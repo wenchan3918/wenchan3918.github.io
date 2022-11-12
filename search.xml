@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>第一篇章</title>
+    <title>今日開張</title>
     <url>/2022/11/12/first-article/</url>
     <content><![CDATA[<p>主要筆記:</p>
 <ul>
@@ -18,9 +18,6 @@
 
 
 ]]></content>
-      <tags>
-        <tag>架構</tag>
-      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
