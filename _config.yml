@@ -1,0 +1,303 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Kevin記事本
+subtitle: ''
+description: ''
+keywords:
+author: Kevin
+# language: en
+language: zh-TW
+timezone: ''
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: http://wenchan3918.github.io/
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: git@github.com:wenchan3918/wenchan3918.github.io.git
+  branch: master
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: false
+  hljs: false
+
+prismjs:
+  enable: false
+  preprocess: false
+  line_number: true
+  tab_replace: ''
+#prism_plugin:
+#  mode: 'preprocess'    # realtime or preprocess
+#  theme: 'default'
+#  line_number: true    # default false
+#  auto_import_assets: true   # default true
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 1
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+# theme: landscape
+# theme: Hacker
+# theme: iLiKE
+theme: next
+# theme: xoxo
+
+
+resume:
+  name: Kevin
+  jobtitle: Full Stack Developer
+  contact:
+    - icon: fa-envelope
+      text: wenchan3918@gmail.com
+#    - icon: fa-phone-square
+#      text: your-phone-num
+    - icon: fa-globe
+      text: Blog
+      link: https://crispgm.github.io/resume/resume.html
+    - icon: fab fa-github
+      text: Github
+      link: https://github.com/wenchan3918
+  education:
+    - university: 國立臺灣科技大學
+      duration: 2005/9月 - 2007/七月
+      location: 台北市大安區基隆路四段43號
+      major: 資訊工程學系 學士
+    - university: 高苑技術學院
+      duration: 2000/9月 - 2005/6月
+      location: 高雄市路竹區中山路1821號
+      major: 電子工程系 副學士
+  skills:
+    - title: Backend
+      items: Python, Django, PostgreSQL, Nginx, Redis, Docker, AWS
+    - title: Frontend
+      items: Vue, Vuetify, jQuery, HTML, JS, CSS
+    - title: Android
+      items: Kotlin, Jetpack Libs, Jetpack Compose, Firebase
+    - title: iOS
+      items: Kotlin, Jetpack Libs, Jetpack Compose, Firebase
+    - title: 開發工具
+      items: PyCharm, Android Studio, Xcode, VSCode, SourceTree, ApiFox, DBeaver
+    - title: 協同工具
+      items: Slack, Trello, 藍湖, Zeplin,  Google Docs, Google Sheets
+  experience:
+    - title: 軟體工程師
+      duration: 2019/3月 - 2022/3月 (3年)
+      company: 茂傑國際股份有限公司
+      description: |
+       <ul style="margin-top:0;margin-left:-24px">
+          <li> 協助將AI模型整合於嵌入式開發，透過IPU進行影像辨識，並將辨識結果回傳後續子系統。</li>
+          <li> 提供後端平台供app進行裝置註冊與報表統計輸出。 </li>
+          <li> Android APP透過藍芽與MCU進行資料溝通與控制(電子紙產品)。</li>
+        </ul>
+    - title: 全端工程師
+      duration: 2017/9月 - 2019/1月 (1年4個月)
+      company: 詮鐠科技股份有限公司
+      description: |
+       <ul style="margin-top:0;margin-left:-24px">
+            <li>公司內部APP開發。實作過藍芽裝置溝通、UDP網路溝通、HTTP API串接。</li>
+           <li>公司預計成為Softbank供應商，但前提需要複製原本供應商已上架的iOS APP，與同事共同完成韌體傳輸協議、APP頁面等功能。</li>
+            <li>RESTful API開發與後台服務架設。</li>
+          </ul>
+    - title: iOS程式工程師
+      duration: 2016/4月 - 2017/9月 (1年5個月)
+      company: 瀚邦科技股份有限公司
+      description: |
+       <ul style="margin-top:0;margin-left:-24px">
+            <li>公司內部APP開發。實作過藍芽裝置溝通、UDP網路溝通、HTTP API串接、Document Extension機制。</li>
+          </ul>
+    - title: 策略發展部專案經理
+      duration: 2015/1月 - 2016/3月 (1年2個月)
+      company: 勝義科技有限公司
+      description: |
+       <ul style="margin-top:0;margin-left:-24px">
+            <li>廣告平台流量開發業務。與百萬下載APP開發者洽談廣告合作。</li>
+            <li>協助公司廣告平台[adLocus]流量開發，一年多拜訪多位台港陸開發者/公司，為公司談成千萬下載APP合作協議(大陸正點科技[千萬下載]、台灣食在方便[百萬下載]、觀察天氣[百萬下載]、即時路況影像[百萬下載])，為廣告平台帶入當日100萬可用曝光流量。</li>
+            <li>透過多次拜訪與主管訪談檢討，了解到開發者需求與誘因，不斷修正商務策略與說術，在中期成功簽下多位百萬下等級開發者合作案。</li>
+          </ul>
+    - title: Android/iOS程式工程師
+      duration: 2012/4月 - 2016/3月 (3年11個月)
+      company: 勝義科技有限公司
+      description: |
+       <ul style="margin-top:0;margin-left:-24px">
+            <li>東森購物Android APP V1.0製作。</li>
+            <li>協助公司完成東森廣告與APP開發合作案，擔任Android APP專案開發主要負責人，完成多種會員登入整合/產品瀏覽/購物車結帳等主要畫面與流程實作，並與東森IT部門透過API進行資料交換。歷經八個月開發時程完成上架與程式碼/文件交付。</li>
+          </ul>
+    - title: 前端/後端程式工程師
+      duration: 2009/10月 - 2011/11月 (2年)
+      company: 亞普達國際商務有限公司
+      description: |
+       <ul style="margin-top:0;margin-left:-24px">
+            <li>開發小型商業客製網站，主要實作經驗有購物車、金流整合、商品管理與最新消息等。</li>
+          </ul>
+  projects:
+    - name: LangGO背單字(Side project)
+      description: |
+        <ul style="margin-top:0;margin-left:-24px">
+          <li>2020年Google Play教育類型排行第一名。<a target="_blank" href="https://play.google.com/store/apps/details?id=cek.com.langgo">Google Play連結</a></li>
+          <li>Golang Gin框架成功轉移Python Django框架。</li>
+          <li>推測Google排名演算法，成功操作將App推至Google Play教育類型排行第一名。</li>
+        </ul>
+      contribution:
+    - name: 簡易魚塭雲端斷線通報系統(Side project)
+      description: |
+        <ul style="margin-top:0;margin-left:-24px">
+          <li>透過ESP8266晶片與AWS主機組合偵測多處魚塭電源狀態變化。</li>
+          <li>燒入<a target="_blank" href="https://github.com/martin-ger/esp_wifi_repeater">第三方韌體</a>，實現遠距離WiFi傳輸</li>
+        </ul>
+      contribution:
+    - name: 臉書爬蟲(Side project)
+      description: |
+        <ul style="margin-top:0;margin-left:-24px">
+          <li>針對特定領域人物與單位進行爬文，下載所有歷史發文，以進行NLP分析與研究。</li>
+          <li>Golang Gin框架成功轉移Python Django框架。</li>
+          <li>推測Google排名演算法，成功操作將App推至Google Play教育類型排行第一名。</li>
+        </ul>
+      contribution:
+#    - name: LangGO背單字(Side project)
+#      description: |
+#        <ul style="margin-top:0;margin-left:-24px">
+#          <li>2020年Google Play教育類型排行第一名。<a target="_blank" href="https://play.google.com/store/apps/details?id=cek.com.langgo">Google Play連結</a></li>
+#          <li>Golang Gin框架成功轉移Python Django框架。</li>
+#          <li>推測Google排名演算法，成功操作將App推至Google Play教育類型排行第一名。</li>
+#        </ul>
+#      contribution:
+
+#
+#  languages:
+#    - name: English
+#      proficiency: Work proficiency
+#    - name: Mandarin Chinese
+#      proficiency: Native
+#
+#
+
+resume_en:
+  name: Kevin Chang
+  jobtitle: Full Stack Developer
+  contact:
+    - icon: fa-envelope
+      text: wenchan3918@gmail.com
+#    - icon: fa-phone-square
+#      text: your-phone-num
+    - icon: fa-globe
+      text: post.langgo.app
+      link: https://crispgm.github.io/resume/resume.html
+    - icon: fa-github
+      text: your-github
+      link: https://github.com/crispgm/resume
+  education:
+    - university: National Taiwan University of Science and Technology (國立臺灣科技大學)
+      duration:  Sep 2005 - Jun 2007 (2 years)
+      location: No.43, Keelung Rd., Sec.4, Da'an Dist., Taipei City 106335, Taiwan (R.O.C.)
+      major: Bachelor of Computer Science and Information Engineering
+    - university: Kao Yuan University (高苑科技大學/技術學院)
+      duration: Sep 1999 - Jun 2005 (5 years)
+      location: No.1821, Jhongshan Rd., Lujhu Dist, Kaohsiung City 82151, Taiwan (R.O.C.)
+      major: Associate of Electrical Engineering
+  skills:
+    - title: Skill Group 1
+      items: Lorem, Ipsum, Dolor, Sit, Amet
+    - title: Skill Group 2
+      items: Consectetur, Adipiscing, Elit
+    - title: Skill Group 3
+      items: Sed do, Eiusmod, Tempor, Incididunt
+  experience:
+    - title: Job Title 1
+      duration: Apr 2016 - Now
+      company: Your 1st, Inc.
+      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    - title: Job Title 2
+      duration: Apr 2013 - Mar 2016
+      company: Your 2nd, Inc.
+      description: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    - title: Job Title 3
+      duration: Dec 2011 - Mar 2012
+      company: Your 3rd Co, Ltd.
+      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  projects:
+    - name: Project Name 1
+      description: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      contribution: Contributor.
+    - name: Project Name 2
+      description: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      contribution: Creator and maintainer.
+  languages:
+    - name: English
+      proficiency: Work proficiency
+    - name: Mandarin Chinese
+      proficiency: Native
