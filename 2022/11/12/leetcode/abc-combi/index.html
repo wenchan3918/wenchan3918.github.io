@@ -22,23 +22,29 @@
 
 <link rel="stylesheet" href="plugins/line-numbers/prism-line-numbers.css" data-noprefix />
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Kevin日誌">
-<meta property="og:url" content="http://wenchan3918.github.io/archives/2022/11/page/2/index.html">
+    <meta name="description" content="題目給定一個字串，列印出所有可能的組合，例如: abc -&gt; aaa, aab, aac, aba, abb, abc, aca, acb, acc, baa, bab, bac, bba, bbb, bbc, bca, bcb, bcc, caa, cab, cac,cba, cbb, cbc, cca, ccb, ccc 解法一123456789101112131415161718192">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode - 列印abc所有排列組合">
+<meta property="og:url" content="http://wenchan3918.github.io/2022/11/12/leetcode/abc-combi/index.html">
 <meta property="og:site_name" content="Kevin日誌">
+<meta property="og:description" content="題目給定一個字串，列印出所有可能的組合，例如: abc -&gt; aaa, aab, aac, aba, abb, abc, aca, acb, acc, baa, bab, bac, bba, bbb, bbc, bca, bcb, bcc, caa, cab, cac,cba, cbb, cbc, cca, ccb, ccc 解法一123456789101112131415161718192">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-11-12T15:44:55.000Z">
+<meta property="article:modified_time" content="2022-11-12T16:20:16.550Z">
 <meta property="article:author" content="Kevin">
+<meta property="article:tag" content="演算法">
+<meta property="article:tag" content="LeetCode">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://wenchan3918.github.io/archives/2022/11/page/2/">
+<link rel="canonical" href="http://wenchan3918.github.io/2022/11/12/leetcode/abc-combi/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":"","permalink":"","path":"archives/2022/11/page/2/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://wenchan3918.github.io/2022/11/12/leetcode/abc-combi/","path":"2022/11/12/leetcode/abc-combi/","title":"LeetCode - 列印abc所有排列組合"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>歸檔 | Kevin日誌</title>
+<title>LeetCode - 列印abc所有排列組合 | Kevin日誌</title>
   
 
 
@@ -74,7 +80,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Kevin日誌</h1>
+      <p class="site-title">Kevin日誌</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">☕️ 人生無大志，只有寫程式 👀</p>
@@ -128,7 +134,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目錄
@@ -141,6 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95%E4%B8%80"><span class="nav-number">2.</span> <span class="nav-text">解法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Remember"><span class="nav-number">3.</span> <span class="nav-text">Remember</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -176,53 +183,140 @@
 
     </div>
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共有 4 篇文章。 繼續努力。</span>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://wenchan3918.github.io/2022/11/12/leetcode/abc-combi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar4.jpg">
+      <meta itemprop="name" content="Kevin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kevin日誌">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="LeetCode - 列印abc所有排列組合 | Kevin日誌">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LeetCode - 列印abc所有排列組合
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-11-12 23:44:55" itemprop="dateCreated datePublished" datetime="2022-11-12T23:44:55+08:00">2022-11-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2022-11-13 00:20:16" itemprop="dateModified" datetime="2022-11-13T00:20:16+08:00">2022-11-13</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>645</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>給定一個字串，列印出所有可能的組合，<br>例如: abc -&gt; aaa, aab, aac, aba, abb, abc, aca, acb, acc, baa, bab, bac, bba, bbb, bbc, bca, bcb, bcc, caa, cab, cac,<br>cba, cbb, cbc, cca, ccb, ccc</p>
+<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">思路</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">TODO</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">combi</span>(<span class="params">question_, next_size, prefix=<span class="string">&quot;&quot;</span></span>):</span><br><span class="line">    <span class="keyword">if</span> next_size == <span class="number">0</span>:</span><br><span class="line">        answer.append(prefix)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(question)):</span><br><span class="line">        combi(question_=question_,</span><br><span class="line">              next_size=next_size - <span class="number">1</span>,</span><br><span class="line">              prefix=<span class="string">f&#x27;<span class="subst">&#123;prefix&#125;</span><span class="subst">&#123;question_[i]&#125;</span>&#x27;</span>,</span><br><span class="line">              )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">answer = []</span><br><span class="line">question = <span class="string">&quot;abc&quot;</span></span><br><span class="line">combi(question, <span class="built_in">len</span>(question))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\n&quot;</span>.join(answer))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Remember"><a href="#Remember" class="headerlink" title="Remember"></a>Remember</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">演算法,</span> <span class="string">Algorithm,</span> <span class="string">al-go-rithm</span></span><br><span class="line"><span class="string">排列,</span> <span class="string">Permutation,</span> <span class="string">per-mu-ta-tion</span></span><br><span class="line"><span class="string">組合,</span> <span class="string">Combination,</span> <span class="string">com-bi-na-tion</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-11-12T01:27:01+08:00"
-              content="2022-11-12">
-          11-12
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/11/12/first-article/" itemprop="url">
-            <span itemprop="name">第一篇章</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    捐贈
+  </button>
+  <div class="post-reward">
 
-      
-    </header>
-  </article>
-
-
-    </div>
   </div>
-  
-  
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2022/11/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/archives/2022/11/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2022/11/page/3/">3</a><a class="page-number" href="/archives/2022/11/page/4/">4</a><a class="extend next" rel="next" href="/archives/2022/11/page/3/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
-  </nav>
+</div>
 
+          <div class="post-tags">
+              <a href="/tags/%E6%BC%94%E7%AE%97%E6%B3%95/" rel="tag"># 演算法</a>
+              <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
+          </div>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/12/first-article/" rel="prev" title="第一篇章">
+                  <i class="fa fa-chevron-left"></i> 第一篇章
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
 </div>
   </main>
 
