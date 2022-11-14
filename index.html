@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">2</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">4</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">2</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">5</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -155,7 +155,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -187,6 +187,105 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wenchan3918.github.io/2022/11/14/leetcode/recursion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar4.jpg">
+      <meta itemprop="name" content="Kevin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kevin日誌">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kevin日誌">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/11/14/leetcode/recursion/" class="post-title-link" itemprop="url">LeetCode - 遞迴思考</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2022-11-14 10:34:08 / 修改時間：18:14:36" itemprop="dateCreated datePublished" datetime="2022-11-14T10:34:08+08:00">2022-11-14</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>計算1加到n的總和，例如: n為10，總和為1+2+3+4+5+6+7+8+9+10&#x3D;55。</p>
+<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><p>時間複雜度: O(n)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過數學累加方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string">步驟1 =&gt; total + 1 =&gt; 0 + 1 = 1</span></span><br><span class="line"><span class="string">步驟2 =&gt; total + 2 =&gt; 1 + 2 = 3</span></span><br><span class="line"><span class="string">步驟3 =&gt; total + 3 =&gt; 3 + 3 = 6</span></span><br><span class="line"><span class="string">步驟4 =&gt; total + 4 =&gt; 6 + 4 = 10</span></span><br><span class="line"><span class="string">步驟5 =&gt; total + 5 =&gt; 10 + 5 = 15</span></span><br><span class="line"><span class="string">步驟6 =&gt; total + 6 =&gt; 15 + 6 = 21</span></span><br><span class="line"><span class="string">步驟7 =&gt; total + 7 =&gt; 21 + 7 = 28</span></span><br><span class="line"><span class="string">步驟8 =&gt; total + 8 =&gt; 28 + 8 = 36</span></span><br><span class="line"><span class="string">步驟9 =&gt; total + 9 =&gt; 36 + 9 = 45</span></span><br><span class="line"><span class="string">步驟10 =&gt; total + 10 =&gt; 45 + 10 = 55</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sum_1_to_n</span>(<span class="params">x</span>):</span><br><span class="line">    answer = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, x + <span class="number">1</span>):</span><br><span class="line">        total = answer</span><br><span class="line">        answer = answer + i</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;步驟<span class="subst">&#123;i&#125;</span> =&gt; total + <span class="subst">&#123;i&#125;</span> =&gt; <span class="subst">&#123;total&#125;</span> + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;answer&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> answer</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(sum_1_to_n(<span class="number">10</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><p>時間複雜度: O(n)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過遞迴方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">將問題拆解成小問題，找出遞迴的關係式</span></span><br><span class="line"><span class="string">x=1時, r(1) =&gt; return 1</span></span><br><span class="line"><span class="string">x=2時, r(2) =&gt; return r(1) + 2 =&gt;  1 + 2 = 3</span></span><br><span class="line"><span class="string">x=3時, r(3) =&gt; return r(2) + 3 =&gt;  3 + 3 = 6</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="string">x=10時, r(10) =&gt; return r(9) + 10 =&gt;  45 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">遞迴展開:</span></span><br><span class="line"><span class="string">r(10)&#123;</span></span><br><span class="line"><span class="string">  return r(9)&#123;</span></span><br><span class="line"><span class="string">     return r(8)&#123;</span></span><br><span class="line"><span class="string">        return r(7)&#123;</span></span><br><span class="line"><span class="string">           return r(6)&#123;</span></span><br><span class="line"><span class="string">              return r(5)&#123;</span></span><br><span class="line"><span class="string">                 return r(4)&#123;</span></span><br><span class="line"><span class="string">                    return r(3)&#123;</span></span><br><span class="line"><span class="string">                       return r(2)&#123;</span></span><br><span class="line"><span class="string">                          return r(1)&#123;</span></span><br><span class="line"><span class="string">                             return 1</span></span><br><span class="line"><span class="string">                          &#125; + 2</span></span><br><span class="line"><span class="string">                       &#125; + 3</span></span><br><span class="line"><span class="string">                    &#125; + 4</span></span><br><span class="line"><span class="string">                 &#125; + 5</span></span><br><span class="line"><span class="string">              &#125; + 6</span></span><br><span class="line"><span class="string">           &#125; + 7</span></span><br><span class="line"><span class="string">        &#125; + 8</span></span><br><span class="line"><span class="string">     &#125; + 9</span></span><br><span class="line"><span class="string">  &#125; + 10</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">r</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">if</span> x == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> r(x - <span class="number">1</span>) + x</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(r(<span class="number">10</span>))</span><br></pre></td></tr></table></figure>
+
+<h2 id="Remember"><a href="#Remember" class="headerlink" title="Remember"></a>Remember</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">演算法,</span> <span class="string">Algorithm,</span> <span class="string">al-go-rithm</span></span><br><span class="line"><span class="string">遞迴,</span> <span class="string">Recursion,</span> <span class="string">re-cur-sion</span></span><br><span class="line"><span class="string">時間複雜度,</span> <span class="string">Time</span> <span class="string">complexity,</span> <span class="string">time</span> <span class="string">com-ple-xity</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://wenchan3918.github.io/2022/11/12/leetcode/abc-combi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -200,7 +299,7 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Kevin日誌">
+      <meta itemprop="name" content="undefined | Kevin日誌">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -223,7 +322,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2022-11-13 00:20:16" itemprop="dateModified" datetime="2022-11-13T00:20:16+08:00">2022-11-13</time>
+      <time title="修改時間：2022-11-13 16:32:32" itemprop="dateModified" datetime="2022-11-13T16:32:32+08:00">2022-11-13</time>
     </span>
 
   
@@ -233,14 +332,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>645</span>
+      <span>4.6k</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>1 分鐘</span>
+      <span>4 分鐘</span>
     </span>
 </div>
 
@@ -252,7 +351,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>給定一個字串，列印出所有可能的組合，<br>例如: abc -&gt; aaa, aab, aac, aba, abb, abc, aca, acb, acc, baa, bab, bac, bba, bbb, bbc, bca, bcb, bcc, caa, cab, cac,<br>cba, cbb, cbc, cca, ccb, ccc</p>
-<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">思路</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">TODO</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">combi</span>(<span class="params">question_, next_size, prefix=<span class="string">&quot;&quot;</span></span>):</span><br><span class="line">    <span class="keyword">if</span> next_size == <span class="number">0</span>:</span><br><span class="line">        answer.append(prefix)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(question)):</span><br><span class="line">        combi(question_=question_,</span><br><span class="line">              next_size=next_size - <span class="number">1</span>,</span><br><span class="line">              prefix=<span class="string">f&#x27;<span class="subst">&#123;prefix&#125;</span><span class="subst">&#123;question_[i]&#125;</span>&#x27;</span>,</span><br><span class="line">              )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">answer = []</span><br><span class="line">question = <span class="string">&quot;abc&quot;</span></span><br><span class="line">combi(question, <span class="built_in">len</span>(question))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\n&quot;</span>.join(answer))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">思路</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">in_put = &#x27;abc&#x27;</span></span><br><span class="line"><span class="string">n = 3個字元</span></span><br><span class="line"><span class="string">組合數量 = n^n = 3^3 = 27</span></span><br><span class="line"><span class="string">Big O: O(n^n)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">virtual_code</span>():</span><br><span class="line">    answer = []</span><br><span class="line">    <span class="keyword">for</span> v1 <span class="keyword">in</span> <span class="string">&#x27;abc&#x27;</span>:</span><br><span class="line">        <span class="keyword">for</span> v2 <span class="keyword">in</span> <span class="string">&#x27;abc&#x27;</span>:</span><br><span class="line">            <span class="keyword">for</span> v3 <span class="keyword">in</span> <span class="string">&#x27;abc&#x27;</span>:</span><br><span class="line">                <span class="built_in">print</span>(v1+v2+v3)</span><br><span class="line">                answer.append(v1+v2+v3)</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    foreach(n)+foreach(n)+foreach(n) </span></span><br><span class="line"><span class="string">    a - a - a =&gt;aaa</span></span><br><span class="line"><span class="string">          - b =&gt;aab</span></span><br><span class="line"><span class="string">          - c =&gt;aac</span></span><br><span class="line"><span class="string">    a - b - a =&gt;aba</span></span><br><span class="line"><span class="string">          - b =&gt;abb</span></span><br><span class="line"><span class="string">          - c =&gt;abc</span></span><br><span class="line"><span class="string">    a - c - a =&gt;aca</span></span><br><span class="line"><span class="string">          - b =&gt;acb</span></span><br><span class="line"><span class="string">          - c =&gt;acc</span></span><br><span class="line"><span class="string">          </span></span><br><span class="line"><span class="string">    b - a - a =&gt;baa</span></span><br><span class="line"><span class="string">          - b =&gt;bab</span></span><br><span class="line"><span class="string">          - c =&gt;bac</span></span><br><span class="line"><span class="string">    b - b - a =&gt;bba</span></span><br><span class="line"><span class="string">          - b =&gt;bbb</span></span><br><span class="line"><span class="string">          - c =&gt;bbc</span></span><br><span class="line"><span class="string">    b - c - a =&gt;bca</span></span><br><span class="line"><span class="string">          - b =&gt;bcb</span></span><br><span class="line"><span class="string">          - c =&gt;bcc</span></span><br><span class="line"><span class="string">          </span></span><br><span class="line"><span class="string">    c - a - a =&gt;caa</span></span><br><span class="line"><span class="string">          - b =&gt;cab</span></span><br><span class="line"><span class="string">          - c =&gt;cac</span></span><br><span class="line"><span class="string">    c - b - a =&gt;cba</span></span><br><span class="line"><span class="string">          - b =&gt;cbb</span></span><br><span class="line"><span class="string">          - c =&gt;cbc</span></span><br><span class="line"><span class="string">    c - c - a =&gt;cca</span></span><br><span class="line"><span class="string">          - b =&gt;ccb</span></span><br><span class="line"><span class="string">          - c =&gt;ccc</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">遞迴過程:</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=3, prefix=&#x27;&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=2, prefix=&#x27;a&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=1, prefix=&#x27;aa&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;aaa&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;aab&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;aac&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=1, prefix=&#x27;ab&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;aba&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;abb&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;abc&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=1, prefix=&#x27;ac&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;aca&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;acb&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;acc&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=2, prefix=&#x27;b&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=1, prefix=&#x27;ba&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;baa&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;bab&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;bac&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=1, prefix=&#x27;bb&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;bba&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;bbb&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;bbc&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=1, prefix=&#x27;bc&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;bca&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;bcb&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;bcc&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=2, prefix=&#x27;c&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=1, prefix=&#x27;ca&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;caa&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;cab&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;cac&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=1, prefix=&#x27;cb&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;cba&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;cbb&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;cbc&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=1, prefix=&#x27;cc&#x27;)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;cca&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;ccb&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string">combi(in_put=&#x27;abc&#x27;, next_size=0, prefix=&#x27;ccc&#x27;) =&gt;answer.append(prefix)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">combi</span>(<span class="params">in_put, next_size, prefix=<span class="string">&quot;&quot;</span></span>):</span><br><span class="line">    <span class="keyword">if</span> next_size == <span class="number">0</span>:</span><br><span class="line">        answer.append(prefix)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(in_put)):</span><br><span class="line">        combi(in_put=in_put,</span><br><span class="line">              next_size=next_size - <span class="number">1</span>,</span><br><span class="line">              prefix=<span class="string">f&#x27;<span class="subst">&#123;prefix&#125;</span><span class="subst">&#123;in_put[i]&#125;</span>&#x27;</span>,</span><br><span class="line">              )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">answer = []</span><br><span class="line">in_put = <span class="string">&quot;abc&quot;</span></span><br><span class="line">combi(in_put, <span class="built_in">len</span>(in_put))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\n&quot;</span>.join(answer))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="Remember"><a href="#Remember" class="headerlink" title="Remember"></a>Remember</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">演算法,</span> <span class="string">Algorithm,</span> <span class="string">al-go-rithm</span></span><br><span class="line"><span class="string">排列,</span> <span class="string">Permutation,</span> <span class="string">per-mu-ta-tion</span></span><br><span class="line"><span class="string">組合,</span> <span class="string">Combination,</span> <span class="string">com-bi-na-tion</span></span><br></pre></td></tr></table></figure>
 
@@ -301,7 +400,7 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Kevin日誌">
+      <meta itemprop="name" content="undefined | Kevin日誌">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -405,12 +504,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Kevin日誌">
+      <meta itemprop="name" content="undefined | Kevin日誌">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/11/11/word-of-the-day/" class="post-title-link" itemprop="url">每日單字</a>
+          <a href="/2022/11/11/word-of-the-day/" class="post-title-link" itemprop="url">常用單字</a>
         </h2>
 
         <div class="post-meta-container">
@@ -428,7 +527,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2022-11-12 20:50:24" itemprop="dateModified" datetime="2022-11-12T20:50:24+08:00">2022-11-12</time>
+      <time title="修改時間：2022-11-13 00:43:05" itemprop="dateModified" datetime="2022-11-13T00:43:05+08:00">2022-11-13</time>
     </span>
 
   
@@ -497,7 +596,7 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Kevin日誌">
+      <meta itemprop="name" content="undefined | Kevin日誌">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -593,13 +692,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="總字數">2k</span>
+    <span title="總字數">7k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">2 分鐘</span>
+    <span title="所需總閱讀時間">7 分鐘</span>
   </span>
 </div>
 <div class="busuanzi-count">
