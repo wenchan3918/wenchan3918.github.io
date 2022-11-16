@@ -34,7 +34,7 @@
 <meta property="og:description" content="題目計算1加到n的總和，例如: n為10，總和為1+2+3+4+5+6+7+8+9+10&#x3D;55。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-11-14T02:34:08.000Z">
-<meta property="article:modified_time" content="2022-11-15T16:39:41.277Z">
+<meta property="article:modified_time" content="2022-11-16T07:51:52.134Z">
 <meta property="article:author" content="Kevin">
 <meta property="article:tag" content="演算法">
 <meta property="article:tag" content="LeetCode">
@@ -276,7 +276,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2022-11-16 00:39:41" itemprop="dateModified" datetime="2022-11-16T00:39:41+08:00">2022-11-16</time>
+      <time title="修改時間：2022-11-16 15:51:52" itemprop="dateModified" datetime="2022-11-16T15:51:52+08:00">2022-11-16</time>
     </span>
 
   
@@ -292,14 +292,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>2.1k</span>
+      <span>1.4k</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>4 分鐘</span>
+      <span>3 分鐘</span>
     </span>
 </div>
 
@@ -316,55 +316,9 @@
 <h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><p>時間複雜度: O(n)</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過數學累加方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string">步驟1 =&gt; total + 1 =&gt; 0 + 1 = 1</span></span><br><span class="line"><span class="string">步驟2 =&gt; total + 2 =&gt; 1 + 2 = 3</span></span><br><span class="line"><span class="string">步驟3 =&gt; total + 3 =&gt; 3 + 3 = 6</span></span><br><span class="line"><span class="string">步驟4 =&gt; total + 4 =&gt; 6 + 4 = 10</span></span><br><span class="line"><span class="string">步驟5 =&gt; total + 5 =&gt; 10 + 5 = 15</span></span><br><span class="line"><span class="string">步驟6 =&gt; total + 6 =&gt; 15 + 6 = 21</span></span><br><span class="line"><span class="string">步驟7 =&gt; total + 7 =&gt; 21 + 7 = 28</span></span><br><span class="line"><span class="string">步驟8 =&gt; total + 8 =&gt; 28 + 8 = 36</span></span><br><span class="line"><span class="string">步驟9 =&gt; total + 9 =&gt; 36 + 9 = 45</span></span><br><span class="line"><span class="string">步驟10 =&gt; total + 10 =&gt; 45 + 10 = 55</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sum_1_to_n</span>(<span class="params">n</span>):</span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">        total = total + i</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;步驟<span class="subst">&#123;i&#125;</span> = total + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total&#125;</span> + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total + <span class="number">1</span>&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> total</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; sum_1_to_n(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<script>
-function run(){
-   let script = document.createElement('script');
-    script.src = 'https://pyscript.net/alpha/pyscript.js';
-    script.type = 'text/javascript';
-    document.body.parentNode.appendChild(script);
-   $('#run').html(` <py-repl>
-def sum_1_to_n(n):
-    total = 0
-    for i in range(1, n + 1):
-        total = total + i
-        print(f'步驟{i} → total + {i} → {total} + {i} → {total+1}')
-
-    return total
-
-print(f"總和: { sum_1_to_n(10) }")
-</py-repl>`);
-  $('#run').show()
-}
-</script>
-<p><button type="button" class="btn"  onclick="run()" style="margin-left:10px">點選執行</button></p>
-<div id="run">
-</div>
-
 <h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><p>時間複雜度: O(n)</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過遞迴方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">將問題拆解成小問題，找出遞迴的關係式</span></span><br><span class="line"><span class="string">x=1時, r(1) =&gt; return 1</span></span><br><span class="line"><span class="string">x=2時, r(2) =&gt; return r(1) + 2 =&gt;  1 + 2 = 3</span></span><br><span class="line"><span class="string">x=3時, r(3) =&gt; return r(2) + 3 =&gt;  3 + 3 = 6</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="string">x=10時, r(10) =&gt; return r(9) + 10 =&gt;  45 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">遞迴展開:</span></span><br><span class="line"><span class="string">r(10)&#123;</span></span><br><span class="line"><span class="string">  return r(9)&#123;</span></span><br><span class="line"><span class="string">     return r(8)&#123;</span></span><br><span class="line"><span class="string">        return r(7)&#123;</span></span><br><span class="line"><span class="string">           return r(6)&#123;</span></span><br><span class="line"><span class="string">              return r(5)&#123;</span></span><br><span class="line"><span class="string">                 return r(4)&#123;</span></span><br><span class="line"><span class="string">                    return r(3)&#123;</span></span><br><span class="line"><span class="string">                       return r(2)&#123;</span></span><br><span class="line"><span class="string">                          return r(1)&#123;</span></span><br><span class="line"><span class="string">                             return 1</span></span><br><span class="line"><span class="string">                          &#125; + 2</span></span><br><span class="line"><span class="string">                       &#125; + 3</span></span><br><span class="line"><span class="string">                    &#125; + 4</span></span><br><span class="line"><span class="string">                 &#125; + 5</span></span><br><span class="line"><span class="string">              &#125; + 6</span></span><br><span class="line"><span class="string">           &#125; + 7</span></span><br><span class="line"><span class="string">        &#125; + 8</span></span><br><span class="line"><span class="string">     &#125; + 9</span></span><br><span class="line"><span class="string">  &#125; + 10</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">r</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> r(n - <span class="number">1</span>) + n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; r(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-
-<script>
-function run2(){
-   let script = document.createElement('script');
-    script.src = 'https://pyscript.net/alpha/pyscript.js';
-    script.type = 'text/javascript';
-    document.body.parentNode.appendChild(script);
-   $('#run2').html(`<py-repl>
-def r(n):
-    if n == 1:
-        return 1
-
-    return r(n - 1) + n
-
-print(f"總和: { r(10) }")
-</py-repl>`);
-  $('#run2').show()
-}
-</script>
-<p><button type="button" class="btn"  onclick="run2()" style="margin-left:10px">點選執行</button></p>
-<div id="run2">
-</div>
 
 <h2 id="Remember"><a href="#Remember" class="headerlink" title="Remember"></a>Remember</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">演算法,</span> <span class="string">Algorithm,</span> <span class="string">al-go-rithm</span></span><br><span class="line"><span class="string">遞迴,</span> <span class="string">Recursion,</span> <span class="string">re-cur-sion</span></span><br><span class="line"><span class="string">時間複雜度,</span> <span class="string">Time</span> <span class="string">complexity,</span> <span class="string">time</span> <span class="string">com-ple-xity</span></span><br></pre></td></tr></table></figure>
 
@@ -434,13 +388,13 @@ print(f"總和: { r(10) }")
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="總字數">15k</span>
+    <span title="總字數">14k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">26 分鐘</span>
+    <span title="所需總閱讀時間">25 分鐘</span>
   </span>
 </div>
 <div class="busuanzi-count">
