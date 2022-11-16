@@ -23,7 +23,7 @@
 
 <link rel="stylesheet" href="plugins/line-numbers/prism-line-numbers.css" data-noprefix />
 
-     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/>
+     <!--link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/-->
 
 
     <meta property="og:type" content="website">
@@ -104,7 +104,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">4</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">5</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">6</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -169,13 +169,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -232,6 +232,106 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wenchan3918.github.io/2022/11/16/tool-project-manage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar4.jpg">
+      <meta itemprop="name" content="Kevin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kevin技術博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kevin技術博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/11/16/tool-project-manage/" class="post-title-link" itemprop="url">多種開發語言專案管理工具</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2022-11-16 00:38:50 / 修改時間：15:46:12" itemprop="dateCreated datePublished" datetime="2022-11-16T00:38:50+08:00">2022-11-16</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>6.2k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>11 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>全端工程師常常會同時需要用多種語言進行專案開發，使用各種語言適合的IDE(例如Xcode、Android Studio、PyCharm、GoLand、AppCode)進行專案開啟。若對要修改較舊專案，常常會須再花時間去找專案的位置。</p>
+<p><br>如果可以透過指令找到專案並開啟對應的IDE，就能節省很多時間。</p>
+<p><br>從上面問題歸納幾點需求:</p>
+<ul>
+<li>透過指令列出過去做的專案，以及可透過關鍵字進行搜尋。</li>
+<li>可以指定每個專案開啟的IDE。</li>
+<li>能有個區塊可以輸入過去做的專案資訊。</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/11/16/tool-project-manage/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://wenchan3918.github.io/2022/11/15/projects/langgo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -245,7 +345,7 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Kevin技術博客">
+      <meta itemprop="name" content="undefined | Kevin技術博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -350,7 +450,7 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Kevin技術博客">
+      <meta itemprop="name" content="undefined | Kevin技術博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -449,7 +549,7 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Kevin技術博客">
+      <meta itemprop="name" content="undefined | Kevin技術博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -548,7 +648,7 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Kevin技術博客">
+      <meta itemprop="name" content="undefined | Kevin技術博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -654,7 +754,7 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Kevin技術博客">
+      <meta itemprop="name" content="undefined | Kevin技術博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -748,13 +848,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="總字數">8k</span>
+    <span title="總字數">14k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">15 分鐘</span>
+    <span title="所需總閱讀時間">26 分鐘</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -781,8 +881,8 @@
 
 <style>
 body{
-font-size:16px;
-line-height:2rem;
+font-size:15px;
+line-height:1.5rem;
 }
 .highlight{
 padding:10px
@@ -793,7 +893,7 @@ padding:10px
 }
 
 p{
-margin: 0 0 0 0;
+margin: 0 0 0px 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -810,6 +910,13 @@ ul{
 li{
 line-height: 1.5rem;
 }
+
+<style>
+ol, ul {
+    list-style:disc;
+    padding-left: 20px;
+}
+</style>
 
 store_img{
 margin-left: 0;
