@@ -48,15 +48,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Project - 健康手環專案分享</title>
-    <url>/2022/11/15/projects/health-bracelet/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>Android</tag>
-        <tag>Project</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LeetCode - 計算1加到n的總和</title>
     <url>/2022/11/14/leetcode/recursion/</url>
     <content><![CDATA[<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>計算1加到n的總和，例如: n為10，總和為1+2+3+4+5+6+7+8+9+10&#x3D;55。</p>
@@ -126,6 +117,15 @@ print(f"總和: { r(10) }")
       <tags>
         <tag>演算法</tag>
         <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Project - 健康手環專案分享</title>
+    <url>/2022/11/15/projects/health-bracelet/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>Android</tag>
+        <tag>Project</tag>
       </tags>
   </entry>
   <entry>
