@@ -28,15 +28,15 @@
      <!--link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/-->
 
 
-    <meta name="description" content="題目給定下列多樣的營業時間格式: Mon, Wed, Fri 08:00 - 12:00 &#x2F; Tue, Thur 14:00 - 18:00Mon - Fri 08:00 - 17:00Mon - Fri 08:00 - 17:00Mon - Fri 08:00 - 17:00 &#x2F; Sat, Sun 08:00 - 12:00Mon - Fri 08:00 - 17:00Mon">
+    <meta name="description" content="題目給定下列多種的營業時間格式: Mon, Wed, Fri 08:00 - 12:00 &#x2F; Tue, Thur 14:00 - 18:00Mon - Fri 08:00 - 17:00Mon - Fri 08:00 - 17:00Mon - Fri 08:00 - 17:00 &#x2F; Sat, Sun 08:00 - 12:00Mon - Fri 08:00 - 17:00Mon">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode - 多樣營業時間格式處理">
+<meta property="og:title" content="LeetCode - 多種營業時間格式處理">
 <meta property="og:url" content="http://wenchan3918.github.io/2022/11/20/leetcode/multi-style-date-format/index.html">
 <meta property="og:site_name" content="Kevin技術博客">
-<meta property="og:description" content="題目給定下列多樣的營業時間格式: Mon, Wed, Fri 08:00 - 12:00 &#x2F; Tue, Thur 14:00 - 18:00Mon - Fri 08:00 - 17:00Mon - Fri 08:00 - 17:00Mon - Fri 08:00 - 17:00 &#x2F; Sat, Sun 08:00 - 12:00Mon - Fri 08:00 - 17:00Mon">
+<meta property="og:description" content="題目給定下列多種的營業時間格式: Mon, Wed, Fri 08:00 - 12:00 &#x2F; Tue, Thur 14:00 - 18:00Mon - Fri 08:00 - 17:00Mon - Fri 08:00 - 17:00Mon - Fri 08:00 - 17:00 &#x2F; Sat, Sun 08:00 - 12:00Mon - Fri 08:00 - 17:00Mon">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-11-19T16:28:37.000Z">
-<meta property="article:modified_time" content="2022-11-19T17:07:39.408Z">
+<meta property="article:modified_time" content="2022-11-19T17:43:50.454Z">
 <meta property="article:author" content="Kevin">
 <meta property="article:tag" content="演算法">
 <meta property="article:tag" content="Python">
@@ -47,10 +47,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://wenchan3918.github.io/2022/11/20/leetcode/multi-style-date-format/","path":"2022/11/20/leetcode/multi-style-date-format/","title":"LeetCode - 多樣營業時間格式處理"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://wenchan3918.github.io/2022/11/20/leetcode/multi-style-date-format/","path":"2022/11/20/leetcode/multi-style-date-format/","title":"LeetCode - 多種營業時間格式處理"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>LeetCode - 多樣營業時間格式處理 | Kevin技術博客</title>
+<title>LeetCode - 多種營業時間格式處理 | Kevin技術博客</title>
   
 
 
@@ -244,12 +244,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="LeetCode - 多樣營業時間格式處理 | Kevin技術博客">
+      <meta itemprop="name" content="LeetCode - 多種營業時間格式處理 | Kevin技術博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          LeetCode - 多樣營業時間格式處理
+          LeetCode - 多種營業時間格式處理
         </h1>
 
         <div class="post-meta-container">
@@ -261,7 +261,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2022-11-20 00:28:37 / 修改時間：01:07:39" itemprop="dateCreated datePublished" datetime="2022-11-20T00:28:37+08:00">2022-11-20</time>
+      <time title="創建時間：2022-11-20 00:28:37 / 修改時間：01:43:50" itemprop="dateCreated datePublished" datetime="2022-11-20T00:28:37+08:00">2022-11-20</time>
     </span>
 
   
@@ -296,7 +296,7 @@
     
     <div class="post-body" itemprop="articleBody">
 
-        <h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>給定下列多樣的營業時間格式:</p>
+        <h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>給定下列多種的營業時間格式:</p>
 <p><br>Mon, Wed, Fri 08:00 - 12:00 &#x2F; Tue, Thur 14:00 - 18:00<br>Mon - Fri 08:00 - 17:00<br>Mon - Fri 08:00 - 17:00<br>Mon - Fri 08:00 - 17:00 &#x2F; Sat, Sun 08:00 - 12:00<br>Mon - Fri 08:00 - 17:00<br>Mon - Fri 08:00 - 17:00 &#x2F; Sat, Sun 08:00 - 12:00<br>Mon - Fri 08:00 - 17:00 &#x2F; Sat, Sun 08:00 - 12:00<br>Fri - Sun 20:00 - 02:00<br>Mon, Wed, Fri 08:00 - 12:00 &#x2F; Tue, Thur 14:00 - 18:00<br>Mon, Wed, Fri 08:00 - 12:00 &#x2F; Tue, Thur 14:00 - 18:00<br>Mon - Fri 08:00 - 17:00 &#x2F; Sat, Sun 08:00 - 12:00<br>Mon - Wed 08:00 - 17:00 &#x2F; Thur, Sat 20:00 - 02:00<br>Mon - Wed 08:00 - 17:00 &#x2F; Thur, Sat 20:00 - 02:00<br>Mon - Wed 08:00 - 17:00 &#x2F; Thur, Sat 20:00 - 02:00<br>Mon, Wed, Fri 08:00 - 12:00 &#x2F; Tue, Thur 14:00 - 18:00<br>Mon, Wed, Fri 20:00 - 02:00<br>Mon, Wed, Fri 20:00 - 02:00<br>Mon - Fri 08:00 - 17:00<br>Mon, Wed, Fri 20:00 - 02:00<br>Fri - Sun 20:00 - 02:00</p>
 <p><br>請輸出:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">例如: [1, 3, 5][&#x27;08:00&#x27;, &#x27;12:00&#x27;]</span></span><br><span class="line"><span class="string">代表營業時間為週一、三、五的 08:00 - 12:00</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;12:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>]</span><br><span class="line">[<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>][<span class="string">&#x27;02:00&#x27;</span>, <span class="string">&#x27;20:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;12:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;12:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;12:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>][<span class="string">&#x27;02:00&#x27;</span>, <span class="string">&#x27;20:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>][<span class="string">&#x27;02:00&#x27;</span>, <span class="string">&#x27;20:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>][<span class="string">&#x27;08:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>][<span class="string">&#x27;02:00&#x27;</span>, <span class="string">&#x27;20:00&#x27;</span>]</span><br><span class="line">[<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>][<span class="string">&#x27;02:00&#x27;</span>, <span class="string">&#x27;20:00&#x27;</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
