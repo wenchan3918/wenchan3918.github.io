@@ -65,7 +65,7 @@
 <meta property="og:image" content="https://i.imgur.com/kr2UC7n.png">
 <meta property="og:image" content="https://i.imgur.com/Wbisibr.png">
 <meta property="article:published_time" content="2022-11-18T16:16:43.000Z">
-<meta property="article:modified_time" content="2022-11-19T15:50:19.002Z">
+<meta property="article:modified_time" content="2022-11-19T16:05:28.638Z">
 <meta property="article:author" content="Kevin">
 <meta property="article:tag" content="Backend">
 <meta property="article:tag" content="面試筆試">
@@ -291,9 +291,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2022-11-19 00:16:43 / 修改時間：23:50:19" itemprop="dateCreated datePublished" datetime="2022-11-19T00:16:43+08:00">2022-11-19</time>
+      <time title="創建時間：2022-11-19 00:16:43" itemprop="dateCreated datePublished" datetime="2022-11-19T00:16:43+08:00">2022-11-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2022-11-20 00:05:28" itemprop="dateModified" datetime="2022-11-20T00:05:28+08:00">2022-11-20</time>
     </span>
 
   
@@ -382,7 +388,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 測試條件: 客戶『Ada Larson』購買兩筆口罩商品，其中一筆產品購買數量為100。</span></span><br><span class="line">- Ada Larson購買前可用餘額<span class="variable">$922</span>.93</span><br><span class="line">購買下面兩筆口罩:</span><br><span class="line">&#123;</span><br><span class="line">      <span class="string">&quot;pharmacy_id&quot;</span>: 1,</span><br><span class="line">      <span class="string">&quot;pharmacy_name&quot;</span>: <span class="string">&quot;DFW Wellness&quot;</span>,</span><br><span class="line">      <span class="string">&quot;mask_product_id&quot;</span>: 1,</span><br><span class="line">      <span class="string">&quot;mask_product_name&quot;</span>: <span class="string">&quot;True Barrier (green) (3 per pack)&quot;</span>,</span><br><span class="line">      <span class="string">&quot;price&quot;</span>: 13.7</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">      <span class="string">&quot;pharmacy_id&quot;</span>: 1,</span><br><span class="line">      <span class="string">&quot;pharmacy_name&quot;</span>: <span class="string">&quot;DFW Wellness&quot;</span>,</span><br><span class="line">      <span class="string">&quot;mask_product_id&quot;</span>: 2,</span><br><span class="line">      <span class="string">&quot;mask_product_name&quot;</span>: <span class="string">&quot;MaskT (green) (10 per pack)&quot;</span>,</span><br><span class="line">      <span class="string">&quot;price&quot;</span>: 41.86</span><br><span class="line">&#125;</span><br><span class="line">- 第二次購買後，因超過可用餘額將不扣款，可用餘額維持<span class="variable">$922</span>.93</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Request</span></span><br><span class="line">curl --location --request POST <span class="string">&#x27;https://mask.langgo.app/api/pharmacy/mask/order/&#x27;</span> \</span><br><span class="line">--header <span class="string">&#x27;Content-Type: application/json&#x27;</span> \</span><br><span class="line">--data-raw <span class="string">&#x27;&#123;</span></span><br><span class="line"><span class="string">    &quot;customer_name&quot;: &quot;Ada Larson&quot;,</span></span><br><span class="line"><span class="string">    &quot;items&quot;: [</span></span><br><span class="line"><span class="string">        &#123;</span></span><br><span class="line"><span class="string">            &quot;mask_product_id&quot;: 1,</span></span><br><span class="line"><span class="string">            &quot;num&quot;: 1</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        &#123;</span></span><br><span class="line"><span class="string">            &quot;mask_product_id&quot;: 2,</span></span><br><span class="line"><span class="string">            &quot;num&quot;: 100</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    ]</span></span><br><span class="line"><span class="string">&#125;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Response</span></span><br><span class="line">status: 400</span><br><span class="line">[</span><br><span class="line">    <span class="string">&quot;Customer cash balance is not enough. Ada Larson&#x27;s cash balance is <span class="variable">$922</span>.93.&quot;</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="https://i.imgur.com/TAY3C74.png"><br><img data-src="https://i.imgur.com/06m7u8I.png" alt="第二次購買後，因超過可用餘額將不扣款，可用餘額維持$922.93"></p>
-<h1 id="資料模型"><a href="#資料模型" class="headerlink" title="資料模型"></a>資料模型</h1><p>共有五個資料模型，分別為：</p>
+<h1 id="資料模型"><a href="#資料模型" class="headerlink" title="資料模型"></a>資料模型</h1><p>共有五個資料模型，分別為:</p>
 <ul>
 <li>Pharmacy Model: 藥局資料表。</li>
 <li>OpeningHour Model: 藥局營業時間資料表。</li>
@@ -397,7 +403,7 @@
 </blockquote>
 <p><br><br></p>
 <p><img data-src="https://i.imgur.com/QFEYz3b.png" alt="ER Diagram"></p>
-<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><h2 id="Swagger"><a href="#Swagger" class="headerlink" title="Swagger"></a>Swagger</h2><p>共提供四隻API，分別為：</p>
+<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><h2 id="Swagger"><a href="#Swagger" class="headerlink" title="Swagger"></a>Swagger</h2><p>共提供四隻API，分別為:</p>
 <ul>
 <li>Search Pharmacy API: 搜尋藥局。</li>
 <li>Search Customer API: 搜尋顧客。</li>
