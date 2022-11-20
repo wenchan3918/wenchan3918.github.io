@@ -261,7 +261,7 @@ ol, ul {
 <h1 id="資料模型"><a href="#資料模型" class="headerlink" title="資料模型"></a>資料模型</h1><p>共有五個資料模型，分別為:</p>
 <ul>
 <li>Pharmacy Model: 藥局資料表。</li>
-<li>OpeningHour Model: 藥局營業時間資料表。</li>
+<li>Opening Hour Model: 藥局營業時間資料表。</li>
 <li>Mask Model: 口罩資料表。</li>
 <li>Pharmacy Mask Model: 藥局口罩資料表，用來對應藥局與口罩的關係，每筆資料代表可販售的口罩商品。</li>
 <li>Customer Model: 顧客資料表。</li>
