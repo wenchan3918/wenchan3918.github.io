@@ -1,4 +1,54 @@
 
+body {
+  font-size: 15px;
+  line-height: 1.5rem;
+}
+
+.highlight {
+  padding: 10px
+}
+
+.post-body h1, .post-body h2 {
+  border-bottom: 0px dotted #eee;
+/ / line-height: 1.2 rem;
+}
+
+p {
+  margin: 0 0 0px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-weight: bold;
+  line-height: 2.5rem;
+  font-size: 1.6rem;
+  margin: 30px 0px 6px 0px;
+}
+
+ul {
+  margin: 0px 0px 0px 0px;
+}
+
+li {
+  line-height: 1.5rem;
+}
+
+
+ol, ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+store_img {
+  margin-left: 0;
+}
+
+.cm-content {
+  padding: 10px;
+  margin: 10px;
+}
+
+
 figure.highlight, pre {
   line-height: 1.6;
   margin: 10px auto 20px;
