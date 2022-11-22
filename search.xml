@@ -75,6 +75,8 @@
 <li><a href="https://hexo.io/zh-tw/">Hexo</a>: 靜態網站產生器</li>
 <li><a href="https://theme-next.js.org/">Next</a>: Hexo 主題，整合許多插件，例如網站流量分析Google Analytics、留言板DISQUS等等。</li>
 </ul>
+<span id="more"></span>
+
 <h2 id="製圖"><a href="#製圖" class="headerlink" title="製圖"></a>製圖</h2><p>寫作常常需要針對某個畫面做截圖並標記說明，然後上傳到雲端後，再從雲端取得連結，整個工作流: <code>截圖-&gt;標記說明-&gt;存放到剪貼簿-&gt;直接上傳到雲端-&gt;自動把連結貼到剪貼簿</code><br>。</p>
 <p>推薦工具:</p>
 <ul>
@@ -398,8 +400,8 @@ ol, ul {
 ]]></content>
       <tags>
         <tag>Android</tag>
-        <tag>Frontend</tag>
         <tag>Backend</tag>
+        <tag>Frontend</tag>
         <tag>作品集</tag>
       </tags>
   </entry>
