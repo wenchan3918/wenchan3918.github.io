@@ -260,43 +260,6 @@
       </tags>
   </entry>
   <entry>
-    <title>常用工具</title>
-    <url>/2022/11/22/tools/</url>
-    <content><![CDATA[<h1 id="寫部落格"><a href="#寫部落格" class="headerlink" title="寫部落格"></a>寫部落格</h1><h2 id="寫作"><a href="#寫作" class="headerlink" title="寫作"></a>寫作</h2><p>如果你希望寫作能:</p>
-<ul>
-<li>用 Markdown 寫文章</li>
-<li>用 Git 管理文章</li>
-<li>用 GitHub Pages 部署網站</li>
-<li>有豐富的漂亮主題可選擇</li>
-<li>有豐富的插件可選擇</li>
-<li>一鍵快速發佈文章</li>
-</ul>
-<p><br>推薦工具:</p>
-<ul>
-<li><a href="https://hexo.io/zh-tw/">Hexo</a>: 靜態網站產生器</li>
-<li><a href="https://theme-next.js.org/">Next</a>: Hexo 主題，整合許多插件，例如網站流量分析Google Analytics、留言板DISQUS等等。</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="製圖"><a href="#製圖" class="headerlink" title="製圖"></a>製圖</h2><p>寫作常常需要針對某個畫面做截圖並標記說明，然後上傳到雲端後，再從雲端取得連結，整個工作流: <code>截圖-&gt;標記說明-&gt;存放到剪貼簿-&gt;直接上傳到雲端-&gt;自動把連結貼到剪貼簿</code><br>。</p>
-<p>推薦工具(for Mac):</p>
-<ul>
-<li><a href="https://flameshot.org/#features">flameshot</a>: 用於截圖與標記說明並存放於剪貼簿。</li>
-<li><a href="https://picgo.github.io/PicGo-Doc/zh/guide/">PicGO</a>: 用於自動上傳並取得雲端連結。</li>
-</ul>
-<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">剪貼簿,</span> <span class="string">Clipboard,</span> <span class="string">clip-board</span></span><br><span class="line"><span class="string">工作流,</span> <span class="string">Workflow,</span> <span class="string">work-flow</span></span><br><span class="line"><span class="string">製圖,</span> <span class="string">Diagram,</span> <span class="string">dia-gram</span></span><br><span class="line"><span class="string">分析,</span> <span class="string">Analytics,</span> <span class="string">an-aly-tics</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Tools</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多種開發語言專案管理工具</title>
     <url>/2022/11/16/tool-project-manage/</url>
     <content><![CDATA[<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>全端工程師常常會同時需要用多種語言進行專案開發，使用各種語言適合的IDE(例如Xcode、Android Studio、PyCharm、GoLand、AppCode)進行專案開啟。若對要修改較舊專案，常常會須再花時間去找專案的位置。</p>
@@ -333,6 +296,43 @@
       <tags>
         <tag>開發工具</tag>
         <tag>專案管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用工具</title>
+    <url>/2022/11/22/tools/</url>
+    <content><![CDATA[<h1 id="寫部落格"><a href="#寫部落格" class="headerlink" title="寫部落格"></a>寫部落格</h1><h2 id="寫作"><a href="#寫作" class="headerlink" title="寫作"></a>寫作</h2><p>如果你希望寫作能:</p>
+<ul>
+<li>用 Markdown 寫文章</li>
+<li>用 Git 管理文章</li>
+<li>用 GitHub Pages 部署網站</li>
+<li>有豐富的漂亮主題可選擇</li>
+<li>有豐富的插件可選擇</li>
+<li>一鍵快速發佈文章</li>
+</ul>
+<p><br>推薦工具:</p>
+<ul>
+<li><a href="https://hexo.io/zh-tw/">Hexo</a>: 靜態網站產生器</li>
+<li><a href="https://theme-next.js.org/">Next</a>: Hexo 主題，整合許多插件，例如網站流量分析Google Analytics、留言板DISQUS等等。</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="製圖"><a href="#製圖" class="headerlink" title="製圖"></a>製圖</h2><p>寫作常常需要針對某個畫面做截圖並標記說明，然後上傳到雲端後，再從雲端取得連結，整個工作流: <code>截圖-&gt;標記說明-&gt;存放到剪貼簿-&gt;直接上傳到雲端-&gt;自動把連結貼到剪貼簿</code><br>。</p>
+<p>推薦工具(for Mac):</p>
+<ul>
+<li><a href="https://flameshot.org/#features">flameshot</a>: 用於截圖與標記說明並存放於剪貼簿。</li>
+<li><a href="https://picgo.github.io/PicGo-Doc/zh/guide/">PicGO</a>: 用於自動上傳並取得雲端連結。</li>
+</ul>
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">剪貼簿,</span> <span class="string">Clipboard,</span> <span class="string">clip-board</span></span><br><span class="line"><span class="string">工作流,</span> <span class="string">Workflow,</span> <span class="string">work-flow</span></span><br><span class="line"><span class="string">製圖,</span> <span class="string">Diagram,</span> <span class="string">dia-gram</span></span><br><span class="line"><span class="string">分析,</span> <span class="string">Analytics,</span> <span class="string">an-aly-tics</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Tools</tag>
       </tags>
   </entry>
   <entry>

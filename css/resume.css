@@ -32,7 +32,7 @@ ul li {
 
 .contact {
   font-size: 1rem;
-  padding-top: 1rem;
+  padding-top: 0rem;
 }
 
 .contact-item {
@@ -94,7 +94,7 @@ section {
 }
 
 .block {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .block:last-child {
