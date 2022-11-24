@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
+
+
+
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/custom_main.css">
+<link rel="stylesheet" href="/css/timeline.css">
 
 
 
@@ -20,11 +25,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/orange/pace-theme-minimal.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wenchan3918.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":{"disqus":{"text":"Load Disqus","order":-1}},"activeClass":"disqus"},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":false}}</script><script src="/js/config.js"></script>
-
-<link rel="stylesheet" href="plugins/line-numbers/prism-line-numbers.css" data-noprefix />
-
-     <!--link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/-->
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wenchan3918.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":{"disqus":{"text":"Load Disqus","order":-1}},"activeClass":"disqus"},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":false}}</script><script src="/js/config.js"></script>
 
 
     <meta name="description" content="前言最近需要支援同事開發iOS APP，同事主要用Storyboard開發，自己則想用主流技術SwiftUI開發，因此需要將兩者混合使用，這邊紀錄一下研究過程。  為何想使用SwiftUI，主要使用過Android Jetpack Compose經驗，覺得Jetpack Compose的開發體驗非常好，因此想嘗試SwiftUI。SwiftUI主要能提供的優點為:  元件佈局異動不用再重新調整約束。">
@@ -34,6 +35,7 @@
 <meta property="og:site_name" content="Kevin技術博客">
 <meta property="og:description" content="前言最近需要支援同事開發iOS APP，同事主要用Storyboard開發，自己則想用主流技術SwiftUI開發，因此需要將兩者混合使用，這邊紀錄一下研究過程。  為何想使用SwiftUI，主要使用過Android Jetpack Compose經驗，覺得Jetpack Compose的開發體驗非常好，因此想嘗試SwiftUI。SwiftUI主要能提供的優點為:  元件佈局異動不用再重新調整約束。">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/87516906?v=4">
 <meta property="og:image" content="https://i.imgur.com/zb8pUNd.png">
 <meta property="og:image" content="https://i.imgur.com/1JtpbPp.png">
 <meta property="og:image" content="https://i.imgur.com/AYbd9kF.png">
@@ -41,7 +43,7 @@
 <meta property="og:image" content="https://i.imgur.com/MVCtL3M.png">
 <meta property="og:image" content="https://i.imgur.com/RAIGRla.png">
 <meta property="article:published_time" content="2022-11-22T08:22:11.000Z">
-<meta property="article:modified_time" content="2022-11-23T04:16:46.553Z">
+<meta property="article:modified_time" content="2022-11-23T15:44:12.036Z">
 <meta property="article:author" content="Kevin">
 <meta property="article:tag" content="專案日誌">
 <meta property="article:tag" content="Swift">
@@ -49,7 +51,7 @@
 <meta property="article:tag" content="Xib">
 <meta property="article:tag" content="SwiftUI">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/zb8pUNd.png">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/87516906?v=4">
 
 
 <link rel="canonical" href="http://wenchan3918.github.io/2022/11/22/swiftui-storyboard-mixed-use/">
@@ -78,7 +80,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: 'ca-pub-6548710525032578',
+          google_ad_client: 'ca-pub-1032936476429770',
           enable_page_level_ads: true
      });
 
@@ -279,7 +281,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2022-11-23 12:16:46" itemprop="dateModified" datetime="2022-11-23T12:16:46+08:00">2022-11-23</time>
+      <time title="修改時間：2022-11-23 23:44:12" itemprop="dateModified" datetime="2022-11-23T23:44:12+08:00">2022-11-23</time>
     </span>
 
   
@@ -309,14 +311,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>4.5k</span>
+      <span>11k</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>8 分鐘</span>
+      <span>21 分鐘</span>
     </span>
 </div>
 
@@ -339,10 +341,187 @@
 </ul>
 </blockquote>
 <p><br>經過溝通會以功能模組進行切割，因此只要針對功能模組UI實作、API串接後，後續提供參數給同事進行呼叫即可。</p>
-<h1 id="下載原始碼"><a href="#下載原始碼" class="headerlink" title="下載原始碼"></a>下載原始碼</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/wenchan3918/swiftui_storyboard_mixed_use/tree/main">Github專案原始碼</a></li>
-<li>專案快速啟動指令<code>kevin_swiftui_storyboard_mixed_use__xcode</code> <a href="/2022/11/16/tool-project-manage/">[多種開發語言專案管理工具]</a><br><img data-src="https://i.imgur.com/zb8pUNd.png"></li>
-</ul>
+<h1 id="下載原始碼"><a href="#下載原始碼" class="headerlink" title="下載原始碼"></a>下載原始碼</h1><style>
+                /* css part */
+                .gr-card {
+
+                    --gr-header-width-proportion: 10%;
+                    --gr-footer-width-proportion: 10%;
+                    --gr-content-width-proportion: 80%;
+
+                    --gr-header-min-width: 80px;
+                    --gr-footer-min-width: 80px;
+
+                    --gr-card-element-margin: 6px 10px 6px 10px; /* header content footer*/
+
+                    display: flex;
+                    background-color: #fff;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, .12);
+                    margin-bottom: 20px;
+                    vertical-align: middle;
+                    position: relative;
+                }
+
+                .gr-header {
+                    width: var(--gr-header-width-proportion);
+                    min-width: var(--gr-header-min-width);
+                    margin: var(--gr-card-element-margin);
+                    background-color: #fff;
+                    /* background-color: blueviolet; */
+                }
+
+                .gr-header img {
+                    width: 80px;
+                    height: 80px;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin: 0px;
+                }
+
+                .gr-content {
+                    width: var(--gr-content-width-proportion);
+                    margin: var(--gr-card-element-margin);
+                    background-color: #fff;
+                    text-align: left;
+                }
+
+                #gr-github-icon {
+                    font-size: 1.3rem;
+                }
+                .gr-fullname {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+                .gr-fullname p {
+                    line-height: 2rem;
+                    margin: 10px 0px 0px 0px;
+                    padding: 0;
+                    font-size: .83rem;
+                    font-weight: bolder;
+                }
+
+                .gr-description {
+                    font-size: .8rem;
+                    line-height: 1.6rem;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+                .gr-footer {
+                    width: var(--gr-footer-width-proportion);
+                    min-width: var(--gr-footer-min-width);
+                    margin: var(--gr-card-element-margin);
+                    display: flex;
+                    /* background-color: aqua; */
+                    background-color: #fff;
+                    position: relative;
+                    padding: 0px;
+                }
+
+                .gr-language-star {
+                    margin: auto auto 22px auto;
+                    text-align: center;
+                    opacity: 1;
+                }
+
+                .gr-language {
+                    font-size: .8rem;
+                    font-weight: 600;
+                    line-height: 2.2rem;
+                    color: #2070d3;
+                }
+
+                #gr-star-icon {
+                    font-size: .8rem;
+                    display: inherit;
+                }
+
+                .gr-card-toolbar{
+                    display:flex;
+                    width: 100%;
+                    height: 100%;
+
+                    position: absolute;
+
+                    opacity: 0;
+                    animation: fade-out;
+                    animation-duration: .4s;
+                    z-index: -1;
+                    /* background-color: #2070d3; */
+                }
+
+                .gr-repo-link {
+                    margin: auto;
+                }
+
+                #gr-repo-link-icon {
+                    font-size: 16px;
+                }
+                /* animation part */
+
+                @keyframes fade-in {
+                    0% {opacity: 0;}/*初始状态 透明度为0*/
+                    100% {opacity: 1;}/*结束状态 透明度为1*/
+                }
+
+                @keyframes fade-out {
+                    0% {opacity: 1;}/*初始状态 透明度为0*/
+                    100% {opacity: 0;}/*结束状态 透明度为1*/
+                }
+
+                .gr-card:hover .gr-language-star{
+                    opacity: 0;
+                    animation: fade-out;
+                    animation-duration: .3s;
+                }
+
+                .gr-card:hover .gr-card-toolbar{
+                    opacity: 1;
+                    animation: fade-in;
+                    animation-duration: .6s;
+                    z-index: 1;
+                }
+                </style>
+
+                <div class="gr-card">
+                    <div class="gr-header">
+                        <img data-src="https://avatars.githubusercontent.com/u/87516906?v=4" alt="">
+                    </div>
+                    <div class="gr-content">
+                        <div class="gr-fullname">
+                            <p><i class="fab fa-github fa-lg" aria-hidden="true" id="gr-github-icon"></i> wenchan3918/swiftui_storyboard_mixed_use</p>
+                        </div>
+                        <div class="gr-description">
+                            SwiftUI 與 Storyboard 混合使用研究
+                        </div>
+                    </div>
+                    <div class="gr-footer">
+                        <div class="gr-language-star">
+                            <span class="gr-language">Swift</span>
+                            <i class="far fa-star" aria-hidden="true" id='gr-star-icon'> 0</i>
+                        </div>
+                        <div class="gr-card-toolbar">
+                            <div class="gr-repo-link">
+                                <a href="https://github.com/wenchan3918/swiftui_storyboard_mixed_use" target="_blank" rel="noopener noreferrer"
+                                    title="Open in a new TAB">
+                                    <i class="fas fa-external-link-square-alt fa-lg" aria-hidden="true" style="color: black;" id="gr-repo-link-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<p>專案快速啟動指令<code>kevin_swiftui_storyboard_mixed_use__xcode</code> <a href="/2022/11/16/tool-project-manage/">[多種開發語言專案管理工具]</a><br><img data-src="https://i.imgur.com/zb8pUNd.png"></p>
 <h1 id="驗證項目"><a href="#驗證項目" class="headerlink" title="驗證項目"></a>驗證項目</h1><ul>
 <li>Storyboard嵌入SwiftUI(這次專案需求)</li>
 <li>Xib嵌入SwiftUI</li>
@@ -443,13 +622,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="總字數">46k</span>
+    <span title="總字數">65k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">1:24</span>
+    <span title="所需總閱讀時間">1:59</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -470,6 +649,7 @@
       </span>
     </span>
 </div>
+
 
 
 
@@ -516,26 +696,6 @@
 
 
 
-<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-
-<script>
-var options = {
-  bottom: '32px',
-  right: '32px',
-  left: 'unset',
-  time: '0.5s',
-  mixColor: 'transparent',
-  backgroundColor: 'transparent',
-  buttonColorDark: '#100f2c',
-  buttonColorLight: '#fff',
-  saveInCookies: true,
-  label: '🌓',
-  autoMatchOsTheme: true
-}
-const darkmode = new Darkmode(options);
-window.darkmode = darkmode;
-darkmode.showWidget();
-</script>
 <script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wenchan3918","count":true,"i18n":{"disqus":"disqus"}}</script>
 <script src="/js/third-party/comments/disqus.js"></script>
 
