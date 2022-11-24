@@ -323,15 +323,15 @@
 <li><a href="https://flameshot.org/#features">flameshot</a>: 用於截圖與標記說明並存放於剪貼簿。</li>
 <li><a href="https://picgo.github.io/PicGo-Doc/zh/guide/">PicGO</a>: 用於自動上傳並取得雲端連結。</li>
 </ul>
-<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">剪貼簿,</span> <span class="string">Clipboard,</span> <span class="string">clip-board</span></span><br><span class="line"><span class="string">工作流,</span> <span class="string">Workflow,</span> <span class="string">work-flow</span></span><br><span class="line"><span class="string">製圖,</span> <span class="string">Diagram,</span> <span class="string">dia-gram</span></span><br><span class="line"><span class="string">分析,</span> <span class="string">Analytics,</span> <span class="string">an-aly-tics</span></span><br></pre></td></tr></table></figure>
-
-
-
-
+<h1 id="遠端服務器管理"><a href="#遠端服務器管理" class="headerlink" title="遠端服務器管理"></a>遠端服務器管理</h1><ul>
+<li><a href="https://tabby.sh/">Tabby</a>: ssh登入管理<br>可方便同時多開ssh連線，當下次重新開啟軟體時，會自動連線上次的SSH，<code>減少每次輸入連線指令時間</code>。</li>
+<li><a href="https://github.com/htop-dev/htop">htop</a>: 監控系統資源使用情況<br>為<code>top</code>指令加強版，提供豐富色彩顯示。安裝於遠端Ubuntu服務器<code>apt install htop</code>，然後輸入<code>htop</code>指令即可。</li>
+<li><a href="https://github.com/tgraf/bmon">bmon</a>: 監控網路流量當前使用情況<br>安裝於遠端Ubuntu服務器<code>apt install bmon</code>，然後輸入<code>bmon</code>指令即可。</li>
+</ul>
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">剪貼簿,</span> <span class="string">Clipboard,</span> <span class="string">clip-board</span></span><br><span class="line"><span class="string">工作流,</span> <span class="string">Workflow,</span> <span class="string">work-flow</span></span><br><span class="line"><span class="string">製圖,</span> <span class="string">Diagram,</span> <span class="string">dia-gram</span></span><br><span class="line"><span class="string">分析,</span> <span class="string">Analytics,</span> <span class="string">an-aly-tics</span></span><br><span class="line"><span class="string">方便,</span> <span class="string">Convenient,</span> <span class="string">con-ven-ient</span></span><br><span class="line"><span class="string">豐富色彩,</span> <span class="string">Rich</span> <span class="string">color,</span> <span class="string">rich-color</span></span><br><span class="line"><span class="string">流量,</span> <span class="string">Traffic,</span> <span class="string">traf-fic</span></span><br><span class="line"><span class="string">加強,</span> <span class="string">Enhance,</span> <span class="string">en-hance</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <tags>
-        <tag>Hexo</tag>
         <tag>Tools</tag>
       </tags>
   </entry>
