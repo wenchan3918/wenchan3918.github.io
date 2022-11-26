@@ -5211,10 +5211,10 @@ blockquote.pullquote.right {
   content: '';
 }
 [data-theme='dark'] #article-container code {
-  background: #222;
+  background: #121212;
 }
 [data-theme='dark'] #article-container pre > code {
-  background: #272727;
+  background: #171717;
 }
 [data-theme='dark'] #article-container figure.highlight {
   -webkit-box-shadow: none;
