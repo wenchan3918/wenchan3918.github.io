@@ -5211,10 +5211,10 @@ blockquote.pullquote.right {
   content: '';
 }
 [data-theme='dark'] #article-container code {
-  background: #2c2c2c;
+  background: #111;
 }
 [data-theme='dark'] #article-container pre > code {
-  background: #171717;
+  background: #161616;
 }
 [data-theme='dark'] #article-container figure.highlight {
   -webkit-box-shadow: none;
@@ -5314,7 +5314,7 @@ blockquote.pullquote.right {
 }
 [data-theme='dark'] .read-mode {
   --font-color: rgba(255,255,255,0.7);
-  --readmode-light-color: #0d0d0d;
+  --readmode-light-color: #222;
   --white: rgba(255,255,255,0.9);
   --light-grey: rgba(255,255,255,0.7);
   --gray: rgba(255,255,255,0.7);
