@@ -121,7 +121,39 @@
   <entry>
     <title>常用工具</title>
     <url>/2022/11/22/tools/</url>
-    <content><![CDATA[<h1 id="寫部落格"><a href="#寫部落格" class="headerlink" title="寫部落格"></a>寫部落格</h1><h2 id="寫作"><a href="#寫作" class="headerlink" title="寫作"></a>寫作</h2><p>如果你希望寫作能:</p>
+    <content><![CDATA[<h1 id="專案管理"><a href="#專案管理" class="headerlink" title="專案管理"></a>專案管理</h1><h2 id="圖片"><a href="#圖片" class="headerlink" title="圖片"></a>圖片</h2><ul>
+<li><a href="https://tw.eagle.cool/">Eagle</a> 圖片管理工具，可針對個專案進行分類，提供方便的預覽、編輯功能。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/YBMJCTR.png"></li>
+<li><a href="https://lanhuapp.com/">藍湖</a> 提供設計師與前端工程師溝通的工具，可將設計稿上傳至藍湖，並提供設計稿的連結給前端工程師，前端工程師可在藍湖上進行註解，並提供設計師修改。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270224440.png"></li>
+</ul>
+<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><ul>
+<li><a href="https://obsidian.md/">Obsidian</a> 一個 Markdown 筆記軟體，支援連結、標籤、搜尋、編輯等功能，以及有豐富插件。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/gbKPKtP.png"></li>
+</ul>
+<h2 id="程式碼控管"><a href="#程式碼控管" class="headerlink" title="程式碼控管"></a>程式碼控管</h2><ul>
+<li><a href="https://www.sourcetreeapp.com/">SourceTree</a> 一個 Git GUI 工具，提供方便的圖形化操作介面。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://wac-cdn.atlassian.com/dam/jcr:580c367b-c240-453d-aa18-c7ced44324f9/hero-mac-screenshot.png?cdnVersion=638"></li>
+</ul>
+<h2 id="任務追蹤"><a href="#任務追蹤" class="headerlink" title="任務追蹤"></a>任務追蹤</h2><ul>
+<li><a href="https://trello.com/zh-Hant">Trello</a> 任務追蹤工具，可針對個專案進行分類，提供方便的預覽、編輯功能。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://images.ctfassets.net/rz1oowkt5gyp/7pYWhpQ3vnntxoShaImNws/790e8f85143b62adef9428dcf7e8c7dc/trello_1_zh-TW.png?w=1902&fm=webp"></li>
+</ul>
+<span id="more"></span>
+
+<h1 id="後端開發"><a href="#後端開發" class="headerlink" title="後端開發"></a>後端開發</h1><h2 id="環境部署"><a href="#環境部署" class="headerlink" title="環境部署"></a>環境部署</h2><ul>
+<li><a href="https://docs.docker.com/desktop/install/mac-install/">Docker Desktop</a> Docker 桌面版，可用於架設開發環境，可快速部署開發所需環境。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/vsK6pdZ.png"></li>
+</ul>
+<h2 id="資料庫"><a href="#資料庫" class="headerlink" title="資料庫"></a>資料庫</h2><ul>
+<li><a href="https://dbeaver.io/">DBeaver</a> 跨平台的視覺化資料庫管理工具，可以連接多種資料庫，例如MySQL、PostgreSQL、Oracle、SQLite等。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270230410.png"></li>
+</ul>
+<h2 id="API測試"><a href="#API測試" class="headerlink" title="API測試"></a>API測試</h2><ul>
+<li><a href="https://www.apifox.cn/">Apifox</a> API測試工具，方便管理多專案所需API。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/5KJoyhZ.png"></li>
+</ul>
+<h2 id="程式編輯"><a href="#程式編輯" class="headerlink" title="程式編輯"></a>程式編輯</h2><ul>
+<li><a href="https://www.jetbrains.com/pycharm/">Pycharm</a> Python IDE，提供方便的程式碼編輯功能。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270234300.png"></li>
+</ul>
+<h1 id="維運-DevOps"><a href="#維運-DevOps" class="headerlink" title="維運(DevOps)"></a>維運(DevOps)</h1><ul>
+<li><a href="https://tabby.sh/">Tabby</a> ssh登入管理，可方便同時多開ssh連線，當下次重新開啟軟體時，會自動連線上次的SSH，可有效減少每次輸入連線指令的時間。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/9p77PI6.png"></li>
+<li><a href="https://github.com/htop-dev/htop">htop</a> 監控系統資源使用情況，為<code>top</code>指令加強版，提供豐富色彩顯示。<br>安裝於遠端Ubuntu服務器<code>apt install htop -y</code>，然後輸入<code>htop</code>指令即可。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270228390.png"></li>
+<li><a href="https://github.com/tgraf/bmon">bmon</a> 監控網路流量當前使用情況，安裝於遠端Ubuntu服務器<code>apt install bmon -y</code><br>，然後輸入<code>bmon</code>指令即可。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270229668.png"></li>
+</ul>
+<h1 id="寫部落格"><a href="#寫部落格" class="headerlink" title="寫部落格"></a>寫部落格</h1><h2 id="寫作"><a href="#寫作" class="headerlink" title="寫作"></a>寫作</h2><p>如果你希望寫作能:</p>
 <ul>
 <li>用 Markdown 寫文章</li>
 <li>用 Git 管理文章</li>
@@ -132,25 +164,21 @@
 </ul>
 <p>推薦工具:</p>
 <ul>
-<li><a href="https://hexo.io/zh-tw/">Hexo</a>: 靜態網站產生器</li>
-<li><a href="https://theme-next.js.org/">Next</a>: Hexo 主題，整合許多插件。</li>
-<li><a href="https://butterfly.js.org/">Butterfly</a>: Butterfly主題<code>(推薦)</code>，整合許多插件，例如Google Analytics、留言板DISQUS等。</li>
+<li><a href="https://hexo.io/zh-tw/">Hexo</a> 靜態網站產生器</li>
+<li><a href="https://theme-next.js.org/">Next</a> Hexo 主題，整合許多插件。</li>
+<li><a href="https://butterfly.js.org/">Butterfly</a> Butterfly主題<code>(推薦)</code>，整合許多插件，例如Google Analytics、留言板DISQUS等。</li>
 </ul>
-<span id="more"></span>
-
 <h2 id="製圖"><a href="#製圖" class="headerlink" title="製圖"></a>製圖</h2><p>寫作常常需要針對某個畫面做截圖並標記說明，然後上傳到雲端後，再從雲端取得連結，整個工作流:<br><code>截圖-&gt;標記說明-&gt;存放到剪貼簿-&gt;直接上傳到雲端-&gt;自動把連結貼到剪貼簿</code>。</p>
 <p>推薦工具:</p>
 <ul>
-<li><a href="https://flameshot.org/#features">flameshot</a>: 用於截圖與標記說明並存放於剪貼簿。</li>
-<li><a href="https://picgo.github.io/PicGo-Doc/zh/guide/">PicGO</a>: 用於自動上傳並取得雲端連結。</li>
+<li><a href="https://flameshot.org/#features">flameshot</a> 用於截圖與標記說明並存放於剪貼簿。</li>
+<li><a href="https://picgo.github.io/PicGo-Doc/zh/guide/">PicGO</a> 用於自動上傳並取得雲端連結。</li>
 </ul>
 <h2 id="圖片素材"><a href="#圖片素材" class="headerlink" title="圖片素材"></a>圖片素材</h2><ul>
-<li><a href="https://www.pexels.com/zh-tw/search/%E6%8A%80%E8%A1%93/">Pexels</a>: 有許多免費的高品質圖片素材。</li>
+<li><a href="https://www.pexels.com/zh-tw/search/%E6%8A%80%E8%A1%93/">Pexels</a> 有許多免費的高品質圖片素材。</li>
 </ul>
-<h1 id="遠端服務器管理"><a href="#遠端服務器管理" class="headerlink" title="遠端服務器管理"></a>遠端服務器管理</h1><ul>
-<li><a href="https://tabby.sh/">Tabby</a>: ssh登入管理<br>可方便同時多開ssh連線，當下次重新開啟軟體時，會自動連線上次的SSH，<code>可有效減少每次輸入連線指令的時間</code>。</li>
-<li><a href="https://github.com/htop-dev/htop">htop</a>: 監控系統資源使用情況<br>為<code>top</code>指令加強版，提供豐富色彩顯示。安裝於遠端Ubuntu服務器<code>apt install htop -y</code>，然後輸入<code>htop</code>指令即可。</li>
-<li><a href="https://github.com/tgraf/bmon">bmon</a>: 監控網路流量當前使用情況<br>安裝於遠端Ubuntu服務器<code>apt install bmon -y</code>，然後輸入<code>bmon</code>指令即可。</li>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="美股投資"><a href="#美股投資" class="headerlink" title="美股投資"></a>美股投資</h2><ul>
+<li><a href="https://www.futunn.com/hk/download/mac">富途牛牛</a> 可查詢美股資訊，並下單買賣，豐富的免費指標功能。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/WlepF2u.jpg"></li>
 </ul>
 <h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">剪貼簿,</span> <span class="string">Clipboard,</span> <span class="string">clip-board</span></span><br><span class="line"><span class="string">工作流,</span> <span class="string">Workflow,</span> <span class="string">work-flow</span></span><br><span class="line"><span class="string">製圖,</span> <span class="string">Diagram,</span> <span class="string">dia-gram</span></span><br><span class="line"><span class="string">分析,</span> <span class="string">Analytics,</span> <span class="string">an-aly-tics</span></span><br><span class="line"><span class="string">方便,</span> <span class="string">Convenient,</span> <span class="string">con-ve-ni-ent</span></span><br><span class="line"><span class="string">豐富色彩,</span> <span class="string">Rich</span> <span class="string">color,</span> <span class="string">rich-color</span></span><br><span class="line"><span class="string">流量,</span> <span class="string">Traffic,</span> <span class="string">traf-fic</span></span><br><span class="line"><span class="string">加強,</span> <span class="string">Enhance,</span> <span class="string">en-hance</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
