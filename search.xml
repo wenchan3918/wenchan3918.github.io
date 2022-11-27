@@ -137,7 +137,7 @@
 <span id="more"></span>
 
 <h1 id="後端開發"><a href="#後端開發" class="headerlink" title="後端開發"></a>後端開發</h1><h2 id="環境部署"><a href="#環境部署" class="headerlink" title="環境部署"></a>環境部署</h2><ul>
-<li><a href="https://docs.docker.com/desktop/install/mac-install/">Docker Desktop</a> Docker 桌面版，可用於架設開發環境，可快速部署開發所需環境。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/vsK6pdZ.png"></li>
+<li><a href="https://docs.docker.com/desktop/install/mac-install/">Docker Desktop</a> 桌面版，可用於架設開發環境，可快速部署開發所需環境。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/vsK6pdZ.png"></li>
 </ul>
 <h2 id="資料庫管理"><a href="#資料庫管理" class="headerlink" title="資料庫管理"></a>資料庫管理</h2><ul>
 <li><a href="https://dbeaver.io/">DBeaver</a> 跨平台的視覺化資料庫管理工具，可以連接多種資料庫，例如MySQL、PostgreSQL、Oracle、SQLite等。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270230410.png"></li>
@@ -346,6 +346,56 @@ ol, ul {
 <h1 id="演算法"><a href="#演算法" class="headerlink" title="演算法"></a>演算法</h1><ul>
 <li><a href="https://wenchan3918.github.io/2022/11/20/leetcode/multi-style-date-format/">多種營業時間格式處理</a></li>
 </ul>
+<h1 id="線上面試"><a href="#線上面試" class="headerlink" title="線上面試"></a>線上面試</h1><h2 id="資訊收集"><a href="#資訊收集" class="headerlink" title="資訊收集"></a>資訊收集</h2><p>了解公司與老闆背景，以及目前公司產品與服務。</p>
+<ul>
+<li><p><a href="https://www.kdanmobile.com/zh-tw/aboutus">官方-關於我們</a></p>
+</li>
+<li><p><a href="https://www.bnext.com.tw/article/60477/kdan-mobile">從純賣軟體走向訂閱制！ 凱鈿科技抓準海外企業需求，擁800萬會員發展B2B</a></p>
+</li>
+<li><p><a href="https://www.digitimes.com.tw/iot/article.asp?cat=158&cat1=20&id=0000579569_HHT47KZI70XPVF8A3QVXC">對話凱鈿CEO蘇柏州：雲端服務未來10年將有爆發性成長</a></p>
+</li>
+<li><p>公司: <a href="https://www.kdanmobile.com/zh-tw">凱鈿行動科技股份有限公司</a></p>
+</li>
+<li><p>主要產品:</p>
+<ul>
+<li>Creativity 365 讓彙整資料、編輯、創作、發布的流程變得快速、簡單。一次擁有全系列產品，包含Animation Desk、Write-on<br>Video、NoteLedge和Markup。</li>
+<li>Document 365提供個人與企業用戶絕佳的PDF文件解決方案，搭載凱鈿最受歡迎的PDF Reader行動與桌機全系列軟體，滿足您在任一裝置上的各種工作情境。</li>
+<li>點點簽 DottedSign將簽名流程數位化，讓您立即享有行動工作的自由。點點簽幫您將工作流程化繁為簡，讓商務推展更順暢！<ul>
+<li><a href="https://www.youtube.com/watch?v=rAPKSlv-WEA">點點簽DottedSign - 電子簽名教學，3分鐘完成簽署！</a></li>
+<li>[<a href="https://www.dottedsign.com/zh-tw/blog/product/introduce-of-electronic-signature">電子簽章是什麼？怎麼用？5步驟完成無紙化電子簽署！</a></li>
+</ul>
+</li>
+</ul>
+<p>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270911060.png"> </p>
+<p>  <a href="https://play.google.com/store/apps/dev?id=8130748137413633357">Google Play</a><br>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270959987.png">
+  </p>
+</li>
+<li><p>老闆: 蘇柏州</p>
+</li>
+<li><p>核心成員: 24位。</p>
+</li>
+<li><p>資本額: 3億，實收1.65億。</p>
+</li>
+</ul>
+<h2 id="資訊消化與理解"><a href="#資訊消化與理解" class="headerlink" title="資訊消化與理解"></a>資訊消化與理解</h2><ul>
+<li>公司主要針對企業客戶，提供合約雲端作業平台，可在線上編輯合約內容與電子簽署等服務。</li>
+<li>從提供服務類型得知，市場應該是以企業客戶為主。</li>
+<li>Creativity 365與Notion看似為同質性產品。</li>
+<li>公司獲利來源，APP廣告與雲端服務訂閱。</li>
+<li>提供的雲端數位創作，競爭應該滿大的，例如office 365、notion。</li>
+</ul>
+<h2 id="提問問題"><a href="#提問問題" class="headerlink" title="提問問題"></a>提問問題</h2><ul>
+<li>公司未來發展方向應該以企業客戶為主要市場?希望再提供哪方面服務(還有哪些痛點)，以目前產品點點簽應該已經解決到客戶合約簽署痛點。</li>
+<li>目前技術團隊組成，APP、前端、後端規模？是否有還有其他職務？，如AI、運維？</li>
+<li>職務內容，希望協助解決哪方面問題？</li>
+<li>公司目前使用的技術有哪些？</li>
+<li>公司是否有提供創新環境？讓員工能有時間跟環境進行idea發想與創新？</li>
+<li>一個專案任務下來，從需求到實作整個過程會是如何進行討論與分配？</li>
+<li>目前公司提供的服務，對未來遠景與競爭對手有什麼看法？</li>
+<li>公司主要獲利來源？</li>
+</ul>
+<h2 id="面試過程"><a href="#面試過程" class="headerlink" title="面試過程"></a>面試過程</h2><p>HR電話面談[2022&#x2F;11&#x2F;25]:<br>輕切熱忱，主要通知技術面試時間跟內容，並介紹公司文化背景與產品以及辦公情況。</p>
+<p>技術視訊面試[2022&#x2F;11&#x2F;27 14:00]:<br>come soon…</p>
 <h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">交付項目,</span> <span class="string">Deliverable,</span> <span class="string">de-live-rable</span></span><br><span class="line"><span class="string">未實作任務,</span> <span class="string">Unimplemented</span> <span class="string">Task,</span> <span class="string">un-im-ple-ment-ed</span> <span class="string">task</span></span><br><span class="line"><span class="string">藥局,</span> <span class="string">Pharmacy,</span> <span class="string">phar-ma-cy</span></span><br><span class="line"><span class="string">關聯性排序,</span> <span class="string">Related</span> <span class="string">Sorting,</span> <span class="string">re-lated</span> <span class="string">sort-ing</span></span><br><span class="line"><span class="string">導入自動化測試,</span> <span class="string">Import</span> <span class="string">Automated</span> <span class="string">Testing,</span> <span class="string">im-port</span> <span class="string">auto-mat-ed</span> <span class="string">test-ing</span></span><br><span class="line"><span class="string">容器,</span> <span class="string">Container,</span> <span class="string">con-tai-ner</span></span><br><span class="line"><span class="string">理解需求,</span> <span class="string">Understand</span> <span class="string">Requirement,</span> <span class="string">un-der-stand</span> <span class="string">re-quire-ment</span></span><br><span class="line"><span class="string">餘額不足,</span> <span class="string">Insufficient</span> <span class="string">Balance,</span> <span class="string">in-suf-fi-cient</span> <span class="string">bal-ance</span></span><br><span class="line"><span class="string">面試筆試,</span> <span class="string">Interview</span> <span class="string">Written</span> <span class="string">Test,</span> <span class="string">in-ter-view</span> <span class="string">writ-ten</span> <span class="string">test</span></span><br><span class="line"><span class="string">效能分析,</span> <span class="string">Performance</span> <span class="string">Analysis,</span> <span class="string">per-form-ance</span> <span class="string">ana-ly-sis</span></span><br><span class="line"><span class="string">架構圖,</span> <span class="string">Architecture</span> <span class="string">Diagram,</span> <span class="string">arch-itec-ture</span> <span class="string">dia-gram</span></span><br></pre></td></tr></table></figure>
 
 
