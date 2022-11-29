@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>今日開張</title>
+    <url>/2022/11/12/first-article/</url>
+    <content><![CDATA[<p>主要筆記:</p>
+<ul>
+<li>程式專案:專案過程研究的技術、架構、與遇到的問題分享。</li>
+<li>金融知識</li>
+<li>工具分享</li>
+</ul>
+<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">金融知識,</span> <span class="string">Knowledge</span> <span class="string">of</span> <span class="string">finance,</span> <span class="string">know-l-edge</span> <span class="string">of</span> <span class="string">fin-ance</span></span><br><span class="line"><span class="string">架構,</span> <span class="string">Architecture,</span> <span class="string">arch-itec-ture</span></span><br><span class="line"><span class="string">研究過程,</span> <span class="string">Research</span> <span class="string">process,</span> <span class="string">re-search</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">技術,</span> <span class="string">Technology,</span> <span class="string">tech-no-logy</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>SwiftUI 與 Storyboard 混合使用研究</title>
     <url>/2022/11/22/swiftui-storyboard-mixed-use/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近需要支援同事開發iOS APP，同事主要用Storyboard開發，自己則想用主流技術SwiftUI開發，因此需要將兩者混合使用，這邊紀錄一下研究過程。</p>
@@ -61,15 +80,11 @@
       </tags>
   </entry>
   <entry>
-    <title>今日開張</title>
-    <url>/2022/11/12/first-article/</url>
-    <content><![CDATA[<p>主要筆記:</p>
-<ul>
-<li>程式專案:專案過程研究的技術、架構、與遇到的問題分享。</li>
-<li>金融知識</li>
-<li>工具分享</li>
-</ul>
-<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">金融知識,</span> <span class="string">Knowledge</span> <span class="string">of</span> <span class="string">finance,</span> <span class="string">know-l-edge</span> <span class="string">of</span> <span class="string">fin-ance</span></span><br><span class="line"><span class="string">架構,</span> <span class="string">Architecture,</span> <span class="string">arch-itec-ture</span></span><br><span class="line"><span class="string">研究過程,</span> <span class="string">Research</span> <span class="string">process,</span> <span class="string">re-search</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">技術,</span> <span class="string">Technology,</span> <span class="string">tech-no-logy</span></span><br></pre></td></tr></table></figure>
+    <title>Python之禪</title>
+    <url>/2022/11/28/the_zen_of_python/</url>
+    <content><![CDATA[<p>Python之禪 最早由Tim Peters在Python郵件列表中發表，它包含了影響Python程式語言設計的19條軟體編寫原則。<br>在最初及後來的一些版本中，一共包含20條，其中第20條是「這一條留空請 Guido 來填寫」。<br>這留空的一條從未公布也可能並不存在。這些文本屬於公共領域。 [<a href="https://zh.wikipedia.org/zh-tw/Python%E4%B9%8B%E7%A6%85">維基百科</a>]</p>
+<p>執行<code>import this</code>，可以看到以下的輸出：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">The Zen of Python<span class="punctuation">,</span> by Tim Peters</span><br><span class="line"></span><br><span class="line">Beautiful is better than ugly. </span><br><span class="line">優美優於醜陋</span><br><span class="line"></span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">明瞭優於隱晦</span><br><span class="line"></span><br><span class="line">Simple is better than complex.</span><br><span class="line">簡單優於複雜</span><br><span class="line"></span><br><span class="line">Complex is better than complicated.</span><br><span class="line">複雜優於凌亂</span><br><span class="line"></span><br><span class="line">Flat is better than nested.</span><br><span class="line">扁平勝於嵌套</span><br><span class="line"></span><br><span class="line">Sparse is better than dense.</span><br><span class="line">稀疏勝於稠密</span><br><span class="line"></span><br><span class="line">Readability counts.</span><br><span class="line">可讀性很重要</span><br><span class="line"></span><br><span class="line">Special cases aren&#x27;t special enough to break the rules.</span><br><span class="line">特例亦不可違背原則</span><br><span class="line"></span><br><span class="line">Although practicality beats purity.</span><br><span class="line">雖然實用性勝過純粹性</span><br><span class="line"></span><br><span class="line">Errors should never pass silently.</span><br><span class="line">錯誤不應該悄無聲息地過去</span><br><span class="line"></span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">除非明確地沈默。</span><br><span class="line"></span><br><span class="line">In the face of ambiguity<span class="punctuation">,</span> refuse the temptation to guess.</span><br><span class="line">面對模棱兩可時，拒絕猜測的誘惑</span><br><span class="line"></span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">任何問題應有一種，且最好只有一種，顯而易見的解決方法</span><br><span class="line"></span><br><span class="line">Although that way may not be obvious at first unless you&#x27;re Dutch.</span><br><span class="line">雖然你一開始的方法不一定是最好的，除非你是荷蘭人</span><br><span class="line">解決一個問題的方法可能會有很多種，但在 Python 中，只選擇最明顯的那一個</span><br><span class="line"></span><br><span class="line">Now is better than never.</span><br><span class="line">做優於不做</span><br><span class="line"></span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">然而不假思索還不如不做</span><br><span class="line"></span><br><span class="line">If the implementation is hard to explain<span class="punctuation">,</span> it&#x27;s a bad idea.</span><br><span class="line">很難解釋的，必然是壞方法</span><br><span class="line"></span><br><span class="line">If the implementation is easy to explain<span class="punctuation">,</span> it may be a good idea.</span><br><span class="line">很好解釋的，可能是好方法</span><br><span class="line">        </span><br><span class="line">Namespaces are one honking great idea -- let&#x27;s do more of those!</span><br><span class="line">命名空間是個絕佳機制<span class="punctuation">,</span> 要充分利用</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
@@ -78,6 +93,9 @@
 
 
 ]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
   </entry>
   <entry>
     <title>多種開發語言專案管理工具</title>
@@ -147,6 +165,10 @@
 </ul>
 <h2 id="程式編輯"><a href="#程式編輯" class="headerlink" title="程式編輯"></a>程式編輯</h2><ul>
 <li><a href="https://www.jetbrains.com/pycharm/">Pycharm</a> Python IDE，提供方便的程式碼編輯功能。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270234300.png"></li>
+</ul>
+<h2 id="終端指令"><a href="#終端指令" class="headerlink" title="終端指令"></a>終端指令</h2><ul>
+<li><a href="https://github.com/antonmedv/fx">fx</a> 格式化JSON結果，安裝<code>brew install fx</code>，使用方法為<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl --location --request \</span><br><span class="line">GET <span class="string">&#x27;https://mask.langgo.app/api/pharmacy/?week=3&amp;open_at=02:00&amp;close_at=20:00&amp;fields=name,opening_hours&amp;page_size=1&#x27;</span> \</span><br><span class="line">| fx .</span><br></pre></td></tr></table></figure>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211291052640.png"></li>
 </ul>
 <h1 id="維運-DevOps"><a href="#維運-DevOps" class="headerlink" title="維運(DevOps)"></a>維運(DevOps)</h1><ul>
 <li><a href="https://tabby.sh/">Tabby</a> ssh登入管理，可方便同時多開ssh連線，當下次重新開啟軟體時，會自動連線上次的SSH，可有效減少每次輸入連線指令的時間。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/9p77PI6.png"></li>
@@ -237,8 +259,8 @@
 
 ]]></content>
       <tags>
-        <tag>演算法</tag>
         <tag>Python</tag>
+        <tag>演算法</tag>
       </tags>
   </entry>
   <entry>
@@ -441,9 +463,8 @@ ol, ul {
 </ul>
 </li>
 </ul>
-<p>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270911060.png"> </p>
-<p>  <a href="https://play.google.com/store/apps/dev?id=8130748137413633357">Google Play</a><br>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270959987.png">
-  </p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270911060.png"></p>
+<p><a href="https://play.google.com/store/apps/dev?id=8130748137413633357">Google Play</a><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270959987.png"></p>
 </li>
 <li><p>老闆: 蘇柏州 先生。</p>
 </li>
@@ -452,7 +473,7 @@ ol, ul {
 <li><p>資本額: 3億，實收1.65億。</p>
 </li>
 </ul>
-<h2 id="資訊消化與理解"><a href="#資訊消化與理解" class="headerlink" title="資訊消化與理解"></a>資訊消化與理解</h2><ul>
+<h2 id="資訊消化"><a href="#資訊消化" class="headerlink" title="資訊消化"></a>資訊消化</h2><ul>
 <li>公司主要針對企業客戶，提供合約雲端作業平台，可在線上編輯合約內容與電子簽署等服務。</li>
 <li>從提供服務類型得知，市場應該是以企業客戶為主。</li>
 <li>Creativity 365與Notion看似為同質性產品。</li>
@@ -462,6 +483,7 @@ ol, ul {
 <h2 id="提問問題"><a href="#提問問題" class="headerlink" title="提問問題"></a>提問問題</h2><ul>
 <li>公司未來發展方向應該以企業客戶為主要市場?希望再提供哪方面服務(還有哪些痛點)，以目前產品點點簽應該已經解決到客戶合約簽署痛點。</li>
 <li>目前技術團隊組成，APP、前端、後端規模？是否有還有其他職務？，如AI、運維？</li>
+<li>三位技術經理主要負責領域？</li>
 <li>職務內容，希望協助解決哪方面問題？</li>
 <li>公司目前使用的技術有哪些？</li>
 <li>公司是否有提供創新環境？讓員工能有時間跟環境進行idea發想與創新？</li>
@@ -469,7 +491,7 @@ ol, ul {
 <li>目前公司提供的服務，對未來遠景與競爭對手有什麼看法？</li>
 <li>公司主要獲利來源？</li>
 </ul>
-<h2 id="面試過程"><a href="#面試過程" class="headerlink" title="面試過程"></a>面試過程</h2><p>HR電話面談[2022&#x2F;11&#x2F;25]:<br>輕切熱忱，主要通知技術面試時間跟內容，並介紹公司文化背景與產品以及辦公情況。</p>
+<h2 id="面試過程"><a href="#面試過程" class="headerlink" title="面試過程"></a>面試過程</h2><p>HR電話面談[2022&#x2F;11&#x2F;25]:<br>輕切熱忱，主要通知技術面試時間跟內容，並介紹公司文化、背景、產品以及辦公情況。</p>
 <p>技術視訊面試[2022&#x2F;11&#x2F;27 14:00]:<br>come soon…</p>
 <h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">交付項目,</span> <span class="string">Deliverable,</span> <span class="string">de-live-rable</span></span><br><span class="line"><span class="string">未實作任務,</span> <span class="string">Unimplemented</span> <span class="string">Task,</span> <span class="string">un-im-ple-ment-ed</span> <span class="string">task</span></span><br><span class="line"><span class="string">藥局,</span> <span class="string">Pharmacy,</span> <span class="string">phar-ma-cy</span></span><br><span class="line"><span class="string">關聯性排序,</span> <span class="string">Related</span> <span class="string">Sorting,</span> <span class="string">re-lated</span> <span class="string">sort-ing</span></span><br><span class="line"><span class="string">導入自動化測試,</span> <span class="string">Import</span> <span class="string">Automated</span> <span class="string">Testing,</span> <span class="string">im-port</span> <span class="string">auto-mat-ed</span> <span class="string">test-ing</span></span><br><span class="line"><span class="string">容器,</span> <span class="string">Container,</span> <span class="string">con-tai-ner</span></span><br><span class="line"><span class="string">理解需求,</span> <span class="string">Understand</span> <span class="string">Requirement,</span> <span class="string">un-der-stand</span> <span class="string">re-quire-ment</span></span><br><span class="line"><span class="string">餘額不足,</span> <span class="string">Insufficient</span> <span class="string">Balance,</span> <span class="string">in-suf-fi-cient</span> <span class="string">bal-ance</span></span><br><span class="line"><span class="string">面試筆試,</span> <span class="string">Interview</span> <span class="string">Written</span> <span class="string">Test,</span> <span class="string">in-ter-view</span> <span class="string">writ-ten</span> <span class="string">test</span></span><br><span class="line"><span class="string">效能分析,</span> <span class="string">Performance</span> <span class="string">Analysis,</span> <span class="string">per-form-ance</span> <span class="string">ana-ly-sis</span></span><br><span class="line"><span class="string">架構圖,</span> <span class="string">Architecture</span> <span class="string">Diagram,</span> <span class="string">arch-itec-ture</span> <span class="string">dia-gram</span></span><br></pre></td></tr></table></figure>
 
