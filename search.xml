@@ -24,7 +24,7 @@
     <url>/2022/12/01/python-print-performance/</url>
     <content><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>針對Python print效能測試，用實際數據進行比較。</p>
 <h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212011359133.png"></p>
-<h1 id="測試方法"><a href="#測試方法" class="headerlink" title="測試方法"></a>測試方法</h1><!-- Get UTF-8 Size (python) -->
+<h1 id="測試方法"><a href="#測試方法" class="headerlink" title="測試方法"></a>測試方法</h1><!-- Get UTF-8 -->
 <!-- Begin -->
 <script src="https://gist.github.com/wenchan3918/daaf36d70ed309bb25ccc7b986b36d35.js"></script>
 <!-- End -->
@@ -154,7 +154,7 @@
 <ul>
 <li>p6: 專案編號，也是簡短指令，輸入p6指令可開啟此專案。</li>
 <li>私人綜合服務: 專案簡短描述。</li>
-<li>kevin_mycloud__python: 專案代號，也是長常令，輸入kevin_mycloud__python指令可開啟此專案。</li>
+<li>kevin_mycloud__python: 專案代號，也是長指令，輸入kevin_mycloud__python指令可開啟此專案。</li>
 <li>~&#x2F;icloud&#x2F;Code&#x2F;cek&#x2F;mycloud: 專案路徑。</li>
 </ul>
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/HDUY3R5.jpg"></p>
