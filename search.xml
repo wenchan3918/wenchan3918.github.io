@@ -20,6 +20,122 @@
 ]]></content>
   </entry>
   <entry>
+    <title>iOS開發備忘錄</title>
+    <url>/2022/12/03/ios-memo/</url>
+    <content><![CDATA[<h1 id="swiftUI語法學習"><a href="#swiftUI語法學習" class="headerlink" title="swiftUI語法學習"></a>swiftUI語法學習</h1><p>當您學過android &#x2F; css佈局，會有一些佈局知識以及關鍵字的瞭解，因此在學習SwiftUI基本上可以用這些關鍵字+swiftui進行谷歌搜尋，就可以找到相對應用法，例如：</p>
+<ol>
+<li>想Image元件做左邊padding就會收尋<code>swiftui padding left 10px</code>[<a href="https://www.google.com/search?client=firefox-b-d&q=swiftui+padding+left+10px">搜尋結果</a>]</li>
+<li>想對垂直佈局(VStack)做左邊對齊就會收尋<code>swiftui vstack align left</code>[<a href="https://www.google.com/search?client=firefox-b-d&q=swiftui+vstack+align+left">搜尋結果</a>]</li>
+</ol>
+<h1 id="SceneDelegate-start-with-ViewController"><a href="#SceneDelegate-start-with-ViewController" class="headerlink" title="SceneDelegate start with ViewController"></a>SceneDelegate start with ViewController</h1><figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SceneDelegate</span>: <span class="title class_">UIResponder</span>, <span class="title class_">UIWindowSceneDelegate</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> window: <span class="type">UIWindow</span>?</span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">scene</span>(<span class="keyword">_</span> <span class="params">scene</span>: <span class="type">UIScene</span>, <span class="params">willConnectTo</span> <span class="params">session</span>: <span class="type">UISceneSession</span>, <span class="params">options</span> <span class="params">connectionOptions</span>: <span class="type">UIScene</span>.<span class="type">ConnectionOptions</span>) &#123;</span><br><span class="line">        <span class="comment">// Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.</span></span><br><span class="line">        <span class="comment">// If using a storyboard, the `window` property will automatically be initialized and attached to the scene.</span></span><br><span class="line">        <span class="comment">// This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">#available</span>(<span class="keyword">iOS</span> <span class="number">13.0</span>, <span class="operator">*</span>) &#123;</span><br><span class="line">            window<span class="operator">?</span>.overrideUserInterfaceStyle <span class="operator">=</span> .light</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">guard</span> <span class="keyword">let</span> <span class="keyword">_</span> <span class="operator">=</span> (scene <span class="keyword">as?</span> <span class="type">UIWindowScene</span>) <span class="keyword">else</span> &#123; <span class="keyword">return</span> &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//從Scene啟動ViewController</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">let</span> windowScene <span class="operator">=</span> scene <span class="keyword">as?</span> <span class="type">UIWindowScene</span> &#123;</span><br><span class="line">           <span class="keyword">let</span> window <span class="operator">=</span> <span class="type">UIWindow</span>(windowScene: windowScene)</span><br><span class="line">           window.rootViewController <span class="operator">=</span> <span class="type">SwiftUIViewController</span>()</span><br><span class="line">           <span class="keyword">self</span>.window <span class="operator">=</span> window</span><br><span class="line">           window.makeKeyAndVisible()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="常用快捷鍵"><a href="#常用快捷鍵" class="headerlink" title="常用快捷鍵"></a>常用快捷鍵</h1><ul>
+<li>格式化代碼：Command + A -&gt; control + I</li>
+<li>區域折疊：Command+Option+Left&#x2F;Right</li>
+<li>全檔折疊：Shift+Command+Option+Left&#x2F;Right</li>
+<li></li>
+<li></li>
+</ul>
+<h1 id="XCode常用設定"><a href="#XCode常用設定" class="headerlink" title="XCode常用設定"></a>XCode常用設定</h1><ul>
+<li>開啟左側折疊符號：Settings… -&gt; Text Editing -&gt; 『Code folding ribbon』勾選<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212041107252.png"></li>
+</ul>
+<h1 id="SwiftUI元件"><a href="#SwiftUI元件" class="headerlink" title="SwiftUI元件"></a>SwiftUI元件</h1><p>常用元件參數設定說明。</p>
+<h2 id="佈局"><a href="#佈局" class="headerlink" title="佈局"></a>佈局</h2><p><a href="https://developer.apple.com/documentation/swiftui/layout-fundamentals">官方佈局文件</a></p>
+<h3 id="VStack-垂直佈局"><a href="#VStack-垂直佈局" class="headerlink" title="VStack 垂直佈局"></a>VStack 垂直佈局</h3><ul>
+<li><p>顯示方式<br>item1<br>item2<br>item3</p>
+</li>
+<li><p>常用參數</p>
+</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="type">VStack</span>(</span><br><span class="line">alignment: .leading, </span><br><span class="line">spacing: <span class="number">10</span></span><br><span class="line">) &#123;</span><br><span class="line">    <span class="type">Text</span>(<span class="string">&quot;Hi VStack&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="HStack-水平佈局"><a href="#HStack-水平佈局" class="headerlink" title="HStack 水平佈局"></a>HStack 水平佈局</h3><ul>
+<li><p>顯示方式<br>item1 item2 item3</p>
+</li>
+<li><p>常用參數</p>
+</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="type">HStack</span>(</span><br><span class="line">alignment: .leading, </span><br><span class="line">spacing: <span class="number">10</span></span><br><span class="line">) &#123;</span><br><span class="line">    <span class="type">Text</span>(<span class="string">&quot;Hi HStack&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ZStack-層疊佈局"><a href="#ZStack-層疊佈局" class="headerlink" title="ZStack 層疊佈局"></a>ZStack 層疊佈局</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://docs-assets.developer.apple.com/published/a01f19de9badebe45a5e43e5b54a5518/SwiftUI-ZStack-offset-rectangles~dark@2x.png" alt="顯示方式 來源-官方提供"></p>
+<ul>
+<li>常用參數</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="type">ZStack</span>(</span><br><span class="line">alignment: .leading, </span><br><span class="line">spacing: <span class="number">10</span></span><br><span class="line">) &#123;</span><br><span class="line">    <span class="type">Text</span>(<span class="string">&quot;Hi VStack&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">垂直,</span> <span class="string">Vertical,</span> <span class="string">ver-ti-cal</span></span><br><span class="line"><span class="string">水平,</span> <span class="string">Horizontal,</span> <span class="string">ho-ri-zon-tal</span></span><br><span class="line"><span class="string">代碼折疊色帶,</span> <span class="string">Code</span> <span class="string">folding</span> <span class="string">ribbon,</span> <span class="string">code</span> <span class="string">fold-ing</span> <span class="string">rib-bon</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>swift</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux系統管理備忘</title>
+    <url>/2022/12/01/linux-management/</url>
+    <content><![CDATA[<h1 id="帳號權限管理"><a href="#帳號權限管理" class="headerlink" title="帳號權限管理"></a>帳號權限管理</h1><h2 id="用root做SSH登入，被駭客風險？"><a href="#用root做SSH登入，被駭客風險？" class="headerlink" title="用root做SSH登入，被駭客風險？"></a>用root做SSH登入，被駭客風險？</h2><ol>
+<li>如果root遠端登入且是用密碼做認證，因為所有系統是以root當帳號名稱，所以駭客可以只針對密碼進行暴力破解密碼進而駭進系統。</li>
+<li>如果用其他名稱當帳號(例如kkevin)做SSH登入，駭客必須猜中你的帳號才能進行密碼暴力破解。</li>
+<li>如果用root做SSH登入且是用private rsa key做認證，這樣駭客想破解難度就會高於密碼認證很多。</li>
+<li>如果用kkevin用密碼做認證且kkevin有sudo權限，安全性就會在kkevin密碼的複雜度。</li>
+</ol>
+<h2 id="ssh-keygen"><a href="#ssh-keygen" class="headerlink" title="ssh-keygen"></a>ssh-keygen</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">風險,</span> <span class="string">Risk,</span> <span class="string">ri-sk</span></span><br><span class="line"><span class="string">駭客,</span> <span class="string">Hacker,</span> <span class="string">ha-ker</span></span><br><span class="line"><span class="string">暴力破解,</span> <span class="string">Brute</span> <span class="string">Force,</span> <span class="string">bru-te</span> <span class="string">for-ce</span></span><br><span class="line"><span class="string">駭進系統,</span> <span class="string">Hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system,</span> <span class="string">hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nginx解析</title>
+    <url>/2022/11/29/nginx-conf/</url>
+    <content><![CDATA[<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><p><strong>Nginx主要提供功能</strong>:</p>
+<ul>
+<li><span style="color:#6d4ee9;font-weight:bold">反向代理(Reverse Proxy)</span><br>反向代理是一種代理模式，它將客戶端的請求轉發給不同的伺服器，並將伺服器的回應轉發給客戶端。<a href="https://zh.wikipedia.org/zh-tw/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86">wiki</a></li>
+<li><span style="color:#6d4ee9;font-weight:bold">負載平衡(Load Balancing)</span><br>負載平衡是一種將請求分配給多個伺服器的方法，以達到平衡伺服器負載的目的。<a href="https://zh.wikipedia.org/zh-tw/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1">wiki</a></li>
+<li><span style="color:#6d4ee9;font-weight:bold">靜態資源服務(Static Resource Service)</span><br>靜態資源服務是一種將靜態資源(如圖片、CSS、JavaScript等)儲存於網頁伺服器上，並由網頁伺服器直接提供給客戶端的服務。</li>
+<li><span style="color:#6d4ee9;font-weight:bold">動態資源服務(Dynamic Resource Service)</span><br>動態資源服務是一種將動態資源(如PHP、ASP、JSP等)儲存於網頁伺服器上，並由網頁伺服器將請求轉發給應用伺服器，再由應用伺服器產生回應，<br>最後由網頁伺服器將回應轉發給客戶端的服務。</li>
+<li><span style="color:#6d4ee9;font-weight:bold">Http憑證存取服務(Http Certificate Access Service)</span><br>Http憑證存取服務是一種將HTTP憑證(如SSL憑證)儲存於網頁伺服器上，並由網頁伺服器直接提供給客戶端的服務。</li>
+</ul>
+<h2 id="nginx-conf"><a href="#nginx-conf" class="headerlink" title="nginx.conf"></a>nginx.conf</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#常用設定</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the number of worker processes; recommended value is the number of</span></span><br><span class="line"><span class="comment"># cores that are being used by your server</span></span><br><span class="line"><span class="comment"># auto will default to number of vcpus/cores</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># vcpus(Virtual CPUs): 虛擬核心，例如EC2 t3a.small(vCPU: 2, Memory: 2 GiB)，則worker_processes 2</span></span><br><span class="line"><span class="comment"># ref: https://aws.amazon.com/tw/ec2/instance-types/</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># cores: 實體核心，intel Xeon E5-1428L (6 cores)，則worker_processes 6</span></span><br><span class="line"><span class="comment"># ref: https://ark.intel.com/content/www/tw/zh/ark/products/66662/intel-xeon-processor-e51428l-15m-cache-1-8-ghz.html</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 設定策略: </span></span><br><span class="line"><span class="comment"># 1. 沒有想法或不確定，使用預設auto</span></span><br><span class="line"><span class="comment"># 2. 如果是單核心，設定為1</span></span><br><span class="line"><span class="comment"># 2. 如果有SSL、gzip這樣比較消耗CPU的工作，同時有多個CPU核心的話，可以設定與CPU的數量一樣。(worker_processes: CPU核心數)</span></span><br><span class="line">worker_processes auto;</span><br><span class="line"><span class="comment"># 最小:1, 最大:CPU核心數</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 進程最大開檔數，如果想調高worker_connections上限，可透過這參數強制調高</span></span><br><span class="line">worker_rlimit_nofile 65535;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Max Number of Clients/Second = worker_processes * worker_connections</span></span><br><span class="line">events &#123;</span><br><span class="line">    <span class="comment"># Define the maximum number of simultaneous connections that can be opened by a worker process</span></span><br><span class="line">    <span class="comment"># 如果瀏覽器同時發出一隻API以及一張圖片請求，這時候瀏覽器將佔領兩個連線，</span></span><br><span class="line">    <span class="comment"># worker_connections 513的設定代表同時只能有512/2的瀏覽器進行連線</span></span><br><span class="line">    <span class="comment"># TODO worker_connections 1時 每隻API都會延遲10秒再進行回覆，使用併發同時觀察每個API的回覆時間</span></span><br><span class="line">    <span class="comment"># 設定策略: </span></span><br><span class="line">    <span class="comment"># 1. 沒有想法或不確定，使用預設512</span></span><br><span class="line">    <span class="comment"># 2. 最大值為系統進程最大開啟數，可用ulimit -a|grep &quot;open files&quot;觀看</span></span><br><span class="line">    <span class="comment"># 3. </span></span><br><span class="line">    worker_connections  512;</span><br><span class="line"><span class="comment">#https://www.gushiciku.cn/pl/pHDk/zh-tw</span></span><br><span class="line"><span class="comment">#https://linyencheng.github.io/2019/07/13/tool-nginx/</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    <span class="comment"># Specifies the maximum accepted body size of a client request, as</span></span><br><span class="line">    <span class="comment"># indicated by the request header Content-Length. If the stated content</span></span><br><span class="line">    <span class="comment"># length is greater than this size, then the client receives the HTTP</span></span><br><span class="line">    <span class="comment"># error code 413. Set to 0 to disable.</span></span><br><span class="line">    <span class="comment"># client_max_body_size 0;</span></span><br><span class="line">    <span class="comment"># Request Body內容大小上限</span></span><br><span class="line">   client_max_body_size 1M;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 與後端Application server 連線的timeout時間</span></span><br><span class="line">fastcgi_connect_timeout 1800;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 向後端Application server 傳送資料的timeout時間</span></span><br><span class="line">fastcgi_send_timeout  1800;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 從後端Application server 接收資料的timeout時間</span></span><br><span class="line">fastcgi_read_timeout  1800;</span><br></pre></td></tr></table></figure>
+
+<h1 id="PostgresSQL"><a href="#PostgresSQL" class="headerlink" title="PostgresSQL"></a>PostgresSQL</h1><h2 id="postgresql-conf"><a href="#postgresql-conf" class="headerlink" title="postgresql.conf"></a>postgresql.conf</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">負載平衡,</span> <span class="string">Load</span> <span class="string">Balancing,</span> <span class="string">load</span> <span class="string">ba-lan-ce-ing</span></span><br><span class="line"><span class="string">靜態資源服務,</span> <span class="string">Static</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">sta-tic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">動態資源服務,</span> <span class="string">Dynamic</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">dy-na-mic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">Http憑證存取服務,</span> <span class="string">Http</span> <span class="string">Certificate</span> <span class="string">Access</span> <span class="string">Service,</span> <span class="string">cer-ti-fi-cate</span> <span class="string">ac-ce-ss</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">效能,</span> <span class="string">Performance,</span> <span class="string">per-form-an-ce</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Nginx</tag>
+        <tag>PostgresSQL</tag>
+        <tag>Backend</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PyCharm環境設定</title>
+    <url>/2022/12/03/pycharm-settings/</url>
+    <content><![CDATA[<h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><ul>
+<li>避免文字過長格式化後導致行數過多。<br>Preferences -&gt; Editor -&gt; Code Style -&gt; Markdown<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212031119846.png"></li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">導致,</span> <span class="string">Cause,</span> <span class="string">cau-se</span></span><br><span class="line"><span class="string">避免,</span> <span class="string">Avoid,</span> <span class="string">av-oid</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python備忘錄</title>
+    <url>/2022/12/02/python-memo/</url>
+    <content><![CDATA[<!-- Get UTF-8 Size (ANSI C) -->
+<!-- Begin -->
+<script src="https://gist.github.com/ChihSeanHsu/27b2f1817daacdf8de5283c22eb5cc05.js"></script>
+<!-- End -->
+
+<h1 id="命名規範"><a href="#命名規範" class="headerlink" title="命名規範"></a>命名規範</h1><p>參考<a href="https://peps.python.org/pep-0008/">PEP 8</a>代碼規範</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">PEP</span> <span class="number">8</span><span class="string">,</span> <span class="string">Python</span> <span class="string">Enhancement</span> <span class="string">Proposals</span> <span class="number">8</span><span class="string">,</span> <span class="string">pep</span> <span class="number">8</span></span><br><span class="line"><span class="string">增強,</span> <span class="string">Enhancement,</span> <span class="string">en-han-ce-ment</span></span><br><span class="line"><span class="string">建議,</span> <span class="string">Proposals,</span> <span class="string">pro-pos-als</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python print效能測試</title>
     <url>/2022/12/01/python-print-performance/</url>
     <content><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>針對Python print效能測試，用實際數據進行比較。</p>
@@ -246,6 +362,46 @@
       </tags>
   </entry>
   <entry>
+    <title>美股學習</title>
+    <url>/2022/11/23/us-stock/</url>
+    <content><![CDATA[<h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><ul>
+<li><a href="https://rl.fx678.com/">重要數據公布日期-匯通財經(推薦)</a></li>
+<li><a href="https://hk.investing.com/economic-calendar/">重要數據公布日期-investing</a></li>
+</ul>
+<h1 id="相關網址"><a href="#相關網址" class="headerlink" title="相關網址"></a>相關網址</h1><ul>
+<li><p><a href="https://www.bls.gov/schedule/news_release/cpi.htm">CPI from 美國勞動部| En</a></p>
+</li>
+<li><p><a href="https://docs.google.com/spreadsheets/d/1YJZl4iqs00CQiCrHi6MqQRJa_v3imw7ehB3QSzCR-MU/edit#gid=0">美國關鍵數據發布日期統計</a></p>
+</li>
+<li><p><a href="https://www.macromicro.me/collections/4/us-employ-relative/87/jolts">財經M平方 | 繁體</a></p>
+</li>
+<li><p><a href="https://hk.investing.com/economic-calendar/">Investing | 繁體</a><br>英為財情是一個財經平台和新聞網站，是全球三大金融網站之一，由德羅·埃弗拉特創立於2007年。它提供市場行情，有關股票、期貨、期權、分析以及大宗物資等方面的資訊。2021年4月，該網站被一家位於東亞的國際投資基金以5億美元的價格收購。</p>
+</li>
+<li><p><a href="https://rili.jhrs.net/jiedu/">金匯網 | 簡體</a></p>
+</li>
+</ul>
+<h1 id="常用指標"><a href="#常用指標" class="headerlink" title="常用指標"></a>常用指標</h1><ul>
+<li><p><a href="https://www.bls.gov/news.release/empsit.toc.htm">Employment Situation | 非農就業數據</a><br>非農業就業變化量度上一個月受聘人數(不含農業)<br>的變化。創造新工作機會是衡量消費者支出的重要指標。而消費者支出亦是經濟活動的重要元素。如果指標比預期高，應視為美元強勢&#x2F;上漲，反之，則應視為美元弱勢&#x2F;走跌。[<a href="https://hk.investing.com/economic-calendar/nonfarm-payrolls-227">Investing</a>]</p>
+</li>
+<li><p><a href="https://www.bls.gov/news.release/cpi.toc.htm">CPI | Consumer Price Index | 消費者物價指數</a><br>消費者物價指數測量的是隨著時間的變化，包括多種（常有幾百種）商品和服務零售價格的平均變化值。[<a href="https://zh.wikipedia.org/zh-tw/%E6%B6%88%E8%B2%BB%E8%80%85%E7%89%A9%E5%83%B9%E6%8C%87%E6%95%B8">wiki</a>]</p>
+</li>
+<li><p><a href="https://www.bls.gov/news.release/eci.toc.htm">ECI | Employment Cost Index | 勞動成本指數</a><br>勞動成本指數是由勞工部針對勞動成本的變化，設計出來的指數。它的調查內容並無產業和職業種類的差別。主要根據工資薪水、受雇人福利對雇主的成本兩項因素的變化來計算指數。[<a href="https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=bce974c0-a976-46ca-af2d-885a79581d0b">理財網</a>]</p>
+</li>
+<li><p><a href="https://www.bls.gov/news.release/ppi.toc.htm">PPI | Producer Price Index | 生產物價指數</a><br>生產物價指數是一個用來衡量製造商出廠價的平均變化的指數，它是統計部門收集和整理的若干個物價指數中的一個。如果生產物價指數比預期數值高時，表明有通貨膨脹的風險。如果生產物價指數比預期數值低時，則表明有通貨緊縮的風險。[<a href="https://wiki.mbalib.com/zh-tw/%E9%9B%87%E4%BD%A3%E6%88%90%E6%9C%AC%E6%8C%87%E6%95%B0">wiki</a>]</p>
+</li>
+</ul>
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">股票,</span> <span class="string">Stock,</span> <span class="string">stock</span></span><br><span class="line"><span class="string">生產物價指數,</span> <span class="string">Producer</span> <span class="string">Price</span> <span class="string">Index</span></span><br><span class="line"><span class="string">非農就業數據,</span> <span class="string">Employment</span> <span class="string">Situation,</span> <span class="string">em-ploy-ment</span> <span class="string">si-tu-ation</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>股票</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>常用單字</title>
     <url>/2022/11/11/word-of-the-day/</url>
     <content><![CDATA[<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Android:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">縱向,</span> <span class="string">portrait,</span> <span class="string">port-rait</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">橫向,</span> <span class="string">landscape,</span> <span class="string">land-scape</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">方向,</span> <span class="string">orientation,</span> <span class="string">o-rien-ta-tion</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">曲線,</span> <span class="string">spline,</span> <span class="string">sp-line</span></span><br><span class="line"></span><br><span class="line"><span class="attr">IT:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">副駕駛,</span> <span class="string">copilot,</span> <span class="string">co-pi-lot</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Stock:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">股票,</span> <span class="string">Stock</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Politics:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">政治,</span> <span class="string">Politics</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">民主黨,</span> <span class="string">Democracy</span> <span class="string">party,</span> <span class="string">demo-cracy</span> <span class="string">party</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">共和黨,</span> <span class="string">Republicans</span> <span class="string">party,</span> <span class="string">re-pub-li-cans</span> <span class="string">party</span></span><br><span class="line"></span><br><span class="line"><span class="attr">SSLMMS:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">電壓,</span> <span class="string">Voltage,</span> <span class="string">vol-tage</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">電流,</span> <span class="string">Current,</span> <span class="string">cur-rent</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Lovbabi:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">The</span> <span class="string">log</span> <span class="string">is</span> <span class="string">bound</span> <span class="string">to</span> <span class="string">the</span> <span class="string">student</span> <span class="string">model.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Education:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">National</span> <span class="string">Taiwan</span> <span class="string">University</span> <span class="string">of</span> <span class="string">Science</span> <span class="string">and</span> <span class="string">Technology</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">No.43,</span> <span class="string">Keelung</span> <span class="string">Rd.,</span> <span class="string">Sec.4,</span> <span class="string">Da&#x27;an</span> <span class="string">Dist.,</span> <span class="string">Taipei</span> <span class="string">City</span> <span class="number">106335</span><span class="string">,</span> <span class="string">Taiwan</span> <span class="string">(R.O.C.)</span> <span class="string">台北</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Associate</span> <span class="string">of</span> <span class="string">Electrical</span> <span class="string">Engineering</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">Month:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">January</span> <span class="string">Jan</span> <span class="string">一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">February</span> <span class="string">Feb</span> <span class="string">二月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">March</span> <span class="string">Mar</span> <span class="string">三月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">April</span> <span class="string">Apr</span> <span class="string">四月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">May</span> <span class="string">May</span> <span class="string">五月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">June</span> <span class="string">Jun</span> <span class="string">六月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">July</span> <span class="string">Jul</span> <span class="string">七月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">August</span> <span class="string">Aug</span> <span class="string">八月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">September</span> <span class="string">Sep</span> <span class="string">九月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">October</span> <span class="string">Oct</span> <span class="string">十月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">November</span> <span class="string">Nov</span> <span class="string">十一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">December</span> <span class="string">Dec</span> <span class="string">十二月</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -382,8 +538,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Android</tag>
         <tag>Backend</tag>
+        <tag>Android</tag>
         <tag>作品集</tag>
         <tag>Side Project</tag>
       </tags>
@@ -632,8 +788,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Android</tag>
         <tag>Backend</tag>
+        <tag>Android</tag>
         <tag>作品集</tag>
         <tag>Frontend</tag>
       </tags>
