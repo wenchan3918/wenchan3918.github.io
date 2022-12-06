@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>今日開張</title>
-    <url>/2022/11/12/first-article/</url>
-    <content><![CDATA[<p>主要筆記:</p>
-<ul>
-<li>程式專案:專案過程研究的技術、架構、與遇到的問題分享。</li>
-<li>金融知識</li>
-<li>工具分享</li>
-</ul>
-<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">金融知識,</span> <span class="string">Knowledge</span> <span class="string">of</span> <span class="string">finance,</span> <span class="string">know-l-edge</span> <span class="string">of</span> <span class="string">fin-ance</span></span><br><span class="line"><span class="string">架構,</span> <span class="string">Architecture,</span> <span class="string">arch-itec-ture</span></span><br><span class="line"><span class="string">研究過程,</span> <span class="string">Research</span> <span class="string">process,</span> <span class="string">re-search</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">技術,</span> <span class="string">Technology,</span> <span class="string">tech-no-logy</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>iOS開發備忘錄</title>
     <url>/2022/12/03/ios-memo/</url>
     <content><![CDATA[<h1 id="swiftUI語法學習"><a href="#swiftUI語法學習" class="headerlink" title="swiftUI語法學習"></a>swiftUI語法學習</h1><p>當您學過android &#x2F; css佈局，會有一些佈局知識以及關鍵字的瞭解，因此在學習SwiftUI基本上可以用這些關鍵字+swiftui進行谷歌搜尋，就可以找到相對應用法，例如：</p>
@@ -71,6 +52,25 @@
       </tags>
   </entry>
   <entry>
+    <title>今日開張</title>
+    <url>/2022/11/12/first-article/</url>
+    <content><![CDATA[<p>主要筆記:</p>
+<ul>
+<li>程式專案:專案過程研究的技術、架構、與遇到的問題分享。</li>
+<li>金融知識</li>
+<li>工具分享</li>
+</ul>
+<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">金融知識,</span> <span class="string">Knowledge</span> <span class="string">of</span> <span class="string">finance,</span> <span class="string">know-l-edge</span> <span class="string">of</span> <span class="string">fin-ance</span></span><br><span class="line"><span class="string">架構,</span> <span class="string">Architecture,</span> <span class="string">arch-itec-ture</span></span><br><span class="line"><span class="string">研究過程,</span> <span class="string">Research</span> <span class="string">process,</span> <span class="string">re-search</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">技術,</span> <span class="string">Technology,</span> <span class="string">tech-no-logy</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>Linux系統管理備忘</title>
     <url>/2022/12/01/linux-management/</url>
     <content><![CDATA[<h1 id="帳號權限管理"><a href="#帳號權限管理" class="headerlink" title="帳號權限管理"></a>帳號權限管理</h1><h2 id="用root做SSH登入，被駭客風險？"><a href="#用root做SSH登入，被駭客風險？" class="headerlink" title="用root做SSH登入，被駭客風險？"></a>用root做SSH登入，被駭客風險？</h2><ol>
@@ -83,6 +83,18 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PyCharm環境設定</title>
+    <url>/2022/12/03/pycharm-settings/</url>
+    <content><![CDATA[<h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><ul>
+<li>避免文字過長格式化後導致行數過多。<br>Preferences -&gt; Editor -&gt; Code Style -&gt; Markdown<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212031119846.png"></li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">導致,</span> <span class="string">Cause,</span> <span class="string">cau-se</span></span><br><span class="line"><span class="string">避免,</span> <span class="string">Avoid,</span> <span class="string">av-oid</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -103,21 +115,9 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">負載平衡,</span> <span class="string">Load</span> <span class="string">Balancing,</span> <span class="string">load</span> <span class="string">ba-lan-ce-ing</span></span><br><span class="line"><span class="string">靜態資源服務,</span> <span class="string">Static</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">sta-tic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">動態資源服務,</span> <span class="string">Dynamic</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">dy-na-mic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">Http憑證存取服務,</span> <span class="string">Http</span> <span class="string">Certificate</span> <span class="string">Access</span> <span class="string">Service,</span> <span class="string">cer-ti-fi-cate</span> <span class="string">ac-ce-ss</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">效能,</span> <span class="string">Performance,</span> <span class="string">per-form-an-ce</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>Nginx</tag>
         <tag>PostgresSQL</tag>
         <tag>Backend</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PyCharm環境設定</title>
-    <url>/2022/12/03/pycharm-settings/</url>
-    <content><![CDATA[<h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><ul>
-<li>避免文字過長格式化後導致行數過多。<br>Preferences -&gt; Editor -&gt; Code Style -&gt; Markdown<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212031119846.png"></li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">導致,</span> <span class="string">Cause,</span> <span class="string">cau-se</span></span><br><span class="line"><span class="string">避免,</span> <span class="string">Avoid,</span> <span class="string">av-oid</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Python</tag>
+        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
@@ -362,6 +362,13 @@
       </tags>
   </entry>
   <entry>
+    <title>常用單字</title>
+    <url>/2022/11/11/word-of-the-day/</url>
+    <content><![CDATA[<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Android:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">縱向,</span> <span class="string">portrait,</span> <span class="string">port-rait</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">橫向,</span> <span class="string">landscape,</span> <span class="string">land-scape</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">方向,</span> <span class="string">orientation,</span> <span class="string">o-rien-ta-tion</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">曲線,</span> <span class="string">spline,</span> <span class="string">sp-line</span></span><br><span class="line"></span><br><span class="line"><span class="attr">IT:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">副駕駛,</span> <span class="string">copilot,</span> <span class="string">co-pi-lot</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Stock:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">股票,</span> <span class="string">Stock</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Politics:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">政治,</span> <span class="string">Politics</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">民主黨,</span> <span class="string">Democracy</span> <span class="string">party,</span> <span class="string">demo-cracy</span> <span class="string">party</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">共和黨,</span> <span class="string">Republicans</span> <span class="string">party,</span> <span class="string">re-pub-li-cans</span> <span class="string">party</span></span><br><span class="line"></span><br><span class="line"><span class="attr">SSLMMS:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">電壓,</span> <span class="string">Voltage,</span> <span class="string">vol-tage</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">電流,</span> <span class="string">Current,</span> <span class="string">cur-rent</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Lovbabi:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">The</span> <span class="string">log</span> <span class="string">is</span> <span class="string">bound</span> <span class="string">to</span> <span class="string">the</span> <span class="string">student</span> <span class="string">model.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Education:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">National</span> <span class="string">Taiwan</span> <span class="string">University</span> <span class="string">of</span> <span class="string">Science</span> <span class="string">and</span> <span class="string">Technology</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">No.43,</span> <span class="string">Keelung</span> <span class="string">Rd.,</span> <span class="string">Sec.4,</span> <span class="string">Da&#x27;an</span> <span class="string">Dist.,</span> <span class="string">Taipei</span> <span class="string">City</span> <span class="number">106335</span><span class="string">,</span> <span class="string">Taiwan</span> <span class="string">(R.O.C.)</span> <span class="string">台北</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Associate</span> <span class="string">of</span> <span class="string">Electrical</span> <span class="string">Engineering</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">Month:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">January</span> <span class="string">Jan</span> <span class="string">一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">February</span> <span class="string">Feb</span> <span class="string">二月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">March</span> <span class="string">Mar</span> <span class="string">三月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">April</span> <span class="string">Apr</span> <span class="string">四月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">May</span> <span class="string">May</span> <span class="string">五月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">June</span> <span class="string">Jun</span> <span class="string">六月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">July</span> <span class="string">Jul</span> <span class="string">七月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">August</span> <span class="string">Aug</span> <span class="string">八月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">September</span> <span class="string">Sep</span> <span class="string">九月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">October</span> <span class="string">Oct</span> <span class="string">十月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">November</span> <span class="string">Nov</span> <span class="string">十一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">December</span> <span class="string">Dec</span> <span class="string">十二月</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+  </entry>
+  <entry>
     <title>美股學習</title>
     <url>/2022/11/23/us-stock/</url>
     <content><![CDATA[<h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><ul>
@@ -400,13 +407,6 @@
       <tags>
         <tag>股票</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>常用單字</title>
-    <url>/2022/11/11/word-of-the-day/</url>
-    <content><![CDATA[<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Android:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">縱向,</span> <span class="string">portrait,</span> <span class="string">port-rait</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">橫向,</span> <span class="string">landscape,</span> <span class="string">land-scape</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">方向,</span> <span class="string">orientation,</span> <span class="string">o-rien-ta-tion</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">曲線,</span> <span class="string">spline,</span> <span class="string">sp-line</span></span><br><span class="line"></span><br><span class="line"><span class="attr">IT:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">副駕駛,</span> <span class="string">copilot,</span> <span class="string">co-pi-lot</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Stock:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">股票,</span> <span class="string">Stock</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Politics:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">政治,</span> <span class="string">Politics</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">民主黨,</span> <span class="string">Democracy</span> <span class="string">party,</span> <span class="string">demo-cracy</span> <span class="string">party</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">共和黨,</span> <span class="string">Republicans</span> <span class="string">party,</span> <span class="string">re-pub-li-cans</span> <span class="string">party</span></span><br><span class="line"></span><br><span class="line"><span class="attr">SSLMMS:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">電壓,</span> <span class="string">Voltage,</span> <span class="string">vol-tage</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">電流,</span> <span class="string">Current,</span> <span class="string">cur-rent</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Lovbabi:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">The</span> <span class="string">log</span> <span class="string">is</span> <span class="string">bound</span> <span class="string">to</span> <span class="string">the</span> <span class="string">student</span> <span class="string">model.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Education:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">National</span> <span class="string">Taiwan</span> <span class="string">University</span> <span class="string">of</span> <span class="string">Science</span> <span class="string">and</span> <span class="string">Technology</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">No.43,</span> <span class="string">Keelung</span> <span class="string">Rd.,</span> <span class="string">Sec.4,</span> <span class="string">Da&#x27;an</span> <span class="string">Dist.,</span> <span class="string">Taipei</span> <span class="string">City</span> <span class="number">106335</span><span class="string">,</span> <span class="string">Taiwan</span> <span class="string">(R.O.C.)</span> <span class="string">台北</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Associate</span> <span class="string">of</span> <span class="string">Electrical</span> <span class="string">Engineering</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">Month:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">January</span> <span class="string">Jan</span> <span class="string">一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">February</span> <span class="string">Feb</span> <span class="string">二月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">March</span> <span class="string">Mar</span> <span class="string">三月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">April</span> <span class="string">Apr</span> <span class="string">四月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">May</span> <span class="string">May</span> <span class="string">五月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">June</span> <span class="string">Jun</span> <span class="string">六月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">July</span> <span class="string">Jul</span> <span class="string">七月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">August</span> <span class="string">Aug</span> <span class="string">八月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">September</span> <span class="string">Sep</span> <span class="string">九月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">October</span> <span class="string">Oct</span> <span class="string">十月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">November</span> <span class="string">Nov</span> <span class="string">十一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">December</span> <span class="string">Dec</span> <span class="string">十二月</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
   </entry>
   <entry>
     <title>LeetCode - 列印abc所有排列組合</title>
@@ -538,10 +538,73 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Backend</tag>
         <tag>Android</tag>
+        <tag>Backend</tag>
         <tag>作品集</tag>
         <tag>Side Project</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>作品集 - 道路管理系統</title>
+    <url>/2022/11/16/projects/road-management/</url>
+    <content><![CDATA[<h1 id="專案需求"><a href="#專案需求" class="headerlink" title="專案需求"></a>專案需求</h1><p>客戶需要一個系統來管理道路回報案件、案件派工維修等e化流程。透過APP進行道路巡查與回報毀損案件，再由內勤人員進行審核與分派案件給協力廠商。</p>
+<p>當車巡人員使用APP錄影進行道路巡查時，後台也需要觀看即時影像與巡查員軌跡。</p>
+<h1 id="交付項目"><a href="#交付項目" class="headerlink" title="交付項目"></a>交付項目</h1><ul>
+<li>車巡APP: 提供汽車巡查人員使用，進行道路巡查與回報毀損案件。</li>
+<li>機巡APP: 提供機車巡查人員使用，進行道路巡查與回報毀損案件。</li>
+<li>內勤與協力廠商後台: 提供內勤人員使用，進行案件審核與分派。</li>
+<li>管理者後台: 提供管理者使用，新增合約、系統相關參數。</li>
+</ul>
+<h1 id="人員分配"><a href="#人員分配" class="headerlink" title="人員分配"></a>人員分配</h1><p>共有5人，分別為:</p>
+<ul>
+<li>車巡APP: 1人(Me)</li>
+<li>機巡APP: 1人</li>
+<li>內勤與協力廠商後台: 1人(Me)<ul>
+<li>車巡管理系統</li>
+<li>道路管理系統</li>
+</ul>
+</li>
+<li>管理者後台: 2人(Me)</li>
+<li>UI設計: 1人</li>
+<li>PM: 1人</li>
+</ul>
+<h1 id="使用技術"><a href="#使用技術" class="headerlink" title="使用技術"></a>使用技術</h1><ul>
+<li>APP: Kotlin</li>
+<li>Backend: Linode + AWS + Django + Nginx + Postgresql + Redis + Nginx RTMP</li>
+<li>Frontend: Vue.js + Vuex + Vue Router + Vuetify + Axios</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="開發日誌"><a href="#開發日誌" class="headerlink" title="開發日誌"></a>開發日誌</h1><h2 id="系統架構與流程圖"><a href="#系統架構與流程圖" class="headerlink" title="系統架構與流程圖"></a>系統架構與流程圖</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/uOf53of.png" alt="系統組織架構"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pg4X3cb.png" alt="案件新增與審查流程"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/5G31v3C.jpg" alt="案件派工流程"></p>
+<h2 id="技術選用評估"><a href="#技術選用評估" class="headerlink" title="技術選用評估"></a>技術選用評估</h2><h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><p>Django自帶一個Admin後台與ORM，可以快速開發後台、建立資料庫模型並且可以透過Django REST<br>Framework快速開發API。而且Django也有很多第三方套件可以使用，例如Django REST Framework JWT可以快速開發JWT驗證，Django Filter可以快速開發篩選功能，Django CORS Headers可以快速開發跨網域功能。</p>
+<p>同時導入Docker容器，可以快速部署開發環境與生產環境，並且可以透過Docker Compose快速建立開發環境。至於為何沒有採用k8s，主要考慮到運維成本可能會過大，所以尚未採用。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/GL1q5lL.png" alt="服務器架構"></p>
+<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>選用Vue + <a href="https://vuetifyjs.com/en/getting-started/installation/">Vuetify</a>，因為Vue是目前最流行的前端框架之一且學習曲線不高，同時考慮到如何縮短UI設計時間，如果有套UI框架提供設計師做設計參考，同時工程師也可以縮短客製化元件的製作成本。且Vuetify已有提供豐富的元件庫，並且可以透過Vue<br>CLI快速開發SPA。</p>
+<h2 id="實作單元"><a href="#實作單元" class="headerlink" title="實作單元"></a>實作單元</h2><h3 id="Android-RTMP推流"><a href="#Android-RTMP推流" class="headerlink" title="Android RTMP推流"></a>Android RTMP推流</h3><p>手機端透過RTMP協定將影像推流到服務器，使用『<a href="https://github.com/pedroSG94/rtmp-rtsp-stream-client-java">RTMP第三方拉流與推流庫</a>』套件進行。 套件同時支援RTMP&#x2F;RSTP協定，同時實作了推流與拉流等功能。專案需求只使用推流功能，早期版本有些Bug，經過長時間推流很容易發生閃退，最後Fork一份檔案到專案裡，進行客製化參數調整。</p>
+<h3 id="Nginx-RTMP-Server"><a href="#Nginx-RTMP-Server" class="headerlink" title="Nginx RTMP Server"></a>Nginx RTMP Server</h3><p>使用Nginx +『<a href="https://github.com/arut/nginx-rtmp-module">nginx-rtmp-module</a>』模組，進行RTMP Server的建置。RTMP協定通常會有5～10秒影像落後，在未優化設定前落後秒數達30秒以上，經過優化設定後，網頁播放的影像落後秒數降低至10～15秒左右，如果透過OBS做拉流可以在5～10秒區間。</p>
+<p>影像延遲優化手段:</p>
+<ul>
+<li>Android端推流時，將影像縮小至720p、FPS減少成20幀、去掉去掉音訊資料，降低影像資料量。</li>
+<li>Nginx Server端，只能從現有參數做調整做優化外，另外就減少分流頻道，保留720p、360p頻道，移除1080p頻道。</li>
+<li>Web前端，使用『<a href="https://github.com/Bilibili/flv.js/">Flv.js</a>』套件進行拉流，從套件參數調整做優化，主要透過減少cache大小進行延遲優化。</li>
+</ul>
+<h1 id="功能頁面"><a href="#功能頁面" class="headerlink" title="功能頁面"></a>功能頁面</h1><h2 id="車巡管理系統"><a href="#車巡管理系統" class="headerlink" title="車巡管理系統"></a>車巡管理系統</h2><p><strong>可以查過去巡查軌跡與案件，若當前有巡察員巡查可在此頁面觀看直播。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/hEndckI.png" alt="車巡即時軌跡"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/I3B6RGf.png" alt="查報案件列表"><br><strong>後勤人員可在此頁面進行案件歸檔，歸檔後的案件會進到道路管理系統。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/qJXgaPV.png" alt="查報案件詳細"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/zOs58pu.png" alt="車巡路段管理"><br><strong>可以在地圖上規劃巡察員每日巡查軌跡。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/nHZl0dU.png" alt="車巡路段管理編輯"></p>
+<h2 id="道路管理系統"><a href="#道路管理系統" class="headerlink" title="道路管理系統"></a>道路管理系統</h2><p><strong>所有查報案件列表。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/3Sr6pOH.jpg" alt="案件總表"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pfxzXuH.jpg" alt="案件地圖"></p>
+<p><strong>後勤人員可在這邊審核案件指派給相關協力廠商進行後續。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/DVvnTvl.png" alt="查報案件作業區"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/ba9U3vz.png" alt="查報案件作業區詳細"></p>
+<p><strong>可查詢合約當前保固的路段資訊。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/CnWJmkB.png" alt="保固路段"></p>
+<h2 id="管理員後台"><a href="#管理員後台" class="headerlink" title="管理員後台"></a>管理員後台</h2><p><strong>管理員可在這邊新增合約、合約人員角色與各種環境參數。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/VjyBXdh.png" alt="管理員功能列表"></p>
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">維修,</span> <span class="string">Repair,</span> <span class="string">re-pair</span></span><br><span class="line"><span class="string">派工,</span> <span class="string">Dispatch,</span> <span class="string">dis-patch</span></span><br><span class="line"><span class="string">協力廠商,</span> <span class="string">Cooperate</span> <span class="string">factory,</span> <span class="string">co-oper-ate</span> <span class="string">fac-tory</span></span><br><span class="line"><span class="string">流程,</span> <span class="string">Process,</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">客戶需求,</span> <span class="string">Customer</span> <span class="string">requirement,</span> <span class="string">cus-tom-er</span> <span class="string">re-quire-ment</span></span><br><span class="line"><span class="string">內勤人員,</span> <span class="string">Internal</span> <span class="string">staff,</span> <span class="string">in-ter-nal</span> <span class="string">staff</span></span><br><span class="line"><span class="string">作品集,</span> <span class="string">Portfolio,</span> <span class="string">port-fol-io</span></span><br><span class="line"><span class="string">開發經驗,</span> <span class="string">Development</span> <span class="string">experience,</span> <span class="string">deve-lop-ment</span> <span class="string">ex-per-ien-ce</span></span><br><span class="line"><span class="string">學習曲線,</span> <span class="string">Learning</span> <span class="string">curve,</span> <span class="string">learn-ing</span> <span class="string">curve</span></span><br><span class="line"><span class="string">縮短設計成本,</span> <span class="string">Shorten</span> <span class="string">design</span> <span class="string">cost,</span> <span class="string">short-en</span> <span class="string">de-sign</span> <span class="string">cost</span></span><br><span class="line"><span class="string">客製化元件,</span> <span class="string">Customized</span> <span class="string">component,</span> <span class="string">cus-tom-ized</span> <span class="string">com-po-nent</span></span><br><span class="line"><span class="string">豐富元件庫,</span> <span class="string">Rich</span> <span class="string">component</span> <span class="string">library,</span> <span class="string">rich</span> <span class="string">com-po-nent</span> <span class="string">lib-r-ary</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Android</tag>
+        <tag>Backend</tag>
+        <tag>作品集</tag>
+        <tag>Frontend</tag>
       </tags>
   </entry>
   <entry>
@@ -684,8 +747,8 @@ ol, ul {
 <li>公司主要獲利來源？</li>
 <li>針對這次筆試呈現結果，是否有哪些地方需要改進？</li>
 </ul>
-<h2 id="面試過程"><a href="#面試過程" class="headerlink" title="面試過程"></a>面試過程</h2><p>HR電話面談[2022&#x2F;11&#x2F;25]:<br>輕切熱忱，主要通知技術面試時間跟內容，並介紹公司文化、背景、產品以及辦公情況。</p>
-<p>技術視訊面試[2022&#x2F;11&#x2F;27 14:00]:<br><strong>面試內容</strong>:</p>
+<h2 id="面試過程"><a href="#面試過程" class="headerlink" title="面試過程"></a>面試過程</h2><h3 id="HR電話面談-2022-x2F-11-x2F-25"><a href="#HR電話面談-2022-x2F-11-x2F-25" class="headerlink" title="HR電話面談[2022&#x2F;11&#x2F;25]:"></a>HR電話面談[2022&#x2F;11&#x2F;25]:</h3><p>輕切熱忱，主要通知技術面試時間跟內容，並介紹公司文化、背景、產品以及辦公情況。</p>
+<h3 id="技術視訊面試-ㄧ面-2022-x2F-11-x2F-27-14-00"><a href="#技術視訊面試-ㄧ面-2022-x2F-11-x2F-27-14-00" class="headerlink" title="技術視訊面試(ㄧ面)[2022&#x2F;11&#x2F;27 14:00]:"></a>技術視訊面試(ㄧ面)[2022&#x2F;11&#x2F;27 14:00]:</h3><p><strong>面試內容</strong>:</p>
 <ul>
 <li>自我介紹，並介紹自己的經歷。</li>
 <li>針對筆試內容做詢問，<ul>
@@ -718,6 +781,35 @@ ol, ul {
 <li>公司會針對筆試跟面試做出完整回饋，此部分有別於其他公司，對彼此成長很有幫助。</li>
 <li>這次為第二階段技術面試，如有合格會再安排第三階段面試，再與部門主管面談公司環境、薪資等等。</li>
 </ul>
+<h3 id="技術視訊面試-二面-2022-x2F-12-x2F-08-14-00"><a href="#技術視訊面試-二面-2022-x2F-12-x2F-08-14-00" class="headerlink" title="技術視訊面試(二面)[2022&#x2F;12&#x2F;08 14:00]:"></a>技術視訊面試(二面)[2022&#x2F;12&#x2F;08 14:00]:</h3><p><strong>提問問題</strong>:</p>
+<ul>
+<li>職務<ul>
+<li>協同合作方式，從想法-&gt;規劃-&gt;實作-&gt;測試-&gt;上線-&gt;維護整個過程。</li>
+<li>如何管理技術團隊，是否有導入一些開發流程(例如Scrum)？</li>
+<li>如何分配團隊成員的任務與時間?</li>
+<li>選用Ruby on Rails的原因?有採用其他方案?</li>
+<li>在導入k8s有遇到哪些問題？</li>
+<li>測試覆蓋率想法。</li>
+</ul>
+</li>
+<li>公司<ul>
+<li>團隊組成？行銷與技術成員佔比？</li>
+<li>獲利模式，內部產品與外部接案？</li>
+<li>公司文化理念。</li>
+<li>老闆願景。</li>
+<li>矽谷資本投資過程。</li>
+</ul>
+</li>
+<li>福利<ul>
+<li>薪資。</li>
+<li>獎金。</li>
+<li>配備。</li>
+<li>異地辦公。</li>
+<li>其他。</li>
+</ul>
+</li>
+</ul>
+<p><strong>面試內容</strong>:<br>come soon~</p>
 <h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">交付項目,</span> <span class="string">Deliverable,</span> <span class="string">de-live-rable</span></span><br><span class="line"><span class="string">未實作任務,</span> <span class="string">Unimplemented</span> <span class="string">Task,</span> <span class="string">un-im-ple-ment-ed</span> <span class="string">task</span></span><br><span class="line"><span class="string">藥局,</span> <span class="string">Pharmacy,</span> <span class="string">phar-ma-cy</span></span><br><span class="line"><span class="string">關聯性排序,</span> <span class="string">Related</span> <span class="string">Sorting,</span> <span class="string">re-lated</span> <span class="string">sort-ing</span></span><br><span class="line"><span class="string">導入自動化測試,</span> <span class="string">Import</span> <span class="string">Automated</span> <span class="string">Testing,</span> <span class="string">im-port</span> <span class="string">auto-mat-ed</span> <span class="string">test-ing</span></span><br><span class="line"><span class="string">容器,</span> <span class="string">Container,</span> <span class="string">con-tai-ner</span></span><br><span class="line"><span class="string">理解需求,</span> <span class="string">Understand</span> <span class="string">Requirement,</span> <span class="string">un-der-stand</span> <span class="string">re-quire-ment</span></span><br><span class="line"><span class="string">餘額不足,</span> <span class="string">Insufficient</span> <span class="string">Balance,</span> <span class="string">in-suf-fi-cient</span> <span class="string">bal-ance</span></span><br><span class="line"><span class="string">面試筆試,</span> <span class="string">Interview</span> <span class="string">Written</span> <span class="string">Test,</span> <span class="string">in-ter-view</span> <span class="string">writ-ten</span> <span class="string">test</span></span><br><span class="line"><span class="string">效能分析,</span> <span class="string">Performance</span> <span class="string">Analysis,</span> <span class="string">per-form-ance</span> <span class="string">ana-ly-sis</span></span><br><span class="line"><span class="string">架構圖,</span> <span class="string">Architecture</span> <span class="string">Diagram,</span> <span class="string">arch-itec-ture</span> <span class="string">dia-gram</span></span><br><span class="line"><span class="string">亞洲美國多元技術協會(台北搖籃計畫),</span> <span class="string">Asia</span> <span class="string">America</span> <span class="string">Multi-Technology</span> <span class="string">Association</span></span><br></pre></td></tr></table></figure>
 
 
@@ -729,69 +821,6 @@ ol, ul {
         <tag>作品集</tag>
         <tag>面試筆試</tag>
         <tag>Django</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>作品集 - 道路管理系統</title>
-    <url>/2022/11/16/projects/road-management/</url>
-    <content><![CDATA[<h1 id="專案需求"><a href="#專案需求" class="headerlink" title="專案需求"></a>專案需求</h1><p>客戶需要一個系統來管理道路回報案件、案件派工維修等e化流程。透過APP進行道路巡查與回報毀損案件，再由內勤人員進行審核與分派案件給協力廠商。</p>
-<p>當車巡人員使用APP錄影進行道路巡查時，後台也需要觀看即時影像與巡查員軌跡。</p>
-<h1 id="交付項目"><a href="#交付項目" class="headerlink" title="交付項目"></a>交付項目</h1><ul>
-<li>車巡APP: 提供汽車巡查人員使用，進行道路巡查與回報毀損案件。</li>
-<li>機巡APP: 提供機車巡查人員使用，進行道路巡查與回報毀損案件。</li>
-<li>內勤與協力廠商後台: 提供內勤人員使用，進行案件審核與分派。</li>
-<li>管理者後台: 提供管理者使用，新增合約、系統相關參數。</li>
-</ul>
-<h1 id="人員分配"><a href="#人員分配" class="headerlink" title="人員分配"></a>人員分配</h1><p>共有5人，分別為:</p>
-<ul>
-<li>車巡APP: 1人(Me)</li>
-<li>機巡APP: 1人</li>
-<li>內勤與協力廠商後台: 1人(Me)<ul>
-<li>車巡管理系統</li>
-<li>道路管理系統</li>
-</ul>
-</li>
-<li>管理者後台: 2人(Me)</li>
-<li>UI設計: 1人</li>
-<li>PM: 1人</li>
-</ul>
-<h1 id="使用技術"><a href="#使用技術" class="headerlink" title="使用技術"></a>使用技術</h1><ul>
-<li>APP: Kotlin</li>
-<li>Backend: Linode + AWS + Django + Nginx + Postgresql + Redis + Nginx RTMP</li>
-<li>Frontend: Vue.js + Vuex + Vue Router + Vuetify + Axios</li>
-</ul>
-<span id="more"></span>
-
-<h1 id="開發日誌"><a href="#開發日誌" class="headerlink" title="開發日誌"></a>開發日誌</h1><h2 id="系統架構與流程圖"><a href="#系統架構與流程圖" class="headerlink" title="系統架構與流程圖"></a>系統架構與流程圖</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/uOf53of.png" alt="系統組織架構"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pg4X3cb.png" alt="案件新增與審查流程"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/5G31v3C.jpg" alt="案件派工流程"></p>
-<h2 id="技術選用評估"><a href="#技術選用評估" class="headerlink" title="技術選用評估"></a>技術選用評估</h2><h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><p>Django自帶一個Admin後台與ORM，可以快速開發後台、建立資料庫模型並且可以透過Django REST<br>Framework快速開發API。而且Django也有很多第三方套件可以使用，例如Django REST Framework JWT可以快速開發JWT驗證，Django Filter可以快速開發篩選功能，Django CORS Headers可以快速開發跨網域功能。</p>
-<p>同時導入Docker容器，可以快速部署開發環境與生產環境，並且可以透過Docker Compose快速建立開發環境。至於為何沒有採用k8s，主要考慮到運維成本可能會過大，所以尚未採用。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/GL1q5lL.png" alt="服務器架構"></p>
-<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>選用Vue + <a href="https://vuetifyjs.com/en/getting-started/installation/">Vuetify</a>，因為Vue是目前最流行的前端框架之一且學習曲線不高，同時考慮到如何縮短UI設計時間，如果有套UI框架提供設計師做設計參考，同時工程師也可以縮短客製化元件的製作成本。且Vuetify已有提供豐富的元件庫，並且可以透過Vue<br>CLI快速開發SPA。</p>
-<h2 id="實作單元"><a href="#實作單元" class="headerlink" title="實作單元"></a>實作單元</h2><h3 id="Android-RTMP推流"><a href="#Android-RTMP推流" class="headerlink" title="Android RTMP推流"></a>Android RTMP推流</h3><p>手機端透過RTMP協定將影像推流到服務器，使用『<a href="https://github.com/pedroSG94/rtmp-rtsp-stream-client-java">RTMP第三方拉流與推流庫</a>』套件進行。 套件同時支援RTMP&#x2F;RSTP協定，同時實作了推流與拉流等功能。專案需求只使用推流功能，早期版本有些Bug，經過長時間推流很容易發生閃退，最後Fork一份檔案到專案裡，進行客製化參數調整。</p>
-<h3 id="Nginx-RTMP-Server"><a href="#Nginx-RTMP-Server" class="headerlink" title="Nginx RTMP Server"></a>Nginx RTMP Server</h3><p>使用Nginx +『<a href="https://github.com/arut/nginx-rtmp-module">nginx-rtmp-module</a>』模組，進行RTMP Server的建置。RTMP協定通常會有5～10秒影像落後，在未優化設定前落後秒數達30秒以上，經過優化設定後，網頁播放的影像落後秒數降低至10～15秒左右，如果透過OBS做拉流可以在5～10秒區間。</p>
-<p>影像延遲優化手段:</p>
-<ul>
-<li>Android端推流時，將影像縮小至720p、FPS減少成20幀、去掉去掉音訊資料，降低影像資料量。</li>
-<li>Nginx Server端，只能從現有參數做調整做優化外，另外就減少分流頻道，保留720p、360p頻道，移除1080p頻道。</li>
-<li>Web前端，使用『<a href="https://github.com/Bilibili/flv.js/">Flv.js</a>』套件進行拉流，從套件參數調整做優化，主要透過減少cache大小進行延遲優化。</li>
-</ul>
-<h1 id="功能頁面"><a href="#功能頁面" class="headerlink" title="功能頁面"></a>功能頁面</h1><h2 id="車巡管理系統"><a href="#車巡管理系統" class="headerlink" title="車巡管理系統"></a>車巡管理系統</h2><p><strong>可以查過去巡查軌跡與案件，若當前有巡察員巡查可在此頁面觀看直播。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/hEndckI.png" alt="車巡即時軌跡"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/I3B6RGf.png" alt="查報案件列表"><br><strong>後勤人員可在此頁面進行案件歸檔，歸檔後的案件會進到道路管理系統。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/qJXgaPV.png" alt="查報案件詳細"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/zOs58pu.png" alt="車巡路段管理"><br><strong>可以在地圖上規劃巡察員每日巡查軌跡。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/nHZl0dU.png" alt="車巡路段管理編輯"></p>
-<h2 id="道路管理系統"><a href="#道路管理系統" class="headerlink" title="道路管理系統"></a>道路管理系統</h2><p><strong>所有查報案件列表。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/3Sr6pOH.jpg" alt="案件總表"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pfxzXuH.jpg" alt="案件地圖"></p>
-<p><strong>後勤人員可在這邊審核案件指派給相關協力廠商進行後續。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/DVvnTvl.png" alt="查報案件作業區"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/ba9U3vz.png" alt="查報案件作業區詳細"></p>
-<p><strong>可查詢合約當前保固的路段資訊。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/CnWJmkB.png" alt="保固路段"></p>
-<h2 id="管理員後台"><a href="#管理員後台" class="headerlink" title="管理員後台"></a>管理員後台</h2><p><strong>管理員可在這邊新增合約、合約人員角色與各種環境參數。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/VjyBXdh.png" alt="管理員功能列表"></p>
-<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">維修,</span> <span class="string">Repair,</span> <span class="string">re-pair</span></span><br><span class="line"><span class="string">派工,</span> <span class="string">Dispatch,</span> <span class="string">dis-patch</span></span><br><span class="line"><span class="string">協力廠商,</span> <span class="string">Cooperate</span> <span class="string">factory,</span> <span class="string">co-oper-ate</span> <span class="string">fac-tory</span></span><br><span class="line"><span class="string">流程,</span> <span class="string">Process,</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">客戶需求,</span> <span class="string">Customer</span> <span class="string">requirement,</span> <span class="string">cus-tom-er</span> <span class="string">re-quire-ment</span></span><br><span class="line"><span class="string">內勤人員,</span> <span class="string">Internal</span> <span class="string">staff,</span> <span class="string">in-ter-nal</span> <span class="string">staff</span></span><br><span class="line"><span class="string">作品集,</span> <span class="string">Portfolio,</span> <span class="string">port-fol-io</span></span><br><span class="line"><span class="string">開發經驗,</span> <span class="string">Development</span> <span class="string">experience,</span> <span class="string">deve-lop-ment</span> <span class="string">ex-per-ien-ce</span></span><br><span class="line"><span class="string">學習曲線,</span> <span class="string">Learning</span> <span class="string">curve,</span> <span class="string">learn-ing</span> <span class="string">curve</span></span><br><span class="line"><span class="string">縮短設計成本,</span> <span class="string">Shorten</span> <span class="string">design</span> <span class="string">cost,</span> <span class="string">short-en</span> <span class="string">de-sign</span> <span class="string">cost</span></span><br><span class="line"><span class="string">客製化元件,</span> <span class="string">Customized</span> <span class="string">component,</span> <span class="string">cus-tom-ized</span> <span class="string">com-po-nent</span></span><br><span class="line"><span class="string">豐富元件庫,</span> <span class="string">Rich</span> <span class="string">component</span> <span class="string">library,</span> <span class="string">rich</span> <span class="string">com-po-nent</span> <span class="string">lib-r-ary</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>Backend</tag>
-        <tag>Android</tag>
-        <tag>作品集</tag>
-        <tag>Frontend</tag>
       </tags>
   </entry>
 </search>
