@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>今日開張</title>
+    <url>/2022/11/12/first-article/</url>
+    <content><![CDATA[<p>主要筆記:</p>
+<ul>
+<li>程式專案:專案過程研究的技術、架構、與遇到的問題分享。</li>
+<li>金融知識</li>
+<li>工具分享</li>
+</ul>
+<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">金融知識,</span> <span class="string">Knowledge</span> <span class="string">of</span> <span class="string">finance,</span> <span class="string">know-l-edge</span> <span class="string">of</span> <span class="string">fin-ance</span></span><br><span class="line"><span class="string">架構,</span> <span class="string">Architecture,</span> <span class="string">arch-itec-ture</span></span><br><span class="line"><span class="string">研究過程,</span> <span class="string">Research</span> <span class="string">process,</span> <span class="string">re-search</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">技術,</span> <span class="string">Technology,</span> <span class="string">tech-no-logy</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>iOS開發備忘錄</title>
     <url>/2022/12/03/ios-memo/</url>
     <content><![CDATA[<h1 id="swiftUI語法學習"><a href="#swiftUI語法學習" class="headerlink" title="swiftUI語法學習"></a>swiftUI語法學習</h1><p>當您學過android &#x2F; css佈局，會有一些佈局知識以及關鍵字的瞭解，因此在學習SwiftUI基本上可以用這些關鍵字+swiftui進行谷歌搜尋，就可以找到相對應用法，例如：</p>
@@ -50,25 +69,6 @@
       <tags>
         <tag>swift</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>今日開張</title>
-    <url>/2022/11/12/first-article/</url>
-    <content><![CDATA[<p>主要筆記:</p>
-<ul>
-<li>程式專案:專案過程研究的技術、架構、與遇到的問題分享。</li>
-<li>金融知識</li>
-<li>工具分享</li>
-</ul>
-<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">金融知識,</span> <span class="string">Knowledge</span> <span class="string">of</span> <span class="string">finance,</span> <span class="string">know-l-edge</span> <span class="string">of</span> <span class="string">fin-ance</span></span><br><span class="line"><span class="string">架構,</span> <span class="string">Architecture,</span> <span class="string">arch-itec-ture</span></span><br><span class="line"><span class="string">研究過程,</span> <span class="string">Research</span> <span class="string">process,</span> <span class="string">re-search</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">技術,</span> <span class="string">Technology,</span> <span class="string">tech-no-logy</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
   </entry>
   <entry>
     <title>Linux系統管理備忘</title>
@@ -262,14 +262,9 @@
 <li>部署複雜度提升，因同時要區別各種環境的容器，但容器使用的port資源可能都一樣，導致部署複雜度提升。</li>
 </ul>
 <h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><ul>
-<li><p>透過溝通針對個方案分析出好處與壞處，達到共識。</p>
-</li>
-<li><p>透過討論，老闆或MIS部門依然覺得自己方案最好，那只能接受老闆或MIS部門的決定。</p>
-</li>
-<li></li>
+<li>透過溝通針對個方案分析出好處與壞處，達到共識。</li>
+<li>透過討論，老闆或MIS部門依然覺得自己方案最好，那只能接受老闆或MIS部門的決定。</li>
 </ul>
-<h1 id="命名規範"><a href="#命名規範" class="headerlink" title="命名規範"></a>命名規範</h1><p>參考<a href="https://peps.python.org/pep-0008/">PEP 8</a>代碼規範</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">PEP</span> <span class="number">8</span><span class="string">,</span> <span class="string">Python</span> <span class="string">Enhancement</span> <span class="string">Proposals</span> <span class="number">8</span><span class="string">,</span> <span class="string">pep</span> <span class="number">8</span></span><br><span class="line"><span class="string">增強,</span> <span class="string">Enhancement,</span> <span class="string">en-han-ce-ment</span></span><br><span class="line"><span class="string">建議,</span> <span class="string">Proposals,</span> <span class="string">pro-pos-als</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Docker</tag>
