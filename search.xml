@@ -136,42 +136,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python print效能測試</title>
-    <url>/2022/12/01/python-print-performance/</url>
-    <content><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>針對Python print效能測試，用實際數據進行比較。</p>
-<h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212011359133.png"></p>
-<h1 id="測試方法"><a href="#測試方法" class="headerlink" title="測試方法"></a>測試方法</h1><!-- Get UTF-8 -->
-<!-- Begin -->
-<script src="https://gist.github.com/wenchan3918/daaf36d70ed309bb25ccc7b986b36d35.js"></script>
-<!-- End -->
-
-<h1 id="測試結果"><a href="#測試結果" class="headerlink" title="測試結果"></a>測試結果</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 10萬次回圈</span></span><br><span class="line">測試條件: 進行10.0萬次回圈,不列印任何字元,消耗時間為0.003秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印10個字元,消耗時間為0.962秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印100個字元,消耗時間為1.64秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印100個字元且換行,消耗時間為9.797秒</span><br><span class="line"></span><br><span class="line"><span class="comment"># 100萬次回圈</span></span><br><span class="line">測試條件: 進行100.0萬次回圈,不列印任何字元,消耗時間為0.02秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印10個字元,消耗時間為9.753秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印100個字元,消耗時間為16.41秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印100個字元且換行,消耗時間為97.132秒</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><p>print確實會消耗更多的執行時間。</p>
-<p><strong>在10萬次回圈下</strong></p>
-<ul>
-<li>『列印100個字元且換行』消耗時間為『不列印任何字元』的9.797&#x2F;0.003&#x3D;3266倍</li>
-<li>『列印100個字元』消耗時間為『不列印任何字元』的1.64&#x2F;0.003&#x3D;546倍</li>
-<li>『列印10個字元』消耗時間為『不列印任何字元』的0.962&#x2F;0.003&#x3D;320倍</li>
-</ul>
-<p><strong>在100萬次回圈下</strong></p>
-<ul>
-<li>『列印100個字元且換行』消耗時間為『不列印任何字元』的97.132&#x2F;0.02&#x3D;4856倍</li>
-<li>『列印100個字元』消耗時間為『不列印任何字元』的16.41&#x2F;0.02&#x3D;812倍</li>
-<li>『列印10個字元』消耗時間為『不列印任何字元』的9.753&#x2F;0.02&#x3D;488倍</li>
-</ul>
-<span style="color:#6d4ee9;font-weight:bold">
-那是否因為這效能差異而不使用print呢？如果在一般小專案用戶不多情況下，個人會選擇使用print，因為print的可讀性比較高，而且在debug時，可直接看到print的結果，這對接案節省時間是有幫助的。
-
-<p>若是有大量使用者的服務，某API呼叫次數每天都有數十萬數百萬，這時應該就要避免使用print了，因為節省下來的效能會非常可觀。<br></p></span><p></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">結論,</span> <span class="string">Conclusion,</span> <span class="string">con-clu-sion</span></span><br><span class="line"><span class="string">數百萬,</span> <span class="string">hundred</span> <span class="string">million,</span> <span class="string">hund-erd</span> <span class="string">mi-lion</span></span><br><span class="line"><span class="string">可讀性,</span> <span class="string">readability,</span> <span class="string">read-a-bil-ity</span></span><br><span class="line"><span class="string">消耗時間,</span> <span class="string">consume</span> <span class="string">time,</span> <span class="string">con-sume</span> <span class="string">time</span></span><br><span class="line"><span class="string">```</span>  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Python</tag>
-        <tag>測試</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SwiftUI 與 Storyboard 混合使用研究</title>
     <url>/2022/11/22/swiftui-storyboard-mixed-use/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近需要支援同事開發iOS APP，同事主要用Storyboard開發，自己則想用主流技術SwiftUI開發，因此需要將兩者混合使用，這邊紀錄一下研究過程。</p>
@@ -229,6 +193,42 @@
         <tag>Storyboard</tag>
         <tag>Xib</tag>
         <tag>SwiftUI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python print效能測試</title>
+    <url>/2022/12/01/python-print-performance/</url>
+    <content><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>針對Python print效能測試，用實際數據進行比較。</p>
+<h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212011359133.png"></p>
+<h1 id="測試方法"><a href="#測試方法" class="headerlink" title="測試方法"></a>測試方法</h1><!-- Get UTF-8 -->
+<!-- Begin -->
+<script src="https://gist.github.com/wenchan3918/daaf36d70ed309bb25ccc7b986b36d35.js"></script>
+<!-- End -->
+
+<h1 id="測試結果"><a href="#測試結果" class="headerlink" title="測試結果"></a>測試結果</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 10萬次回圈</span></span><br><span class="line">測試條件: 進行10.0萬次回圈,不列印任何字元,消耗時間為0.003秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印10個字元,消耗時間為0.962秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印100個字元,消耗時間為1.64秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印100個字元且換行,消耗時間為9.797秒</span><br><span class="line"></span><br><span class="line"><span class="comment"># 100萬次回圈</span></span><br><span class="line">測試條件: 進行100.0萬次回圈,不列印任何字元,消耗時間為0.02秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印10個字元,消耗時間為9.753秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印100個字元,消耗時間為16.41秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印100個字元且換行,消耗時間為97.132秒</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><p>print確實會消耗更多的執行時間。</p>
+<p><strong>在10萬次回圈下</strong></p>
+<ul>
+<li>『列印100個字元且換行』消耗時間為『不列印任何字元』的9.797&#x2F;0.003&#x3D;3266倍</li>
+<li>『列印100個字元』消耗時間為『不列印任何字元』的1.64&#x2F;0.003&#x3D;546倍</li>
+<li>『列印10個字元』消耗時間為『不列印任何字元』的0.962&#x2F;0.003&#x3D;320倍</li>
+</ul>
+<p><strong>在100萬次回圈下</strong></p>
+<ul>
+<li>『列印100個字元且換行』消耗時間為『不列印任何字元』的97.132&#x2F;0.02&#x3D;4856倍</li>
+<li>『列印100個字元』消耗時間為『不列印任何字元』的16.41&#x2F;0.02&#x3D;812倍</li>
+<li>『列印10個字元』消耗時間為『不列印任何字元』的9.753&#x2F;0.02&#x3D;488倍</li>
+</ul>
+<span style="color:#6d4ee9;font-weight:bold">
+那是否因為這效能差異而不使用print呢？如果在一般小專案用戶不多情況下，個人會選擇使用print，因為print的可讀性比較高，而且在debug時，可直接看到print的結果，這對接案節省時間是有幫助的。
+
+<p>若是有大量使用者的服務，某API呼叫次數每天都有數十萬數百萬，這時應該就要避免使用print了，因為節省下來的效能會非常可觀。<br></p></span><p></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">結論,</span> <span class="string">Conclusion,</span> <span class="string">con-clu-sion</span></span><br><span class="line"><span class="string">數百萬,</span> <span class="string">hundred</span> <span class="string">million,</span> <span class="string">hund-erd</span> <span class="string">mi-lion</span></span><br><span class="line"><span class="string">可讀性,</span> <span class="string">readability,</span> <span class="string">read-a-bil-ity</span></span><br><span class="line"><span class="string">消耗時間,</span> <span class="string">consume</span> <span class="string">time,</span> <span class="string">con-sume</span> <span class="string">time</span></span><br><span class="line"><span class="string">```</span>  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+        <tag>測試</tag>
       </tags>
   </entry>
   <entry>
@@ -583,8 +583,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Android</tag>
         <tag>Backend</tag>
+        <tag>Android</tag>
         <tag>作品集</tag>
         <tag>Side Project</tag>
       </tags>
@@ -862,8 +862,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Android</tag>
         <tag>Backend</tag>
+        <tag>Android</tag>
         <tag>作品集</tag>
         <tag>Frontend</tag>
       </tags>
