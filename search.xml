@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>今日開張</title>
-    <url>/2022/11/12/first-article/</url>
-    <content><![CDATA[<p>主要筆記:</p>
-<ul>
-<li>程式專案:專案過程研究的技術、架構、與遇到的問題分享。</li>
-<li>金融知識</li>
-<li>工具分享</li>
-</ul>
-<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">金融知識,</span> <span class="string">Knowledge</span> <span class="string">of</span> <span class="string">finance,</span> <span class="string">know-l-edge</span> <span class="string">of</span> <span class="string">fin-ance</span></span><br><span class="line"><span class="string">架構,</span> <span class="string">Architecture,</span> <span class="string">arch-itec-ture</span></span><br><span class="line"><span class="string">研究過程,</span> <span class="string">Research</span> <span class="string">process,</span> <span class="string">re-search</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">技術,</span> <span class="string">Technology,</span> <span class="string">tech-no-logy</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>iOS開發備忘錄</title>
     <url>/2022/12/03/ios-memo/</url>
     <content><![CDATA[<h1 id="swiftUI語法學習"><a href="#swiftUI語法學習" class="headerlink" title="swiftUI語法學習"></a>swiftUI語法學習</h1><p>當您學過android &#x2F; css佈局，會有一些佈局知識以及關鍵字的瞭解，因此在學習SwiftUI基本上可以用這些關鍵字+swiftui進行谷歌搜尋，就可以找到相對應用法，例如：</p>
@@ -69,6 +50,25 @@
       <tags>
         <tag>swift</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>今日開張</title>
+    <url>/2022/11/12/first-article/</url>
+    <content><![CDATA[<p>主要筆記:</p>
+<ul>
+<li>程式專案:專案過程研究的技術、架構、與遇到的問題分享。</li>
+<li>金融知識</li>
+<li>工具分享</li>
+</ul>
+<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">金融知識,</span> <span class="string">Knowledge</span> <span class="string">of</span> <span class="string">finance,</span> <span class="string">know-l-edge</span> <span class="string">of</span> <span class="string">fin-ance</span></span><br><span class="line"><span class="string">架構,</span> <span class="string">Architecture,</span> <span class="string">arch-itec-ture</span></span><br><span class="line"><span class="string">研究過程,</span> <span class="string">Research</span> <span class="string">process,</span> <span class="string">re-search</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">技術,</span> <span class="string">Technology,</span> <span class="string">tech-no-logy</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
   </entry>
   <entry>
     <title>Linux系統管理備忘</title>
@@ -136,6 +136,42 @@
       </tags>
   </entry>
   <entry>
+    <title>Python print效能測試</title>
+    <url>/2022/12/01/python-print-performance/</url>
+    <content><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>針對Python print效能測試，用實際數據進行比較。</p>
+<h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212011359133.png"></p>
+<h1 id="測試方法"><a href="#測試方法" class="headerlink" title="測試方法"></a>測試方法</h1><!-- Get UTF-8 -->
+<!-- Begin -->
+<script src="https://gist.github.com/wenchan3918/daaf36d70ed309bb25ccc7b986b36d35.js"></script>
+<!-- End -->
+
+<h1 id="測試結果"><a href="#測試結果" class="headerlink" title="測試結果"></a>測試結果</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 10萬次回圈</span></span><br><span class="line">測試條件: 進行10.0萬次回圈,不列印任何字元,消耗時間為0.003秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印10個字元,消耗時間為0.962秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印100個字元,消耗時間為1.64秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印100個字元且換行,消耗時間為9.797秒</span><br><span class="line"></span><br><span class="line"><span class="comment"># 100萬次回圈</span></span><br><span class="line">測試條件: 進行100.0萬次回圈,不列印任何字元,消耗時間為0.02秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印10個字元,消耗時間為9.753秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印100個字元,消耗時間為16.41秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印100個字元且換行,消耗時間為97.132秒</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><p>print確實會消耗更多的執行時間。</p>
+<p><strong>在10萬次回圈下</strong></p>
+<ul>
+<li>『列印100個字元且換行』消耗時間為『不列印任何字元』的9.797&#x2F;0.003&#x3D;3266倍</li>
+<li>『列印100個字元』消耗時間為『不列印任何字元』的1.64&#x2F;0.003&#x3D;546倍</li>
+<li>『列印10個字元』消耗時間為『不列印任何字元』的0.962&#x2F;0.003&#x3D;320倍</li>
+</ul>
+<p><strong>在100萬次回圈下</strong></p>
+<ul>
+<li>『列印100個字元且換行』消耗時間為『不列印任何字元』的97.132&#x2F;0.02&#x3D;4856倍</li>
+<li>『列印100個字元』消耗時間為『不列印任何字元』的16.41&#x2F;0.02&#x3D;812倍</li>
+<li>『列印10個字元』消耗時間為『不列印任何字元』的9.753&#x2F;0.02&#x3D;488倍</li>
+</ul>
+<span style="color:#6d4ee9;font-weight:bold">
+那是否因為這效能差異而不使用print呢？如果在一般小專案用戶不多情況下，個人會選擇使用print，因為print的可讀性比較高，而且在debug時，可直接看到print的結果，這對接案節省時間是有幫助的。
+
+<p>若是有大量使用者的服務，某API呼叫次數每天都有數十萬數百萬，這時應該就要避免使用print了，因為節省下來的效能會非常可觀。<br></p></span><p></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">結論,</span> <span class="string">Conclusion,</span> <span class="string">con-clu-sion</span></span><br><span class="line"><span class="string">數百萬,</span> <span class="string">hundred</span> <span class="string">million,</span> <span class="string">hund-erd</span> <span class="string">mi-lion</span></span><br><span class="line"><span class="string">可讀性,</span> <span class="string">readability,</span> <span class="string">read-a-bil-ity</span></span><br><span class="line"><span class="string">消耗時間,</span> <span class="string">consume</span> <span class="string">time,</span> <span class="string">con-sume</span> <span class="string">time</span></span><br><span class="line"><span class="string">```</span>  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+        <tag>測試</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SwiftUI 與 Storyboard 混合使用研究</title>
     <url>/2022/11/22/swiftui-storyboard-mixed-use/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近需要支援同事開發iOS APP，同事主要用Storyboard開發，自己則想用主流技術SwiftUI開發，因此需要將兩者混合使用，這邊紀錄一下研究過程。</p>
@@ -196,42 +232,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python print效能測試</title>
-    <url>/2022/12/01/python-print-performance/</url>
-    <content><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>針對Python print效能測試，用實際數據進行比較。</p>
-<h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212011359133.png"></p>
-<h1 id="測試方法"><a href="#測試方法" class="headerlink" title="測試方法"></a>測試方法</h1><!-- Get UTF-8 -->
-<!-- Begin -->
-<script src="https://gist.github.com/wenchan3918/daaf36d70ed309bb25ccc7b986b36d35.js"></script>
-<!-- End -->
-
-<h1 id="測試結果"><a href="#測試結果" class="headerlink" title="測試結果"></a>測試結果</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 10萬次回圈</span></span><br><span class="line">測試條件: 進行10.0萬次回圈,不列印任何字元,消耗時間為0.003秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印10個字元,消耗時間為0.962秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印100個字元,消耗時間為1.64秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印100個字元且換行,消耗時間為9.797秒</span><br><span class="line"></span><br><span class="line"><span class="comment"># 100萬次回圈</span></span><br><span class="line">測試條件: 進行100.0萬次回圈,不列印任何字元,消耗時間為0.02秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印10個字元,消耗時間為9.753秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印100個字元,消耗時間為16.41秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印100個字元且換行,消耗時間為97.132秒</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><p>print確實會消耗更多的執行時間。</p>
-<p><strong>在10萬次回圈下</strong></p>
-<ul>
-<li>『列印100個字元且換行』消耗時間為『不列印任何字元』的9.797&#x2F;0.003&#x3D;3266倍</li>
-<li>『列印100個字元』消耗時間為『不列印任何字元』的1.64&#x2F;0.003&#x3D;546倍</li>
-<li>『列印10個字元』消耗時間為『不列印任何字元』的0.962&#x2F;0.003&#x3D;320倍</li>
-</ul>
-<p><strong>在100萬次回圈下</strong></p>
-<ul>
-<li>『列印100個字元且換行』消耗時間為『不列印任何字元』的97.132&#x2F;0.02&#x3D;4856倍</li>
-<li>『列印100個字元』消耗時間為『不列印任何字元』的16.41&#x2F;0.02&#x3D;812倍</li>
-<li>『列印10個字元』消耗時間為『不列印任何字元』的9.753&#x2F;0.02&#x3D;488倍</li>
-</ul>
-<span style="color:#6d4ee9;font-weight:bold">
-那是否因為這效能差異而不使用print呢？如果在一般小專案用戶不多情況下，個人會選擇使用print，因為print的可讀性比較高，而且在debug時，可直接看到print的結果，這對接案節省時間是有幫助的。
-
-<p>若是有大量使用者的服務，某API呼叫次數每天都有數十萬數百萬，這時應該就要避免使用print了，因為節省下來的效能會非常可觀。<br></p></span><p></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">結論,</span> <span class="string">Conclusion,</span> <span class="string">con-clu-sion</span></span><br><span class="line"><span class="string">數百萬,</span> <span class="string">hundred</span> <span class="string">million,</span> <span class="string">hund-erd</span> <span class="string">mi-lion</span></span><br><span class="line"><span class="string">可讀性,</span> <span class="string">readability,</span> <span class="string">read-a-bil-ity</span></span><br><span class="line"><span class="string">消耗時間,</span> <span class="string">consume</span> <span class="string">time,</span> <span class="string">con-sume</span> <span class="string">time</span></span><br><span class="line"><span class="string">```</span>  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Python</tag>
-        <tag>測試</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>將Test/Prod環境安裝在同一台主機問題</title>
     <url>/2022/12/03/test-prod-on-same-host/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>與前同事討論關於他所在公司MIS想把專案(專案服務都有容器化)的測試與生產環境都安裝在同一台主機上，但後端工程師是認為應該把測試與生產環境拆開成兩台不一樣虛擬機上。</p>
@@ -272,24 +272,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python之禪</title>
-    <url>/2022/11/28/the_zen_of_python/</url>
-    <content><![CDATA[<p>Python之禪 最早由Tim Peters在Python郵件列表中發表，它包含了影響Python程式語言設計的19條軟體編寫原則。<br>在最初及後來的一些版本中，一共包含20條，其中第20條是「這一條留空請 Guido 來填寫」。<br>這留空的一條從未公布也可能並不存在。這些文本屬於公共領域。 [<a href="https://zh.wikipedia.org/zh-tw/Python%E4%B9%8B%E7%A6%85">維基百科</a>]</p>
-<p>執行<code>import this</code>，可以看到以下的輸出：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">The Zen of Python<span class="punctuation">,</span> by Tim Peters</span><br><span class="line"></span><br><span class="line">Beautiful is better than ugly. </span><br><span class="line">優美優於醜陋</span><br><span class="line"></span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">明瞭優於隱晦</span><br><span class="line"></span><br><span class="line">Simple is better than complex.</span><br><span class="line">簡單優於複雜</span><br><span class="line"></span><br><span class="line">Complex is better than complicated.</span><br><span class="line">複雜優於凌亂</span><br><span class="line"></span><br><span class="line">Flat is better than nested.</span><br><span class="line">扁平勝於嵌套</span><br><span class="line"></span><br><span class="line">Sparse is better than dense.</span><br><span class="line">稀疏勝於稠密</span><br><span class="line"></span><br><span class="line">Readability counts.</span><br><span class="line">可讀性很重要</span><br><span class="line"></span><br><span class="line">Special cases aren&#x27;t special enough to break the rules.</span><br><span class="line">特例亦不可違背原則</span><br><span class="line"></span><br><span class="line">Although practicality beats purity.</span><br><span class="line">雖然實用性勝過純粹性</span><br><span class="line"></span><br><span class="line">Errors should never pass silently.</span><br><span class="line">錯誤不應該悄無聲息地過去</span><br><span class="line"></span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">除非明確地沈默。</span><br><span class="line"></span><br><span class="line">In the face of ambiguity<span class="punctuation">,</span> refuse the temptation to guess.</span><br><span class="line">面對模棱兩可時，拒絕猜測的誘惑</span><br><span class="line"></span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">任何問題應有一種，且最好只有一種，顯而易見的解決方法</span><br><span class="line"></span><br><span class="line">Although that way may not be obvious at first unless you&#x27;re Dutch.</span><br><span class="line">雖然你一開始的方法不一定是最好的，除非你是荷蘭人</span><br><span class="line">解決一個問題的方法可能會有很多種，但在 Python 中，只選擇最明顯的那一個</span><br><span class="line"></span><br><span class="line">Now is better than never.</span><br><span class="line">做優於不做</span><br><span class="line"></span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">然而不假思索還不如不做</span><br><span class="line"></span><br><span class="line">If the implementation is hard to explain<span class="punctuation">,</span> it&#x27;s a bad idea.</span><br><span class="line">很難解釋的，必然是壞方法</span><br><span class="line"></span><br><span class="line">If the implementation is easy to explain<span class="punctuation">,</span> it may be a good idea.</span><br><span class="line">很好解釋的，可能是好方法</span><br><span class="line">        </span><br><span class="line">Namespaces are one honking great idea -- let&#x27;s do more of those!</span><br><span class="line">命名空間是個絕佳機制<span class="punctuation">,</span> 要充分利用</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多種開發語言專案管理工具</title>
     <url>/2022/11/16/tool-project-manage/</url>
     <content><![CDATA[<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>全端工程師常常會同時需要用多種語言進行專案開發，使用各種語言適合的IDE(例如Xcode、Android Studio、PyCharm、GoLand、AppCode)進行專案開啟。若對要修改較舊專案，常常會須再花時間去找專案的位置。</p>
@@ -326,6 +308,24 @@
       <tags>
         <tag>開發工具</tag>
         <tag>專案管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python之禪</title>
+    <url>/2022/11/28/the_zen_of_python/</url>
+    <content><![CDATA[<p>Python之禪 最早由Tim Peters在Python郵件列表中發表，它包含了影響Python程式語言設計的19條軟體編寫原則。<br>在最初及後來的一些版本中，一共包含20條，其中第20條是「這一條留空請 Guido 來填寫」。<br>這留空的一條從未公布也可能並不存在。這些文本屬於公共領域。 [<a href="https://zh.wikipedia.org/zh-tw/Python%E4%B9%8B%E7%A6%85">維基百科</a>]</p>
+<p>執行<code>import this</code>，可以看到以下的輸出：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">The Zen of Python<span class="punctuation">,</span> by Tim Peters</span><br><span class="line"></span><br><span class="line">Beautiful is better than ugly. </span><br><span class="line">優美優於醜陋</span><br><span class="line"></span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">明瞭優於隱晦</span><br><span class="line"></span><br><span class="line">Simple is better than complex.</span><br><span class="line">簡單優於複雜</span><br><span class="line"></span><br><span class="line">Complex is better than complicated.</span><br><span class="line">複雜優於凌亂</span><br><span class="line"></span><br><span class="line">Flat is better than nested.</span><br><span class="line">扁平勝於嵌套</span><br><span class="line"></span><br><span class="line">Sparse is better than dense.</span><br><span class="line">稀疏勝於稠密</span><br><span class="line"></span><br><span class="line">Readability counts.</span><br><span class="line">可讀性很重要</span><br><span class="line"></span><br><span class="line">Special cases aren&#x27;t special enough to break the rules.</span><br><span class="line">特例亦不可違背原則</span><br><span class="line"></span><br><span class="line">Although practicality beats purity.</span><br><span class="line">雖然實用性勝過純粹性</span><br><span class="line"></span><br><span class="line">Errors should never pass silently.</span><br><span class="line">錯誤不應該悄無聲息地過去</span><br><span class="line"></span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">除非明確地沈默。</span><br><span class="line"></span><br><span class="line">In the face of ambiguity<span class="punctuation">,</span> refuse the temptation to guess.</span><br><span class="line">面對模棱兩可時，拒絕猜測的誘惑</span><br><span class="line"></span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">任何問題應有一種，且最好只有一種，顯而易見的解決方法</span><br><span class="line"></span><br><span class="line">Although that way may not be obvious at first unless you&#x27;re Dutch.</span><br><span class="line">雖然你一開始的方法不一定是最好的，除非你是荷蘭人</span><br><span class="line">解決一個問題的方法可能會有很多種，但在 Python 中，只選擇最明顯的那一個</span><br><span class="line"></span><br><span class="line">Now is better than never.</span><br><span class="line">做優於不做</span><br><span class="line"></span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">然而不假思索還不如不做</span><br><span class="line"></span><br><span class="line">If the implementation is hard to explain<span class="punctuation">,</span> it&#x27;s a bad idea.</span><br><span class="line">很難解釋的，必然是壞方法</span><br><span class="line"></span><br><span class="line">If the implementation is easy to explain<span class="punctuation">,</span> it may be a good idea.</span><br><span class="line">很好解釋的，可能是好方法</span><br><span class="line">        </span><br><span class="line">Namespaces are one honking great idea -- let&#x27;s do more of those!</span><br><span class="line">命名空間是個絕佳機制<span class="punctuation">,</span> 要充分利用</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -583,8 +583,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Backend</tag>
         <tag>Android</tag>
+        <tag>Backend</tag>
         <tag>作品集</tag>
         <tag>Side Project</tag>
       </tags>
@@ -862,8 +862,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Backend</tag>
         <tag>Android</tag>
+        <tag>Backend</tag>
         <tag>作品集</tag>
         <tag>Frontend</tag>
       </tags>
