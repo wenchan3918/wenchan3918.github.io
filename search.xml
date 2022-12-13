@@ -71,21 +71,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux系統管理備忘</title>
-    <url>/2022/12/01/linux-management/</url>
-    <content><![CDATA[<h1 id="帳號權限管理"><a href="#帳號權限管理" class="headerlink" title="帳號權限管理"></a>帳號權限管理</h1><h2 id="用root做SSH登入，被駭客風險？"><a href="#用root做SSH登入，被駭客風險？" class="headerlink" title="用root做SSH登入，被駭客風險？"></a>用root做SSH登入，被駭客風險？</h2><ol>
-<li>如果root遠端登入且是用密碼做認證，因為所有系統是以root當帳號名稱，所以駭客可以只針對密碼進行暴力破解密碼進而駭進系統。</li>
-<li>如果用其他名稱當帳號(例如kkevin)做SSH登入，駭客必須猜中你的帳號才能進行密碼暴力破解。</li>
-<li>如果用root做SSH登入且是用private rsa key做認證，這樣駭客想破解難度就會高於密碼認證很多。</li>
-<li>如果用kkevin用密碼做認證且kkevin有sudo權限，安全性就會在kkevin密碼的複雜度。</li>
-</ol>
-<h2 id="ssh-keygen"><a href="#ssh-keygen" class="headerlink" title="ssh-keygen"></a>ssh-keygen</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">風險,</span> <span class="string">Risk,</span> <span class="string">ri-sk</span></span><br><span class="line"><span class="string">駭客,</span> <span class="string">Hacker,</span> <span class="string">ha-ker</span></span><br><span class="line"><span class="string">暴力破解,</span> <span class="string">Brute</span> <span class="string">Force,</span> <span class="string">bru-te</span> <span class="string">for-ce</span></span><br><span class="line"><span class="string">駭進系統,</span> <span class="string">Hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system,</span> <span class="string">hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Nginx解析</title>
     <url>/2022/11/29/nginx-conf/</url>
     <content><![CDATA[<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><p><strong>Nginx主要提供功能</strong>:</p>
@@ -106,6 +91,21 @@
         <tag>PostgresSQL</tag>
         <tag>Backend</tag>
         <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux系統管理備忘</title>
+    <url>/2022/12/01/linux-management/</url>
+    <content><![CDATA[<h1 id="帳號權限管理"><a href="#帳號權限管理" class="headerlink" title="帳號權限管理"></a>帳號權限管理</h1><h2 id="用root做SSH登入，被駭客風險？"><a href="#用root做SSH登入，被駭客風險？" class="headerlink" title="用root做SSH登入，被駭客風險？"></a>用root做SSH登入，被駭客風險？</h2><ol>
+<li>如果root遠端登入且是用密碼做認證，因為所有系統是以root當帳號名稱，所以駭客可以只針對密碼進行暴力破解密碼進而駭進系統。</li>
+<li>如果用其他名稱當帳號(例如kkevin)做SSH登入，駭客必須猜中你的帳號才能進行密碼暴力破解。</li>
+<li>如果用root做SSH登入且是用private rsa key做認證，這樣駭客想破解難度就會高於密碼認證很多。</li>
+<li>如果用kkevin用密碼做認證且kkevin有sudo權限，安全性就會在kkevin密碼的複雜度。</li>
+</ol>
+<h2 id="ssh-keygen"><a href="#ssh-keygen" class="headerlink" title="ssh-keygen"></a>ssh-keygen</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">風險,</span> <span class="string">Risk,</span> <span class="string">ri-sk</span></span><br><span class="line"><span class="string">駭客,</span> <span class="string">Hacker,</span> <span class="string">ha-ker</span></span><br><span class="line"><span class="string">暴力破解,</span> <span class="string">Brute</span> <span class="string">Force,</span> <span class="string">bru-te</span> <span class="string">for-ce</span></span><br><span class="line"><span class="string">駭進系統,</span> <span class="string">Hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system,</span> <span class="string">hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -470,32 +470,6 @@
       </tags>
   </entry>
   <entry>
-    <title>LeetCode - 計算1加到n的總和</title>
-    <url>/2022/11/14/leetcode/recursion/</url>
-    <content><![CDATA[<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>計算1加到n的總和，例如: n為10，總和為1+2+3+4+5+6+7+8+9+10&#x3D;55。</p>
-<span id="more"></span>
-<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><p>時間複雜度: O(n)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過數學累加方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string">步驟1 =&gt; total + 1 =&gt; 0 + 1 = 1</span></span><br><span class="line"><span class="string">步驟2 =&gt; total + 2 =&gt; 1 + 2 = 3</span></span><br><span class="line"><span class="string">步驟3 =&gt; total + 3 =&gt; 3 + 3 = 6</span></span><br><span class="line"><span class="string">步驟4 =&gt; total + 4 =&gt; 6 + 4 = 10</span></span><br><span class="line"><span class="string">步驟5 =&gt; total + 5 =&gt; 10 + 5 = 15</span></span><br><span class="line"><span class="string">步驟6 =&gt; total + 6 =&gt; 15 + 6 = 21</span></span><br><span class="line"><span class="string">步驟7 =&gt; total + 7 =&gt; 21 + 7 = 28</span></span><br><span class="line"><span class="string">步驟8 =&gt; total + 8 =&gt; 28 + 8 = 36</span></span><br><span class="line"><span class="string">步驟9 =&gt; total + 9 =&gt; 36 + 9 = 45</span></span><br><span class="line"><span class="string">步驟10 =&gt; total + 10 =&gt; 45 + 10 = 55</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sum_1_to_n</span>(<span class="params">n</span>):</span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">        total = total + i</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;步驟<span class="subst">&#123;i&#125;</span> = total + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total&#125;</span> + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total + <span class="number">1</span>&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> total</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; sum_1_to_n(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><p>時間複雜度: O(n)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過遞迴方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">將問題拆解成小問題，找出遞迴的關係式</span></span><br><span class="line"><span class="string">x=1時, r(1) =&gt; return 1</span></span><br><span class="line"><span class="string">x=2時, r(2) =&gt; return r(1) + 2 =&gt;  1 + 2 = 3</span></span><br><span class="line"><span class="string">x=3時, r(3) =&gt; return r(2) + 3 =&gt;  3 + 3 = 6</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="string">x=10時, r(10) =&gt; return r(9) + 10 =&gt;  45 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">遞迴展開:</span></span><br><span class="line"><span class="string">r(10)&#123;</span></span><br><span class="line"><span class="string">  return r(9)&#123;</span></span><br><span class="line"><span class="string">     return r(8)&#123;</span></span><br><span class="line"><span class="string">        return r(7)&#123;</span></span><br><span class="line"><span class="string">           return r(6)&#123;</span></span><br><span class="line"><span class="string">              return r(5)&#123;</span></span><br><span class="line"><span class="string">                 return r(4)&#123;</span></span><br><span class="line"><span class="string">                    return r(3)&#123;</span></span><br><span class="line"><span class="string">                       return r(2)&#123;</span></span><br><span class="line"><span class="string">                          return r(1)&#123;</span></span><br><span class="line"><span class="string">                             return 1</span></span><br><span class="line"><span class="string">                          &#125; + 2</span></span><br><span class="line"><span class="string">                       &#125; + 3</span></span><br><span class="line"><span class="string">                    &#125; + 4</span></span><br><span class="line"><span class="string">                 &#125; + 5</span></span><br><span class="line"><span class="string">              &#125; + 6</span></span><br><span class="line"><span class="string">           &#125; + 7</span></span><br><span class="line"><span class="string">        &#125; + 8</span></span><br><span class="line"><span class="string">     &#125; + 9</span></span><br><span class="line"><span class="string">  &#125; + 10</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">r</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> r(n - <span class="number">1</span>) + n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; r(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">演算法,</span> <span class="string">Algorithm,</span> <span class="string">al-go-rithm</span></span><br><span class="line"><span class="string">遞迴,</span> <span class="string">Recursion,</span> <span class="string">re-cur-sion</span></span><br><span class="line"><span class="string">時間複雜度,</span> <span class="string">Time</span> <span class="string">complexity,</span> <span class="string">time</span> <span class="string">com-ple-xity</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>演算法</tag>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>演算法 - 多種營業時間格式處理</title>
     <url>/2022/11/20/leetcode/multi-style-date-format/</url>
     <content><![CDATA[<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>給定下列多種的營業時間格式:</p>
@@ -582,6 +556,32 @@ ol, ul {
         <tag>Backend</tag>
         <tag>作品集</tag>
         <tag>Side Project</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LeetCode - 計算1加到n的總和</title>
+    <url>/2022/11/14/leetcode/recursion/</url>
+    <content><![CDATA[<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>計算1加到n的總和，例如: n為10，總和為1+2+3+4+5+6+7+8+9+10&#x3D;55。</p>
+<span id="more"></span>
+<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><p>時間複雜度: O(n)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過數學累加方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string">步驟1 =&gt; total + 1 =&gt; 0 + 1 = 1</span></span><br><span class="line"><span class="string">步驟2 =&gt; total + 2 =&gt; 1 + 2 = 3</span></span><br><span class="line"><span class="string">步驟3 =&gt; total + 3 =&gt; 3 + 3 = 6</span></span><br><span class="line"><span class="string">步驟4 =&gt; total + 4 =&gt; 6 + 4 = 10</span></span><br><span class="line"><span class="string">步驟5 =&gt; total + 5 =&gt; 10 + 5 = 15</span></span><br><span class="line"><span class="string">步驟6 =&gt; total + 6 =&gt; 15 + 6 = 21</span></span><br><span class="line"><span class="string">步驟7 =&gt; total + 7 =&gt; 21 + 7 = 28</span></span><br><span class="line"><span class="string">步驟8 =&gt; total + 8 =&gt; 28 + 8 = 36</span></span><br><span class="line"><span class="string">步驟9 =&gt; total + 9 =&gt; 36 + 9 = 45</span></span><br><span class="line"><span class="string">步驟10 =&gt; total + 10 =&gt; 45 + 10 = 55</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sum_1_to_n</span>(<span class="params">n</span>):</span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">        total = total + i</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;步驟<span class="subst">&#123;i&#125;</span> = total + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total&#125;</span> + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total + <span class="number">1</span>&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> total</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; sum_1_to_n(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><p>時間複雜度: O(n)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過遞迴方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">將問題拆解成小問題，找出遞迴的關係式</span></span><br><span class="line"><span class="string">x=1時, r(1) =&gt; return 1</span></span><br><span class="line"><span class="string">x=2時, r(2) =&gt; return r(1) + 2 =&gt;  1 + 2 = 3</span></span><br><span class="line"><span class="string">x=3時, r(3) =&gt; return r(2) + 3 =&gt;  3 + 3 = 6</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="string">x=10時, r(10) =&gt; return r(9) + 10 =&gt;  45 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">遞迴展開:</span></span><br><span class="line"><span class="string">r(10)&#123;</span></span><br><span class="line"><span class="string">  return r(9)&#123;</span></span><br><span class="line"><span class="string">     return r(8)&#123;</span></span><br><span class="line"><span class="string">        return r(7)&#123;</span></span><br><span class="line"><span class="string">           return r(6)&#123;</span></span><br><span class="line"><span class="string">              return r(5)&#123;</span></span><br><span class="line"><span class="string">                 return r(4)&#123;</span></span><br><span class="line"><span class="string">                    return r(3)&#123;</span></span><br><span class="line"><span class="string">                       return r(2)&#123;</span></span><br><span class="line"><span class="string">                          return r(1)&#123;</span></span><br><span class="line"><span class="string">                             return 1</span></span><br><span class="line"><span class="string">                          &#125; + 2</span></span><br><span class="line"><span class="string">                       &#125; + 3</span></span><br><span class="line"><span class="string">                    &#125; + 4</span></span><br><span class="line"><span class="string">                 &#125; + 5</span></span><br><span class="line"><span class="string">              &#125; + 6</span></span><br><span class="line"><span class="string">           &#125; + 7</span></span><br><span class="line"><span class="string">        &#125; + 8</span></span><br><span class="line"><span class="string">     &#125; + 9</span></span><br><span class="line"><span class="string">  &#125; + 10</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">r</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> r(n - <span class="number">1</span>) + n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; r(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">演算法,</span> <span class="string">Algorithm,</span> <span class="string">al-go-rithm</span></span><br><span class="line"><span class="string">遞迴,</span> <span class="string">Recursion,</span> <span class="string">re-cur-sion</span></span><br><span class="line"><span class="string">時間複雜度,</span> <span class="string">Time</span> <span class="string">complexity,</span> <span class="string">time</span> <span class="string">com-ple-xity</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>演算法</tag>
+        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
