@@ -71,6 +71,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux系統管理備忘</title>
+    <url>/2022/12/01/linux-management/</url>
+    <content><![CDATA[<h1 id="帳號權限管理"><a href="#帳號權限管理" class="headerlink" title="帳號權限管理"></a>帳號權限管理</h1><h2 id="用root做SSH登入，被駭客風險？"><a href="#用root做SSH登入，被駭客風險？" class="headerlink" title="用root做SSH登入，被駭客風險？"></a>用root做SSH登入，被駭客風險？</h2><ol>
+<li>如果root遠端登入且是用密碼做認證，因為所有系統是以root當帳號名稱，所以駭客可以只針對密碼進行暴力破解密碼進而駭進系統。</li>
+<li>如果用其他名稱當帳號(例如kkevin)做SSH登入，駭客必須猜中你的帳號才能進行密碼暴力破解。</li>
+<li>如果用root做SSH登入且是用private rsa key做認證，這樣駭客想破解難度就會高於密碼認證很多。</li>
+<li>如果用kkevin用密碼做認證且kkevin有sudo權限，安全性就會在kkevin密碼的複雜度。</li>
+</ol>
+<h2 id="ssh-keygen"><a href="#ssh-keygen" class="headerlink" title="ssh-keygen"></a>ssh-keygen</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">風險,</span> <span class="string">Risk,</span> <span class="string">ri-sk</span></span><br><span class="line"><span class="string">駭客,</span> <span class="string">Hacker,</span> <span class="string">ha-ker</span></span><br><span class="line"><span class="string">暴力破解,</span> <span class="string">Brute</span> <span class="string">Force,</span> <span class="string">bru-te</span> <span class="string">for-ce</span></span><br><span class="line"><span class="string">駭進系統,</span> <span class="string">Hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system,</span> <span class="string">hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Nginx解析</title>
     <url>/2022/11/29/nginx-conf/</url>
     <content><![CDATA[<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><p><strong>Nginx主要提供功能</strong>:</p>
@@ -88,24 +103,9 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">負載平衡,</span> <span class="string">Load</span> <span class="string">Balancing,</span> <span class="string">load</span> <span class="string">ba-lan-ce-ing</span></span><br><span class="line"><span class="string">靜態資源服務,</span> <span class="string">Static</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">sta-tic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">動態資源服務,</span> <span class="string">Dynamic</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">dy-na-mic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">Http憑證存取服務,</span> <span class="string">Http</span> <span class="string">Certificate</span> <span class="string">Access</span> <span class="string">Service,</span> <span class="string">cer-ti-fi-cate</span> <span class="string">ac-ce-ss</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">效能,</span> <span class="string">Performance,</span> <span class="string">per-form-an-ce</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
+        <tag>Nginx</tag>
         <tag>PostgresSQL</tag>
         <tag>Backend</tag>
-        <tag>Nginx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux系統管理備忘</title>
-    <url>/2022/12/01/linux-management/</url>
-    <content><![CDATA[<h1 id="帳號權限管理"><a href="#帳號權限管理" class="headerlink" title="帳號權限管理"></a>帳號權限管理</h1><h2 id="用root做SSH登入，被駭客風險？"><a href="#用root做SSH登入，被駭客風險？" class="headerlink" title="用root做SSH登入，被駭客風險？"></a>用root做SSH登入，被駭客風險？</h2><ol>
-<li>如果root遠端登入且是用密碼做認證，因為所有系統是以root當帳號名稱，所以駭客可以只針對密碼進行暴力破解密碼進而駭進系統。</li>
-<li>如果用其他名稱當帳號(例如kkevin)做SSH登入，駭客必須猜中你的帳號才能進行密碼暴力破解。</li>
-<li>如果用root做SSH登入且是用private rsa key做認證，這樣駭客想破解難度就會高於密碼認證很多。</li>
-<li>如果用kkevin用密碼做認證且kkevin有sudo權限，安全性就會在kkevin密碼的複雜度。</li>
-</ol>
-<h2 id="ssh-keygen"><a href="#ssh-keygen" class="headerlink" title="ssh-keygen"></a>ssh-keygen</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">風險,</span> <span class="string">Risk,</span> <span class="string">ri-sk</span></span><br><span class="line"><span class="string">駭客,</span> <span class="string">Hacker,</span> <span class="string">ha-ker</span></span><br><span class="line"><span class="string">暴力破解,</span> <span class="string">Brute</span> <span class="string">Force,</span> <span class="string">bru-te</span> <span class="string">for-ce</span></span><br><span class="line"><span class="string">駭進系統,</span> <span class="string">Hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system,</span> <span class="string">hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -115,21 +115,6 @@
 <li>避免文字過長格式化後導致行數過多。<br>Preferences -&gt; Editor -&gt; Code Style -&gt; Markdown<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212031119846.png"></li>
 </ul>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">導致,</span> <span class="string">Cause,</span> <span class="string">cau-se</span></span><br><span class="line"><span class="string">避免,</span> <span class="string">Avoid,</span> <span class="string">av-oid</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python備忘錄</title>
-    <url>/2022/12/02/python-memo/</url>
-    <content><![CDATA[<!-- Get UTF-8 Size (ANSI C) -->
-<!-- Begin -->
-<script src="https://gist.github.com/ChihSeanHsu/27b2f1817daacdf8de5283c22eb5cc05.js"></script>
-<!-- End -->
-
-<h1 id="命名規範"><a href="#命名規範" class="headerlink" title="命名規範"></a>命名規範</h1><p>參考<a href="https://peps.python.org/pep-0008/">PEP 8</a>代碼規範</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">PEP</span> <span class="number">8</span><span class="string">,</span> <span class="string">Python</span> <span class="string">Enhancement</span> <span class="string">Proposals</span> <span class="number">8</span><span class="string">,</span> <span class="string">pep</span> <span class="number">8</span></span><br><span class="line"><span class="string">增強,</span> <span class="string">Enhancement,</span> <span class="string">en-han-ce-ment</span></span><br><span class="line"><span class="string">建議,</span> <span class="string">Proposals,</span> <span class="string">pro-pos-als</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Python</tag>
@@ -169,6 +154,21 @@
       <tags>
         <tag>Python</tag>
         <tag>測試</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python備忘錄</title>
+    <url>/2022/12/02/python-memo/</url>
+    <content><![CDATA[<!-- Get UTF-8 Size (ANSI C) -->
+<!-- Begin -->
+<script src="https://gist.github.com/ChihSeanHsu/27b2f1817daacdf8de5283c22eb5cc05.js"></script>
+<!-- End -->
+
+<h1 id="命名規範"><a href="#命名規範" class="headerlink" title="命名規範"></a>命名規範</h1><p>參考<a href="https://peps.python.org/pep-0008/">PEP 8</a>代碼規範</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">PEP</span> <span class="number">8</span><span class="string">,</span> <span class="string">Python</span> <span class="string">Enhancement</span> <span class="string">Proposals</span> <span class="number">8</span><span class="string">,</span> <span class="string">pep</span> <span class="number">8</span></span><br><span class="line"><span class="string">增強,</span> <span class="string">Enhancement,</span> <span class="string">en-han-ce-ment</span></span><br><span class="line"><span class="string">建議,</span> <span class="string">Proposals,</span> <span class="string">pro-pos-als</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -329,6 +329,46 @@
       </tags>
   </entry>
   <entry>
+    <title>美股學習</title>
+    <url>/2022/11/23/us-stock/</url>
+    <content><![CDATA[<h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><ul>
+<li><a href="https://rl.fx678.com/">重要數據公布日期-匯通財經(推薦)</a></li>
+<li><a href="https://hk.investing.com/economic-calendar/">重要數據公布日期-investing</a></li>
+</ul>
+<h1 id="相關網址"><a href="#相關網址" class="headerlink" title="相關網址"></a>相關網址</h1><ul>
+<li><p><a href="https://www.bls.gov/schedule/news_release/cpi.htm">CPI from 美國勞動部| En</a></p>
+</li>
+<li><p><a href="https://docs.google.com/spreadsheets/d/1YJZl4iqs00CQiCrHi6MqQRJa_v3imw7ehB3QSzCR-MU/edit#gid=0">美國關鍵數據發布日期統計</a></p>
+</li>
+<li><p><a href="https://www.macromicro.me/collections/4/us-employ-relative/87/jolts">財經M平方 | 繁體</a></p>
+</li>
+<li><p><a href="https://hk.investing.com/economic-calendar/">Investing | 繁體</a><br>英為財情是一個財經平台和新聞網站，是全球三大金融網站之一，由德羅·埃弗拉特創立於2007年。它提供市場行情，有關股票、期貨、期權、分析以及大宗物資等方面的資訊。2021年4月，該網站被一家位於東亞的國際投資基金以5億美元的價格收購。</p>
+</li>
+<li><p><a href="https://rili.jhrs.net/jiedu/">金匯網 | 簡體</a></p>
+</li>
+</ul>
+<h1 id="常用指標"><a href="#常用指標" class="headerlink" title="常用指標"></a>常用指標</h1><ul>
+<li><p><a href="https://www.bls.gov/news.release/empsit.toc.htm">Employment Situation | 非農就業數據</a><br>非農業就業變化量度上一個月受聘人數(不含農業)<br>的變化。創造新工作機會是衡量消費者支出的重要指標。而消費者支出亦是經濟活動的重要元素。如果指標比預期高，應視為美元強勢&#x2F;上漲，反之，則應視為美元弱勢&#x2F;走跌。[<a href="https://hk.investing.com/economic-calendar/nonfarm-payrolls-227">Investing</a>]</p>
+</li>
+<li><p><a href="https://www.bls.gov/news.release/cpi.toc.htm">CPI | Consumer Price Index | 消費者物價指數</a><br>消費者物價指數測量的是隨著時間的變化，包括多種（常有幾百種）商品和服務零售價格的平均變化值。[<a href="https://zh.wikipedia.org/zh-tw/%E6%B6%88%E8%B2%BB%E8%80%85%E7%89%A9%E5%83%B9%E6%8C%87%E6%95%B8">wiki</a>]</p>
+</li>
+<li><p><a href="https://www.bls.gov/news.release/eci.toc.htm">ECI | Employment Cost Index | 勞動成本指數</a><br>勞動成本指數是由勞工部針對勞動成本的變化，設計出來的指數。它的調查內容並無產業和職業種類的差別。主要根據工資薪水、受雇人福利對雇主的成本兩項因素的變化來計算指數。[<a href="https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=bce974c0-a976-46ca-af2d-885a79581d0b">理財網</a>]</p>
+</li>
+<li><p><a href="https://www.bls.gov/news.release/ppi.toc.htm">PPI | Producer Price Index | 生產物價指數</a><br>生產物價指數是一個用來衡量製造商出廠價的平均變化的指數，它是統計部門收集和整理的若干個物價指數中的一個。如果生產物價指數比預期數值高時，表明有通貨膨脹的風險。如果生產物價指數比預期數值低時，則表明有通貨緊縮的風險。[<a href="https://wiki.mbalib.com/zh-tw/%E9%9B%87%E4%BD%A3%E6%88%90%E6%9C%AC%E6%8C%87%E6%95%B0">wiki</a>]</p>
+</li>
+</ul>
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">股票,</span> <span class="string">Stock,</span> <span class="string">stock</span></span><br><span class="line"><span class="string">生產物價指數,</span> <span class="string">Producer</span> <span class="string">Price</span> <span class="string">Index</span></span><br><span class="line"><span class="string">非農就業數據,</span> <span class="string">Employment</span> <span class="string">Situation,</span> <span class="string">em-ploy-ment</span> <span class="string">si-tu-ation</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>股票</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>常用工具</title>
     <url>/2022/11/22/tools/</url>
     <content><![CDATA[<h1 id="專案管理"><a href="#專案管理" class="headerlink" title="專案管理"></a>專案管理</h1><h2 id="圖片"><a href="#圖片" class="headerlink" title="圖片"></a>圖片</h2><ul>
@@ -399,46 +439,6 @@
 ]]></content>
       <tags>
         <tag>Tools</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>美股學習</title>
-    <url>/2022/11/23/us-stock/</url>
-    <content><![CDATA[<h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><ul>
-<li><a href="https://rl.fx678.com/">重要數據公布日期-匯通財經(推薦)</a></li>
-<li><a href="https://hk.investing.com/economic-calendar/">重要數據公布日期-investing</a></li>
-</ul>
-<h1 id="相關網址"><a href="#相關網址" class="headerlink" title="相關網址"></a>相關網址</h1><ul>
-<li><p><a href="https://www.bls.gov/schedule/news_release/cpi.htm">CPI from 美國勞動部| En</a></p>
-</li>
-<li><p><a href="https://docs.google.com/spreadsheets/d/1YJZl4iqs00CQiCrHi6MqQRJa_v3imw7ehB3QSzCR-MU/edit#gid=0">美國關鍵數據發布日期統計</a></p>
-</li>
-<li><p><a href="https://www.macromicro.me/collections/4/us-employ-relative/87/jolts">財經M平方 | 繁體</a></p>
-</li>
-<li><p><a href="https://hk.investing.com/economic-calendar/">Investing | 繁體</a><br>英為財情是一個財經平台和新聞網站，是全球三大金融網站之一，由德羅·埃弗拉特創立於2007年。它提供市場行情，有關股票、期貨、期權、分析以及大宗物資等方面的資訊。2021年4月，該網站被一家位於東亞的國際投資基金以5億美元的價格收購。</p>
-</li>
-<li><p><a href="https://rili.jhrs.net/jiedu/">金匯網 | 簡體</a></p>
-</li>
-</ul>
-<h1 id="常用指標"><a href="#常用指標" class="headerlink" title="常用指標"></a>常用指標</h1><ul>
-<li><p><a href="https://www.bls.gov/news.release/empsit.toc.htm">Employment Situation | 非農就業數據</a><br>非農業就業變化量度上一個月受聘人數(不含農業)<br>的變化。創造新工作機會是衡量消費者支出的重要指標。而消費者支出亦是經濟活動的重要元素。如果指標比預期高，應視為美元強勢&#x2F;上漲，反之，則應視為美元弱勢&#x2F;走跌。[<a href="https://hk.investing.com/economic-calendar/nonfarm-payrolls-227">Investing</a>]</p>
-</li>
-<li><p><a href="https://www.bls.gov/news.release/cpi.toc.htm">CPI | Consumer Price Index | 消費者物價指數</a><br>消費者物價指數測量的是隨著時間的變化，包括多種（常有幾百種）商品和服務零售價格的平均變化值。[<a href="https://zh.wikipedia.org/zh-tw/%E6%B6%88%E8%B2%BB%E8%80%85%E7%89%A9%E5%83%B9%E6%8C%87%E6%95%B8">wiki</a>]</p>
-</li>
-<li><p><a href="https://www.bls.gov/news.release/eci.toc.htm">ECI | Employment Cost Index | 勞動成本指數</a><br>勞動成本指數是由勞工部針對勞動成本的變化，設計出來的指數。它的調查內容並無產業和職業種類的差別。主要根據工資薪水、受雇人福利對雇主的成本兩項因素的變化來計算指數。[<a href="https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=bce974c0-a976-46ca-af2d-885a79581d0b">理財網</a>]</p>
-</li>
-<li><p><a href="https://www.bls.gov/news.release/ppi.toc.htm">PPI | Producer Price Index | 生產物價指數</a><br>生產物價指數是一個用來衡量製造商出廠價的平均變化的指數，它是統計部門收集和整理的若干個物價指數中的一個。如果生產物價指數比預期數值高時，表明有通貨膨脹的風險。如果生產物價指數比預期數值低時，則表明有通貨緊縮的風險。[<a href="https://wiki.mbalib.com/zh-tw/%E9%9B%87%E4%BD%A3%E6%88%90%E6%9C%AC%E6%8C%87%E6%95%B0">wiki</a>]</p>
-</li>
-</ul>
-<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">股票,</span> <span class="string">Stock,</span> <span class="string">stock</span></span><br><span class="line"><span class="string">生產物價指數,</span> <span class="string">Producer</span> <span class="string">Price</span> <span class="string">Index</span></span><br><span class="line"><span class="string">非農就業數據,</span> <span class="string">Employment</span> <span class="string">Situation,</span> <span class="string">em-ploy-ment</span> <span class="string">si-tu-ation</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>股票</tag>
       </tags>
   </entry>
   <entry>
@@ -552,8 +552,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Android</tag>
         <tag>Backend</tag>
+        <tag>Android</tag>
         <tag>作品集</tag>
         <tag>Side Project</tag>
       </tags>
@@ -857,8 +857,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Android</tag>
         <tag>Backend</tag>
+        <tag>Android</tag>
         <tag>作品集</tag>
         <tag>Frontend</tag>
       </tags>
