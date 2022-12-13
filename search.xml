@@ -103,9 +103,9 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">負載平衡,</span> <span class="string">Load</span> <span class="string">Balancing,</span> <span class="string">load</span> <span class="string">ba-lan-ce-ing</span></span><br><span class="line"><span class="string">靜態資源服務,</span> <span class="string">Static</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">sta-tic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">動態資源服務,</span> <span class="string">Dynamic</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">dy-na-mic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">Http憑證存取服務,</span> <span class="string">Http</span> <span class="string">Certificate</span> <span class="string">Access</span> <span class="string">Service,</span> <span class="string">cer-ti-fi-cate</span> <span class="string">ac-ce-ss</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">效能,</span> <span class="string">Performance,</span> <span class="string">per-form-an-ce</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>Nginx</tag>
         <tag>PostgresSQL</tag>
         <tag>Backend</tag>
+        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
@@ -118,42 +118,6 @@
 ]]></content>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python print效能測試</title>
-    <url>/2022/12/01/python-print-performance/</url>
-    <content><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>針對Python print效能測試，用實際數據進行比較。</p>
-<h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212011359133.png"></p>
-<h1 id="測試方法"><a href="#測試方法" class="headerlink" title="測試方法"></a>測試方法</h1><!-- Get UTF-8 -->
-<!-- Begin -->
-<script src="https://gist.github.com/wenchan3918/daaf36d70ed309bb25ccc7b986b36d35.js"></script>
-<!-- End -->
-
-<h1 id="測試結果"><a href="#測試結果" class="headerlink" title="測試結果"></a>測試結果</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 10萬次回圈</span></span><br><span class="line">測試條件: 進行10.0萬次回圈,不列印任何字元,消耗時間為0.003秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印10個字元,消耗時間為0.962秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印100個字元,消耗時間為1.64秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印100個字元且換行,消耗時間為9.797秒</span><br><span class="line"></span><br><span class="line"><span class="comment"># 100萬次回圈</span></span><br><span class="line">測試條件: 進行100.0萬次回圈,不列印任何字元,消耗時間為0.02秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印10個字元,消耗時間為9.753秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印100個字元,消耗時間為16.41秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印100個字元且換行,消耗時間為97.132秒</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><p>print確實會消耗更多的執行時間。</p>
-<p><strong>在10萬次回圈下</strong></p>
-<ul>
-<li>『列印100個字元且換行』消耗時間為『不列印任何字元』的9.797&#x2F;0.003&#x3D;3266倍</li>
-<li>『列印100個字元』消耗時間為『不列印任何字元』的1.64&#x2F;0.003&#x3D;546倍</li>
-<li>『列印10個字元』消耗時間為『不列印任何字元』的0.962&#x2F;0.003&#x3D;320倍</li>
-</ul>
-<p><strong>在100萬次回圈下</strong></p>
-<ul>
-<li>『列印100個字元且換行』消耗時間為『不列印任何字元』的97.132&#x2F;0.02&#x3D;4856倍</li>
-<li>『列印100個字元』消耗時間為『不列印任何字元』的16.41&#x2F;0.02&#x3D;812倍</li>
-<li>『列印10個字元』消耗時間為『不列印任何字元』的9.753&#x2F;0.02&#x3D;488倍</li>
-</ul>
-<span style="color:#6d4ee9;font-weight:bold">
-那是否因為這效能差異而不使用print呢？如果在一般小專案用戶不多情況下，個人會選擇使用print，因為print的可讀性比較高，而且在debug時，可直接看到print的結果，這對接案節省時間是有幫助的。
-
-<p>若是有大量使用者的服務，某API呼叫次數每天都有數十萬數百萬，這時應該就要避免使用print了，因為節省下來的效能會非常可觀。<br></p></span><p></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">結論,</span> <span class="string">Conclusion,</span> <span class="string">con-clu-sion</span></span><br><span class="line"><span class="string">數百萬,</span> <span class="string">hundred</span> <span class="string">million,</span> <span class="string">hund-erd</span> <span class="string">mi-lion</span></span><br><span class="line"><span class="string">可讀性,</span> <span class="string">readability,</span> <span class="string">read-a-bil-ity</span></span><br><span class="line"><span class="string">消耗時間,</span> <span class="string">consume</span> <span class="string">time,</span> <span class="string">con-sume</span> <span class="string">time</span></span><br><span class="line"><span class="string">```</span>  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Python</tag>
-        <tag>測試</tag>
       </tags>
   </entry>
   <entry>
@@ -272,6 +236,42 @@
       </tags>
   </entry>
   <entry>
+    <title>Python print效能測試</title>
+    <url>/2022/12/01/python-print-performance/</url>
+    <content><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>針對Python print效能測試，用實際數據進行比較。</p>
+<h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212011359133.png"></p>
+<h1 id="測試方法"><a href="#測試方法" class="headerlink" title="測試方法"></a>測試方法</h1><!-- Get UTF-8 -->
+<!-- Begin -->
+<script src="https://gist.github.com/wenchan3918/daaf36d70ed309bb25ccc7b986b36d35.js"></script>
+<!-- End -->
+
+<h1 id="測試結果"><a href="#測試結果" class="headerlink" title="測試結果"></a>測試結果</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 10萬次回圈</span></span><br><span class="line">測試條件: 進行10.0萬次回圈,不列印任何字元,消耗時間為0.003秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印10個字元,消耗時間為0.962秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印100個字元,消耗時間為1.64秒</span><br><span class="line">測試條件: 進行10.0萬次回圈,列印100個字元且換行,消耗時間為9.797秒</span><br><span class="line"></span><br><span class="line"><span class="comment"># 100萬次回圈</span></span><br><span class="line">測試條件: 進行100.0萬次回圈,不列印任何字元,消耗時間為0.02秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印10個字元,消耗時間為9.753秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印100個字元,消耗時間為16.41秒</span><br><span class="line">測試條件: 進行100.0萬次回圈,列印100個字元且換行,消耗時間為97.132秒</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><p>print確實會消耗更多的執行時間。</p>
+<p><strong>在10萬次回圈下</strong></p>
+<ul>
+<li>『列印100個字元且換行』消耗時間為『不列印任何字元』的9.797&#x2F;0.003&#x3D;3266倍</li>
+<li>『列印100個字元』消耗時間為『不列印任何字元』的1.64&#x2F;0.003&#x3D;546倍</li>
+<li>『列印10個字元』消耗時間為『不列印任何字元』的0.962&#x2F;0.003&#x3D;320倍</li>
+</ul>
+<p><strong>在100萬次回圈下</strong></p>
+<ul>
+<li>『列印100個字元且換行』消耗時間為『不列印任何字元』的97.132&#x2F;0.02&#x3D;4856倍</li>
+<li>『列印100個字元』消耗時間為『不列印任何字元』的16.41&#x2F;0.02&#x3D;812倍</li>
+<li>『列印10個字元』消耗時間為『不列印任何字元』的9.753&#x2F;0.02&#x3D;488倍</li>
+</ul>
+<span style="color:#6d4ee9;font-weight:bold">
+那是否因為這效能差異而不使用print呢？如果在一般小專案用戶不多情況下，個人會選擇使用print，因為print的可讀性比較高，而且在debug時，可直接看到print的結果，這對接案節省時間是有幫助的。
+
+<p>若是有大量使用者的服務，某API呼叫次數每天都有數十萬數百萬，這時應該就要避免使用print了，因為節省下來的效能會非常可觀。<br></p></span><p></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">結論,</span> <span class="string">Conclusion,</span> <span class="string">con-clu-sion</span></span><br><span class="line"><span class="string">數百萬,</span> <span class="string">hundred</span> <span class="string">million,</span> <span class="string">hund-erd</span> <span class="string">mi-lion</span></span><br><span class="line"><span class="string">可讀性,</span> <span class="string">readability,</span> <span class="string">read-a-bil-ity</span></span><br><span class="line"><span class="string">消耗時間,</span> <span class="string">consume</span> <span class="string">time,</span> <span class="string">con-sume</span> <span class="string">time</span></span><br><span class="line"><span class="string">```</span>  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+        <tag>測試</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python之禪</title>
     <url>/2022/11/28/the_zen_of_python/</url>
     <content><![CDATA[<p>Python之禪 最早由Tim Peters在Python郵件列表中發表，它包含了影響Python程式語言設計的19條軟體編寫原則。<br>在最初及後來的一些版本中，一共包含20條，其中第20條是「這一條留空請 Guido 來填寫」。<br>這留空的一條從未公布也可能並不存在。這些文本屬於公共領域。 [<a href="https://zh.wikipedia.org/zh-tw/Python%E4%B9%8B%E7%A6%85">維基百科</a>]</p>
@@ -326,46 +326,6 @@
       <tags>
         <tag>開發工具</tag>
         <tag>專案管理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>美股學習</title>
-    <url>/2022/11/23/us-stock/</url>
-    <content><![CDATA[<h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><ul>
-<li><a href="https://rl.fx678.com/">重要數據公布日期-匯通財經(推薦)</a></li>
-<li><a href="https://hk.investing.com/economic-calendar/">重要數據公布日期-investing</a></li>
-</ul>
-<h1 id="相關網址"><a href="#相關網址" class="headerlink" title="相關網址"></a>相關網址</h1><ul>
-<li><p><a href="https://www.bls.gov/schedule/news_release/cpi.htm">CPI from 美國勞動部| En</a></p>
-</li>
-<li><p><a href="https://docs.google.com/spreadsheets/d/1YJZl4iqs00CQiCrHi6MqQRJa_v3imw7ehB3QSzCR-MU/edit#gid=0">美國關鍵數據發布日期統計</a></p>
-</li>
-<li><p><a href="https://www.macromicro.me/collections/4/us-employ-relative/87/jolts">財經M平方 | 繁體</a></p>
-</li>
-<li><p><a href="https://hk.investing.com/economic-calendar/">Investing | 繁體</a><br>英為財情是一個財經平台和新聞網站，是全球三大金融網站之一，由德羅·埃弗拉特創立於2007年。它提供市場行情，有關股票、期貨、期權、分析以及大宗物資等方面的資訊。2021年4月，該網站被一家位於東亞的國際投資基金以5億美元的價格收購。</p>
-</li>
-<li><p><a href="https://rili.jhrs.net/jiedu/">金匯網 | 簡體</a></p>
-</li>
-</ul>
-<h1 id="常用指標"><a href="#常用指標" class="headerlink" title="常用指標"></a>常用指標</h1><ul>
-<li><p><a href="https://www.bls.gov/news.release/empsit.toc.htm">Employment Situation | 非農就業數據</a><br>非農業就業變化量度上一個月受聘人數(不含農業)<br>的變化。創造新工作機會是衡量消費者支出的重要指標。而消費者支出亦是經濟活動的重要元素。如果指標比預期高，應視為美元強勢&#x2F;上漲，反之，則應視為美元弱勢&#x2F;走跌。[<a href="https://hk.investing.com/economic-calendar/nonfarm-payrolls-227">Investing</a>]</p>
-</li>
-<li><p><a href="https://www.bls.gov/news.release/cpi.toc.htm">CPI | Consumer Price Index | 消費者物價指數</a><br>消費者物價指數測量的是隨著時間的變化，包括多種（常有幾百種）商品和服務零售價格的平均變化值。[<a href="https://zh.wikipedia.org/zh-tw/%E6%B6%88%E8%B2%BB%E8%80%85%E7%89%A9%E5%83%B9%E6%8C%87%E6%95%B8">wiki</a>]</p>
-</li>
-<li><p><a href="https://www.bls.gov/news.release/eci.toc.htm">ECI | Employment Cost Index | 勞動成本指數</a><br>勞動成本指數是由勞工部針對勞動成本的變化，設計出來的指數。它的調查內容並無產業和職業種類的差別。主要根據工資薪水、受雇人福利對雇主的成本兩項因素的變化來計算指數。[<a href="https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=bce974c0-a976-46ca-af2d-885a79581d0b">理財網</a>]</p>
-</li>
-<li><p><a href="https://www.bls.gov/news.release/ppi.toc.htm">PPI | Producer Price Index | 生產物價指數</a><br>生產物價指數是一個用來衡量製造商出廠價的平均變化的指數，它是統計部門收集和整理的若干個物價指數中的一個。如果生產物價指數比預期數值高時，表明有通貨膨脹的風險。如果生產物價指數比預期數值低時，則表明有通貨緊縮的風險。[<a href="https://wiki.mbalib.com/zh-tw/%E9%9B%87%E4%BD%A3%E6%88%90%E6%9C%AC%E6%8C%87%E6%95%B0">wiki</a>]</p>
-</li>
-</ul>
-<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">股票,</span> <span class="string">Stock,</span> <span class="string">stock</span></span><br><span class="line"><span class="string">生產物價指數,</span> <span class="string">Producer</span> <span class="string">Price</span> <span class="string">Index</span></span><br><span class="line"><span class="string">非農就業數據,</span> <span class="string">Employment</span> <span class="string">Situation,</span> <span class="string">em-ploy-ment</span> <span class="string">si-tu-ation</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>股票</tag>
       </tags>
   </entry>
   <entry>
@@ -449,6 +409,46 @@
 <h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
   </entry>
   <entry>
+    <title>美股學習</title>
+    <url>/2022/11/23/us-stock/</url>
+    <content><![CDATA[<h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><ul>
+<li><a href="https://rl.fx678.com/">重要數據公布日期-匯通財經(推薦)</a></li>
+<li><a href="https://hk.investing.com/economic-calendar/">重要數據公布日期-investing</a></li>
+</ul>
+<h1 id="相關網址"><a href="#相關網址" class="headerlink" title="相關網址"></a>相關網址</h1><ul>
+<li><p><a href="https://www.bls.gov/schedule/news_release/cpi.htm">CPI from 美國勞動部| En</a></p>
+</li>
+<li><p><a href="https://docs.google.com/spreadsheets/d/1YJZl4iqs00CQiCrHi6MqQRJa_v3imw7ehB3QSzCR-MU/edit#gid=0">美國關鍵數據發布日期統計</a></p>
+</li>
+<li><p><a href="https://www.macromicro.me/collections/4/us-employ-relative/87/jolts">財經M平方 | 繁體</a></p>
+</li>
+<li><p><a href="https://hk.investing.com/economic-calendar/">Investing | 繁體</a><br>英為財情是一個財經平台和新聞網站，是全球三大金融網站之一，由德羅·埃弗拉特創立於2007年。它提供市場行情，有關股票、期貨、期權、分析以及大宗物資等方面的資訊。2021年4月，該網站被一家位於東亞的國際投資基金以5億美元的價格收購。</p>
+</li>
+<li><p><a href="https://rili.jhrs.net/jiedu/">金匯網 | 簡體</a></p>
+</li>
+</ul>
+<h1 id="常用指標"><a href="#常用指標" class="headerlink" title="常用指標"></a>常用指標</h1><ul>
+<li><p><a href="https://www.bls.gov/news.release/empsit.toc.htm">Employment Situation | 非農就業數據</a><br>非農業就業變化量度上一個月受聘人數(不含農業)<br>的變化。創造新工作機會是衡量消費者支出的重要指標。而消費者支出亦是經濟活動的重要元素。如果指標比預期高，應視為美元強勢&#x2F;上漲，反之，則應視為美元弱勢&#x2F;走跌。[<a href="https://hk.investing.com/economic-calendar/nonfarm-payrolls-227">Investing</a>]</p>
+</li>
+<li><p><a href="https://www.bls.gov/news.release/cpi.toc.htm">CPI | Consumer Price Index | 消費者物價指數</a><br>消費者物價指數測量的是隨著時間的變化，包括多種（常有幾百種）商品和服務零售價格的平均變化值。[<a href="https://zh.wikipedia.org/zh-tw/%E6%B6%88%E8%B2%BB%E8%80%85%E7%89%A9%E5%83%B9%E6%8C%87%E6%95%B8">wiki</a>]</p>
+</li>
+<li><p><a href="https://www.bls.gov/news.release/eci.toc.htm">ECI | Employment Cost Index | 勞動成本指數</a><br>勞動成本指數是由勞工部針對勞動成本的變化，設計出來的指數。它的調查內容並無產業和職業種類的差別。主要根據工資薪水、受雇人福利對雇主的成本兩項因素的變化來計算指數。[<a href="https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=bce974c0-a976-46ca-af2d-885a79581d0b">理財網</a>]</p>
+</li>
+<li><p><a href="https://www.bls.gov/news.release/ppi.toc.htm">PPI | Producer Price Index | 生產物價指數</a><br>生產物價指數是一個用來衡量製造商出廠價的平均變化的指數，它是統計部門收集和整理的若干個物價指數中的一個。如果生產物價指數比預期數值高時，表明有通貨膨脹的風險。如果生產物價指數比預期數值低時，則表明有通貨緊縮的風險。[<a href="https://wiki.mbalib.com/zh-tw/%E9%9B%87%E4%BD%A3%E6%88%90%E6%9C%AC%E6%8C%87%E6%95%B0">wiki</a>]</p>
+</li>
+</ul>
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">股票,</span> <span class="string">Stock,</span> <span class="string">stock</span></span><br><span class="line"><span class="string">生產物價指數,</span> <span class="string">Producer</span> <span class="string">Price</span> <span class="string">Index</span></span><br><span class="line"><span class="string">非農就業數據,</span> <span class="string">Employment</span> <span class="string">Situation,</span> <span class="string">em-ploy-ment</span> <span class="string">si-tu-ation</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>股票</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LeetCode - 列印abc所有排列組合</title>
     <url>/2022/11/12/leetcode/abc-combi/</url>
     <content><![CDATA[<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>給定一個字串，列印出所有可能的組合，<br>例如: abc -&gt; aaa, aab, aac, aba, abb, abc, aca, acb, acc, baa, bab, bac, bba, bbb, bbc, bca, bcb, bcc, caa, cab, cac,<br>cba, cbb, cbc, cca, ccb, ccc</p>
@@ -493,6 +493,32 @@
       <tags>
         <tag>Python</tag>
         <tag>演算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LeetCode - 計算1加到n的總和</title>
+    <url>/2022/11/14/leetcode/recursion/</url>
+    <content><![CDATA[<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>計算1加到n的總和，例如: n為10，總和為1+2+3+4+5+6+7+8+9+10&#x3D;55。</p>
+<span id="more"></span>
+<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><p>時間複雜度: O(n)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過數學累加方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string">步驟1 =&gt; total + 1 =&gt; 0 + 1 = 1</span></span><br><span class="line"><span class="string">步驟2 =&gt; total + 2 =&gt; 1 + 2 = 3</span></span><br><span class="line"><span class="string">步驟3 =&gt; total + 3 =&gt; 3 + 3 = 6</span></span><br><span class="line"><span class="string">步驟4 =&gt; total + 4 =&gt; 6 + 4 = 10</span></span><br><span class="line"><span class="string">步驟5 =&gt; total + 5 =&gt; 10 + 5 = 15</span></span><br><span class="line"><span class="string">步驟6 =&gt; total + 6 =&gt; 15 + 6 = 21</span></span><br><span class="line"><span class="string">步驟7 =&gt; total + 7 =&gt; 21 + 7 = 28</span></span><br><span class="line"><span class="string">步驟8 =&gt; total + 8 =&gt; 28 + 8 = 36</span></span><br><span class="line"><span class="string">步驟9 =&gt; total + 9 =&gt; 36 + 9 = 45</span></span><br><span class="line"><span class="string">步驟10 =&gt; total + 10 =&gt; 45 + 10 = 55</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sum_1_to_n</span>(<span class="params">n</span>):</span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">        total = total + i</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;步驟<span class="subst">&#123;i&#125;</span> = total + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total&#125;</span> + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total + <span class="number">1</span>&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> total</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; sum_1_to_n(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><p>時間複雜度: O(n)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過遞迴方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">將問題拆解成小問題，找出遞迴的關係式</span></span><br><span class="line"><span class="string">x=1時, r(1) =&gt; return 1</span></span><br><span class="line"><span class="string">x=2時, r(2) =&gt; return r(1) + 2 =&gt;  1 + 2 = 3</span></span><br><span class="line"><span class="string">x=3時, r(3) =&gt; return r(2) + 3 =&gt;  3 + 3 = 6</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="string">x=10時, r(10) =&gt; return r(9) + 10 =&gt;  45 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">遞迴展開:</span></span><br><span class="line"><span class="string">r(10)&#123;</span></span><br><span class="line"><span class="string">  return r(9)&#123;</span></span><br><span class="line"><span class="string">     return r(8)&#123;</span></span><br><span class="line"><span class="string">        return r(7)&#123;</span></span><br><span class="line"><span class="string">           return r(6)&#123;</span></span><br><span class="line"><span class="string">              return r(5)&#123;</span></span><br><span class="line"><span class="string">                 return r(4)&#123;</span></span><br><span class="line"><span class="string">                    return r(3)&#123;</span></span><br><span class="line"><span class="string">                       return r(2)&#123;</span></span><br><span class="line"><span class="string">                          return r(1)&#123;</span></span><br><span class="line"><span class="string">                             return 1</span></span><br><span class="line"><span class="string">                          &#125; + 2</span></span><br><span class="line"><span class="string">                       &#125; + 3</span></span><br><span class="line"><span class="string">                    &#125; + 4</span></span><br><span class="line"><span class="string">                 &#125; + 5</span></span><br><span class="line"><span class="string">              &#125; + 6</span></span><br><span class="line"><span class="string">           &#125; + 7</span></span><br><span class="line"><span class="string">        &#125; + 8</span></span><br><span class="line"><span class="string">     &#125; + 9</span></span><br><span class="line"><span class="string">  &#125; + 10</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">r</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> r(n - <span class="number">1</span>) + n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; r(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">演算法,</span> <span class="string">Algorithm,</span> <span class="string">al-go-rithm</span></span><br><span class="line"><span class="string">遞迴,</span> <span class="string">Recursion,</span> <span class="string">re-cur-sion</span></span><br><span class="line"><span class="string">時間複雜度,</span> <span class="string">Time</span> <span class="string">complexity,</span> <span class="string">time</span> <span class="string">com-ple-xity</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>演算法</tag>
+        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
@@ -552,36 +578,10 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Backend</tag>
         <tag>Android</tag>
+        <tag>Backend</tag>
         <tag>作品集</tag>
         <tag>Side Project</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LeetCode - 計算1加到n的總和</title>
-    <url>/2022/11/14/leetcode/recursion/</url>
-    <content><![CDATA[<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>計算1加到n的總和，例如: n為10，總和為1+2+3+4+5+6+7+8+9+10&#x3D;55。</p>
-<span id="more"></span>
-<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><p>時間複雜度: O(n)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過數學累加方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string">步驟1 =&gt; total + 1 =&gt; 0 + 1 = 1</span></span><br><span class="line"><span class="string">步驟2 =&gt; total + 2 =&gt; 1 + 2 = 3</span></span><br><span class="line"><span class="string">步驟3 =&gt; total + 3 =&gt; 3 + 3 = 6</span></span><br><span class="line"><span class="string">步驟4 =&gt; total + 4 =&gt; 6 + 4 = 10</span></span><br><span class="line"><span class="string">步驟5 =&gt; total + 5 =&gt; 10 + 5 = 15</span></span><br><span class="line"><span class="string">步驟6 =&gt; total + 6 =&gt; 15 + 6 = 21</span></span><br><span class="line"><span class="string">步驟7 =&gt; total + 7 =&gt; 21 + 7 = 28</span></span><br><span class="line"><span class="string">步驟8 =&gt; total + 8 =&gt; 28 + 8 = 36</span></span><br><span class="line"><span class="string">步驟9 =&gt; total + 9 =&gt; 36 + 9 = 45</span></span><br><span class="line"><span class="string">步驟10 =&gt; total + 10 =&gt; 45 + 10 = 55</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sum_1_to_n</span>(<span class="params">n</span>):</span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">        total = total + i</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;步驟<span class="subst">&#123;i&#125;</span> = total + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total&#125;</span> + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total + <span class="number">1</span>&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> total</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; sum_1_to_n(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><p>時間複雜度: O(n)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過遞迴方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">將問題拆解成小問題，找出遞迴的關係式</span></span><br><span class="line"><span class="string">x=1時, r(1) =&gt; return 1</span></span><br><span class="line"><span class="string">x=2時, r(2) =&gt; return r(1) + 2 =&gt;  1 + 2 = 3</span></span><br><span class="line"><span class="string">x=3時, r(3) =&gt; return r(2) + 3 =&gt;  3 + 3 = 6</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="string">x=10時, r(10) =&gt; return r(9) + 10 =&gt;  45 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">遞迴展開:</span></span><br><span class="line"><span class="string">r(10)&#123;</span></span><br><span class="line"><span class="string">  return r(9)&#123;</span></span><br><span class="line"><span class="string">     return r(8)&#123;</span></span><br><span class="line"><span class="string">        return r(7)&#123;</span></span><br><span class="line"><span class="string">           return r(6)&#123;</span></span><br><span class="line"><span class="string">              return r(5)&#123;</span></span><br><span class="line"><span class="string">                 return r(4)&#123;</span></span><br><span class="line"><span class="string">                    return r(3)&#123;</span></span><br><span class="line"><span class="string">                       return r(2)&#123;</span></span><br><span class="line"><span class="string">                          return r(1)&#123;</span></span><br><span class="line"><span class="string">                             return 1</span></span><br><span class="line"><span class="string">                          &#125; + 2</span></span><br><span class="line"><span class="string">                       &#125; + 3</span></span><br><span class="line"><span class="string">                    &#125; + 4</span></span><br><span class="line"><span class="string">                 &#125; + 5</span></span><br><span class="line"><span class="string">              &#125; + 6</span></span><br><span class="line"><span class="string">           &#125; + 7</span></span><br><span class="line"><span class="string">        &#125; + 8</span></span><br><span class="line"><span class="string">     &#125; + 9</span></span><br><span class="line"><span class="string">  &#125; + 10</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">r</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> r(n - <span class="number">1</span>) + n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; r(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">演算法,</span> <span class="string">Algorithm,</span> <span class="string">al-go-rithm</span></span><br><span class="line"><span class="string">遞迴,</span> <span class="string">Recursion,</span> <span class="string">re-cur-sion</span></span><br><span class="line"><span class="string">時間複雜度,</span> <span class="string">Time</span> <span class="string">complexity,</span> <span class="string">time</span> <span class="string">com-ple-xity</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>演算法</tag>
-        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
@@ -857,8 +857,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Backend</tag>
         <tag>Android</tag>
+        <tag>Backend</tag>
         <tag>作品集</tag>
         <tag>Frontend</tag>
       </tags>
