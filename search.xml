@@ -71,6 +71,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux系統管理備忘</title>
+    <url>/2022/12/01/linux-management/</url>
+    <content><![CDATA[<h1 id="帳號權限管理"><a href="#帳號權限管理" class="headerlink" title="帳號權限管理"></a>帳號權限管理</h1><h2 id="用root做SSH登入，被駭客風險？"><a href="#用root做SSH登入，被駭客風險？" class="headerlink" title="用root做SSH登入，被駭客風險？"></a>用root做SSH登入，被駭客風險？</h2><ol>
+<li>如果root遠端登入且是用密碼做認證，因為所有系統是以root當帳號名稱，所以駭客可以只針對密碼進行暴力破解密碼進而駭進系統。</li>
+<li>如果用其他名稱當帳號(例如kkevin)做SSH登入，駭客必須猜中你的帳號才能進行密碼暴力破解。</li>
+<li>如果用root做SSH登入且是用private rsa key做認證，這樣駭客想破解難度就會高於密碼認證很多。</li>
+<li>如果用kkevin用密碼做認證且kkevin有sudo權限，安全性就會在kkevin密碼的複雜度。</li>
+</ol>
+<h2 id="ssh-keygen"><a href="#ssh-keygen" class="headerlink" title="ssh-keygen"></a>ssh-keygen</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">風險,</span> <span class="string">Risk,</span> <span class="string">ri-sk</span></span><br><span class="line"><span class="string">駭客,</span> <span class="string">Hacker,</span> <span class="string">ha-ker</span></span><br><span class="line"><span class="string">暴力破解,</span> <span class="string">Brute</span> <span class="string">Force,</span> <span class="string">bru-te</span> <span class="string">for-ce</span></span><br><span class="line"><span class="string">駭進系統,</span> <span class="string">Hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system,</span> <span class="string">hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>後端事務常用指令</title>
     <url>/2022/12/24/linux-memo/</url>
     <content><![CDATA[<h1 id="搜尋關鍵字"><a href="#搜尋關鍵字" class="headerlink" title="搜尋關鍵字"></a>搜尋關鍵字</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -i, --ignore-case  ignore case distinctions,忽略大小寫</span></span><br><span class="line"><span class="comment"># -n, --line-number  print line number with output lines,顯示行號</span></span><br><span class="line"><span class="comment"># -r, --recursive  recursive,遞迴</span></span><br><span class="line"><span class="comment"># SSLMMS/**/migrations/*.py&quot;  搜尋SSLMMS底下任何目錄裡的migrations目錄含有所有.py檔</span></span><br><span class="line">$ grep -inr <span class="string">&#x27;streelamp&#x27;</span> /tmp/service_django/SSLMMS/**/migrations/*.py</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -112,18 +127,23 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux系統管理備忘</title>
-    <url>/2022/12/01/linux-management/</url>
-    <content><![CDATA[<h1 id="帳號權限管理"><a href="#帳號權限管理" class="headerlink" title="帳號權限管理"></a>帳號權限管理</h1><h2 id="用root做SSH登入，被駭客風險？"><a href="#用root做SSH登入，被駭客風險？" class="headerlink" title="用root做SSH登入，被駭客風險？"></a>用root做SSH登入，被駭客風險？</h2><ol>
-<li>如果root遠端登入且是用密碼做認證，因為所有系統是以root當帳號名稱，所以駭客可以只針對密碼進行暴力破解密碼進而駭進系統。</li>
-<li>如果用其他名稱當帳號(例如kkevin)做SSH登入，駭客必須猜中你的帳號才能進行密碼暴力破解。</li>
-<li>如果用root做SSH登入且是用private rsa key做認證，這樣駭客想破解難度就會高於密碼認證很多。</li>
-<li>如果用kkevin用密碼做認證且kkevin有sudo權限，安全性就會在kkevin密碼的複雜度。</li>
-</ol>
-<h2 id="ssh-keygen"><a href="#ssh-keygen" class="headerlink" title="ssh-keygen"></a>ssh-keygen</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">風險,</span> <span class="string">Risk,</span> <span class="string">ri-sk</span></span><br><span class="line"><span class="string">駭客,</span> <span class="string">Hacker,</span> <span class="string">ha-ker</span></span><br><span class="line"><span class="string">暴力破解,</span> <span class="string">Brute</span> <span class="string">Force,</span> <span class="string">bru-te</span> <span class="string">for-ce</span></span><br><span class="line"><span class="string">駭進系統,</span> <span class="string">Hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system,</span> <span class="string">hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
+    <title>Python備忘錄</title>
+    <url>/2022/12/02/python-memo/</url>
+    <content><![CDATA[<!-- Get UTF-8 Size (ANSI C) -->
+<!-- Begin -->
+<script src="https://gist.github.com/ChihSeanHsu/27b2f1817daacdf8de5283c22eb5cc05.js"></script>
+<!-- End -->
+
+<h1 id="命名規範"><a href="#命名規範" class="headerlink" title="命名規範"></a>命名規範</h1><p>參考<a href="https://peps.python.org/pep-0008/">PEP 8</a>代碼規範</p>
+<h1 id="Django-Mock"><a href="#Django-Mock" class="headerlink" title="Django Mock"></a>Django Mock</h1><p>當後端工程師定義好api schema後，需要再花時間把商業邏輯進行實作，這段時間前端工程師只能等待，為了讓前端工程師可以先進行開發，可以先使用mock的方式來模擬後端api<br>的回傳結果，這樣前端工程師就可以先進行開發，等到後端工程師完成實作後，再將mock的程式碼關閉，改成呼叫後端api。</p>
+<p><a href="https://github.com/wenchan3918/phantom_mask/commit/0fd7cc5517e792d6923c11e1f1efbeb5b6356e80">範例參考</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># pip install pip install django-mock-queries</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Model</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Account</span>(models.Model):</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Meta</span>:</span><br><span class="line">        verbose_name = <span class="string">&#x27;Account&#x27;</span></span><br><span class="line">        verbose_name_plural = <span class="string">&#x27;Account&#x27;</span></span><br><span class="line"></span><br><span class="line">    name = models.CharField(verbose_name=<span class="string">&#x27;Name&#x27;</span>,</span><br><span class="line">                            max_length=<span class="number">255</span>, )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self.name</span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_mock_qs</span>(<span class="params">cls</span>):</span><br><span class="line">        qs = MockSet(</span><br><span class="line">            MockModel(<span class="built_in">id</span>=<span class="number">1</span>, name=<span class="string">&quot;kevin&quot;</span>),</span><br><span class="line">            MockModel(<span class="built_in">id</span>=<span class="number">2</span>, name=<span class="string">&quot;David&quot;</span>),</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">return</span> qs</span><br><span class="line"></span><br><span class="line"><span class="comment"># View</span></span><br><span class="line"><span class="meta">    @action(<span class="params">methods=[<span class="string">&#x27;GET&#x27;</span>], detail=<span class="literal">False</span>, url_path=<span class="string">&#x27;example&#x27;</span></span>)</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">example</span>(<span class="params">self, request, *args, **kwargs</span>):</span><br><span class="line">        use_mock = request.GET.get(<span class="string">&#x27;use_mock&#x27;</span>, <span class="literal">False</span>)</span><br><span class="line">        queryset = Account.get_mock_qs() <span class="keyword">if</span> use_mock <span class="keyword">else</span> Account.objects.<span class="built_in">all</span>()</span><br><span class="line"></span><br><span class="line">        serializer = AccountItemOut(</span><br><span class="line">            queryset.first(),</span><br><span class="line">            many=<span class="literal">False</span>,</span><br><span class="line">            context=&#123;<span class="string">&#x27;request&#x27;</span>: request&#125;,</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">return</span> self.response(data=serializer.data)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">PEP</span> <span class="number">8</span><span class="string">,</span> <span class="string">Python</span> <span class="string">Enhancement</span> <span class="string">Proposals</span> <span class="number">8</span><span class="string">,</span> <span class="string">pep</span> <span class="number">8</span></span><br><span class="line"><span class="string">增強,</span> <span class="string">Enhancement,</span> <span class="string">en-han-ce-ment</span></span><br><span class="line"><span class="string">建議,</span> <span class="string">Proposals,</span> <span class="string">pro-pos-als</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>Linux</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -133,21 +153,6 @@
 <li>避免文字過長格式化後導致行數過多。<br>Preferences -&gt; Editor -&gt; Code Style -&gt; Markdown<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212031119846.png"></li>
 </ul>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">導致,</span> <span class="string">Cause,</span> <span class="string">cau-se</span></span><br><span class="line"><span class="string">避免,</span> <span class="string">Avoid,</span> <span class="string">av-oid</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python備忘錄</title>
-    <url>/2022/12/02/python-memo/</url>
-    <content><![CDATA[<!-- Get UTF-8 Size (ANSI C) -->
-<!-- Begin -->
-<script src="https://gist.github.com/ChihSeanHsu/27b2f1817daacdf8de5283c22eb5cc05.js"></script>
-<!-- End -->
-
-<h1 id="命名規範"><a href="#命名規範" class="headerlink" title="命名規範"></a>命名規範</h1><p>參考<a href="https://peps.python.org/pep-0008/">PEP 8</a>代碼規範</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">PEP</span> <span class="number">8</span><span class="string">,</span> <span class="string">Python</span> <span class="string">Enhancement</span> <span class="string">Proposals</span> <span class="number">8</span><span class="string">,</span> <span class="string">pep</span> <span class="number">8</span></span><br><span class="line"><span class="string">增強,</span> <span class="string">Enhancement,</span> <span class="string">en-han-ce-ment</span></span><br><span class="line"><span class="string">建議,</span> <span class="string">Proposals,</span> <span class="string">pro-pos-als</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Python</tag>
@@ -187,46 +192,6 @@
       <tags>
         <tag>Python</tag>
         <tag>測試</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>將Test/Prod環境安裝在同一台主機問題</title>
-    <url>/2022/12/03/test-prod-on-same-host/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>與前同事討論關於他所在公司MIS想把專案(專案服務都有容器化)的測試與生產環境都安裝在同一台主機上，但後端工程師是認為應該把測試與生產環境拆開成兩台不一樣虛擬機上。</p>
-<p>在公司裏其實滿常發生不同職務對同一件事情有不同看法，但如何做出最後決策的方法可能很多種，例如：</p>
-<ul>
-<li>老闆已經有想法，那就照老闆的想法當決策，出錢的最大，最後責任也是老闆承擔。</li>
-<li>MIS(DevOps)部門有想法，那就溝通看看，最終還是以MIS部門想法為主，畢竟責任歸還是這部門要承擔。</li>
-<li>後端工程師也有想法，如果老闆或MIS部門願意交換彼此想法，那就值得溝通看看，這篇文章也主要針對這情況進行溝通的探討。</li>
-</ul>
-<h1 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h1><p>針對此議題進行思考：</p>
-<ul>
-<li>方案A: 測試與生產環境都安裝在同一台主機上。(老闆與MIS頃向此方案)</li>
-<li>方案B: 測試與生產環境拆開成兩台不一樣虛擬機上。(個人與前同事頃向此方案)</li>
-</ul>
-<p>在大家都有不同想法時，我可能會先詢問對方用方案A有哪些好處以及回饋個人對方案A可能面臨到的壞處。後續再提供方案B的好處與壞處，這樣大家就可以對明確的好處跟壞處進行討論，而不是對方案的抽象概念進行討論，這樣討論的結果可能會更有建設性。</p>
-<p><strong>因個人頃向的是對方案B，以下是個人認為方案B的好處：</strong></p>
-<ul>
-<li>資源分離，測試環境與生產環境的資源不會互相影響，例如在進行壓力測試時榨乾了系統資源。</li>
-<li>資安等級，測試環境可以配置較低的資安等級，生產環境可以配置較高的資安等級。</li>
-<li>套件升級，可先在測試環境測試套件升級後，確認沒問題再將測試環境的套件升級到生產環境，避免直接在生產環境升級導致服務中斷。</li>
-<li>硬體配置，測試環境與生產環境的資源可以分別配置，例如測試環境可以配置較低的CPU與記憶體，生產環境可以配置較高的CPU與記憶體。</li>
-</ul>
-<p><strong>以下是個人認為方案A的壞處：</strong><br>基本上方案B的好處可能都會是方案A的壞處。</p>
-<ul>
-<li>資源佔用，雖然可以限制容器資源上限，但也代表要把一部分資源給測試環境，導致生產環境的資源會被減少。</li>
-<li>套件升級，Docker套件升級時，導致配置與相依套件的版本不一致，使服務無法啟動。</li>
-<li>資安等級太高，導致測試環境除錯困難，例如不允許後端工程師登入遠端主機進行log取得與當前資源監測。</li>
-<li>部署複雜度提升，因同時要區別各種環境的容器，但容器使用的port資源可能都一樣，導致部署複雜度提升。</li>
-</ul>
-<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><ul>
-<li>透過溝通針對個方案分析出好處與壞處，達到共識。</li>
-<li>透過討論，老闆或MIS部門依然覺得自己方案最好，那只能接受老闆或MIS部門的決定。</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Docker</tag>
-        <tag>職場溝通</tag>
       </tags>
   </entry>
   <entry>
@@ -290,6 +255,46 @@
       </tags>
   </entry>
   <entry>
+    <title>將Test/Prod環境安裝在同一台主機問題</title>
+    <url>/2022/12/03/test-prod-on-same-host/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>與前同事討論關於他所在公司MIS想把專案(專案服務都有容器化)的測試與生產環境都安裝在同一台主機上，但後端工程師是認為應該把測試與生產環境拆開成兩台不一樣虛擬機上。</p>
+<p>在公司裏其實滿常發生不同職務對同一件事情有不同看法，但如何做出最後決策的方法可能很多種，例如：</p>
+<ul>
+<li>老闆已經有想法，那就照老闆的想法當決策，出錢的最大，最後責任也是老闆承擔。</li>
+<li>MIS(DevOps)部門有想法，那就溝通看看，最終還是以MIS部門想法為主，畢竟責任歸還是這部門要承擔。</li>
+<li>後端工程師也有想法，如果老闆或MIS部門願意交換彼此想法，那就值得溝通看看，這篇文章也主要針對這情況進行溝通的探討。</li>
+</ul>
+<h1 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h1><p>針對此議題進行思考：</p>
+<ul>
+<li>方案A: 測試與生產環境都安裝在同一台主機上。(老闆與MIS頃向此方案)</li>
+<li>方案B: 測試與生產環境拆開成兩台不一樣虛擬機上。(個人與前同事頃向此方案)</li>
+</ul>
+<p>在大家都有不同想法時，我可能會先詢問對方用方案A有哪些好處以及回饋個人對方案A可能面臨到的壞處。後續再提供方案B的好處與壞處，這樣大家就可以對明確的好處跟壞處進行討論，而不是對方案的抽象概念進行討論，這樣討論的結果可能會更有建設性。</p>
+<p><strong>因個人頃向的是對方案B，以下是個人認為方案B的好處：</strong></p>
+<ul>
+<li>資源分離，測試環境與生產環境的資源不會互相影響，例如在進行壓力測試時榨乾了系統資源。</li>
+<li>資安等級，測試環境可以配置較低的資安等級，生產環境可以配置較高的資安等級。</li>
+<li>套件升級，可先在測試環境測試套件升級後，確認沒問題再將測試環境的套件升級到生產環境，避免直接在生產環境升級導致服務中斷。</li>
+<li>硬體配置，測試環境與生產環境的資源可以分別配置，例如測試環境可以配置較低的CPU與記憶體，生產環境可以配置較高的CPU與記憶體。</li>
+</ul>
+<p><strong>以下是個人認為方案A的壞處：</strong><br>基本上方案B的好處可能都會是方案A的壞處。</p>
+<ul>
+<li>資源佔用，雖然可以限制容器資源上限，但也代表要把一部分資源給測試環境，導致生產環境的資源會被減少。</li>
+<li>套件升級，Docker套件升級時，導致配置與相依套件的版本不一致，使服務無法啟動。</li>
+<li>資安等級太高，導致測試環境除錯困難，例如不允許後端工程師登入遠端主機進行log取得與當前資源監測。</li>
+<li>部署複雜度提升，因同時要區別各種環境的容器，但容器使用的port資源可能都一樣，導致部署複雜度提升。</li>
+</ul>
+<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><ul>
+<li>透過溝通針對個方案分析出好處與壞處，達到共識。</li>
+<li>透過討論，老闆或MIS部門依然覺得自己方案最好，那只能接受老闆或MIS部門的決定。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+        <tag>職場溝通</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python之禪</title>
     <url>/2022/11/28/the_zen_of_python/</url>
     <content><![CDATA[<p>Python之禪 最早由Tim Peters在Python郵件列表中發表，它包含了影響Python程式語言設計的19條軟體編寫原則。<br>在最初及後來的一些版本中，一共包含20條，其中第20條是「這一條留空請 Guido 來填寫」。<br>這留空的一條從未公布也可能並不存在。這些文本屬於公共領域。 [<a href="https://zh.wikipedia.org/zh-tw/Python%E4%B9%8B%E7%A6%85">維基百科</a>]</p>
@@ -347,50 +352,10 @@
       </tags>
   </entry>
   <entry>
-    <title>美股學習</title>
-    <url>/2022/11/23/us-stock/</url>
-    <content><![CDATA[<h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><ul>
-<li><a href="https://rl.fx678.com/">重要數據公布日期-匯通財經(推薦)</a></li>
-<li><a href="https://hk.investing.com/economic-calendar/">重要數據公布日期-investing</a></li>
-</ul>
-<h1 id="相關網址"><a href="#相關網址" class="headerlink" title="相關網址"></a>相關網址</h1><ul>
-<li><p><a href="https://www.bls.gov/schedule/news_release/cpi.htm">CPI from 美國勞動部| En</a></p>
-</li>
-<li><p><a href="https://docs.google.com/spreadsheets/d/1YJZl4iqs00CQiCrHi6MqQRJa_v3imw7ehB3QSzCR-MU/edit#gid=0">美國關鍵數據發布日期統計</a></p>
-</li>
-<li><p><a href="https://www.macromicro.me/collections/4/us-employ-relative/87/jolts">財經M平方 | 繁體</a></p>
-</li>
-<li><p><a href="https://hk.investing.com/economic-calendar/">Investing | 繁體</a><br>英為財情是一個財經平台和新聞網站，是全球三大金融網站之一，由德羅·埃弗拉特創立於2007年。它提供市場行情，有關股票、期貨、期權、分析以及大宗物資等方面的資訊。2021年4月，該網站被一家位於東亞的國際投資基金以5億美元的價格收購。</p>
-</li>
-<li><p><a href="https://rili.jhrs.net/jiedu/">金匯網 | 簡體</a></p>
-</li>
-</ul>
-<h1 id="常用指標"><a href="#常用指標" class="headerlink" title="常用指標"></a>常用指標</h1><ul>
-<li><p><a href="https://www.bls.gov/news.release/empsit.toc.htm">Employment Situation | 非農就業數據</a><br>非農業就業變化量度上一個月受聘人數(不含農業)<br>的變化。創造新工作機會是衡量消費者支出的重要指標。而消費者支出亦是經濟活動的重要元素。如果指標比預期高，應視為美元強勢&#x2F;上漲，反之，則應視為美元弱勢&#x2F;走跌。[<a href="https://hk.investing.com/economic-calendar/nonfarm-payrolls-227">Investing</a>]</p>
-</li>
-<li><p><a href="https://www.bls.gov/news.release/cpi.toc.htm">CPI | Consumer Price Index | 消費者物價指數</a><br>消費者物價指數測量的是隨著時間的變化，包括多種（常有幾百種）商品和服務零售價格的平均變化值。[<a href="https://zh.wikipedia.org/zh-tw/%E6%B6%88%E8%B2%BB%E8%80%85%E7%89%A9%E5%83%B9%E6%8C%87%E6%95%B8">wiki</a>]</p>
-</li>
-<li><p><a href="https://www.bls.gov/news.release/eci.toc.htm">ECI | Employment Cost Index | 勞動成本指數</a><br>勞動成本指數是由勞工部針對勞動成本的變化，設計出來的指數。它的調查內容並無產業和職業種類的差別。主要根據工資薪水、受雇人福利對雇主的成本兩項因素的變化來計算指數。[<a href="https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=bce974c0-a976-46ca-af2d-885a79581d0b">理財網</a>]</p>
-</li>
-<li><p><a href="https://www.bls.gov/news.release/ppi.toc.htm">PPI | Producer Price Index | 生產物價指數</a><br>生產物價指數是一個用來衡量製造商出廠價的平均變化的指數，它是統計部門收集和整理的若干個物價指數中的一個。如果生產物價指數比預期數值高時，表明有通貨膨脹的風險。如果生產物價指數比預期數值低時，則表明有通貨緊縮的風險。[<a href="https://wiki.mbalib.com/zh-tw/%E9%9B%87%E4%BD%A3%E6%88%90%E6%9C%AC%E6%8C%87%E6%95%B0">wiki</a>]</p>
-</li>
-</ul>
-<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">股票,</span> <span class="string">Stock,</span> <span class="string">stock</span></span><br><span class="line"><span class="string">生產物價指數,</span> <span class="string">Producer</span> <span class="string">Price</span> <span class="string">Index</span></span><br><span class="line"><span class="string">非農就業數據,</span> <span class="string">Employment</span> <span class="string">Situation,</span> <span class="string">em-ploy-ment</span> <span class="string">si-tu-ation</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>股票</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>常用工具</title>
     <url>/2022/11/22/tools/</url>
     <content><![CDATA[<h1 id="學習資源"><a href="#學習資源" class="headerlink" title="學習資源"></a>學習資源</h1><h2 id="System-Design"><a href="#System-Design" class="headerlink" title="System Design"></a>System Design</h2><h3 id="ByteByteGo"><a href="#ByteByteGo" class="headerlink" title="ByteByteGo"></a>ByteByteGo</h3><ul>
-<li><a href="https://www.youtube.com/c/ByteByteGo">Youtube</a> </li>
+<li><a href="https://www.youtube.com/c/ByteByteGo">Youtube</a></li>
 <li><a href="https://bytebytego.com/courses/system-design-interview/design-a-chat-system">Article</a></li>
 <li><a href="https://www.linkedin.com/in/alex-xu-a8131b11?original_referer=https://www.google.com/">Founder’s Linkin</a></li>
 </ul>
@@ -418,7 +383,7 @@
 <h2 id="API測試"><a href="#API測試" class="headerlink" title="API測試"></a>API測試</h2><ul>
 <li><a href="https://www.apifox.cn/">Apifox</a> API測試工具，方便管理多專案所需API。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/5KJoyhZ.png"></li>
 </ul>
-<h2 id="轉換工具"><a href="#轉換工具" class="headerlink" title="轉換工具"></a>轉換工具</h2><p>  <a href="https://app.quicktype.io/">Json Convert to data serializer(Quicktype)</a></p>
+<h2 id="轉換工具"><a href="#轉換工具" class="headerlink" title="轉換工具"></a>轉換工具</h2><p><a href="https://app.quicktype.io/">Json Convert to data serializer(Quicktype)</a></p>
 <h2 id="程式編輯"><a href="#程式編輯" class="headerlink" title="程式編輯"></a>程式編輯</h2><ul>
 <li><a href="https://www.jetbrains.com/pycharm/">Pycharm</a> Python IDE，提供方便的程式碼編輯功能。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202211270234300.png"></li>
 </ul>
@@ -463,6 +428,46 @@
 ]]></content>
       <tags>
         <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>美股學習</title>
+    <url>/2022/11/23/us-stock/</url>
+    <content><![CDATA[<h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><ul>
+<li><a href="https://rl.fx678.com/">重要數據公布日期-匯通財經(推薦)</a></li>
+<li><a href="https://hk.investing.com/economic-calendar/">重要數據公布日期-investing</a></li>
+</ul>
+<h1 id="相關網址"><a href="#相關網址" class="headerlink" title="相關網址"></a>相關網址</h1><ul>
+<li><p><a href="https://www.bls.gov/schedule/news_release/cpi.htm">CPI from 美國勞動部| En</a></p>
+</li>
+<li><p><a href="https://docs.google.com/spreadsheets/d/1YJZl4iqs00CQiCrHi6MqQRJa_v3imw7ehB3QSzCR-MU/edit#gid=0">美國關鍵數據發布日期統計</a></p>
+</li>
+<li><p><a href="https://www.macromicro.me/collections/4/us-employ-relative/87/jolts">財經M平方 | 繁體</a></p>
+</li>
+<li><p><a href="https://hk.investing.com/economic-calendar/">Investing | 繁體</a><br>英為財情是一個財經平台和新聞網站，是全球三大金融網站之一，由德羅·埃弗拉特創立於2007年。它提供市場行情，有關股票、期貨、期權、分析以及大宗物資等方面的資訊。2021年4月，該網站被一家位於東亞的國際投資基金以5億美元的價格收購。</p>
+</li>
+<li><p><a href="https://rili.jhrs.net/jiedu/">金匯網 | 簡體</a></p>
+</li>
+</ul>
+<h1 id="常用指標"><a href="#常用指標" class="headerlink" title="常用指標"></a>常用指標</h1><ul>
+<li><p><a href="https://www.bls.gov/news.release/empsit.toc.htm">Employment Situation | 非農就業數據</a><br>非農業就業變化量度上一個月受聘人數(不含農業)<br>的變化。創造新工作機會是衡量消費者支出的重要指標。而消費者支出亦是經濟活動的重要元素。如果指標比預期高，應視為美元強勢&#x2F;上漲，反之，則應視為美元弱勢&#x2F;走跌。[<a href="https://hk.investing.com/economic-calendar/nonfarm-payrolls-227">Investing</a>]</p>
+</li>
+<li><p><a href="https://www.bls.gov/news.release/cpi.toc.htm">CPI | Consumer Price Index | 消費者物價指數</a><br>消費者物價指數測量的是隨著時間的變化，包括多種（常有幾百種）商品和服務零售價格的平均變化值。[<a href="https://zh.wikipedia.org/zh-tw/%E6%B6%88%E8%B2%BB%E8%80%85%E7%89%A9%E5%83%B9%E6%8C%87%E6%95%B8">wiki</a>]</p>
+</li>
+<li><p><a href="https://www.bls.gov/news.release/eci.toc.htm">ECI | Employment Cost Index | 勞動成本指數</a><br>勞動成本指數是由勞工部針對勞動成本的變化，設計出來的指數。它的調查內容並無產業和職業種類的差別。主要根據工資薪水、受雇人福利對雇主的成本兩項因素的變化來計算指數。[<a href="https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=bce974c0-a976-46ca-af2d-885a79581d0b">理財網</a>]</p>
+</li>
+<li><p><a href="https://www.bls.gov/news.release/ppi.toc.htm">PPI | Producer Price Index | 生產物價指數</a><br>生產物價指數是一個用來衡量製造商出廠價的平均變化的指數，它是統計部門收集和整理的若干個物價指數中的一個。如果生產物價指數比預期數值高時，表明有通貨膨脹的風險。如果生產物價指數比預期數值低時，則表明有通貨緊縮的風險。[<a href="https://wiki.mbalib.com/zh-tw/%E9%9B%87%E4%BD%A3%E6%88%90%E6%9C%AC%E6%8C%87%E6%95%B0">wiki</a>]</p>
+</li>
+</ul>
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">股票,</span> <span class="string">Stock,</span> <span class="string">stock</span></span><br><span class="line"><span class="string">生產物價指數,</span> <span class="string">Producer</span> <span class="string">Price</span> <span class="string">Index</span></span><br><span class="line"><span class="string">非農就業數據,</span> <span class="string">Employment</span> <span class="string">Situation,</span> <span class="string">em-ploy-ment</span> <span class="string">si-tu-ation</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>股票</tag>
       </tags>
   </entry>
   <entry>
@@ -574,6 +579,32 @@
       </tags>
   </entry>
   <entry>
+    <title>LeetCode - 計算1加到n的總和</title>
+    <url>/2022/11/14/leetcode/recursion/</url>
+    <content><![CDATA[<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>計算1加到n的總和，例如: n為10，總和為1+2+3+4+5+6+7+8+9+10&#x3D;55。</p>
+<span id="more"></span>
+<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><p>時間複雜度: O(n)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過數學累加方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string">步驟1 =&gt; total + 1 =&gt; 0 + 1 = 1</span></span><br><span class="line"><span class="string">步驟2 =&gt; total + 2 =&gt; 1 + 2 = 3</span></span><br><span class="line"><span class="string">步驟3 =&gt; total + 3 =&gt; 3 + 3 = 6</span></span><br><span class="line"><span class="string">步驟4 =&gt; total + 4 =&gt; 6 + 4 = 10</span></span><br><span class="line"><span class="string">步驟5 =&gt; total + 5 =&gt; 10 + 5 = 15</span></span><br><span class="line"><span class="string">步驟6 =&gt; total + 6 =&gt; 15 + 6 = 21</span></span><br><span class="line"><span class="string">步驟7 =&gt; total + 7 =&gt; 21 + 7 = 28</span></span><br><span class="line"><span class="string">步驟8 =&gt; total + 8 =&gt; 28 + 8 = 36</span></span><br><span class="line"><span class="string">步驟9 =&gt; total + 9 =&gt; 36 + 9 = 45</span></span><br><span class="line"><span class="string">步驟10 =&gt; total + 10 =&gt; 45 + 10 = 55</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sum_1_to_n</span>(<span class="params">n</span>):</span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">        total = total + i</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;步驟<span class="subst">&#123;i&#125;</span> = total + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total&#125;</span> + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total + <span class="number">1</span>&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> total</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; sum_1_to_n(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><p>時間複雜度: O(n)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過遞迴方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">將問題拆解成小問題，找出遞迴的關係式</span></span><br><span class="line"><span class="string">x=1時, r(1) =&gt; return 1</span></span><br><span class="line"><span class="string">x=2時, r(2) =&gt; return r(1) + 2 =&gt;  1 + 2 = 3</span></span><br><span class="line"><span class="string">x=3時, r(3) =&gt; return r(2) + 3 =&gt;  3 + 3 = 6</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="string">x=10時, r(10) =&gt; return r(9) + 10 =&gt;  45 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">遞迴展開:</span></span><br><span class="line"><span class="string">r(10)&#123;</span></span><br><span class="line"><span class="string">  return r(9)&#123;</span></span><br><span class="line"><span class="string">     return r(8)&#123;</span></span><br><span class="line"><span class="string">        return r(7)&#123;</span></span><br><span class="line"><span class="string">           return r(6)&#123;</span></span><br><span class="line"><span class="string">              return r(5)&#123;</span></span><br><span class="line"><span class="string">                 return r(4)&#123;</span></span><br><span class="line"><span class="string">                    return r(3)&#123;</span></span><br><span class="line"><span class="string">                       return r(2)&#123;</span></span><br><span class="line"><span class="string">                          return r(1)&#123;</span></span><br><span class="line"><span class="string">                             return 1</span></span><br><span class="line"><span class="string">                          &#125; + 2</span></span><br><span class="line"><span class="string">                       &#125; + 3</span></span><br><span class="line"><span class="string">                    &#125; + 4</span></span><br><span class="line"><span class="string">                 &#125; + 5</span></span><br><span class="line"><span class="string">              &#125; + 6</span></span><br><span class="line"><span class="string">           &#125; + 7</span></span><br><span class="line"><span class="string">        &#125; + 8</span></span><br><span class="line"><span class="string">     &#125; + 9</span></span><br><span class="line"><span class="string">  &#125; + 10</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">r</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> r(n - <span class="number">1</span>) + n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; r(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">演算法,</span> <span class="string">Algorithm,</span> <span class="string">al-go-rithm</span></span><br><span class="line"><span class="string">遞迴,</span> <span class="string">Recursion,</span> <span class="string">re-cur-sion</span></span><br><span class="line"><span class="string">時間複雜度,</span> <span class="string">Time</span> <span class="string">complexity,</span> <span class="string">time</span> <span class="string">com-ple-xity</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>演算法</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>後端工程師面試-Python技巧篇</title>
     <url>/2022/12/20/leetcode/thing_interview/</url>
     <content><![CDATA[<p>針對面試中常見的Python技巧做練習並記錄相關延伸知識。</p>
@@ -631,100 +662,6 @@
       <tags>
         <tag>Python</tag>
         <tag>面試</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LeetCode - 計算1加到n的總和</title>
-    <url>/2022/11/14/leetcode/recursion/</url>
-    <content><![CDATA[<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>計算1加到n的總和，例如: n為10，總和為1+2+3+4+5+6+7+8+9+10&#x3D;55。</p>
-<span id="more"></span>
-<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><p>時間複雜度: O(n)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過數學累加方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string">步驟1 =&gt; total + 1 =&gt; 0 + 1 = 1</span></span><br><span class="line"><span class="string">步驟2 =&gt; total + 2 =&gt; 1 + 2 = 3</span></span><br><span class="line"><span class="string">步驟3 =&gt; total + 3 =&gt; 3 + 3 = 6</span></span><br><span class="line"><span class="string">步驟4 =&gt; total + 4 =&gt; 6 + 4 = 10</span></span><br><span class="line"><span class="string">步驟5 =&gt; total + 5 =&gt; 10 + 5 = 15</span></span><br><span class="line"><span class="string">步驟6 =&gt; total + 6 =&gt; 15 + 6 = 21</span></span><br><span class="line"><span class="string">步驟7 =&gt; total + 7 =&gt; 21 + 7 = 28</span></span><br><span class="line"><span class="string">步驟8 =&gt; total + 8 =&gt; 28 + 8 = 36</span></span><br><span class="line"><span class="string">步驟9 =&gt; total + 9 =&gt; 36 + 9 = 45</span></span><br><span class="line"><span class="string">步驟10 =&gt; total + 10 =&gt; 45 + 10 = 55</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sum_1_to_n</span>(<span class="params">n</span>):</span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">        total = total + i</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;步驟<span class="subst">&#123;i&#125;</span> = total + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total&#125;</span> + <span class="subst">&#123;i&#125;</span> = <span class="subst">&#123;total + <span class="number">1</span>&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> total</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; sum_1_to_n(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><p>時間複雜度: O(n)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">透過遞迴方式進行計算總和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">若n=10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">計算方式:</span></span><br><span class="line"><span class="string">1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">將問題拆解成小問題，找出遞迴的關係式</span></span><br><span class="line"><span class="string">x=1時, r(1) =&gt; return 1</span></span><br><span class="line"><span class="string">x=2時, r(2) =&gt; return r(1) + 2 =&gt;  1 + 2 = 3</span></span><br><span class="line"><span class="string">x=3時, r(3) =&gt; return r(2) + 3 =&gt;  3 + 3 = 6</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="string">x=10時, r(10) =&gt; return r(9) + 10 =&gt;  45 + 10 = 55</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">遞迴展開:</span></span><br><span class="line"><span class="string">r(10)&#123;</span></span><br><span class="line"><span class="string">  return r(9)&#123;</span></span><br><span class="line"><span class="string">     return r(8)&#123;</span></span><br><span class="line"><span class="string">        return r(7)&#123;</span></span><br><span class="line"><span class="string">           return r(6)&#123;</span></span><br><span class="line"><span class="string">              return r(5)&#123;</span></span><br><span class="line"><span class="string">                 return r(4)&#123;</span></span><br><span class="line"><span class="string">                    return r(3)&#123;</span></span><br><span class="line"><span class="string">                       return r(2)&#123;</span></span><br><span class="line"><span class="string">                          return r(1)&#123;</span></span><br><span class="line"><span class="string">                             return 1</span></span><br><span class="line"><span class="string">                          &#125; + 2</span></span><br><span class="line"><span class="string">                       &#125; + 3</span></span><br><span class="line"><span class="string">                    &#125; + 4</span></span><br><span class="line"><span class="string">                 &#125; + 5</span></span><br><span class="line"><span class="string">              &#125; + 6</span></span><br><span class="line"><span class="string">           &#125; + 7</span></span><br><span class="line"><span class="string">        &#125; + 8</span></span><br><span class="line"><span class="string">     &#125; + 9</span></span><br><span class="line"><span class="string">  &#125; + 10</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">r</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> r(n - <span class="number">1</span>) + n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;總和: <span class="subst">&#123; r(<span class="number">10</span>) &#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">演算法,</span> <span class="string">Algorithm,</span> <span class="string">al-go-rithm</span></span><br><span class="line"><span class="string">遞迴,</span> <span class="string">Recursion,</span> <span class="string">re-cur-sion</span></span><br><span class="line"><span class="string">時間複雜度,</span> <span class="string">Time</span> <span class="string">complexity,</span> <span class="string">time</span> <span class="string">com-ple-xity</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>演算法</tag>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>作品集 - LangGO背單字</title>
-    <url>/2022/11/15/projects/langgo/</url>
-    <content><![CDATA[<h1>2020年google play 教育類型排行第一名</h1>
- <a target="_blank" style="font-size:32px" href="https://play.google.com/store/apps/details?id=cek.com.langgo">
-        Google Play Download
-        </a>  
-
-<img style="margin-left: 0;" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/GcdipVf.png">
-<img style="margin-left: 0;" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/p0fQV0P.png">
-<img style="margin-left: 0;" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212131549030.png">
-<img style="margin-left: 0;" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212131549085.png">
-<img style="margin-left: 0;" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212131551856.png">
-
-
-
-<h1 id="專案發起"><a href="#專案發起" class="headerlink" title="專案發起"></a>專案發起</h1><p>工作上常有新的英文單字與句子需要學習，但是每次都要到網路上搜尋，或是到書本上找，都很麻煩，因此想要做一個網站，<br>可以讓自己管理單字與句子，方便平常重覆練習。</p>
-<span id="more"></span>
-<h1 id="使用族群"><a href="#使用族群" class="headerlink" title="使用族群"></a>使用族群</h1><ol>
-<li>自己</li>
-<li>國高中生</li>
-<li>大學生</li>
-</ol>
-<h1 id="開發技術"><a href="#開發技術" class="headerlink" title="開發技術"></a>開發技術</h1><ul>
-<li>後端: 使用<a href="https://go.dev/">Go</a> + <a href="https://github.com/gin-gonic/gin">gin框架</a></li>
-<li>前端: 使用<a href="https://vuejs.org/">Vue.js</a> + <a href="https://vuetifyjs.com/en/getting-started/installation/">Vuetify</a></li>
-<li>Android: 使用<a href="https://kotlinlang.org/">Kotlin</a>進行開發</li>
-<li>APP廣告: 使用Google Admob</li>
-</ul>
-<h1 id="APP功能"><a href="#APP功能" class="headerlink" title="APP功能"></a>APP功能</h1><ul>
-<li>類別列表<br>類別除了有內建各種主題類別項目外，也提供私人類別，可以自行新增類別，並且可以將單字與句子加入到類別中。</li>
-<li>練習單元<br>共有四大練習單元，(1)單字列表 (2)背景重覆英聽練習 (3)單字卡手寫練習 (4)選擇問答練習。</li>
-<li>設定<br>可針對練習單元進行設定，例如: 背景重覆英聽練習，可以設定單字重覆次數，單字間隔時間，單字播放速度等等。</li>
-</ul>
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/QWvqBDj.jpg" width="50%" style="margin-left: 0;">
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pIXYEEX.jpg" width="50%" style="margin-left: 0;">
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/ghQSsjL.jpg" width="50%" style="margin-left: 0;">
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/txuOKk2.jpg" width="50%" style="margin-left: 0;">
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/dWxqX35.jpg" width="50%" style="margin-left: 0;">
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/YwjJz1h.jpg" width="50%" style="margin-left: 0;">
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/XKZv9kq.jpg" width="50%" style="margin-left: 0;">
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/tCGraij.jpg" width="50%" style="margin-left: 0;">
-
-<h1 id="後台管理功能"><a href="#後台管理功能" class="headerlink" title="後台管理功能"></a>後台管理功能</h1><a href="https://langgo.app/#/" target="_blank" style="border: 1px solid #2e9fff;font-size: 24px;margin-bottom:10px" class="btn">
-後台管理</a>
-
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/E5fJKaR.png" alt="首頁"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/64kVDpV.png" alt="主分類排序"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/gZjOiB0.png" alt="子分類排序"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/S8mjvQM.png" alt="單字列表"></p>
-<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">評分,</span> <span class="string">Score,</span> <span class="string">s-core</span></span><br><span class="line"><span class="string">評論,</span> <span class="string">Comment,</span> <span class="string">com-ment</span></span><br><span class="line"><span class="string">發起,</span> <span class="string">Launch,</span> <span class="string">laun-ch</span></span><br><span class="line"><span class="string">練習單元,</span> <span class="string">Practice</span> <span class="string">unit,</span> <span class="string">pr-ac-tice</span> <span class="string">unit</span></span><br><span class="line"><span class="string">重覆練習,</span> <span class="string">Repeat</span> <span class="string">practice,</span> <span class="string">re-peat</span> <span class="string">pr-ac-tice</span></span><br><span class="line"><span class="string">大學生,</span> <span class="string">University</span> <span class="string">student,</span> <span class="string">uni-ver-sity</span> <span class="string">stu-dent</span></span><br><span class="line"><span class="string">國中生,</span> <span class="string">Junior</span> <span class="string">high</span> <span class="string">school</span> <span class="string">student,</span> <span class="string">ju-nior</span> <span class="string">high</span> <span class="string">school</span> <span class="string">stu-dent</span></span><br><span class="line"><span class="string">國小生,</span> <span class="string">Elementary</span> <span class="string">school</span> <span class="string">student,</span> <span class="string">ele-men-tary</span> <span class="string">school</span> <span class="string">stu-dent</span></span><br></pre></td></tr></table></figure>
-
-
-<style>
-ol, ul {
-    list-style:disc;
-    padding-left: 20px;
-}
-</style>
-
-
-
-
-]]></content>
-      <tags>
-        <tag>Android</tag>
-        <tag>Backend</tag>
-        <tag>作品集</tag>
-        <tag>Side Project</tag>
       </tags>
   </entry>
   <entry>
@@ -834,6 +771,74 @@ ol, ul {
         <tag>面試</tag>
         <tag>Django</tag>
         <tag>ORM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>作品集 - LangGO背單字</title>
+    <url>/2022/11/15/projects/langgo/</url>
+    <content><![CDATA[<h1>2020年google play 教育類型排行第一名</h1>
+ <a target="_blank" style="font-size:32px" href="https://play.google.com/store/apps/details?id=cek.com.langgo">
+        Google Play Download
+        </a>  
+
+<img style="margin-left: 0;" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/GcdipVf.png">
+<img style="margin-left: 0;" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/p0fQV0P.png">
+<img style="margin-left: 0;" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212131549030.png">
+<img style="margin-left: 0;" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212131549085.png">
+<img style="margin-left: 0;" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212131551856.png">
+
+
+
+<h1 id="專案發起"><a href="#專案發起" class="headerlink" title="專案發起"></a>專案發起</h1><p>工作上常有新的英文單字與句子需要學習，但是每次都要到網路上搜尋，或是到書本上找，都很麻煩，因此想要做一個網站，<br>可以讓自己管理單字與句子，方便平常重覆練習。</p>
+<span id="more"></span>
+<h1 id="使用族群"><a href="#使用族群" class="headerlink" title="使用族群"></a>使用族群</h1><ol>
+<li>自己</li>
+<li>國高中生</li>
+<li>大學生</li>
+</ol>
+<h1 id="開發技術"><a href="#開發技術" class="headerlink" title="開發技術"></a>開發技術</h1><ul>
+<li>後端: 使用<a href="https://go.dev/">Go</a> + <a href="https://github.com/gin-gonic/gin">gin框架</a></li>
+<li>前端: 使用<a href="https://vuejs.org/">Vue.js</a> + <a href="https://vuetifyjs.com/en/getting-started/installation/">Vuetify</a></li>
+<li>Android: 使用<a href="https://kotlinlang.org/">Kotlin</a>進行開發</li>
+<li>APP廣告: 使用Google Admob</li>
+</ul>
+<h1 id="APP功能"><a href="#APP功能" class="headerlink" title="APP功能"></a>APP功能</h1><ul>
+<li>類別列表<br>類別除了有內建各種主題類別項目外，也提供私人類別，可以自行新增類別，並且可以將單字與句子加入到類別中。</li>
+<li>練習單元<br>共有四大練習單元，(1)單字列表 (2)背景重覆英聽練習 (3)單字卡手寫練習 (4)選擇問答練習。</li>
+<li>設定<br>可針對練習單元進行設定，例如: 背景重覆英聽練習，可以設定單字重覆次數，單字間隔時間，單字播放速度等等。</li>
+</ul>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/QWvqBDj.jpg" width="50%" style="margin-left: 0;">
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pIXYEEX.jpg" width="50%" style="margin-left: 0;">
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/ghQSsjL.jpg" width="50%" style="margin-left: 0;">
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/txuOKk2.jpg" width="50%" style="margin-left: 0;">
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/dWxqX35.jpg" width="50%" style="margin-left: 0;">
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/YwjJz1h.jpg" width="50%" style="margin-left: 0;">
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/XKZv9kq.jpg" width="50%" style="margin-left: 0;">
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/tCGraij.jpg" width="50%" style="margin-left: 0;">
+
+<h1 id="後台管理功能"><a href="#後台管理功能" class="headerlink" title="後台管理功能"></a>後台管理功能</h1><a href="https://langgo.app/#/" target="_blank" style="border: 1px solid #2e9fff;font-size: 24px;margin-bottom:10px" class="btn">
+後台管理</a>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/E5fJKaR.png" alt="首頁"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/64kVDpV.png" alt="主分類排序"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/gZjOiB0.png" alt="子分類排序"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/S8mjvQM.png" alt="單字列表"></p>
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">評分,</span> <span class="string">Score,</span> <span class="string">s-core</span></span><br><span class="line"><span class="string">評論,</span> <span class="string">Comment,</span> <span class="string">com-ment</span></span><br><span class="line"><span class="string">發起,</span> <span class="string">Launch,</span> <span class="string">laun-ch</span></span><br><span class="line"><span class="string">練習單元,</span> <span class="string">Practice</span> <span class="string">unit,</span> <span class="string">pr-ac-tice</span> <span class="string">unit</span></span><br><span class="line"><span class="string">重覆練習,</span> <span class="string">Repeat</span> <span class="string">practice,</span> <span class="string">re-peat</span> <span class="string">pr-ac-tice</span></span><br><span class="line"><span class="string">大學生,</span> <span class="string">University</span> <span class="string">student,</span> <span class="string">uni-ver-sity</span> <span class="string">stu-dent</span></span><br><span class="line"><span class="string">國中生,</span> <span class="string">Junior</span> <span class="string">high</span> <span class="string">school</span> <span class="string">student,</span> <span class="string">ju-nior</span> <span class="string">high</span> <span class="string">school</span> <span class="string">stu-dent</span></span><br><span class="line"><span class="string">國小生,</span> <span class="string">Elementary</span> <span class="string">school</span> <span class="string">student,</span> <span class="string">ele-men-tary</span> <span class="string">school</span> <span class="string">stu-dent</span></span><br></pre></td></tr></table></figure>
+
+
+<style>
+ol, ul {
+    list-style:disc;
+    padding-left: 20px;
+}
+</style>
+
+
+
+
+]]></content>
+      <tags>
+        <tag>Android</tag>
+        <tag>Backend</tag>
+        <tag>作品集</tag>
+        <tag>Side Project</tag>
       </tags>
   </entry>
   <entry>
@@ -1048,8 +1053,8 @@ ol, ul {
         <tag>Backend</tag>
         <tag>Python</tag>
         <tag>面試</tag>
-        <tag>作品集</tag>
         <tag>Django</tag>
+        <tag>作品集</tag>
       </tags>
   </entry>
   <entry>
