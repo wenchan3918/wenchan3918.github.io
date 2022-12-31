@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>今日開張</title>
+    <url>/2022/11/12/first-article/</url>
+    <content><![CDATA[<p>主要筆記:</p>
+<ul>
+<li>程式專案:專案過程研究的技術、架構、與遇到的問題分享。</li>
+<li>金融知識</li>
+<li>工具分享</li>
+</ul>
+<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">金融知識,</span> <span class="string">Knowledge</span> <span class="string">of</span> <span class="string">finance,</span> <span class="string">know-l-edge</span> <span class="string">of</span> <span class="string">fin-ance</span></span><br><span class="line"><span class="string">架構,</span> <span class="string">Architecture,</span> <span class="string">arch-itec-ture</span></span><br><span class="line"><span class="string">研究過程,</span> <span class="string">Research</span> <span class="string">process,</span> <span class="string">re-search</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">技術,</span> <span class="string">Technology,</span> <span class="string">tech-no-logy</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>iOS開發備忘錄</title>
     <url>/2022/12/03/ios-memo/</url>
     <content><![CDATA[<h1 id="swiftUI語法學習"><a href="#swiftUI語法學習" class="headerlink" title="swiftUI語法學習"></a>swiftUI語法學習</h1><p>當您學過android &#x2F; css佈局，會有一些佈局知識以及關鍵字的瞭解，因此在學習SwiftUI基本上可以用這些關鍵字+swiftui進行谷歌搜尋，就可以找到相對應用法，例如：</p>
@@ -50,25 +69,6 @@
       <tags>
         <tag>swift</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>今日開張</title>
-    <url>/2022/11/12/first-article/</url>
-    <content><![CDATA[<p>主要筆記:</p>
-<ul>
-<li>程式專案:專案過程研究的技術、架構、與遇到的問題分享。</li>
-<li>金融知識</li>
-<li>工具分享</li>
-</ul>
-<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">金融知識,</span> <span class="string">Knowledge</span> <span class="string">of</span> <span class="string">finance,</span> <span class="string">know-l-edge</span> <span class="string">of</span> <span class="string">fin-ance</span></span><br><span class="line"><span class="string">架構,</span> <span class="string">Architecture,</span> <span class="string">arch-itec-ture</span></span><br><span class="line"><span class="string">研究過程,</span> <span class="string">Research</span> <span class="string">process,</span> <span class="string">re-search</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">技術,</span> <span class="string">Technology,</span> <span class="string">tech-no-logy</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
   </entry>
   <entry>
     <title>Linux系統管理備忘</title>
@@ -121,16 +121,16 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">負載平衡,</span> <span class="string">Load</span> <span class="string">Balancing,</span> <span class="string">load</span> <span class="string">ba-lan-ce-ing</span></span><br><span class="line"><span class="string">靜態資源服務,</span> <span class="string">Static</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">sta-tic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">動態資源服務,</span> <span class="string">Dynamic</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">dy-na-mic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">Http憑證存取服務,</span> <span class="string">Http</span> <span class="string">Certificate</span> <span class="string">Access</span> <span class="string">Service,</span> <span class="string">cer-ti-fi-cate</span> <span class="string">ac-ce-ss</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">效能,</span> <span class="string">Performance,</span> <span class="string">per-form-an-ce</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
+        <tag>Nginx</tag>
         <tag>PostgresSQL</tag>
         <tag>Backend</tag>
-        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
     <title>PyCharm環境設定</title>
     <url>/2022/12/03/pycharm-settings/</url>
     <content><![CDATA[<h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><ul>
-<li><p>避免文字過長格式化後導致行數過多。<br>Preferences -&gt; Editor -&gt; Code Style -&gt; Markdown<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212031119846.png"></p>
+<li><p>避免文字過長格式化後導致行數過多。<br>路徑<code>Preferences -&gt; Editor -&gt; Code Style -&gt; Markdown</code><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212031119846.png"></p>
 </li>
 <li><p>豐富的markdown語法支援，可支援PlantUML與Mermaid語法。<br>路徑<code>Settings/Preferences | Languages &amp; Frameworks | Markdown</code><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212311448402.png"></p>
 </li>
@@ -431,6 +431,13 @@
       </tags>
   </entry>
   <entry>
+    <title>常用單字</title>
+    <url>/2022/11/11/word-of-the-day/</url>
+    <content><![CDATA[<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Android:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">縱向,</span> <span class="string">portrait,</span> <span class="string">port-rait</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">橫向,</span> <span class="string">landscape,</span> <span class="string">land-scape</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">方向,</span> <span class="string">orientation,</span> <span class="string">o-rien-ta-tion</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">曲線,</span> <span class="string">spline,</span> <span class="string">sp-line</span></span><br><span class="line"></span><br><span class="line"><span class="attr">IT:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">副駕駛,</span> <span class="string">copilot,</span> <span class="string">co-pi-lot</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Stock:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">股票,</span> <span class="string">Stock</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Politics:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">政治,</span> <span class="string">Politics</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">民主黨,</span> <span class="string">Democracy</span> <span class="string">party,</span> <span class="string">demo-cracy</span> <span class="string">party</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">共和黨,</span> <span class="string">Republicans</span> <span class="string">party,</span> <span class="string">re-pub-li-cans</span> <span class="string">party</span></span><br><span class="line"></span><br><span class="line"><span class="attr">SSLMMS:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">電壓,</span> <span class="string">Voltage,</span> <span class="string">vol-tage</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">電流,</span> <span class="string">Current,</span> <span class="string">cur-rent</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Lovbabi:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">The</span> <span class="string">log</span> <span class="string">is</span> <span class="string">bound</span> <span class="string">to</span> <span class="string">the</span> <span class="string">student</span> <span class="string">model.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Education:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">National</span> <span class="string">Taiwan</span> <span class="string">University</span> <span class="string">of</span> <span class="string">Science</span> <span class="string">and</span> <span class="string">Technology</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">No.43,</span> <span class="string">Keelung</span> <span class="string">Rd.,</span> <span class="string">Sec.4,</span> <span class="string">Da&#x27;an</span> <span class="string">Dist.,</span> <span class="string">Taipei</span> <span class="string">City</span> <span class="number">106335</span><span class="string">,</span> <span class="string">Taiwan</span> <span class="string">(R.O.C.)</span> <span class="string">台北</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Associate</span> <span class="string">of</span> <span class="string">Electrical</span> <span class="string">Engineering</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">Month:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">January</span> <span class="string">Jan</span> <span class="string">一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">February</span> <span class="string">Feb</span> <span class="string">二月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">March</span> <span class="string">Mar</span> <span class="string">三月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">April</span> <span class="string">Apr</span> <span class="string">四月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">May</span> <span class="string">May</span> <span class="string">五月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">June</span> <span class="string">Jun</span> <span class="string">六月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">July</span> <span class="string">Jul</span> <span class="string">七月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">August</span> <span class="string">Aug</span> <span class="string">八月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">September</span> <span class="string">Sep</span> <span class="string">九月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">October</span> <span class="string">Oct</span> <span class="string">十月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">November</span> <span class="string">Nov</span> <span class="string">十一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">December</span> <span class="string">Dec</span> <span class="string">十二月</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+  </entry>
+  <entry>
     <title>美股學習</title>
     <url>/2022/11/23/us-stock/</url>
     <content><![CDATA[<h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><ul>
@@ -469,13 +476,6 @@
       <tags>
         <tag>股票</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>常用單字</title>
-    <url>/2022/11/11/word-of-the-day/</url>
-    <content><![CDATA[<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Android:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">縱向,</span> <span class="string">portrait,</span> <span class="string">port-rait</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">橫向,</span> <span class="string">landscape,</span> <span class="string">land-scape</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">方向,</span> <span class="string">orientation,</span> <span class="string">o-rien-ta-tion</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">曲線,</span> <span class="string">spline,</span> <span class="string">sp-line</span></span><br><span class="line"></span><br><span class="line"><span class="attr">IT:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">副駕駛,</span> <span class="string">copilot,</span> <span class="string">co-pi-lot</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Stock:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">股票,</span> <span class="string">Stock</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Politics:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">政治,</span> <span class="string">Politics</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">民主黨,</span> <span class="string">Democracy</span> <span class="string">party,</span> <span class="string">demo-cracy</span> <span class="string">party</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">共和黨,</span> <span class="string">Republicans</span> <span class="string">party,</span> <span class="string">re-pub-li-cans</span> <span class="string">party</span></span><br><span class="line"></span><br><span class="line"><span class="attr">SSLMMS:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">電壓,</span> <span class="string">Voltage,</span> <span class="string">vol-tage</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">電流,</span> <span class="string">Current,</span> <span class="string">cur-rent</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Lovbabi:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">The</span> <span class="string">log</span> <span class="string">is</span> <span class="string">bound</span> <span class="string">to</span> <span class="string">the</span> <span class="string">student</span> <span class="string">model.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Education:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">National</span> <span class="string">Taiwan</span> <span class="string">University</span> <span class="string">of</span> <span class="string">Science</span> <span class="string">and</span> <span class="string">Technology</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">No.43,</span> <span class="string">Keelung</span> <span class="string">Rd.,</span> <span class="string">Sec.4,</span> <span class="string">Da&#x27;an</span> <span class="string">Dist.,</span> <span class="string">Taipei</span> <span class="string">City</span> <span class="number">106335</span><span class="string">,</span> <span class="string">Taiwan</span> <span class="string">(R.O.C.)</span> <span class="string">台北</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Associate</span> <span class="string">of</span> <span class="string">Electrical</span> <span class="string">Engineering</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">Month:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">January</span> <span class="string">Jan</span> <span class="string">一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">February</span> <span class="string">Feb</span> <span class="string">二月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">March</span> <span class="string">Mar</span> <span class="string">三月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">April</span> <span class="string">Apr</span> <span class="string">四月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">May</span> <span class="string">May</span> <span class="string">五月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">June</span> <span class="string">Jun</span> <span class="string">六月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">July</span> <span class="string">Jul</span> <span class="string">七月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">August</span> <span class="string">Aug</span> <span class="string">八月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">September</span> <span class="string">Sep</span> <span class="string">九月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">October</span> <span class="string">Oct</span> <span class="string">十月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">November</span> <span class="string">Nov</span> <span class="string">十一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">December</span> <span class="string">Dec</span> <span class="string">十二月</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
   </entry>
   <entry>
     <title>LeetCode - 列印abc所有排列組合</title>
@@ -835,8 +835,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Android</tag>
         <tag>Backend</tag>
+        <tag>Android</tag>
         <tag>作品集</tag>
         <tag>Side Project</tag>
       </tags>
@@ -1114,8 +1114,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Android</tag>
         <tag>Backend</tag>
+        <tag>Android</tag>
         <tag>作品集</tag>
         <tag>Frontend</tag>
       </tags>
