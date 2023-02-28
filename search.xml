@@ -20,6 +20,30 @@
 ]]></content>
   </entry>
   <entry>
+    <title>git commit template plugin for Idea IDE</title>
+    <url>/2023/02/28/idea-ide-git-commit-template/</url>
+    <content><![CDATA[<h1 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h1><p><a href="https://plugins.jetbrains.com/plugin/9861-git-commit-template">Plugin Site</a></p>
+<ul>
+<li>Setting-&gt;Plugins-&gt; search 『git commit template』。 Click Install button.<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281354646.png"></li>
+</ul>
+<h1 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h1><ul>
+<li><p>新增測試檔案<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281402833.png"></p>
+</li>
+<li><p>進行git commit<br> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281404030.png"></p>
+</li>
+<li><p>填寫commit內容<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281410372.png"></p>
+</li>
+<li><p>產生commit內容</p>
+</li>
+<li><p><a href="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281411699.png"></a></p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>iOS開發備忘錄</title>
     <url>/2022/12/03/ios-memo/</url>
     <content><![CDATA[<h1 id="swiftUI語法學習"><a href="#swiftUI語法學習" class="headerlink" title="swiftUI語法學習"></a>swiftUI語法學習</h1><p>當您學過android &#x2F; css佈局，會有一些佈局知識以及關鍵字的瞭解，因此在學習SwiftUI基本上可以用這些關鍵字+swiftui進行谷歌搜尋，就可以找到相對應用法，例如：</p>
@@ -71,21 +95,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux系統管理備忘</title>
-    <url>/2022/12/01/linux-management/</url>
-    <content><![CDATA[<h1 id="帳號權限管理"><a href="#帳號權限管理" class="headerlink" title="帳號權限管理"></a>帳號權限管理</h1><h2 id="用root做SSH登入，被駭客風險？"><a href="#用root做SSH登入，被駭客風險？" class="headerlink" title="用root做SSH登入，被駭客風險？"></a>用root做SSH登入，被駭客風險？</h2><ol>
-<li>如果root遠端登入且是用密碼做認證，因為所有系統是以root當帳號名稱，所以駭客可以只針對密碼進行暴力破解密碼進而駭進系統。</li>
-<li>如果用其他名稱當帳號(例如kkevin)做SSH登入，駭客必須猜中你的帳號才能進行密碼暴力破解。</li>
-<li>如果用root做SSH登入且是用private rsa key做認證，這樣駭客想破解難度就會高於密碼認證很多。</li>
-<li>如果用kkevin用密碼做認證且kkevin有sudo權限，安全性就會在kkevin密碼的複雜度。</li>
-</ol>
-<h2 id="ssh-keygen"><a href="#ssh-keygen" class="headerlink" title="ssh-keygen"></a>ssh-keygen</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">風險,</span> <span class="string">Risk,</span> <span class="string">ri-sk</span></span><br><span class="line"><span class="string">駭客,</span> <span class="string">Hacker,</span> <span class="string">ha-ker</span></span><br><span class="line"><span class="string">暴力破解,</span> <span class="string">Brute</span> <span class="string">Force,</span> <span class="string">bru-te</span> <span class="string">for-ce</span></span><br><span class="line"><span class="string">駭進系統,</span> <span class="string">Hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system,</span> <span class="string">hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>後端事務常用指令</title>
     <url>/2022/12/24/linux-memo/</url>
     <content><![CDATA[<h1 id="搜尋關鍵字"><a href="#搜尋關鍵字" class="headerlink" title="搜尋關鍵字"></a>搜尋關鍵字</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -i, --ignore-case  ignore case distinctions,忽略大小寫</span></span><br><span class="line"><span class="comment"># -n, --line-number  print line number with output lines,顯示行號</span></span><br><span class="line"><span class="comment"># -r, --recursive  recursive,遞迴</span></span><br><span class="line"><span class="comment"># SSLMMS/**/migrations/*.py&quot;  搜尋SSLMMS底下任何目錄裡的migrations目錄含有所有.py檔</span></span><br><span class="line">$ grep -inr <span class="string">&#x27;streelamp&#x27;</span> /tmp/service_django/SSLMMS/**/migrations/*.py</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -101,6 +110,21 @@
       <tags>
         <tag>Linux</tag>
         <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux系統管理備忘</title>
+    <url>/2022/12/01/linux-management/</url>
+    <content><![CDATA[<h1 id="帳號權限管理"><a href="#帳號權限管理" class="headerlink" title="帳號權限管理"></a>帳號權限管理</h1><h2 id="用root做SSH登入，被駭客風險？"><a href="#用root做SSH登入，被駭客風險？" class="headerlink" title="用root做SSH登入，被駭客風險？"></a>用root做SSH登入，被駭客風險？</h2><ol>
+<li>如果root遠端登入且是用密碼做認證，因為所有系統是以root當帳號名稱，所以駭客可以只針對密碼進行暴力破解密碼進而駭進系統。</li>
+<li>如果用其他名稱當帳號(例如kkevin)做SSH登入，駭客必須猜中你的帳號才能進行密碼暴力破解。</li>
+<li>如果用root做SSH登入且是用private rsa key做認證，這樣駭客想破解難度就會高於密碼認證很多。</li>
+<li>如果用kkevin用密碼做認證且kkevin有sudo權限，安全性就會在kkevin密碼的複雜度。</li>
+</ol>
+<h2 id="ssh-keygen"><a href="#ssh-keygen" class="headerlink" title="ssh-keygen"></a>ssh-keygen</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">風險,</span> <span class="string">Risk,</span> <span class="string">ri-sk</span></span><br><span class="line"><span class="string">駭客,</span> <span class="string">Hacker,</span> <span class="string">ha-ker</span></span><br><span class="line"><span class="string">暴力破解,</span> <span class="string">Brute</span> <span class="string">Force,</span> <span class="string">bru-te</span> <span class="string">for-ce</span></span><br><span class="line"><span class="string">駭進系統,</span> <span class="string">Hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system,</span> <span class="string">hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -121,9 +145,9 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">負載平衡,</span> <span class="string">Load</span> <span class="string">Balancing,</span> <span class="string">load</span> <span class="string">ba-lan-ce-ing</span></span><br><span class="line"><span class="string">靜態資源服務,</span> <span class="string">Static</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">sta-tic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">動態資源服務,</span> <span class="string">Dynamic</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">dy-na-mic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">Http憑證存取服務,</span> <span class="string">Http</span> <span class="string">Certificate</span> <span class="string">Access</span> <span class="string">Service,</span> <span class="string">cer-ti-fi-cate</span> <span class="string">ac-ce-ss</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">效能,</span> <span class="string">Performance,</span> <span class="string">per-form-an-ce</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
+        <tag>Nginx</tag>
         <tag>PostgresSQL</tag>
         <tag>Backend</tag>
-        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
@@ -845,10 +869,73 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Android</tag>
         <tag>Backend</tag>
+        <tag>Android</tag>
         <tag>作品集</tag>
         <tag>Side Project</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>作品集 - 道路管理系統</title>
+    <url>/2022/11/16/projects/road-management/</url>
+    <content><![CDATA[<h1 id="專案需求"><a href="#專案需求" class="headerlink" title="專案需求"></a>專案需求</h1><p>客戶需要一個系統來管理道路回報案件、案件派工維修等e化流程。透過APP進行道路巡查與回報毀損案件，再由內勤人員進行審核與分派案件給協力廠商。</p>
+<p>當車巡人員使用APP錄影進行道路巡查時，後台也需要觀看即時影像與巡查員軌跡。</p>
+<h1 id="交付項目"><a href="#交付項目" class="headerlink" title="交付項目"></a>交付項目</h1><ul>
+<li>車巡APP: 提供汽車巡查人員使用，進行道路巡查與回報毀損案件。</li>
+<li>機巡APP: 提供機車巡查人員使用，進行道路巡查與回報毀損案件。</li>
+<li>內勤與協力廠商後台: 提供內勤人員使用，進行案件審核與分派。</li>
+<li>管理者後台: 提供管理者使用，新增合約、系統相關參數。</li>
+</ul>
+<h1 id="人員分配"><a href="#人員分配" class="headerlink" title="人員分配"></a>人員分配</h1><p>共有5人，分別為:</p>
+<ul>
+<li>車巡APP: 1人(Me)</li>
+<li>機巡APP: 1人</li>
+<li>內勤與協力廠商後台: 1人(Me)<ul>
+<li>車巡管理系統</li>
+<li>道路管理系統</li>
+</ul>
+</li>
+<li>管理者後台: 2人(Me)</li>
+<li>UI設計: 1人</li>
+<li>PM: 1人</li>
+</ul>
+<h1 id="使用技術"><a href="#使用技術" class="headerlink" title="使用技術"></a>使用技術</h1><ul>
+<li>APP: Kotlin</li>
+<li>Backend: Linode + AWS + Django + Nginx + Postgresql + Redis + Nginx RTMP</li>
+<li>Frontend: Vue.js + Vuex + Vue Router + Vuetify + Axios</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="開發日誌"><a href="#開發日誌" class="headerlink" title="開發日誌"></a>開發日誌</h1><h2 id="系統架構與流程圖"><a href="#系統架構與流程圖" class="headerlink" title="系統架構與流程圖"></a>系統架構與流程圖</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/uOf53of.png" alt="系統組織架構"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pg4X3cb.png" alt="案件新增與審查流程"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/5G31v3C.jpg" alt="案件派工流程"></p>
+<h2 id="技術選用評估"><a href="#技術選用評估" class="headerlink" title="技術選用評估"></a>技術選用評估</h2><h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><p>Django自帶一個Admin後台與ORM，可以快速開發後台、建立資料庫模型並且可以透過Django REST<br>Framework快速開發API。而且Django也有很多第三方套件可以使用，例如Django REST Framework JWT可以快速開發JWT驗證，Django Filter可以快速開發篩選功能，Django CORS Headers可以快速開發跨網域功能。</p>
+<p>同時導入Docker容器，可以快速部署開發環境與生產環境，並且可以透過Docker Compose快速建立開發環境。至於為何沒有採用k8s，主要考慮到運維成本可能會過大，所以尚未採用。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/GL1q5lL.png" alt="服務器架構"></p>
+<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>選用Vue + <a href="https://vuetifyjs.com/en/getting-started/installation/">Vuetify</a>，因為Vue是目前最流行的前端框架之一且學習曲線不高，同時考慮到如何縮短UI設計時間，如果有套UI框架提供設計師做設計參考，同時工程師也可以縮短客製化元件的製作成本。且Vuetify已有提供豐富的元件庫，並且可以透過Vue<br>CLI快速開發SPA。</p>
+<h2 id="實作單元"><a href="#實作單元" class="headerlink" title="實作單元"></a>實作單元</h2><h3 id="Android-RTMP推流"><a href="#Android-RTMP推流" class="headerlink" title="Android RTMP推流"></a>Android RTMP推流</h3><p>手機端透過RTMP協定將影像推流到服務器，使用『<a href="https://github.com/pedroSG94/rtmp-rtsp-stream-client-java">RTMP第三方拉流與推流庫</a>』套件進行。 套件同時支援RTMP&#x2F;RSTP協定，同時實作了推流與拉流等功能。專案需求只使用推流功能，早期版本有些Bug，經過長時間推流很容易發生閃退，最後Fork一份檔案到專案裡，進行客製化參數調整。</p>
+<h3 id="Nginx-RTMP-Server"><a href="#Nginx-RTMP-Server" class="headerlink" title="Nginx RTMP Server"></a>Nginx RTMP Server</h3><p>使用Nginx +『<a href="https://github.com/arut/nginx-rtmp-module">nginx-rtmp-module</a>』模組，進行RTMP Server的建置。RTMP協定通常會有5～10秒影像落後，在未優化設定前落後秒數達30秒以上，經過優化設定後，網頁播放的影像落後秒數降低至10～15秒左右，如果透過OBS做拉流可以在5～10秒區間。</p>
+<p>影像延遲優化手段:</p>
+<ul>
+<li>Android端推流時，將影像縮小至720p、FPS減少成20幀、去掉去掉音訊資料，降低影像資料量。</li>
+<li>Nginx Server端，只能從現有參數做調整做優化外，另外就減少分流頻道，保留720p、360p頻道，移除1080p頻道。</li>
+<li>Web前端，使用『<a href="https://github.com/Bilibili/flv.js/">Flv.js</a>』套件進行拉流，從套件參數調整做優化，主要透過減少cache大小進行延遲優化。</li>
+</ul>
+<h1 id="功能頁面"><a href="#功能頁面" class="headerlink" title="功能頁面"></a>功能頁面</h1><h2 id="車巡管理系統"><a href="#車巡管理系統" class="headerlink" title="車巡管理系統"></a>車巡管理系統</h2><p><strong>可以查過去巡查軌跡與案件，若當前有巡察員巡查可在此頁面觀看直播。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/hEndckI.png" alt="車巡即時軌跡"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/I3B6RGf.png" alt="查報案件列表"><br><strong>後勤人員可在此頁面進行案件歸檔，歸檔後的案件會進到道路管理系統。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/qJXgaPV.png" alt="查報案件詳細"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/zOs58pu.png" alt="車巡路段管理"><br><strong>可以在地圖上規劃巡察員每日巡查軌跡。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/nHZl0dU.png" alt="車巡路段管理編輯"></p>
+<h2 id="道路管理系統"><a href="#道路管理系統" class="headerlink" title="道路管理系統"></a>道路管理系統</h2><p><strong>所有查報案件列表。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/3Sr6pOH.jpg" alt="案件總表"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pfxzXuH.jpg" alt="案件地圖"></p>
+<p><strong>後勤人員可在這邊審核案件指派給相關協力廠商進行後續。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/DVvnTvl.png" alt="查報案件作業區"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/ba9U3vz.png" alt="查報案件作業區詳細"></p>
+<p><strong>可查詢合約當前保固的路段資訊。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/CnWJmkB.png" alt="保固路段"></p>
+<h2 id="管理員後台"><a href="#管理員後台" class="headerlink" title="管理員後台"></a>管理員後台</h2><p><strong>管理員可在這邊新增合約、合約人員角色與各種環境參數。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/VjyBXdh.png" alt="管理員功能列表"></p>
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">維修,</span> <span class="string">Repair,</span> <span class="string">re-pair</span></span><br><span class="line"><span class="string">派工,</span> <span class="string">Dispatch,</span> <span class="string">dis-patch</span></span><br><span class="line"><span class="string">協力廠商,</span> <span class="string">Cooperate</span> <span class="string">factory,</span> <span class="string">co-oper-ate</span> <span class="string">fac-tory</span></span><br><span class="line"><span class="string">流程,</span> <span class="string">Process,</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">客戶需求,</span> <span class="string">Customer</span> <span class="string">requirement,</span> <span class="string">cus-tom-er</span> <span class="string">re-quire-ment</span></span><br><span class="line"><span class="string">內勤人員,</span> <span class="string">Internal</span> <span class="string">staff,</span> <span class="string">in-ter-nal</span> <span class="string">staff</span></span><br><span class="line"><span class="string">作品集,</span> <span class="string">Portfolio,</span> <span class="string">port-fol-io</span></span><br><span class="line"><span class="string">開發經驗,</span> <span class="string">Development</span> <span class="string">experience,</span> <span class="string">deve-lop-ment</span> <span class="string">ex-per-ien-ce</span></span><br><span class="line"><span class="string">學習曲線,</span> <span class="string">Learning</span> <span class="string">curve,</span> <span class="string">learn-ing</span> <span class="string">curve</span></span><br><span class="line"><span class="string">縮短設計成本,</span> <span class="string">Shorten</span> <span class="string">design</span> <span class="string">cost,</span> <span class="string">short-en</span> <span class="string">de-sign</span> <span class="string">cost</span></span><br><span class="line"><span class="string">客製化元件,</span> <span class="string">Customized</span> <span class="string">component,</span> <span class="string">cus-tom-ized</span> <span class="string">com-po-nent</span></span><br><span class="line"><span class="string">豐富元件庫,</span> <span class="string">Rich</span> <span class="string">component</span> <span class="string">library,</span> <span class="string">rich</span> <span class="string">com-po-nent</span> <span class="string">lib-r-ary</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Backend</tag>
+        <tag>Android</tag>
+        <tag>作品集</tag>
+        <tag>Frontend</tag>
       </tags>
   </entry>
   <entry>
@@ -1065,69 +1152,6 @@ ol, ul {
         <tag>面試</tag>
         <tag>Django</tag>
         <tag>作品集</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>作品集 - 道路管理系統</title>
-    <url>/2022/11/16/projects/road-management/</url>
-    <content><![CDATA[<h1 id="專案需求"><a href="#專案需求" class="headerlink" title="專案需求"></a>專案需求</h1><p>客戶需要一個系統來管理道路回報案件、案件派工維修等e化流程。透過APP進行道路巡查與回報毀損案件，再由內勤人員進行審核與分派案件給協力廠商。</p>
-<p>當車巡人員使用APP錄影進行道路巡查時，後台也需要觀看即時影像與巡查員軌跡。</p>
-<h1 id="交付項目"><a href="#交付項目" class="headerlink" title="交付項目"></a>交付項目</h1><ul>
-<li>車巡APP: 提供汽車巡查人員使用，進行道路巡查與回報毀損案件。</li>
-<li>機巡APP: 提供機車巡查人員使用，進行道路巡查與回報毀損案件。</li>
-<li>內勤與協力廠商後台: 提供內勤人員使用，進行案件審核與分派。</li>
-<li>管理者後台: 提供管理者使用，新增合約、系統相關參數。</li>
-</ul>
-<h1 id="人員分配"><a href="#人員分配" class="headerlink" title="人員分配"></a>人員分配</h1><p>共有5人，分別為:</p>
-<ul>
-<li>車巡APP: 1人(Me)</li>
-<li>機巡APP: 1人</li>
-<li>內勤與協力廠商後台: 1人(Me)<ul>
-<li>車巡管理系統</li>
-<li>道路管理系統</li>
-</ul>
-</li>
-<li>管理者後台: 2人(Me)</li>
-<li>UI設計: 1人</li>
-<li>PM: 1人</li>
-</ul>
-<h1 id="使用技術"><a href="#使用技術" class="headerlink" title="使用技術"></a>使用技術</h1><ul>
-<li>APP: Kotlin</li>
-<li>Backend: Linode + AWS + Django + Nginx + Postgresql + Redis + Nginx RTMP</li>
-<li>Frontend: Vue.js + Vuex + Vue Router + Vuetify + Axios</li>
-</ul>
-<span id="more"></span>
-
-<h1 id="開發日誌"><a href="#開發日誌" class="headerlink" title="開發日誌"></a>開發日誌</h1><h2 id="系統架構與流程圖"><a href="#系統架構與流程圖" class="headerlink" title="系統架構與流程圖"></a>系統架構與流程圖</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/uOf53of.png" alt="系統組織架構"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pg4X3cb.png" alt="案件新增與審查流程"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/5G31v3C.jpg" alt="案件派工流程"></p>
-<h2 id="技術選用評估"><a href="#技術選用評估" class="headerlink" title="技術選用評估"></a>技術選用評估</h2><h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><p>Django自帶一個Admin後台與ORM，可以快速開發後台、建立資料庫模型並且可以透過Django REST<br>Framework快速開發API。而且Django也有很多第三方套件可以使用，例如Django REST Framework JWT可以快速開發JWT驗證，Django Filter可以快速開發篩選功能，Django CORS Headers可以快速開發跨網域功能。</p>
-<p>同時導入Docker容器，可以快速部署開發環境與生產環境，並且可以透過Docker Compose快速建立開發環境。至於為何沒有採用k8s，主要考慮到運維成本可能會過大，所以尚未採用。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/GL1q5lL.png" alt="服務器架構"></p>
-<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>選用Vue + <a href="https://vuetifyjs.com/en/getting-started/installation/">Vuetify</a>，因為Vue是目前最流行的前端框架之一且學習曲線不高，同時考慮到如何縮短UI設計時間，如果有套UI框架提供設計師做設計參考，同時工程師也可以縮短客製化元件的製作成本。且Vuetify已有提供豐富的元件庫，並且可以透過Vue<br>CLI快速開發SPA。</p>
-<h2 id="實作單元"><a href="#實作單元" class="headerlink" title="實作單元"></a>實作單元</h2><h3 id="Android-RTMP推流"><a href="#Android-RTMP推流" class="headerlink" title="Android RTMP推流"></a>Android RTMP推流</h3><p>手機端透過RTMP協定將影像推流到服務器，使用『<a href="https://github.com/pedroSG94/rtmp-rtsp-stream-client-java">RTMP第三方拉流與推流庫</a>』套件進行。 套件同時支援RTMP&#x2F;RSTP協定，同時實作了推流與拉流等功能。專案需求只使用推流功能，早期版本有些Bug，經過長時間推流很容易發生閃退，最後Fork一份檔案到專案裡，進行客製化參數調整。</p>
-<h3 id="Nginx-RTMP-Server"><a href="#Nginx-RTMP-Server" class="headerlink" title="Nginx RTMP Server"></a>Nginx RTMP Server</h3><p>使用Nginx +『<a href="https://github.com/arut/nginx-rtmp-module">nginx-rtmp-module</a>』模組，進行RTMP Server的建置。RTMP協定通常會有5～10秒影像落後，在未優化設定前落後秒數達30秒以上，經過優化設定後，網頁播放的影像落後秒數降低至10～15秒左右，如果透過OBS做拉流可以在5～10秒區間。</p>
-<p>影像延遲優化手段:</p>
-<ul>
-<li>Android端推流時，將影像縮小至720p、FPS減少成20幀、去掉去掉音訊資料，降低影像資料量。</li>
-<li>Nginx Server端，只能從現有參數做調整做優化外，另外就減少分流頻道，保留720p、360p頻道，移除1080p頻道。</li>
-<li>Web前端，使用『<a href="https://github.com/Bilibili/flv.js/">Flv.js</a>』套件進行拉流，從套件參數調整做優化，主要透過減少cache大小進行延遲優化。</li>
-</ul>
-<h1 id="功能頁面"><a href="#功能頁面" class="headerlink" title="功能頁面"></a>功能頁面</h1><h2 id="車巡管理系統"><a href="#車巡管理系統" class="headerlink" title="車巡管理系統"></a>車巡管理系統</h2><p><strong>可以查過去巡查軌跡與案件，若當前有巡察員巡查可在此頁面觀看直播。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/hEndckI.png" alt="車巡即時軌跡"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/I3B6RGf.png" alt="查報案件列表"><br><strong>後勤人員可在此頁面進行案件歸檔，歸檔後的案件會進到道路管理系統。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/qJXgaPV.png" alt="查報案件詳細"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/zOs58pu.png" alt="車巡路段管理"><br><strong>可以在地圖上規劃巡察員每日巡查軌跡。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/nHZl0dU.png" alt="車巡路段管理編輯"></p>
-<h2 id="道路管理系統"><a href="#道路管理系統" class="headerlink" title="道路管理系統"></a>道路管理系統</h2><p><strong>所有查報案件列表。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/3Sr6pOH.jpg" alt="案件總表"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pfxzXuH.jpg" alt="案件地圖"></p>
-<p><strong>後勤人員可在這邊審核案件指派給相關協力廠商進行後續。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/DVvnTvl.png" alt="查報案件作業區"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/ba9U3vz.png" alt="查報案件作業區詳細"></p>
-<p><strong>可查詢合約當前保固的路段資訊。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/CnWJmkB.png" alt="保固路段"></p>
-<h2 id="管理員後台"><a href="#管理員後台" class="headerlink" title="管理員後台"></a>管理員後台</h2><p><strong>管理員可在這邊新增合約、合約人員角色與各種環境參數。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/VjyBXdh.png" alt="管理員功能列表"></p>
-<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">維修,</span> <span class="string">Repair,</span> <span class="string">re-pair</span></span><br><span class="line"><span class="string">派工,</span> <span class="string">Dispatch,</span> <span class="string">dis-patch</span></span><br><span class="line"><span class="string">協力廠商,</span> <span class="string">Cooperate</span> <span class="string">factory,</span> <span class="string">co-oper-ate</span> <span class="string">fac-tory</span></span><br><span class="line"><span class="string">流程,</span> <span class="string">Process,</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">客戶需求,</span> <span class="string">Customer</span> <span class="string">requirement,</span> <span class="string">cus-tom-er</span> <span class="string">re-quire-ment</span></span><br><span class="line"><span class="string">內勤人員,</span> <span class="string">Internal</span> <span class="string">staff,</span> <span class="string">in-ter-nal</span> <span class="string">staff</span></span><br><span class="line"><span class="string">作品集,</span> <span class="string">Portfolio,</span> <span class="string">port-fol-io</span></span><br><span class="line"><span class="string">開發經驗,</span> <span class="string">Development</span> <span class="string">experience,</span> <span class="string">deve-lop-ment</span> <span class="string">ex-per-ien-ce</span></span><br><span class="line"><span class="string">學習曲線,</span> <span class="string">Learning</span> <span class="string">curve,</span> <span class="string">learn-ing</span> <span class="string">curve</span></span><br><span class="line"><span class="string">縮短設計成本,</span> <span class="string">Shorten</span> <span class="string">design</span> <span class="string">cost,</span> <span class="string">short-en</span> <span class="string">de-sign</span> <span class="string">cost</span></span><br><span class="line"><span class="string">客製化元件,</span> <span class="string">Customized</span> <span class="string">component,</span> <span class="string">cus-tom-ized</span> <span class="string">com-po-nent</span></span><br><span class="line"><span class="string">豐富元件庫,</span> <span class="string">Rich</span> <span class="string">component</span> <span class="string">library,</span> <span class="string">rich</span> <span class="string">com-po-nent</span> <span class="string">lib-r-ary</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>Android</tag>
-        <tag>Backend</tag>
-        <tag>作品集</tag>
-        <tag>Frontend</tag>
       </tags>
   </entry>
 </search>
