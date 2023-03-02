@@ -180,15 +180,26 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">負載平衡,</span> <span class="string">Load</span> <span class="string">Balancing,</span> <span class="string">load</span> <span class="string">ba-lan-ce-ing</span></span><br><span class="line"><span class="string">靜態資源服務,</span> <span class="string">Static</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">sta-tic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">動態資源服務,</span> <span class="string">Dynamic</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">dy-na-mic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">Http憑證存取服務,</span> <span class="string">Http</span> <span class="string">Certificate</span> <span class="string">Access</span> <span class="string">Service,</span> <span class="string">cer-ti-fi-cate</span> <span class="string">ac-ce-ss</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">效能,</span> <span class="string">Performance,</span> <span class="string">per-form-an-ce</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>Nginx</tag>
         <tag>PostgresSQL</tag>
         <tag>Backend</tag>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Obsidian備忘錄</title>
+    <url>/2023/03/02/obsidian-memo/</url>
+    <content><![CDATA[<h1 id="自動產生每週報表腳本"><a href="#自動產生每週報表腳本" class="headerlink" title="自動產生每週報表腳本"></a>自動產生每週報表腳本</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line">情境：</span><br><span class="line">在Diary資料夾新增每日誌，日誌以2023-03-0.md為檔案命名，</span><br><span class="line">日誌內容以Header作為個專案代號，</span><br><span class="line">希望能透過腳本指定日期與專案代號進行一週報表輸出。</span><br><span class="line"></span><br><span class="line">**/</span><br><span class="line">var date = new Date(&quot;2023/3/1&quot;);//從3/1號為開始天數</span><br><span class="line">var range = 7//預計輸出七天工作日誌</span><br><span class="line">var proCode = &quot;LOV3&quot; //專案代號</span><br><span class="line">var fileItems = [] //日誌檔名</span><br><span class="line">var count = 0</span><br><span class="line"></span><br><span class="line">while (count&lt;7)&#123;</span><br><span class="line">       count++</span><br><span class="line">    date.setDate(date.getDate() + 1) </span><br><span class="line">    fileItems.push(date.toISOString().split(&#x27;T&#x27;)[0])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fileItems.forEach((date)=&gt;&#123;</span><br><span class="line">     let note = dv.page(`Diary/$&#123;date&#125;.md`)</span><br><span class="line">     if(note!=undefined)&#123;</span><br><span class="line">         console.log(dv)</span><br><span class="line">        dv.header(1,`$&#123;date&#125;日誌`) </span><br><span class="line">        dv.paragraph(`![[$&#123;date&#125;#$&#123;proCode&#125;]]`) </span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <tags>
+        <tag>Obsidian</tag>
       </tags>
   </entry>
   <entry>
     <title>PyCharm環境設定</title>
     <url>/2022/12/03/pycharm-settings/</url>
-    <content><![CDATA[<h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><ul>
+    <content><![CDATA[<h1 id="pycharm-settings"><a href="#pycharm-settings" class="headerlink" title="pycharm-settings"></a>pycharm-settings</h1><ul>
 <li><p>避免文字過長格式化後導致行數過多。<br>路徑<code>Preferences -&gt; Editor -&gt; Code Style -&gt; Markdown</code><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212031119846.png"></p>
 </li>
 <li><p>豐富的markdown語法支援，可支援PlantUML與Mermaid語法。<br>路徑<code>Preferences -&gt;  Languages &amp; Frameworks -&gt; Markdown</code><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212311448402.png"></p>
@@ -910,8 +921,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Backend</tag>
         <tag>Android</tag>
+        <tag>Backend</tag>
         <tag>作品集</tag>
         <tag>Side Project</tag>
       </tags>
@@ -973,8 +984,8 @@ ol, ul {
 
 ]]></content>
       <tags>
-        <tag>Backend</tag>
         <tag>Android</tag>
+        <tag>Backend</tag>
         <tag>作品集</tag>
         <tag>Frontend</tag>
       </tags>
