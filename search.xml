@@ -17,8 +17,8 @@
 <tbody><tr>
 <td>映像大小</td>
 <td>996M</td>
-<td>1005MB</td>
-<td>403MB</td>
+<td>1006MB</td>
+<td>380MB</td>
 <td>336MB</td>
 <td>222MB</td>
 </tr>
@@ -229,6 +229,32 @@
       </tags>
   </entry>
   <entry>
+    <title>Nginx備忘錄</title>
+    <url>/2022/11/29/nginx-memo/</url>
+    <content><![CDATA[<h1 id="限制用IP訪問網站"><a href="#限制用IP訪問網站" class="headerlink" title="限制用IP訪問網站"></a>限制用IP訪問網站</h1><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="comment">#使用IP訪問則回傳404</span></span><br><span class="line">    <span class="attribute">listen</span> <span class="number">80</span>;</span><br><span class="line">    <span class="attribute">listen</span> [::]:<span class="number">80</span>;</span><br><span class="line">    <span class="attribute">server_name</span> <span class="number">1.1.1.1</span>;</span><br><span class="line">    <span class="section">location</span> <span class="regexp">~ /</span> &#123;</span><br><span class="line">        <span class="attribute">return</span> <span class="number">404</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><p><strong>Nginx主要提供功能</strong>:</p>
+<ul>
+<li><span style="color:#6d4ee9;font-weight:bold">反向代理(Reverse Proxy)</span><br>反向代理是一種代理模式，它將客戶端的請求轉發給不同的伺服器，並將伺服器的回應轉發給客戶端。<a href="https://zh.wikipedia.org/zh-tw/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86">wiki</a></li>
+<li><span style="color:#6d4ee9;font-weight:bold">負載平衡(Load Balancing)</span><br>負載平衡是一種將請求分配給多個伺服器的方法，以達到平衡伺服器負載的目的。<a href="https://zh.wikipedia.org/zh-tw/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1">wiki</a></li>
+<li><span style="color:#6d4ee9;font-weight:bold">靜態資源服務(Static Resource Service)</span><br>靜態資源服務是一種將靜態資源(如圖片、CSS、JavaScript等)儲存於網頁伺服器上，並由網頁伺服器直接提供給客戶端的服務。</li>
+<li><span style="color:#6d4ee9;font-weight:bold">動態資源服務(Dynamic Resource Service)</span><br>動態資源服務是一種將動態資源(如PHP、ASP、JSP等)儲存於網頁伺服器上，並由網頁伺服器將請求轉發給應用伺服器，再由應用伺服器產生回應，<br>最後由網頁伺服器將回應轉發給客戶端的服務。</li>
+<li><span style="color:#6d4ee9;font-weight:bold">Http憑證存取服務(Http Certificate Access Service)</span><br>Http憑證存取服務是一種將HTTP憑證(如SSL憑證)儲存於網頁伺服器上，並由網頁伺服器直接提供給客戶端的服務。</li>
+</ul>
+<h2 id="nginx-conf"><a href="#nginx-conf" class="headerlink" title="nginx.conf"></a>nginx.conf</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#常用設定</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the number of worker processes; recommended value is the number of</span></span><br><span class="line"><span class="comment"># cores that are being used by your server</span></span><br><span class="line"><span class="comment"># auto will default to number of vcpus/cores</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># vcpus(Virtual CPUs): 虛擬核心，例如EC2 t3a.small(vCPU: 2, Memory: 2 GiB)，則worker_processes 2</span></span><br><span class="line"><span class="comment"># ref: https://aws.amazon.com/tw/ec2/instance-types/</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># cores: 實體核心，intel Xeon E5-1428L (6 cores)，則worker_processes 6</span></span><br><span class="line"><span class="comment"># ref: https://ark.intel.com/content/www/tw/zh/ark/products/66662/intel-xeon-processor-e51428l-15m-cache-1-8-ghz.html</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 設定策略: </span></span><br><span class="line"><span class="comment"># 1. 沒有想法或不確定，使用預設auto</span></span><br><span class="line"><span class="comment"># 2. 如果是單核心，設定為1</span></span><br><span class="line"><span class="comment"># 2. 如果有SSL、gzip這樣比較消耗CPU的工作，同時有多個CPU核心的話，可以設定與CPU的數量一樣。(worker_processes: CPU核心數)</span></span><br><span class="line">worker_processes auto;</span><br><span class="line"><span class="comment"># 最小:1, 最大:CPU核心數</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 進程最大開檔數，如果想調高worker_connections上限，可透過這參數強制調高</span></span><br><span class="line">worker_rlimit_nofile 65535;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Max Number of Clients/Second = worker_processes * worker_connections</span></span><br><span class="line">events &#123;</span><br><span class="line">    <span class="comment"># Define the maximum number of simultaneous connections that can be opened by a worker process</span></span><br><span class="line">    <span class="comment"># 如果瀏覽器同時發出一隻API以及一張圖片請求，這時候瀏覽器將佔領兩個連線，</span></span><br><span class="line">    <span class="comment"># worker_connections 513的設定代表同時只能有512/2的瀏覽器進行連線</span></span><br><span class="line">    <span class="comment"># TODO worker_connections 1時 每隻API都會延遲10秒再進行回覆，使用併發同時觀察每個API的回覆時間</span></span><br><span class="line">    <span class="comment"># 設定策略: </span></span><br><span class="line">    <span class="comment"># 1. 沒有想法或不確定，使用預設512</span></span><br><span class="line">    <span class="comment"># 2. 最大值為系統進程最大開啟數，可用ulimit -a|grep &quot;open files&quot;觀看</span></span><br><span class="line">    <span class="comment"># 3. </span></span><br><span class="line">    worker_connections  512;</span><br><span class="line"><span class="comment">#https://www.gushiciku.cn/pl/pHDk/zh-tw</span></span><br><span class="line"><span class="comment">#https://linyencheng.github.io/2019/07/13/tool-nginx/</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    <span class="comment"># Specifies the maximum accepted body size of a client request, as</span></span><br><span class="line">    <span class="comment"># indicated by the request header Content-Length. If the stated content</span></span><br><span class="line">    <span class="comment"># length is greater than this size, then the client receives the HTTP</span></span><br><span class="line">    <span class="comment"># error code 413. Set to 0 to disable.</span></span><br><span class="line">    <span class="comment"># client_max_body_size 0;</span></span><br><span class="line">    <span class="comment"># Request Body內容大小上限</span></span><br><span class="line">   client_max_body_size 1M;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 與後端Application server 連線的timeout時間</span></span><br><span class="line">fastcgi_connect_timeout 1800;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 向後端Application server 傳送資料的timeout時間</span></span><br><span class="line">fastcgi_send_timeout  1800;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 從後端Application server 接收資料的timeout時間</span></span><br><span class="line">fastcgi_read_timeout  1800;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">負載平衡,</span> <span class="string">Load</span> <span class="string">Balancing,</span> <span class="string">load</span> <span class="string">ba-lan-ce-ing</span></span><br><span class="line"><span class="string">靜態資源服務,</span> <span class="string">Static</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">sta-tic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">動態資源服務,</span> <span class="string">Dynamic</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">dy-na-mic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">Http憑證存取服務,</span> <span class="string">Http</span> <span class="string">Certificate</span> <span class="string">Access</span> <span class="string">Service,</span> <span class="string">cer-ti-fi-cate</span> <span class="string">ac-ce-ss</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">效能,</span> <span class="string">Performance,</span> <span class="string">per-form-an-ce</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>PostgresSQL</tag>
+        <tag>Backend</tag>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Obsidian備忘錄</title>
     <url>/2023/03/02/obsidian-memo/</url>
     <content><![CDATA[<h1 id="自動產生每週報表腳本"><a href="#自動產生每週報表腳本" class="headerlink" title="自動產生每週報表腳本"></a>自動產生每週報表腳本</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//dataviewjs</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">情境：</span></span><br><span class="line"><span class="comment">在Diary資料夾新增每日誌，日誌以2023-03-0.md為檔案命名，</span></span><br><span class="line"><span class="comment">日誌內容以Header作為個專案代號，</span></span><br><span class="line"><span class="comment">希望能透過腳本指定日期與專案代號進行一週報表輸出。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">**/</span></span><br><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&quot;2023/3/1&quot;</span>);<span class="comment">//從3/1號為開始天數</span></span><br><span class="line"><span class="keyword">var</span> range = <span class="number">7</span><span class="comment">//預計輸出七天工作日誌</span></span><br><span class="line"><span class="keyword">var</span> proCode = <span class="string">&quot;LOV3&quot;</span> <span class="comment">//專案代號</span></span><br><span class="line"><span class="keyword">var</span> fileItems = [] <span class="comment">//日誌檔名</span></span><br><span class="line"><span class="keyword">var</span> count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (count&lt;<span class="number">7</span>)&#123;</span><br><span class="line">       count++</span><br><span class="line">    date.<span class="title function_">setDate</span>(date.<span class="title function_">getDate</span>() + <span class="number">1</span>) </span><br><span class="line">    fileItems.<span class="title function_">push</span>(date.<span class="title function_">toISOString</span>().<span class="title function_">split</span>(<span class="string">&#x27;T&#x27;</span>)[<span class="number">0</span>])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fileItems.<span class="title function_">forEach</span>(<span class="function">(<span class="params">date</span>)=&gt;</span>&#123;</span><br><span class="line">     <span class="keyword">let</span> note = dv.<span class="title function_">page</span>(<span class="string">`Diary/<span class="subst">$&#123;date&#125;</span>.md`</span>)</span><br><span class="line">     <span class="keyword">if</span>(note!=<span class="literal">undefined</span>)&#123;</span><br><span class="line">         <span class="variable language_">console</span>.<span class="title function_">log</span>(dv)</span><br><span class="line">        dv.<span class="title function_">header</span>(<span class="number">1</span>,<span class="string">`<span class="subst">$&#123;date&#125;</span>日誌`</span>) </span><br><span class="line">        dv.<span class="title function_">paragraph</span>(<span class="string">`![[<span class="subst">$&#123;date&#125;</span>#<span class="subst">$&#123;proCode&#125;</span>]]`</span>) </span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -314,6 +340,46 @@
       </tags>
   </entry>
   <entry>
+    <title>將Test/Prod環境安裝在同一台主機問題</title>
+    <url>/2022/12/03/test-prod-on-same-host/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>與前同事討論關於他所在公司MIS想把專案(專案服務都有容器化)的測試與生產環境都安裝在同一台主機上，但後端工程師是認為應該把測試與生產環境拆開成兩台不一樣虛擬機上。</p>
+<p>在公司裏其實滿常發生不同職務對同一件事情有不同看法，但如何做出最後決策的方法可能很多種，例如：</p>
+<ul>
+<li>老闆已經有想法，那就照老闆的想法當決策，出錢的最大，最後責任也是老闆承擔。</li>
+<li>MIS(DevOps)部門有想法，那就溝通看看，最終還是以MIS部門想法為主，畢竟責任歸還是這部門要承擔。</li>
+<li>後端工程師也有想法，如果老闆或MIS部門願意交換彼此想法，那就值得溝通看看，這篇文章也主要針對這情況進行溝通的探討。</li>
+</ul>
+<h1 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h1><p>針對此議題進行思考：</p>
+<ul>
+<li>方案A: 測試與生產環境都安裝在同一台主機上。(老闆與MIS頃向此方案)</li>
+<li>方案B: 測試與生產環境拆開成兩台不一樣虛擬機上。(個人與前同事頃向此方案)</li>
+</ul>
+<p>在大家都有不同想法時，我可能會先詢問對方用方案A有哪些好處以及回饋個人對方案A可能面臨到的壞處。後續再提供方案B的好處與壞處，這樣大家就可以對明確的好處跟壞處進行討論，而不是對方案的抽象概念進行討論，這樣討論的結果可能會更有建設性。</p>
+<p><strong>因個人頃向的是對方案B，以下是個人認為方案B的好處：</strong></p>
+<ul>
+<li>資源分離，測試環境與生產環境的資源不會互相影響，例如在進行壓力測試時榨乾了系統資源。</li>
+<li>資安等級，測試環境可以配置較低的資安等級，生產環境可以配置較高的資安等級。</li>
+<li>套件升級，可先在測試環境測試套件升級後，確認沒問題再將測試環境的套件升級到生產環境，避免直接在生產環境升級導致服務中斷。</li>
+<li>硬體配置，測試環境與生產環境的資源可以分別配置，例如測試環境可以配置較低的CPU與記憶體，生產環境可以配置較高的CPU與記憶體。</li>
+</ul>
+<p><strong>以下是個人認為方案A的壞處：</strong><br>基本上方案B的好處可能都會是方案A的壞處。</p>
+<ul>
+<li>資源佔用，雖然可以限制容器資源上限，但也代表要把一部分資源給測試環境，導致生產環境的資源會被減少。</li>
+<li>套件升級，Docker套件升級時，導致配置與相依套件的版本不一致，使服務無法啟動。</li>
+<li>資安等級太高，導致測試環境除錯困難，例如不允許後端工程師登入遠端主機進行log取得與當前資源監測。</li>
+<li>部署複雜度提升，因同時要區別各種環境的容器，但容器使用的port資源可能都一樣，導致部署複雜度提升。</li>
+</ul>
+<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><ul>
+<li>透過溝通針對個方案分析出好處與壞處，達到共識。</li>
+<li>透過討論，老闆或MIS部門依然覺得自己方案最好，那只能接受老闆或MIS部門的決定。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+        <tag>職場溝通</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SwiftUI 與 Storyboard 混合使用研究</title>
     <url>/2022/11/22/swiftui-storyboard-mixed-use/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近需要支援同事開發iOS APP，同事主要用Storyboard開發，自己則想用主流技術SwiftUI開發，因此需要將兩者混合使用，這邊紀錄一下研究過程。</p>
@@ -371,46 +437,6 @@
         <tag>Storyboard</tag>
         <tag>Xib</tag>
         <tag>SwiftUI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>將Test/Prod環境安裝在同一台主機問題</title>
-    <url>/2022/12/03/test-prod-on-same-host/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>與前同事討論關於他所在公司MIS想把專案(專案服務都有容器化)的測試與生產環境都安裝在同一台主機上，但後端工程師是認為應該把測試與生產環境拆開成兩台不一樣虛擬機上。</p>
-<p>在公司裏其實滿常發生不同職務對同一件事情有不同看法，但如何做出最後決策的方法可能很多種，例如：</p>
-<ul>
-<li>老闆已經有想法，那就照老闆的想法當決策，出錢的最大，最後責任也是老闆承擔。</li>
-<li>MIS(DevOps)部門有想法，那就溝通看看，最終還是以MIS部門想法為主，畢竟責任歸還是這部門要承擔。</li>
-<li>後端工程師也有想法，如果老闆或MIS部門願意交換彼此想法，那就值得溝通看看，這篇文章也主要針對這情況進行溝通的探討。</li>
-</ul>
-<h1 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h1><p>針對此議題進行思考：</p>
-<ul>
-<li>方案A: 測試與生產環境都安裝在同一台主機上。(老闆與MIS頃向此方案)</li>
-<li>方案B: 測試與生產環境拆開成兩台不一樣虛擬機上。(個人與前同事頃向此方案)</li>
-</ul>
-<p>在大家都有不同想法時，我可能會先詢問對方用方案A有哪些好處以及回饋個人對方案A可能面臨到的壞處。後續再提供方案B的好處與壞處，這樣大家就可以對明確的好處跟壞處進行討論，而不是對方案的抽象概念進行討論，這樣討論的結果可能會更有建設性。</p>
-<p><strong>因個人頃向的是對方案B，以下是個人認為方案B的好處：</strong></p>
-<ul>
-<li>資源分離，測試環境與生產環境的資源不會互相影響，例如在進行壓力測試時榨乾了系統資源。</li>
-<li>資安等級，測試環境可以配置較低的資安等級，生產環境可以配置較高的資安等級。</li>
-<li>套件升級，可先在測試環境測試套件升級後，確認沒問題再將測試環境的套件升級到生產環境，避免直接在生產環境升級導致服務中斷。</li>
-<li>硬體配置，測試環境與生產環境的資源可以分別配置，例如測試環境可以配置較低的CPU與記憶體，生產環境可以配置較高的CPU與記憶體。</li>
-</ul>
-<p><strong>以下是個人認為方案A的壞處：</strong><br>基本上方案B的好處可能都會是方案A的壞處。</p>
-<ul>
-<li>資源佔用，雖然可以限制容器資源上限，但也代表要把一部分資源給測試環境，導致生產環境的資源會被減少。</li>
-<li>套件升級，Docker套件升級時，導致配置與相依套件的版本不一致，使服務無法啟動。</li>
-<li>資安等級太高，導致測試環境除錯困難，例如不允許後端工程師登入遠端主機進行log取得與當前資源監測。</li>
-<li>部署複雜度提升，因同時要區別各種環境的容器，但容器使用的port資源可能都一樣，導致部署複雜度提升。</li>
-</ul>
-<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><ul>
-<li>透過溝通針對個方案分析出好處與壞處，達到共識。</li>
-<li>透過討論，老闆或MIS部門依然覺得自己方案最好，那只能接受老闆或MIS部門的決定。</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Docker</tag>
-        <tag>職場溝通</tag>
       </tags>
   </entry>
   <entry>
@@ -557,6 +583,13 @@
       </tags>
   </entry>
   <entry>
+    <title>常用單字</title>
+    <url>/2022/11/11/word-of-the-day/</url>
+    <content><![CDATA[<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Android:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">縱向,</span> <span class="string">portrait,</span> <span class="string">port-rait</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">橫向,</span> <span class="string">landscape,</span> <span class="string">land-scape</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">方向,</span> <span class="string">orientation,</span> <span class="string">o-rien-ta-tion</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">曲線,</span> <span class="string">spline,</span> <span class="string">sp-line</span></span><br><span class="line"></span><br><span class="line"><span class="attr">IT:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">副駕駛,</span> <span class="string">copilot,</span> <span class="string">co-pi-lot</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Stock:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">股票,</span> <span class="string">Stock</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Politics:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">政治,</span> <span class="string">Politics</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">民主黨,</span> <span class="string">Democracy</span> <span class="string">party,</span> <span class="string">demo-cracy</span> <span class="string">party</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">共和黨,</span> <span class="string">Republicans</span> <span class="string">party,</span> <span class="string">re-pub-li-cans</span> <span class="string">party</span></span><br><span class="line"></span><br><span class="line"><span class="attr">SSLMMS:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">電壓,</span> <span class="string">Voltage,</span> <span class="string">vol-tage</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">電流,</span> <span class="string">Current,</span> <span class="string">cur-rent</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Lovbabi:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">The</span> <span class="string">log</span> <span class="string">is</span> <span class="string">bound</span> <span class="string">to</span> <span class="string">the</span> <span class="string">student</span> <span class="string">model.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Education:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">National</span> <span class="string">Taiwan</span> <span class="string">University</span> <span class="string">of</span> <span class="string">Science</span> <span class="string">and</span> <span class="string">Technology</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">No.43,</span> <span class="string">Keelung</span> <span class="string">Rd.,</span> <span class="string">Sec.4,</span> <span class="string">Da&#x27;an</span> <span class="string">Dist.,</span> <span class="string">Taipei</span> <span class="string">City</span> <span class="number">106335</span><span class="string">,</span> <span class="string">Taiwan</span> <span class="string">(R.O.C.)</span> <span class="string">台北</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Associate</span> <span class="string">of</span> <span class="string">Electrical</span> <span class="string">Engineering</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">Month:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">January</span> <span class="string">Jan</span> <span class="string">一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">February</span> <span class="string">Feb</span> <span class="string">二月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">March</span> <span class="string">Mar</span> <span class="string">三月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">April</span> <span class="string">Apr</span> <span class="string">四月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">May</span> <span class="string">May</span> <span class="string">五月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">June</span> <span class="string">Jun</span> <span class="string">六月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">July</span> <span class="string">Jul</span> <span class="string">七月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">August</span> <span class="string">Aug</span> <span class="string">八月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">September</span> <span class="string">Sep</span> <span class="string">九月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">October</span> <span class="string">Oct</span> <span class="string">十月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">November</span> <span class="string">Nov</span> <span class="string">十一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">December</span> <span class="string">Dec</span> <span class="string">十二月</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+  </entry>
+  <entry>
     <title>美股學習</title>
     <url>/2022/11/23/us-stock/</url>
     <content><![CDATA[<h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><ul>
@@ -597,39 +630,6 @@
 ]]></content>
       <tags>
         <tag>股票</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用單字</title>
-    <url>/2022/11/11/word-of-the-day/</url>
-    <content><![CDATA[<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Android:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">縱向,</span> <span class="string">portrait,</span> <span class="string">port-rait</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">橫向,</span> <span class="string">landscape,</span> <span class="string">land-scape</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">方向,</span> <span class="string">orientation,</span> <span class="string">o-rien-ta-tion</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">曲線,</span> <span class="string">spline,</span> <span class="string">sp-line</span></span><br><span class="line"></span><br><span class="line"><span class="attr">IT:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">副駕駛,</span> <span class="string">copilot,</span> <span class="string">co-pi-lot</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Stock:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">股票,</span> <span class="string">Stock</span></span><br><span class="line">  <span class="bullet">-</span> </span><br><span class="line"><span class="attr">Politics:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">政治,</span> <span class="string">Politics</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">民主黨,</span> <span class="string">Democracy</span> <span class="string">party,</span> <span class="string">demo-cracy</span> <span class="string">party</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">共和黨,</span> <span class="string">Republicans</span> <span class="string">party,</span> <span class="string">re-pub-li-cans</span> <span class="string">party</span></span><br><span class="line"></span><br><span class="line"><span class="attr">SSLMMS:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">電壓,</span> <span class="string">Voltage,</span> <span class="string">vol-tage</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">電流,</span> <span class="string">Current,</span> <span class="string">cur-rent</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Lovbabi:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">The</span> <span class="string">log</span> <span class="string">is</span> <span class="string">bound</span> <span class="string">to</span> <span class="string">the</span> <span class="string">student</span> <span class="string">model.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Education:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">National</span> <span class="string">Taiwan</span> <span class="string">University</span> <span class="string">of</span> <span class="string">Science</span> <span class="string">and</span> <span class="string">Technology</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">No.43,</span> <span class="string">Keelung</span> <span class="string">Rd.,</span> <span class="string">Sec.4,</span> <span class="string">Da&#x27;an</span> <span class="string">Dist.,</span> <span class="string">Taipei</span> <span class="string">City</span> <span class="number">106335</span><span class="string">,</span> <span class="string">Taiwan</span> <span class="string">(R.O.C.)</span> <span class="string">台北</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Associate</span> <span class="string">of</span> <span class="string">Electrical</span> <span class="string">Engineering</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">Month:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">January</span> <span class="string">Jan</span> <span class="string">一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">February</span> <span class="string">Feb</span> <span class="string">二月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">March</span> <span class="string">Mar</span> <span class="string">三月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">April</span> <span class="string">Apr</span> <span class="string">四月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">May</span> <span class="string">May</span> <span class="string">五月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">June</span> <span class="string">Jun</span> <span class="string">六月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">July</span> <span class="string">Jul</span> <span class="string">七月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">August</span> <span class="string">Aug</span> <span class="string">八月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">September</span> <span class="string">Sep</span> <span class="string">九月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">October</span> <span class="string">Oct</span> <span class="string">十月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">November</span> <span class="string">Nov</span> <span class="string">十一月</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">December</span> <span class="string">Dec</span> <span class="string">十二月</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
-  </entry>
-  <entry>
-    <title>Nginx備忘錄</title>
-    <url>/2022/11/29/nginx-memo/</url>
-    <content><![CDATA[<h1 id="限制用IP訪問網站"><a href="#限制用IP訪問網站" class="headerlink" title="限制用IP訪問網站"></a>限制用IP訪問網站</h1><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="comment">#使用IP訪問則回傳404</span></span><br><span class="line">    <span class="attribute">listen</span> <span class="number">80</span>;</span><br><span class="line">    <span class="attribute">listen</span> [::]:<span class="number">80</span>;</span><br><span class="line">    <span class="attribute">server_name</span> <span class="number">1.1.1.1</span>;</span><br><span class="line">    <span class="section">location</span> <span class="regexp">~ /</span> &#123;</span><br><span class="line">        <span class="attribute">return</span> <span class="number">404</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><p><strong>Nginx主要提供功能</strong>:</p>
-<ul>
-<li><span style="color:#6d4ee9;font-weight:bold">反向代理(Reverse Proxy)</span><br>反向代理是一種代理模式，它將客戶端的請求轉發給不同的伺服器，並將伺服器的回應轉發給客戶端。<a href="https://zh.wikipedia.org/zh-tw/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86">wiki</a></li>
-<li><span style="color:#6d4ee9;font-weight:bold">負載平衡(Load Balancing)</span><br>負載平衡是一種將請求分配給多個伺服器的方法，以達到平衡伺服器負載的目的。<a href="https://zh.wikipedia.org/zh-tw/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1">wiki</a></li>
-<li><span style="color:#6d4ee9;font-weight:bold">靜態資源服務(Static Resource Service)</span><br>靜態資源服務是一種將靜態資源(如圖片、CSS、JavaScript等)儲存於網頁伺服器上，並由網頁伺服器直接提供給客戶端的服務。</li>
-<li><span style="color:#6d4ee9;font-weight:bold">動態資源服務(Dynamic Resource Service)</span><br>動態資源服務是一種將動態資源(如PHP、ASP、JSP等)儲存於網頁伺服器上，並由網頁伺服器將請求轉發給應用伺服器，再由應用伺服器產生回應，<br>最後由網頁伺服器將回應轉發給客戶端的服務。</li>
-<li><span style="color:#6d4ee9;font-weight:bold">Http憑證存取服務(Http Certificate Access Service)</span><br>Http憑證存取服務是一種將HTTP憑證(如SSL憑證)儲存於網頁伺服器上，並由網頁伺服器直接提供給客戶端的服務。</li>
-</ul>
-<h2 id="nginx-conf"><a href="#nginx-conf" class="headerlink" title="nginx.conf"></a>nginx.conf</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#常用設定</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the number of worker processes; recommended value is the number of</span></span><br><span class="line"><span class="comment"># cores that are being used by your server</span></span><br><span class="line"><span class="comment"># auto will default to number of vcpus/cores</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># vcpus(Virtual CPUs): 虛擬核心，例如EC2 t3a.small(vCPU: 2, Memory: 2 GiB)，則worker_processes 2</span></span><br><span class="line"><span class="comment"># ref: https://aws.amazon.com/tw/ec2/instance-types/</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># cores: 實體核心，intel Xeon E5-1428L (6 cores)，則worker_processes 6</span></span><br><span class="line"><span class="comment"># ref: https://ark.intel.com/content/www/tw/zh/ark/products/66662/intel-xeon-processor-e51428l-15m-cache-1-8-ghz.html</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 設定策略: </span></span><br><span class="line"><span class="comment"># 1. 沒有想法或不確定，使用預設auto</span></span><br><span class="line"><span class="comment"># 2. 如果是單核心，設定為1</span></span><br><span class="line"><span class="comment"># 2. 如果有SSL、gzip這樣比較消耗CPU的工作，同時有多個CPU核心的話，可以設定與CPU的數量一樣。(worker_processes: CPU核心數)</span></span><br><span class="line">worker_processes auto;</span><br><span class="line"><span class="comment"># 最小:1, 最大:CPU核心數</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 進程最大開檔數，如果想調高worker_connections上限，可透過這參數強制調高</span></span><br><span class="line">worker_rlimit_nofile 65535;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Max Number of Clients/Second = worker_processes * worker_connections</span></span><br><span class="line">events &#123;</span><br><span class="line">    <span class="comment"># Define the maximum number of simultaneous connections that can be opened by a worker process</span></span><br><span class="line">    <span class="comment"># 如果瀏覽器同時發出一隻API以及一張圖片請求，這時候瀏覽器將佔領兩個連線，</span></span><br><span class="line">    <span class="comment"># worker_connections 513的設定代表同時只能有512/2的瀏覽器進行連線</span></span><br><span class="line">    <span class="comment"># TODO worker_connections 1時 每隻API都會延遲10秒再進行回覆，使用併發同時觀察每個API的回覆時間</span></span><br><span class="line">    <span class="comment"># 設定策略: </span></span><br><span class="line">    <span class="comment"># 1. 沒有想法或不確定，使用預設512</span></span><br><span class="line">    <span class="comment"># 2. 最大值為系統進程最大開啟數，可用ulimit -a|grep &quot;open files&quot;觀看</span></span><br><span class="line">    <span class="comment"># 3. </span></span><br><span class="line">    worker_connections  512;</span><br><span class="line"><span class="comment">#https://www.gushiciku.cn/pl/pHDk/zh-tw</span></span><br><span class="line"><span class="comment">#https://linyencheng.github.io/2019/07/13/tool-nginx/</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    <span class="comment"># Specifies the maximum accepted body size of a client request, as</span></span><br><span class="line">    <span class="comment"># indicated by the request header Content-Length. If the stated content</span></span><br><span class="line">    <span class="comment"># length is greater than this size, then the client receives the HTTP</span></span><br><span class="line">    <span class="comment"># error code 413. Set to 0 to disable.</span></span><br><span class="line">    <span class="comment"># client_max_body_size 0;</span></span><br><span class="line">    <span class="comment"># Request Body內容大小上限</span></span><br><span class="line">   client_max_body_size 1M;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 與後端Application server 連線的timeout時間</span></span><br><span class="line">fastcgi_connect_timeout 1800;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 向後端Application server 傳送資料的timeout時間</span></span><br><span class="line">fastcgi_send_timeout  1800;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 從後端Application server 接收資料的timeout時間</span></span><br><span class="line">fastcgi_read_timeout  1800;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">負載平衡,</span> <span class="string">Load</span> <span class="string">Balancing,</span> <span class="string">load</span> <span class="string">ba-lan-ce-ing</span></span><br><span class="line"><span class="string">靜態資源服務,</span> <span class="string">Static</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">sta-tic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">動態資源服務,</span> <span class="string">Dynamic</span> <span class="string">Resource</span> <span class="string">Service,</span> <span class="string">dy-na-mic</span> <span class="string">re-source</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">Http憑證存取服務,</span> <span class="string">Http</span> <span class="string">Certificate</span> <span class="string">Access</span> <span class="string">Service,</span> <span class="string">cer-ti-fi-cate</span> <span class="string">ac-ce-ss</span> <span class="string">ser-vice</span></span><br><span class="line"><span class="string">效能,</span> <span class="string">Performance,</span> <span class="string">per-form-an-ce</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>PostgresSQL</tag>
-        <tag>Backend</tag>
-        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
