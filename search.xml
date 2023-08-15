@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>git commit template plugin for IDEA IDE</title>
-    <url>/2023/02/28/idea-ide-git-commit-template/</url>
-    <content><![CDATA[<h1 id="Commit-Message-規範組成"><a href="#Commit-Message-規範組成" class="headerlink" title="Commit Message 規範組成"></a>Commit Message 規範組成</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 組成</span></span><br><span class="line">Header: &lt;<span class="built_in">type</span>&gt;(&lt;scope&gt;): &lt;subject&gt;</span><br><span class="line"> - <span class="built_in">type</span>(必填): 代表commit的類別：feat, fix, docs, style, refactor, <span class="built_in">test</span>, chore。</span><br><span class="line"> - scope(非必填): 代表commit影響的範圍，例如資料庫、控制層、模板層等等，可視專案需要調整。</span><br><span class="line"> - subject(必填): 代表此commit的簡短描述，不要超過 50 個字元，**結尾不要加句號**。</span><br><span class="line"></span><br><span class="line">Body:(非必填)</span><br><span class="line"> * 交付詳細描述，可以分成多行，每一行不要超過72個字元。</span><br><span class="line"> * 說明程式碼變動的項目與原因，還有與先前行為的對比以及參考連結。</span><br><span class="line"></span><br><span class="line">Footer: </span><br><span class="line"> - Closed issues(非必填): 填寫任務編號。</span><br><span class="line"> - Breaking changes(非必填): 記錄不兼容的變動，以『BREAKING CHANGE:』開頭，後面是對變動的描述、以及變動原因和遷移方法。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># type items:</span></span><br><span class="line">feat: 新增/修改功能 (feature)。</span><br><span class="line">fix: 修補 bug (bug fix)。</span><br><span class="line">docs: 文件 (documentation)。</span><br><span class="line">style: 格式 (不影響程式碼運行的變動 white-space, formatting, missing semi colons, etc)。</span><br><span class="line">refactor: 重構 (既不是新增功能，也不是修補 bug 的程式碼變動)。</span><br><span class="line">perf: 改善效能 (A code change that improves performance)。</span><br><span class="line"><span class="built_in">test</span>: 增加測試 (when adding missing tests)。</span><br><span class="line">build: 影響構建系統或外部依賴項的更改(範圍：gulp、broccoli、npm)。</span><br><span class="line">ci: 更改CI配置文件和腳本(範圍：Travis、Circle、BrowserStack、SaucelLabs)。</span><br><span class="line">chore: 建構程序或輔助工具的變動 (maintain)。</span><br><span class="line">revert: 撤銷恢復先前的commit，例如：revert: 恢復版本:xxxx。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 範例</span></span><br><span class="line">* bda94f08 fix: 修正Pseudo語言翻譯</span><br><span class="line">* 9ae9b3b8 fix: 修正Pseudo觸發cms api接口</span><br><span class="line">* 13b2e26d ci: 部署prod時自動產生commit report txt.</span><br><span class="line">* 00923cb6 refactor: serializers</span><br><span class="line">* ef7d8785 feat: 路燈API加入<span class="built_in">enable</span>過濾</span><br><span class="line">* e34ad2f3 feat: 路燈維護-&gt;<span class="built_in">disable</span>/enable加入權限限制</span><br><span class="line">* 3b631819 feat: streetLamp add is_enable and actions(<span class="built_in">enable</span>/disable)</span><br><span class="line">* c0629cda fixed: fix datetime import path</span><br><span class="line">* eee24993 feat: 群控/單控pseudo api implement</span><br><span class="line">* 42230808 docs: upgrade lang package(add:Pseudo)</span><br><span class="line">* 586f45fd docs: upgrade lang package(add:Pseudo)</span><br></pre></td></tr></table></figure>
-<h1 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h1><p><a href="https://plugins.jetbrains.com/plugin/9861-git-commit-template">Plugin Site</a></p>
-<ul>
-<li>Setting-&gt;Plugins-&gt; search 『git commit template』。 Click Install button.<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281354646.png"></li>
-</ul>
-<h1 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h1><ul>
-<li><p>新增測試檔案<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281402833.png"></p>
-</li>
-<li><p>進行git commit<br> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281404030.png"></p>
-</li>
-<li><p>填寫commit內容<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281410372.png"></p>
-</li>
-<li><p>產生commit內容<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281411699.png"></p>
-</li>
-</ul>
-<h1 id="參考文獻"><a href="#參考文獻" class="headerlink" title="參考文獻"></a>參考文獻</h1><ul>
-<li><a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a></li>
-<li><a href="https://www.youtube.com/watch?v=v-_IvDvGlhA">git commit 最佳实践，commitizen + husky + commitlint 规范化校验</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Tools</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker備忘錄</title>
     <url>/2023/04/04/docker-memo/</url>
     <content><![CDATA[<h1 id="Python3-6-8使用各種系統編譯的映像檔比較"><a href="#Python3-6-8使用各種系統編譯的映像檔比較" class="headerlink" title="Python3.6.8使用各種系統編譯的映像檔比較"></a>Python3.6.8使用各種系統編譯的映像檔比較</h1><table>
@@ -71,23 +42,52 @@
       </tags>
   </entry>
   <entry>
-    <title>今日開張</title>
-    <url>/2022/11/12/first-article/</url>
-    <content><![CDATA[<p>主要筆記:</p>
-<ul>
-<li>程式專案:專案過程研究的技術、架構、與遇到的問題分享。</li>
-<li>金融知識</li>
-<li>工具分享</li>
+    <title>GitLab備忘錄</title>
+    <url>/2023/03/01/gitlab-memo/</url>
+    <content><![CDATA[<h1 id="小常識"><a href="#小常識" class="headerlink" title="小常識"></a>小常識</h1><ul>
+<li>GitLab Admin預設登入帳號<code>admin@example.com</code>，密碼則需要進入Console進行修改。</li>
+<li>使用Ruby on Rails語言框架。</li>
+<li></li>
 </ul>
-<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">金融知識,</span> <span class="string">Knowledge</span> <span class="string">of</span> <span class="string">finance,</span> <span class="string">know-l-edge</span> <span class="string">of</span> <span class="string">fin-ance</span></span><br><span class="line"><span class="string">架構,</span> <span class="string">Architecture,</span> <span class="string">arch-itec-ture</span></span><br><span class="line"><span class="string">研究過程,</span> <span class="string">Research</span> <span class="string">process,</span> <span class="string">re-search</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">技術,</span> <span class="string">Technology,</span> <span class="string">tech-no-logy</span></span><br></pre></td></tr></table></figure>
+<h1 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h1><h2 id="Use-Docker-推薦"><a href="#Use-Docker-推薦" class="headerlink" title="Use Docker(推薦!)"></a>Use Docker(<code>推薦!</code>)</h2><p>建議安裝商業授權版本<code>gitlab/gitlab-ee:latest</code>，以便未來購買商業授權即可使用進階功能。(未購買授權，可使用功能與社群版本一樣)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker run --detach \</span><br><span class="line">  --hostname &#123;your ip&#125; \</span><br><span class="line">  --publish 8143:8143 --publish 8180:8180 --publish 8122:22 \</span><br><span class="line">  --name gitlab \</span><br><span class="line">  --restart always \</span><br><span class="line"> --<span class="built_in">env</span> GITLAB_OMNIBUS_CONFIG=<span class="string">&quot;external_url &#x27;http://&#123;your ip&#125;:8180&#x27;;&quot;</span> \</span><br><span class="line">  --volume /data/gitlab/config:/etc/gitlab:Z \</span><br><span class="line">  --volume /data/gitlab/logs:/var/log/gitlab:Z \</span><br><span class="line">  --volume /data/gitlab/data:/var/opt/gitlab:Z \</span><br><span class="line">  --shm-size 8g \</span><br><span class="line">  gitlab/gitlab-ee:latest</span><br></pre></td></tr></table></figure>
+<h2 id="Use-docker-compose"><a href="#Use-docker-compose" class="headerlink" title="Use docker-compose"></a>Use docker-compose</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># docker-compose.yml</span></span><br><span class="line"></span><br><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.0&#x27;</span></span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">gitlab_net:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">gitlab:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">gitlab/gitlab-ce:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&quot;gitlab&quot;</span></span><br><span class="line">    <span class="attr">logging:</span></span><br><span class="line">      <span class="attr">driver:</span> <span class="string">&quot;json-file&quot;</span></span><br><span class="line">      <span class="attr">options:</span></span><br><span class="line">        <span class="attr">max-size:</span> <span class="string">&quot;1g&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">TZ:</span> <span class="string">&quot;Asia/Taipei&quot;</span></span><br><span class="line">    <span class="attr">env_file:</span> <span class="string">.env</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">privileged:</span> <span class="literal">true</span> <span class="comment"># 容器(Container)内的root，擁有真正的root權限</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;8180:80&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;8143:443&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;8122:22&#x27;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;./service_gitlab/data:/var/opt/gitlab&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;./service_gitlab/logs:/var/log/gitlab&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;./service_gitlab/config:/etc/gitlab&#x27;</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="attr">gitlab_net:</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<blockquote>
+<p>因使用8180&#x2F;8143&#x2F;8122非預設port，在git clone會有port問題，因此可以在<code>~/.ssh/config</code>加入以下設定</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Host &#123;your ip&#125;</span><br><span class="line">HostName &#123;your ip&#125;</span><br><span class="line">Port 8122</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>GitLab啟動後，掛載一個Runner並執行一個簡單的Job，記憶體使用量約在4G上下。<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202303031223546.png"></p>
+</blockquote>
+<h1 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#==追蹤日誌==</span></span><br><span class="line">docker-compose logs -f gitlab</span><br><span class="line"></span><br><span class="line"><span class="comment"># ==登入容器修改admin密碼(方法一，推薦)==</span></span><br><span class="line">docker <span class="built_in">exec</span> -it gitlab gitlab-rake <span class="string">&quot;gitlab:password:reset[root]&quot;</span></span><br><span class="line">root</span><br><span class="line">@!ltedu0324</span><br><span class="line"><span class="comment"># ==登入容器修改admin密碼(方法二)==</span></span><br><span class="line"><span class="comment"># Step 1: 登入容器</span></span><br><span class="line">docker <span class="built_in">exec</span> -ti gitlab bash </span><br><span class="line"><span class="comment"># Step 2: 進入Ruby on Rails console</span></span><br><span class="line">gitlab-rails console -e production</span><br><span class="line"><span class="comment"># Step 3: 取得admin使用者物件</span></span><br><span class="line">user = User.<span class="built_in">where</span>(<span class="built_in">id</span>: 1).first</span><br><span class="line"><span class="comment"># Step 4: 設定新密碼</span></span><br><span class="line"><span class="comment"># example:</span></span><br><span class="line"><span class="comment"># user.password = &#x27;12345678&#x27;</span></span><br><span class="line"><span class="comment"># user.password_confirmation = &#x27;12345678&#x27;</span></span><br><span class="line">user.password = <span class="string">&#x27;&#123;新密碼&#125;&#x27;</span></span><br><span class="line">user.password_confirmation = <span class="string">&#x27;&#123;確認新密碼&#125;&#x27;</span></span><br><span class="line"><span class="comment"># Step 5: 使用者物件設定儲存</span></span><br><span class="line">user.save!</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<h1 id="流水線"><a href="#流水線" class="headerlink" title="流水線"></a>流水線</h1><h2 id="Backend"><a href="#Backend" class="headerlink" title="Backend"></a>Backend</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">helloworld:</span></span><br><span class="line">  <span class="attr">script:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">echo</span> <span class="string">&quot;hello world, GitLab!&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">ls</span> <span class="string">-al</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
+<h2 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
-
-
+<h1 id="備份"><a href="#備份" class="headerlink" title="備份"></a>備份</h1><h1 id="gitlab-ci-tags"><a href="#gitlab-ci-tags" class="headerlink" title="gitlab-ci tags"></a>gitlab-ci tags</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202303101040689.png"></p>
+<h1 id="相關圖片"><a href="#相關圖片" class="headerlink" title="相關圖片"></a>相關圖片</h1><h2 id="Ruby-on-Rails-console"><a href="#Ruby-on-Rails-console" class="headerlink" title="Ruby on Rails console"></a>Ruby on Rails console</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202303011342155.png" alt="進入Ruby on Rails console"></p>
+<h2 id="Admin後台"><a href="#Admin後台" class="headerlink" title="Admin後台"></a>Admin後台</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202303011356909.png" alt="Admin登入畫面"></p>
+<h2 id="官方架構圖"><a href="#官方架構圖" class="headerlink" title="官方架構圖"></a>官方架構圖</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202303011411483.png"></p>
+<h1 id="參考文獻"><a href="#參考文獻" class="headerlink" title="參考文獻"></a>參考文獻</h1><ul>
+<li><a href="https://ithelp.ithome.com.tw/articles/10211148">【淺談 Docker 基礎】GitLab 篇：簡易架設 </a></li>
+<li><a href="https://medium.com/phelps-laboratory/docker-install-gitlab-52ea641eca90">在 Dokcer 上安裝 GitLab</a></li>
+<li><a href="https://chegva.com/3229.html">GitLab实战三——Gitlab架构组件详解</a></li>
+<li><a href="https://www.youtube.com/watch?v=-4XT8-znkuc&list=PLBd8JGCAcUAEwyH2kT1wW2BUmcSPQzGcu&index=1">為你自己學 GitLab CI&#x2F;CD</a> &#x3D;&#x3D;推薦！有明確的流水線使用場景解說。&#x3D;&#x3D;</li>
+<li><a href="https://www.webq.top/2020/11/19/doc/ci/">Gitlab CI&#x2F;CD 管道配置参考</a></li>
+<li><a href="http://mycodetub.logdown.com/posts/260395-gitlab-backup-restore-settings-notes">備份-Gitlab 備份&#x2F;還原設定筆記 </a></li>
+<li><a href="https://gitlab.cn/blog/2022/03/30/jihulab-sast/">使用极狐GitLab，两行代码助你搞定SAST（静态应用程序安全测试） </a></li>
+<li><a href="https://blog.51cto.com/dongweizhen/3607363">Gitlab集成sonarQube，实现自动扫描代码</a></li>
+<li><a href="https://chengweichen.com/2021/02/gitlab-ci-lint-pre-commit.html">CI Lint - gitlab-ci-linter</a></li>
+</ul>
 ]]></content>
+      <tags>
+        <tag>docker</tag>
+        <tag>gitlab</tag>
+      </tags>
   </entry>
   <entry>
     <title>iOS開發備忘錄</title>
@@ -148,66 +148,51 @@
       </tags>
   </entry>
   <entry>
-    <title>GitLab備忘錄</title>
-    <url>/2023/03/01/gitlab-memo/</url>
-    <content><![CDATA[<h1 id="小常識"><a href="#小常識" class="headerlink" title="小常識"></a>小常識</h1><ul>
-<li>GitLab Admin預設登入帳號<code>admin@example.com</code>，密碼則需要進入Console進行修改。</li>
-<li>使用Ruby on Rails語言框架。</li>
-<li></li>
+    <title>今日開張</title>
+    <url>/2022/11/12/first-article/</url>
+    <content><![CDATA[<p>主要筆記:</p>
+<ul>
+<li>程式專案:專案過程研究的技術、架構、與遇到的問題分享。</li>
+<li>金融知識</li>
+<li>工具分享</li>
 </ul>
-<h1 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h1><h2 id="Use-Docker-推薦"><a href="#Use-Docker-推薦" class="headerlink" title="Use Docker(推薦!)"></a>Use Docker(<code>推薦!</code>)</h2><p>建議安裝商業授權版本<code>gitlab/gitlab-ee:latest</code>，以便未來購買商業授權即可使用進階功能。(未購買授權，可使用功能與社群版本一樣)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker run --detach \</span><br><span class="line">  --hostname &#123;your ip&#125; \</span><br><span class="line">  --publish 8143:8143 --publish 8180:8180 --publish 8122:22 \</span><br><span class="line">  --name gitlab \</span><br><span class="line">  --restart always \</span><br><span class="line"> --<span class="built_in">env</span> GITLAB_OMNIBUS_CONFIG=<span class="string">&quot;external_url &#x27;http://&#123;your ip&#125;:8180&#x27;;&quot;</span> \</span><br><span class="line">  --volume /data/gitlab/config:/etc/gitlab:Z \</span><br><span class="line">  --volume /data/gitlab/logs:/var/log/gitlab:Z \</span><br><span class="line">  --volume /data/gitlab/data:/var/opt/gitlab:Z \</span><br><span class="line">  --shm-size 8g \</span><br><span class="line">  gitlab/gitlab-ee:latest</span><br></pre></td></tr></table></figure>
-<h2 id="Use-docker-compose"><a href="#Use-docker-compose" class="headerlink" title="Use docker-compose"></a>Use docker-compose</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># docker-compose.yml</span></span><br><span class="line"></span><br><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.0&#x27;</span></span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">gitlab_net:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">gitlab:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">gitlab/gitlab-ce:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&quot;gitlab&quot;</span></span><br><span class="line">    <span class="attr">logging:</span></span><br><span class="line">      <span class="attr">driver:</span> <span class="string">&quot;json-file&quot;</span></span><br><span class="line">      <span class="attr">options:</span></span><br><span class="line">        <span class="attr">max-size:</span> <span class="string">&quot;1g&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">TZ:</span> <span class="string">&quot;Asia/Taipei&quot;</span></span><br><span class="line">    <span class="attr">env_file:</span> <span class="string">.env</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">privileged:</span> <span class="literal">true</span> <span class="comment"># 容器(Container)内的root，擁有真正的root權限</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;8180:80&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;8143:443&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;8122:22&#x27;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;./service_gitlab/data:/var/opt/gitlab&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;./service_gitlab/logs:/var/log/gitlab&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;./service_gitlab/config:/etc/gitlab&#x27;</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="attr">gitlab_net:</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">金融知識,</span> <span class="string">Knowledge</span> <span class="string">of</span> <span class="string">finance,</span> <span class="string">know-l-edge</span> <span class="string">of</span> <span class="string">fin-ance</span></span><br><span class="line"><span class="string">架構,</span> <span class="string">Architecture,</span> <span class="string">arch-itec-ture</span></span><br><span class="line"><span class="string">研究過程,</span> <span class="string">Research</span> <span class="string">process,</span> <span class="string">re-search</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">技術,</span> <span class="string">Technology,</span> <span class="string">tech-no-logy</span></span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>因使用8180&#x2F;8143&#x2F;8122非預設port，在git clone會有port問題，因此可以在<code>~/.ssh/config</code>加入以下設定</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Host &#123;your ip&#125;</span><br><span class="line">HostName &#123;your ip&#125;</span><br><span class="line">Port 8122</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>GitLab啟動後，掛載一個Runner並執行一個簡單的Job，記憶體使用量約在4G上下。<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202303031223546.png"></p>
-</blockquote>
-<h1 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#==追蹤日誌==</span></span><br><span class="line">docker-compose logs -f gitlab</span><br><span class="line"></span><br><span class="line"><span class="comment"># ==登入容器修改admin密碼(方法一，推薦)==</span></span><br><span class="line">docker <span class="built_in">exec</span> -it gitlab gitlab-rake <span class="string">&quot;gitlab:password:reset[root]&quot;</span></span><br><span class="line">root</span><br><span class="line">@!ltedu0324</span><br><span class="line"><span class="comment"># ==登入容器修改admin密碼(方法二)==</span></span><br><span class="line"><span class="comment"># Step 1: 登入容器</span></span><br><span class="line">docker <span class="built_in">exec</span> -ti gitlab bash </span><br><span class="line"><span class="comment"># Step 2: 進入Ruby on Rails console</span></span><br><span class="line">gitlab-rails console -e production</span><br><span class="line"><span class="comment"># Step 3: 取得admin使用者物件</span></span><br><span class="line">user = User.<span class="built_in">where</span>(<span class="built_in">id</span>: 1).first</span><br><span class="line"><span class="comment"># Step 4: 設定新密碼</span></span><br><span class="line"><span class="comment"># example:</span></span><br><span class="line"><span class="comment"># user.password = &#x27;12345678&#x27;</span></span><br><span class="line"><span class="comment"># user.password_confirmation = &#x27;12345678&#x27;</span></span><br><span class="line">user.password = <span class="string">&#x27;&#123;新密碼&#125;&#x27;</span></span><br><span class="line">user.password_confirmation = <span class="string">&#x27;&#123;確認新密碼&#125;&#x27;</span></span><br><span class="line"><span class="comment"># Step 5: 使用者物件設定儲存</span></span><br><span class="line">user.save!</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h1 id="流水線"><a href="#流水線" class="headerlink" title="流水線"></a>流水線</h1><h2 id="Backend"><a href="#Backend" class="headerlink" title="Backend"></a>Backend</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">helloworld:</span></span><br><span class="line">  <span class="attr">script:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">echo</span> <span class="string">&quot;hello world, GitLab!&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">ls</span> <span class="string">-al</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h1 id="備份"><a href="#備份" class="headerlink" title="備份"></a>備份</h1><h1 id="gitlab-ci-tags"><a href="#gitlab-ci-tags" class="headerlink" title="gitlab-ci tags"></a>gitlab-ci tags</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202303101040689.png"></p>
-<h1 id="相關圖片"><a href="#相關圖片" class="headerlink" title="相關圖片"></a>相關圖片</h1><h2 id="Ruby-on-Rails-console"><a href="#Ruby-on-Rails-console" class="headerlink" title="Ruby on Rails console"></a>Ruby on Rails console</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202303011342155.png" alt="進入Ruby on Rails console"></p>
-<h2 id="Admin後台"><a href="#Admin後台" class="headerlink" title="Admin後台"></a>Admin後台</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202303011356909.png" alt="Admin登入畫面"></p>
-<h2 id="官方架構圖"><a href="#官方架構圖" class="headerlink" title="官方架構圖"></a>官方架構圖</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202303011411483.png"></p>
-<h1 id="參考文獻"><a href="#參考文獻" class="headerlink" title="參考文獻"></a>參考文獻</h1><ul>
-<li><a href="https://ithelp.ithome.com.tw/articles/10211148">【淺談 Docker 基礎】GitLab 篇：簡易架設 </a></li>
-<li><a href="https://medium.com/phelps-laboratory/docker-install-gitlab-52ea641eca90">在 Dokcer 上安裝 GitLab</a></li>
-<li><a href="https://chegva.com/3229.html">GitLab实战三——Gitlab架构组件详解</a></li>
-<li><a href="https://www.youtube.com/watch?v=-4XT8-znkuc&list=PLBd8JGCAcUAEwyH2kT1wW2BUmcSPQzGcu&index=1">為你自己學 GitLab CI&#x2F;CD</a> &#x3D;&#x3D;推薦！有明確的流水線使用場景解說。&#x3D;&#x3D;</li>
-<li><a href="https://www.webq.top/2020/11/19/doc/ci/">Gitlab CI&#x2F;CD 管道配置参考</a></li>
-<li><a href="http://mycodetub.logdown.com/posts/260395-gitlab-backup-restore-settings-notes">備份-Gitlab 備份&#x2F;還原設定筆記 </a></li>
-<li><a href="https://gitlab.cn/blog/2022/03/30/jihulab-sast/">使用极狐GitLab，两行代码助你搞定SAST（静态应用程序安全测试） </a></li>
-<li><a href="https://blog.51cto.com/dongweizhen/3607363">Gitlab集成sonarQube，实现自动扫描代码</a></li>
-<li><a href="https://chengweichen.com/2021/02/gitlab-ci-lint-pre-commit.html">CI Lint - gitlab-ci-linter</a></li>
-</ul>
+
+
 ]]></content>
-      <tags>
-        <tag>docker</tag>
-        <tag>gitlab</tag>
-      </tags>
   </entry>
   <entry>
-    <title>Linux系統管理備忘</title>
-    <url>/2022/12/01/linux-management/</url>
-    <content><![CDATA[<h1 id="帳號權限管理"><a href="#帳號權限管理" class="headerlink" title="帳號權限管理"></a>帳號權限管理</h1><h2 id="用root做SSH登入，被駭客風險？"><a href="#用root做SSH登入，被駭客風險？" class="headerlink" title="用root做SSH登入，被駭客風險？"></a>用root做SSH登入，被駭客風險？</h2><ol>
-<li>如果root遠端登入且是用密碼做認證，因為所有系統是以root當帳號名稱，所以駭客可以只針對密碼進行暴力破解密碼進而駭進系統。</li>
-<li>如果用其他名稱當帳號(例如kkevin)做SSH登入，駭客必須猜中你的帳號才能進行密碼暴力破解。</li>
-<li>如果用root做SSH登入且是用private rsa key做認證，這樣駭客想破解難度就會高於密碼認證很多。</li>
-<li>如果用kkevin用密碼做認證且kkevin有sudo權限，安全性就會在kkevin密碼的複雜度。</li>
-</ol>
-<h2 id="ssh-keygen"><a href="#ssh-keygen" class="headerlink" title="ssh-keygen"></a>ssh-keygen</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">風險,</span> <span class="string">Risk,</span> <span class="string">ri-sk</span></span><br><span class="line"><span class="string">駭客,</span> <span class="string">Hacker,</span> <span class="string">ha-ker</span></span><br><span class="line"><span class="string">暴力破解,</span> <span class="string">Brute</span> <span class="string">Force,</span> <span class="string">bru-te</span> <span class="string">for-ce</span></span><br><span class="line"><span class="string">駭進系統,</span> <span class="string">Hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system,</span> <span class="string">hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
+    <title>git commit template plugin for IDEA IDE</title>
+    <url>/2023/02/28/idea-ide-git-commit-template/</url>
+    <content><![CDATA[<h1 id="Commit-Message-規範組成"><a href="#Commit-Message-規範組成" class="headerlink" title="Commit Message 規範組成"></a>Commit Message 規範組成</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 組成</span></span><br><span class="line">Header: &lt;<span class="built_in">type</span>&gt;(&lt;scope&gt;): &lt;subject&gt;</span><br><span class="line"> - <span class="built_in">type</span>(必填): 代表commit的類別：feat, fix, docs, style, refactor, <span class="built_in">test</span>, chore。</span><br><span class="line"> - scope(非必填): 代表commit影響的範圍，例如資料庫、控制層、模板層等等，可視專案需要調整。</span><br><span class="line"> - subject(必填): 代表此commit的簡短描述，不要超過 50 個字元，**結尾不要加句號**。</span><br><span class="line"></span><br><span class="line">Body:(非必填)</span><br><span class="line"> * 交付詳細描述，可以分成多行，每一行不要超過72個字元。</span><br><span class="line"> * 說明程式碼變動的項目與原因，還有與先前行為的對比以及參考連結。</span><br><span class="line"></span><br><span class="line">Footer: </span><br><span class="line"> - Closed issues(非必填): 填寫任務編號。</span><br><span class="line"> - Breaking changes(非必填): 記錄不兼容的變動，以『BREAKING CHANGE:』開頭，後面是對變動的描述、以及變動原因和遷移方法。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># type items:</span></span><br><span class="line">feat: 新增/修改功能 (feature)。</span><br><span class="line">fix: 修補 bug (bug fix)。</span><br><span class="line">docs: 文件 (documentation)。</span><br><span class="line">style: 格式 (不影響程式碼運行的變動 white-space, formatting, missing semi colons, etc)。</span><br><span class="line">refactor: 重構 (既不是新增功能，也不是修補 bug 的程式碼變動)。</span><br><span class="line">perf: 改善效能 (A code change that improves performance)。</span><br><span class="line"><span class="built_in">test</span>: 增加測試 (when adding missing tests)。</span><br><span class="line">build: 影響構建系統或外部依賴項的更改(範圍：gulp、broccoli、npm)。</span><br><span class="line">ci: 更改CI配置文件和腳本(範圍：Travis、Circle、BrowserStack、SaucelLabs)。</span><br><span class="line">chore: 建構程序或輔助工具的變動 (maintain)。</span><br><span class="line">revert: 撤銷恢復先前的commit，例如：revert: 恢復版本:xxxx。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 範例</span></span><br><span class="line">* bda94f08 fix: 修正Pseudo語言翻譯</span><br><span class="line">* 9ae9b3b8 fix: 修正Pseudo觸發cms api接口</span><br><span class="line">* 13b2e26d ci: 部署prod時自動產生commit report txt.</span><br><span class="line">* 00923cb6 refactor: serializers</span><br><span class="line">* ef7d8785 feat: 路燈API加入<span class="built_in">enable</span>過濾</span><br><span class="line">* e34ad2f3 feat: 路燈維護-&gt;<span class="built_in">disable</span>/enable加入權限限制</span><br><span class="line">* 3b631819 feat: streetLamp add is_enable and actions(<span class="built_in">enable</span>/disable)</span><br><span class="line">* c0629cda fixed: fix datetime import path</span><br><span class="line">* eee24993 feat: 群控/單控pseudo api implement</span><br><span class="line">* 42230808 docs: upgrade lang package(add:Pseudo)</span><br><span class="line">* 586f45fd docs: upgrade lang package(add:Pseudo)</span><br></pre></td></tr></table></figure>
+<h1 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h1><p><a href="https://plugins.jetbrains.com/plugin/9861-git-commit-template">Plugin Site</a></p>
+<ul>
+<li>Setting-&gt;Plugins-&gt; search 『git commit template』。 Click Install button.<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281354646.png"></li>
+</ul>
+<h1 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h1><ul>
+<li><p>新增測試檔案<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281402833.png"></p>
+</li>
+<li><p>進行git commit<br> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281404030.png"></p>
+</li>
+<li><p>填寫commit內容<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281410372.png"></p>
+</li>
+<li><p>產生commit內容<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202302281411699.png"></p>
+</li>
+</ul>
+<h1 id="參考文獻"><a href="#參考文獻" class="headerlink" title="參考文獻"></a>參考文獻</h1><ul>
+<li><a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a></li>
+<li><a href="https://www.youtube.com/watch?v=v-_IvDvGlhA">git commit 最佳实践，commitizen + husky + commitlint 规范化校验</a></li>
+</ul>
 ]]></content>
       <tags>
-        <tag>Linux</tag>
+        <tag>Tools</tag>
       </tags>
   </entry>
   <entry>
@@ -245,7 +230,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">CONTAINER_NAME=<span class="string">&quot;監測的容器名稱&quot;</span></span><br><span class="line">MQTT_BROKER=<span class="string">&quot;你的mqtt broker網址或IP&quot;</span></span><br><span class="line">MQTT_TOPIC=<span class="string">&quot;訂閱標題&quot;</span></span><br><span class="line">MQTT_USERNAME=<span class="string">&quot;驗證帳號&quot;</span></span><br><span class="line">MQTT_PASSWORD=<span class="string">&quot;驗證密碼&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 透過while迴圈，將docker logs的輸出，一行一行的送到mosquitto_pub</span></span><br><span class="line">docker logs -f <span class="string">&quot;<span class="variable">$CONTAINER_NAME</span>&quot;</span> | <span class="keyword">while</span> <span class="built_in">read</span> -r log_line; <span class="keyword">do</span></span><br><span class="line"><span class="comment">#  echo $log_line</span></span><br><span class="line">    mosquitto_pub \</span><br><span class="line">    -h <span class="string">&quot;<span class="variable">$MQTT_BROKER</span>&quot;</span> \</span><br><span class="line">    -p 1883 \</span><br><span class="line">    -u <span class="string">&quot;<span class="variable">$MQTT_USERNAME</span>&quot;</span> \</span><br><span class="line">    -P <span class="string">&quot;<span class="variable">$MQTT_PASSWORD</span>&quot;</span> \</span><br><span class="line">    -t <span class="string">&quot;<span class="variable">$MQTT_TOPIC</span>&quot;</span> \</span><br><span class="line">    -m <span class="string">&quot;<span class="variable">$log_line</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>執行腳本</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +755 monitor_docker_log.sh</span><br><span class="line">bash monitor_docker_log.sh</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x monitor_docker_log.sh</span><br><span class="line">bash monitor_docker_log.sh</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="Client端程式"><a href="#Client端程式" class="headerlink" title="Client端程式"></a>Client端程式</h2><ul>
 <li><p>新增mqtt_sub.go</p>
@@ -265,6 +250,21 @@
         <tag>rabbitmq</tag>
         <tag>mqtt</tag>
         <tag>docker log</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux系統管理備忘</title>
+    <url>/2022/12/01/linux-management/</url>
+    <content><![CDATA[<h1 id="帳號權限管理"><a href="#帳號權限管理" class="headerlink" title="帳號權限管理"></a>帳號權限管理</h1><h2 id="用root做SSH登入，被駭客風險？"><a href="#用root做SSH登入，被駭客風險？" class="headerlink" title="用root做SSH登入，被駭客風險？"></a>用root做SSH登入，被駭客風險？</h2><ol>
+<li>如果root遠端登入且是用密碼做認證，因為所有系統是以root當帳號名稱，所以駭客可以只針對密碼進行暴力破解密碼進而駭進系統。</li>
+<li>如果用其他名稱當帳號(例如kkevin)做SSH登入，駭客必須猜中你的帳號才能進行密碼暴力破解。</li>
+<li>如果用root做SSH登入且是用private rsa key做認證，這樣駭客想破解難度就會高於密碼認證很多。</li>
+<li>如果用kkevin用密碼做認證且kkevin有sudo權限，安全性就會在kkevin密碼的複雜度。</li>
+</ol>
+<h2 id="ssh-keygen"><a href="#ssh-keygen" class="headerlink" title="ssh-keygen"></a>ssh-keygen</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">反向代理,</span> <span class="string">Reverse</span> <span class="string">Proxy,</span> <span class="string">re-ver-se</span> <span class="string">pro-xy</span></span><br><span class="line"><span class="string">風險,</span> <span class="string">Risk,</span> <span class="string">ri-sk</span></span><br><span class="line"><span class="string">駭客,</span> <span class="string">Hacker,</span> <span class="string">ha-ker</span></span><br><span class="line"><span class="string">暴力破解,</span> <span class="string">Brute</span> <span class="string">Force,</span> <span class="string">bru-te</span> <span class="string">for-ce</span></span><br><span class="line"><span class="string">駭進系統,</span> <span class="string">Hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system,</span> <span class="string">hack</span> <span class="string">into</span> <span class="string">the</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -305,21 +305,6 @@
       </tags>
   </entry>
   <entry>
-    <title>PyCharm環境設定</title>
-    <url>/2022/12/03/pycharm-settings/</url>
-    <content><![CDATA[<h1 id="pycharm-settings"><a href="#pycharm-settings" class="headerlink" title="pycharm-settings"></a>pycharm-settings</h1><ul>
-<li><p>避免文字過長格式化後導致行數過多。<br>路徑<code>Preferences -&gt; Editor -&gt; Code Style -&gt; Markdown</code><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212031119846.png"></p>
-</li>
-<li><p>豐富的markdown語法支援，可支援PlantUML與Mermaid語法。<br>路徑<code>Preferences -&gt;  Languages &amp; Frameworks -&gt; Markdown</code><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212311448402.png"></p>
-</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">導致,</span> <span class="string">Cause,</span> <span class="string">cau-se</span></span><br><span class="line"><span class="string">避免,</span> <span class="string">Avoid,</span> <span class="string">av-oid</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python備忘錄</title>
     <url>/2022/12/02/python-memo/</url>
     <content><![CDATA[<h1 id="建立虛擬環境"><a href="#建立虛擬環境" class="headerlink" title="建立虛擬環境"></a>建立虛擬環境</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3.11 -m  venv venv </span><br><span class="line"><span class="comment">#python3.9 -m  venv venv </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install package from requirements.txt</span></span><br><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
@@ -337,6 +322,21 @@
 
 
 
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PyCharm環境設定</title>
+    <url>/2022/12/03/pycharm-settings/</url>
+    <content><![CDATA[<h1 id="pycharm-settings"><a href="#pycharm-settings" class="headerlink" title="pycharm-settings"></a>pycharm-settings</h1><ul>
+<li><p>避免文字過長格式化後導致行數過多。<br>路徑<code>Preferences -&gt; Editor -&gt; Code Style -&gt; Markdown</code><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212031119846.png"></p>
+</li>
+<li><p>豐富的markdown語法支援，可支援PlantUML與Mermaid語法。<br>路徑<code>Preferences -&gt;  Languages &amp; Frameworks -&gt; Markdown</code><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202212311448402.png"></p>
+</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">導致,</span> <span class="string">Cause,</span> <span class="string">cau-se</span></span><br><span class="line"><span class="string">避免,</span> <span class="string">Avoid,</span> <span class="string">av-oid</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Python</tag>
@@ -376,6 +376,46 @@
       <tags>
         <tag>Python</tag>
         <tag>測試</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>將Test/Prod環境安裝在同一台主機問題</title>
+    <url>/2022/12/03/test-prod-on-same-host/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>與前同事討論關於他所在公司MIS想把專案(專案服務都有容器化)的測試與生產環境都安裝在同一台主機上，但後端工程師是認為應該把測試與生產環境拆開成兩台不一樣虛擬機上。</p>
+<p>在公司裏其實滿常發生不同職務對同一件事情有不同看法，但如何做出最後決策的方法可能很多種，例如：</p>
+<ul>
+<li>老闆已經有想法，那就照老闆的想法當決策，出錢的最大，最後責任也是老闆承擔。</li>
+<li>MIS(DevOps)部門有想法，那就溝通看看，最終還是以MIS部門想法為主，畢竟責任歸還是這部門要承擔。</li>
+<li>後端工程師也有想法，如果老闆或MIS部門願意交換彼此想法，那就值得溝通看看，這篇文章也主要針對這情況進行溝通的探討。</li>
+</ul>
+<h1 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h1><p>針對此議題進行思考：</p>
+<ul>
+<li>方案A: 測試與生產環境都安裝在同一台主機上。(老闆與MIS頃向此方案)</li>
+<li>方案B: 測試與生產環境拆開成兩台不一樣虛擬機上。(個人與前同事頃向此方案)</li>
+</ul>
+<p>在大家都有不同想法時，我可能會先詢問對方用方案A有哪些好處以及回饋個人對方案A可能面臨到的壞處。後續再提供方案B的好處與壞處，這樣大家就可以對明確的好處跟壞處進行討論，而不是對方案的抽象概念進行討論，這樣討論的結果可能會更有建設性。</p>
+<p><strong>因個人頃向的是對方案B，以下是個人認為方案B的好處：</strong></p>
+<ul>
+<li>資源分離，測試環境與生產環境的資源不會互相影響，例如在進行壓力測試時榨乾了系統資源。</li>
+<li>資安等級，測試環境可以配置較低的資安等級，生產環境可以配置較高的資安等級。</li>
+<li>套件升級，可先在測試環境測試套件升級後，確認沒問題再將測試環境的套件升級到生產環境，避免直接在生產環境升級導致服務中斷。</li>
+<li>硬體配置，測試環境與生產環境的資源可以分別配置，例如測試環境可以配置較低的CPU與記憶體，生產環境可以配置較高的CPU與記憶體。</li>
+</ul>
+<p><strong>以下是個人認為方案A的壞處：</strong><br>基本上方案B的好處可能都會是方案A的壞處。</p>
+<ul>
+<li>資源佔用，雖然可以限制容器資源上限，但也代表要把一部分資源給測試環境，導致生產環境的資源會被減少。</li>
+<li>套件升級，Docker套件升級時，導致配置與相依套件的版本不一致，使服務無法啟動。</li>
+<li>資安等級太高，導致測試環境除錯困難，例如不允許後端工程師登入遠端主機進行log取得與當前資源監測。</li>
+<li>部署複雜度提升，因同時要區別各種環境的容器，但容器使用的port資源可能都一樣，導致部署複雜度提升。</li>
+</ul>
+<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><ul>
+<li>透過溝通針對個方案分析出好處與壞處，達到共識。</li>
+<li>透過討論，老闆或MIS部門依然覺得自己方案最好，那只能接受老闆或MIS部門的決定。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+        <tag>職場溝通</tag>
       </tags>
   </entry>
   <entry>
@@ -457,43 +497,26 @@
       </tags>
   </entry>
   <entry>
-    <title>將Test/Prod環境安裝在同一台主機問題</title>
-    <url>/2022/12/03/test-prod-on-same-host/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>與前同事討論關於他所在公司MIS想把專案(專案服務都有容器化)的測試與生產環境都安裝在同一台主機上，但後端工程師是認為應該把測試與生產環境拆開成兩台不一樣虛擬機上。</p>
-<p>在公司裏其實滿常發生不同職務對同一件事情有不同看法，但如何做出最後決策的方法可能很多種，例如：</p>
+    <title>Mac終端機自建單字庫練習</title>
+    <url>/2023/07/25/tool-mac-say-english/</url>
+    <content><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>想透過終端機學習英文，可以讓終端機從自己詞庫隨機列出相關英文詞庫資訊，並且可以重覆發音。在零碎時間中隨時練習英文。</p>
+<h1 id="實作"><a href="#實作" class="headerlink" title="實作"></a>實作</h1><p>這次實作使用的技術如下：</p>
 <ul>
-<li>老闆已經有想法，那就照老闆的想法當決策，出錢的最大，最後責任也是老闆承擔。</li>
-<li>MIS(DevOps)部門有想法，那就溝通看看，最終還是以MIS部門想法為主，畢竟責任歸還是這部門要承擔。</li>
-<li>後端工程師也有想法，如果老闆或MIS部門願意交換彼此想法，那就值得溝通看看，這篇文章也主要針對這情況進行溝通的探討。</li>
+<li><code>say</code>指令: Mac內建指令<code>say</code>可進行英文發音，缺點是聲音太機器聲～～</li>
+<li>ChatGPT: 透過ChatGPT生成相關領域英文與翻譯，如下:<br> <code>請列出100個機器學習相關技術名詞或片語，並以cvs list格式顯示，例如 machine learning, 機器學習, 簡短功能描述</code><br> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202307251508312.png"></li>
+<li>Youtube: 終端機產生<code>https://youtube.com/results?search_query=Epoch教學</code>一個連結，可以直接透過YT搜尋相關教學內容。</li>
+<li>Python: 透過python解析CSV文檔進行循環資訊列印與呼叫英文發音。<br>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202308010950328.png"><br>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202307251516299.png"></li>
+<li>Bash: 透過Bash縮短成容易記憶與簡短指令。另如輸入<code>le__machine_learning</code>或<code>l1</code>時，就會資料在終端機顯次六個隨機英文練習。<br>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202307251518311.png"><br>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202307251503823.png"></li>
 </ul>
-<h1 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h1><p>針對此議題進行思考：</p>
-<ul>
-<li>方案A: 測試與生產環境都安裝在同一台主機上。(老闆與MIS頃向此方案)</li>
-<li>方案B: 測試與生產環境拆開成兩台不一樣虛擬機上。(個人與前同事頃向此方案)</li>
-</ul>
-<p>在大家都有不同想法時，我可能會先詢問對方用方案A有哪些好處以及回饋個人對方案A可能面臨到的壞處。後續再提供方案B的好處與壞處，這樣大家就可以對明確的好處跟壞處進行討論，而不是對方案的抽象概念進行討論，這樣討論的結果可能會更有建設性。</p>
-<p><strong>因個人頃向的是對方案B，以下是個人認為方案B的好處：</strong></p>
-<ul>
-<li>資源分離，測試環境與生產環境的資源不會互相影響，例如在進行壓力測試時榨乾了系統資源。</li>
-<li>資安等級，測試環境可以配置較低的資安等級，生產環境可以配置較高的資安等級。</li>
-<li>套件升級，可先在測試環境測試套件升級後，確認沒問題再將測試環境的套件升級到生產環境，避免直接在生產環境升級導致服務中斷。</li>
-<li>硬體配置，測試環境與生產環境的資源可以分別配置，例如測試環境可以配置較低的CPU與記憶體，生產環境可以配置較高的CPU與記憶體。</li>
-</ul>
-<p><strong>以下是個人認為方案A的壞處：</strong><br>基本上方案B的好處可能都會是方案A的壞處。</p>
-<ul>
-<li>資源佔用，雖然可以限制容器資源上限，但也代表要把一部分資源給測試環境，導致生產環境的資源會被減少。</li>
-<li>套件升級，Docker套件升級時，導致配置與相依套件的版本不一致，使服務無法啟動。</li>
-<li>資安等級太高，導致測試環境除錯困難，例如不允許後端工程師登入遠端主機進行log取得與當前資源監測。</li>
-<li>部署複雜度提升，因同時要區別各種環境的容器，但容器使用的port資源可能都一樣，導致部署複雜度提升。</li>
-</ul>
-<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><ul>
-<li>透過溝通針對個方案分析出好處與壞處，達到共識。</li>
-<li>透過討論，老闆或MIS部門依然覺得自己方案最好，那只能接受老闆或MIS部門的決定。</li>
+<h1 id="原始碼"><a href="#原始碼" class="headerlink" title="原始碼"></a>原始碼</h1><ul>
+<li>learn_english.py: 主程式<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> urllib.parse</span><br><span class="line"></span><br><span class="line">repeat = <span class="number">1</span>  <span class="comment"># 每個單字重複次數</span></span><br><span class="line">learn_count = <span class="number">6</span>  <span class="comment"># 每次學習單字數量</span></span><br><span class="line"></span><br><span class="line">current_path = os.path.dirname(__file__)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 讀取英文清單</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">f&#x27;<span class="subst">&#123;current_path&#125;</span>/learn_english/<span class="subst">&#123;sys.argv[<span class="number">1</span>]&#125;</span>.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    items = [row.strip() <span class="keyword">for</span> row <span class="keyword">in</span> f.readlines()]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(sys.argv) &gt; <span class="number">2</span>:</span><br><span class="line">    learn_count = <span class="built_in">int</span>(sys.argv[<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> index, item <span class="keyword">in</span> <span class="built_in">enumerate</span>(random.sample(items, learn_count)):</span><br><span class="line">    item = [o.strip() <span class="keyword">for</span> o <span class="keyword">in</span> item.strip().split(<span class="string">&#x27;,&#x27;</span>)]</span><br><span class="line">    i = repeat</span><br><span class="line">    <span class="keyword">while</span> i &gt; <span class="number">0</span>:</span><br><span class="line">        i -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 顯示單字與中文翻譯</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;&#x27;&#x27;<span class="subst">&#123;index + <span class="number">1</span>&#125;</span>. \033[91m<span class="subst">&#123;item[<span class="number">0</span>]&#125;</span> \033[0m | \033[34m<span class="subst">&#123;item[<span class="number">1</span>]&#125;</span>\033[0m | \033[94m<span class="subst">&#123;item[<span class="number">2</span>]&#125;</span>\033[0m&#x27;&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 顯示YT參考影片</span></span><br><span class="line">        encoded_string = urllib.parse.quote(<span class="string">f&quot;<span class="subst">&#123;item[<span class="number">0</span>]&#125;</span>學習&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;\033[4mhttps://youtube.com/results?search_query=<span class="subst">&#123;encoded_string&#125;</span>\033[0m \n&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 自訂發音次數</span></span><br><span class="line">        <span class="comment"># subprocess.run([&quot;say&quot;,</span></span><br><span class="line">        <span class="comment">#                 f&quot;-r 150&quot;,</span></span><br><span class="line">        <span class="comment">#                 item[0],</span></span><br><span class="line">        <span class="comment">#                 ])</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment"># subprocess.run([&quot;say&quot;,</span></span><br><span class="line">        <span class="comment">#                 f&quot;-r 150&quot;,</span></span><br><span class="line">        <span class="comment">#                 item[0],</span></span><br><span class="line">        <span class="comment">#                 ])</span></span><br><span class="line"></span><br><span class="line">        subprocess.run([<span class="string">&quot;say&quot;</span>,</span><br><span class="line">                        <span class="string">f&quot;-r 200&quot;</span>,</span><br><span class="line">                        item[<span class="number">0</span>],</span><br><span class="line">                        ])</span><br><span class="line"></span><br><span class="line">        subprocess.run([<span class="string">&quot;say&quot;</span>,</span><br><span class="line">                        <span class="string">f&quot;-r 200&quot;</span>,</span><br><span class="line">                        item[<span class="number">0</span>],</span><br><span class="line">                        ])</span><br><span class="line"></span><br><span class="line">        subprocess.run([<span class="string">&quot;say&quot;</span>,</span><br><span class="line">                        <span class="string">f&quot;-r 200&quot;</span>,</span><br><span class="line">                        item[<span class="number">0</span>],</span><br><span class="line">                        ])</span><br><span class="line"></span><br><span class="line">        subprocess.run([<span class="string">&quot;say&quot;</span>,</span><br><span class="line">                        <span class="string">f&quot;-r 200&quot;</span>,</span><br><span class="line">                        item[<span class="number">0</span>],</span><br><span class="line">                        ])</span><br><span class="line">        </span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        -v: 指定使用的語音類型，例如-v Alex或-v Victoria</span></span><br><span class="line"><span class="string">        -r: 設定語速，例如-r 150</span></span><br><span class="line"><span class="string">        -o: 指定輸出檔案的路徑和檔名，例如-o output.aiff</span></span><br><span class="line"><span class="string">        -f: 指定要轉換的文字檔案路徑，例如-f input.txt</span></span><br><span class="line"><span class="string">        -i: 指定要轉換的文字，例如-i &quot;Hello, how are you?&quot;</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>learn_english.sh: Bash簡短指令<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">alias</span> le__machine_learning=<span class="string">&quot;python3 &#123;您的路徑&#125;/learn_english.py machine_learning&quot;</span></span><br><span class="line"><span class="built_in">alias</span> l1=<span class="string">&quot;python3 &#123;您的路徑&#125;/learn_english.py machine_learning&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <tags>
-        <tag>Docker</tag>
-        <tag>職場溝通</tag>
+        <tag>openai</tag>
+        <tag>python</tag>
+        <tag>tool</tag>
       </tags>
   </entry>
   <entry>
@@ -531,32 +554,9 @@
 
 ]]></content>
       <tags>
+        <tag>tool</tag>
         <tag>開發工具</tag>
         <tag>專案管理</tag>
-        <tag>tool</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac終端機自建單字庫練習</title>
-    <url>/2023/07/25/tool-mac-say-english/</url>
-    <content><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>想透過終端機學習英文，可以讓終端機從自己詞庫隨機列出相關英文詞庫資訊，並且可以重覆發音。在零碎時間中隨時練習英文。</p>
-<h1 id="實作"><a href="#實作" class="headerlink" title="實作"></a>實作</h1><p>這次實作使用的技術如下：</p>
-<ul>
-<li><code>say</code>指令: Mac內建指令<code>say</code>可進行英文發音，缺點是聲音太機器聲～～</li>
-<li>ChatGPT: 透過ChatGPT生成相關領域英文與翻譯，如下:<br> <code>請列出100個機器學習相關技術名詞或片語，並以cvs list格式顯示，例如 machine learning, 機器學習, 簡短功能描述</code><br> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202307251508312.png"></li>
-<li>Youtube: 終端機產生<code>https://youtube.com/results?search_query=Epoch教學</code>一個連結，可以直接透過YT搜尋相關教學內容。</li>
-<li>Python: 透過python解析CSV文檔進行循環資訊列印與呼叫英文發音。<br>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202308010950328.png"><br>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202307251516299.png"></li>
-<li>Bash: 透過Bash縮短成容易記憶與簡短指令。另如輸入<code>le__machine_learning</code>或<code>l1</code>時，就會資料在終端機顯次六個隨機英文練習。<br>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202307251518311.png"><br>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/wenchan3918/hexo_images/master/202307251503823.png"></li>
-</ul>
-<h1 id="原始碼"><a href="#原始碼" class="headerlink" title="原始碼"></a>原始碼</h1><ul>
-<li>learn_english.py: 主程式<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> urllib.parse</span><br><span class="line"></span><br><span class="line">repeat = <span class="number">1</span>  <span class="comment"># 每個單字重複次數</span></span><br><span class="line">learn_count = <span class="number">6</span>  <span class="comment"># 每次學習單字數量</span></span><br><span class="line"></span><br><span class="line">current_path = os.path.dirname(__file__)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 讀取英文清單</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">f&#x27;<span class="subst">&#123;current_path&#125;</span>/learn_english/<span class="subst">&#123;sys.argv[<span class="number">1</span>]&#125;</span>.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    items = [row.strip() <span class="keyword">for</span> row <span class="keyword">in</span> f.readlines()]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(sys.argv) &gt; <span class="number">2</span>:</span><br><span class="line">    learn_count = <span class="built_in">int</span>(sys.argv[<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> index, item <span class="keyword">in</span> <span class="built_in">enumerate</span>(random.sample(items, learn_count)):</span><br><span class="line">    item = [o.strip() <span class="keyword">for</span> o <span class="keyword">in</span> item.strip().split(<span class="string">&#x27;,&#x27;</span>)]</span><br><span class="line">    i = repeat</span><br><span class="line">    <span class="keyword">while</span> i &gt; <span class="number">0</span>:</span><br><span class="line">        i -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 顯示單字與中文翻譯</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;&#x27;&#x27;<span class="subst">&#123;index + <span class="number">1</span>&#125;</span>. \033[91m<span class="subst">&#123;item[<span class="number">0</span>]&#125;</span> \033[0m | \033[34m<span class="subst">&#123;item[<span class="number">1</span>]&#125;</span>\033[0m | \033[94m<span class="subst">&#123;item[<span class="number">2</span>]&#125;</span>\033[0m&#x27;&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 顯示YT參考影片</span></span><br><span class="line">        encoded_string = urllib.parse.quote(<span class="string">f&quot;<span class="subst">&#123;item[<span class="number">0</span>]&#125;</span>學習&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;\033[4mhttps://youtube.com/results?search_query=<span class="subst">&#123;encoded_string&#125;</span>\033[0m \n&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 自訂發音次數</span></span><br><span class="line">        <span class="comment"># subprocess.run([&quot;say&quot;,</span></span><br><span class="line">        <span class="comment">#                 f&quot;-r 150&quot;,</span></span><br><span class="line">        <span class="comment">#                 item[0],</span></span><br><span class="line">        <span class="comment">#                 ])</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment"># subprocess.run([&quot;say&quot;,</span></span><br><span class="line">        <span class="comment">#                 f&quot;-r 150&quot;,</span></span><br><span class="line">        <span class="comment">#                 item[0],</span></span><br><span class="line">        <span class="comment">#                 ])</span></span><br><span class="line"></span><br><span class="line">        subprocess.run([<span class="string">&quot;say&quot;</span>,</span><br><span class="line">                        <span class="string">f&quot;-r 200&quot;</span>,</span><br><span class="line">                        item[<span class="number">0</span>],</span><br><span class="line">                        ])</span><br><span class="line"></span><br><span class="line">        subprocess.run([<span class="string">&quot;say&quot;</span>,</span><br><span class="line">                        <span class="string">f&quot;-r 200&quot;</span>,</span><br><span class="line">                        item[<span class="number">0</span>],</span><br><span class="line">                        ])</span><br><span class="line"></span><br><span class="line">        subprocess.run([<span class="string">&quot;say&quot;</span>,</span><br><span class="line">                        <span class="string">f&quot;-r 200&quot;</span>,</span><br><span class="line">                        item[<span class="number">0</span>],</span><br><span class="line">                        ])</span><br><span class="line"></span><br><span class="line">        subprocess.run([<span class="string">&quot;say&quot;</span>,</span><br><span class="line">                        <span class="string">f&quot;-r 200&quot;</span>,</span><br><span class="line">                        item[<span class="number">0</span>],</span><br><span class="line">                        ])</span><br><span class="line">        </span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        -v: 指定使用的語音類型，例如-v Alex或-v Victoria</span></span><br><span class="line"><span class="string">        -r: 設定語速，例如-r 150</span></span><br><span class="line"><span class="string">        -o: 指定輸出檔案的路徑和檔名，例如-o output.aiff</span></span><br><span class="line"><span class="string">        -f: 指定要轉換的文字檔案路徑，例如-f input.txt</span></span><br><span class="line"><span class="string">        -i: 指定要轉換的文字，例如-i &quot;Hello, how are you?&quot;</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li>learn_english.sh: Bash簡短指令<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">alias</span> le__machine_learning=<span class="string">&quot;python3 &#123;您的路徑&#125;/learn_english.py machine_learning&quot;</span></span><br><span class="line"><span class="built_in">alias</span> l1=<span class="string">&quot;python3 &#123;您的路徑&#125;/learn_english.py machine_learning&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>tool</tag>
-        <tag>openai</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -569,8 +569,8 @@
 </ul>
 <h1 id="原始碼"><a href="#原始碼" class="headerlink" title="原始碼"></a>原始碼</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="title">t</span></span>() &#123;</span><br><span class="line">  <span class="comment"># Translate to english or chinese</span></span><br><span class="line">  value=<span class="variable">$1</span></span><br><span class="line">  <span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$value</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    value=$(pbpaste)</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$value</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;請輸入要翻譯的內容&quot;</span></span><br><span class="line">    <span class="built_in">return</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">  </span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$value</span>&quot;</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span> [[ <span class="variable">$value</span> =~ [\p&#123;Han&#125;] ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="comment"># 進行OpenAI翻譯，並把結果儲存到剪貼簿</span></span><br><span class="line">    sgpt <span class="string">&quot;Translate to chinese: <span class="variable">$value</span>&quot;</span> | pbcopy</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    sgpt <span class="string">&quot;Translate to english: <span class="variable">$value</span>&quot;</span> | pbcopy</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  value=$(pbpaste)</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$value</span>&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">tj</span></span>() &#123;</span><br><span class="line">  <span class="comment"># Translate to japanese</span></span><br><span class="line">  value=<span class="variable">$1</span></span><br><span class="line">  <span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$value</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    value=$(pbpaste)</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$value</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;請輸入要翻譯的內容&quot;</span></span><br><span class="line">    <span class="built_in">return</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$value</span>&quot;</span></span><br><span class="line">  </span><br><span class="line">  sgpt <span class="string">&quot;Translate to japanese: <span class="variable">$value</span>&quot;</span> | pbcopy</span><br><span class="line"></span><br><span class="line">  value=$(pbpaste)</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$value</span>&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <tags>
-        <tag>tool</tag>
         <tag>openai</tag>
+        <tag>tool</tag>
         <tag>shell_gpt</tag>
       </tags>
   </entry>
@@ -1075,69 +1075,6 @@ ol, ul {
       </tags>
   </entry>
   <entry>
-    <title>作品集 - 道路管理系統</title>
-    <url>/2022/11/16/projects/road-management/</url>
-    <content><![CDATA[<h1 id="專案需求"><a href="#專案需求" class="headerlink" title="專案需求"></a>專案需求</h1><p>客戶需要一個系統來管理道路回報案件、案件派工維修等e化流程。透過APP進行道路巡查與回報毀損案件，再由內勤人員進行審核與分派案件給協力廠商。</p>
-<p>當車巡人員使用APP錄影進行道路巡查時，後台也需要觀看即時影像與巡查員軌跡。</p>
-<h1 id="交付項目"><a href="#交付項目" class="headerlink" title="交付項目"></a>交付項目</h1><ul>
-<li>車巡APP: 提供汽車巡查人員使用，進行道路巡查與回報毀損案件。</li>
-<li>機巡APP: 提供機車巡查人員使用，進行道路巡查與回報毀損案件。</li>
-<li>內勤與協力廠商後台: 提供內勤人員使用，進行案件審核與分派。</li>
-<li>管理者後台: 提供管理者使用，新增合約、系統相關參數。</li>
-</ul>
-<h1 id="人員分配"><a href="#人員分配" class="headerlink" title="人員分配"></a>人員分配</h1><p>共有5人，分別為:</p>
-<ul>
-<li>車巡APP: 1人(Me)</li>
-<li>機巡APP: 1人</li>
-<li>內勤與協力廠商後台: 1人(Me)<ul>
-<li>車巡管理系統</li>
-<li>道路管理系統</li>
-</ul>
-</li>
-<li>管理者後台: 2人(Me)</li>
-<li>UI設計: 1人</li>
-<li>PM: 1人</li>
-</ul>
-<h1 id="使用技術"><a href="#使用技術" class="headerlink" title="使用技術"></a>使用技術</h1><ul>
-<li>APP: Kotlin</li>
-<li>Backend: Linode + AWS + Django + Nginx + Postgresql + Redis + Nginx RTMP</li>
-<li>Frontend: Vue.js + Vuex + Vue Router + Vuetify + Axios</li>
-</ul>
-<span id="more"></span>
-
-<h1 id="開發日誌"><a href="#開發日誌" class="headerlink" title="開發日誌"></a>開發日誌</h1><h2 id="系統架構與流程圖"><a href="#系統架構與流程圖" class="headerlink" title="系統架構與流程圖"></a>系統架構與流程圖</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/uOf53of.png" alt="系統組織架構"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pg4X3cb.png" alt="案件新增與審查流程"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/5G31v3C.jpg" alt="案件派工流程"></p>
-<h2 id="技術選用評估"><a href="#技術選用評估" class="headerlink" title="技術選用評估"></a>技術選用評估</h2><h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><p>Django自帶一個Admin後台與ORM，可以快速開發後台、建立資料庫模型並且可以透過Django REST<br>Framework快速開發API。而且Django也有很多第三方套件可以使用，例如Django REST Framework JWT可以快速開發JWT驗證，Django Filter可以快速開發篩選功能，Django CORS Headers可以快速開發跨網域功能。</p>
-<p>同時導入Docker容器，可以快速部署開發環境與生產環境，並且可以透過Docker Compose快速建立開發環境。至於為何沒有採用k8s，主要考慮到運維成本可能會過大，所以尚未採用。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/GL1q5lL.png" alt="服務器架構"></p>
-<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>選用Vue + <a href="https://vuetifyjs.com/en/getting-started/installation/">Vuetify</a>，因為Vue是目前最流行的前端框架之一且學習曲線不高，同時考慮到如何縮短UI設計時間，如果有套UI框架提供設計師做設計參考，同時工程師也可以縮短客製化元件的製作成本。且Vuetify已有提供豐富的元件庫，並且可以透過Vue<br>CLI快速開發SPA。</p>
-<h2 id="實作單元"><a href="#實作單元" class="headerlink" title="實作單元"></a>實作單元</h2><h3 id="Android-RTMP推流"><a href="#Android-RTMP推流" class="headerlink" title="Android RTMP推流"></a>Android RTMP推流</h3><p>手機端透過RTMP協定將影像推流到服務器，使用『<a href="https://github.com/pedroSG94/rtmp-rtsp-stream-client-java">RTMP第三方拉流與推流庫</a>』套件進行。 套件同時支援RTMP&#x2F;RSTP協定，同時實作了推流與拉流等功能。專案需求只使用推流功能，早期版本有些Bug，經過長時間推流很容易發生閃退，最後Fork一份檔案到專案裡，進行客製化參數調整。</p>
-<h3 id="Nginx-RTMP-Server"><a href="#Nginx-RTMP-Server" class="headerlink" title="Nginx RTMP Server"></a>Nginx RTMP Server</h3><p>使用Nginx +『<a href="https://github.com/arut/nginx-rtmp-module">nginx-rtmp-module</a>』模組，進行RTMP Server的建置。RTMP協定通常會有5～10秒影像落後，在未優化設定前落後秒數達30秒以上，經過優化設定後，網頁播放的影像落後秒數降低至10～15秒左右，如果透過OBS做拉流可以在5～10秒區間。</p>
-<p>影像延遲優化手段:</p>
-<ul>
-<li>Android端推流時，將影像縮小至720p、FPS減少成20幀、去掉去掉音訊資料，降低影像資料量。</li>
-<li>Nginx Server端，只能從現有參數做調整做優化外，另外就減少分流頻道，保留720p、360p頻道，移除1080p頻道。</li>
-<li>Web前端，使用『<a href="https://github.com/Bilibili/flv.js/">Flv.js</a>』套件進行拉流，從套件參數調整做優化，主要透過減少cache大小進行延遲優化。</li>
-</ul>
-<h1 id="功能頁面"><a href="#功能頁面" class="headerlink" title="功能頁面"></a>功能頁面</h1><h2 id="車巡管理系統"><a href="#車巡管理系統" class="headerlink" title="車巡管理系統"></a>車巡管理系統</h2><p><strong>可以查過去巡查軌跡與案件，若當前有巡察員巡查可在此頁面觀看直播。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/hEndckI.png" alt="車巡即時軌跡"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/I3B6RGf.png" alt="查報案件列表"><br><strong>後勤人員可在此頁面進行案件歸檔，歸檔後的案件會進到道路管理系統。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/qJXgaPV.png" alt="查報案件詳細"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/zOs58pu.png" alt="車巡路段管理"><br><strong>可以在地圖上規劃巡察員每日巡查軌跡。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/nHZl0dU.png" alt="車巡路段管理編輯"></p>
-<h2 id="道路管理系統"><a href="#道路管理系統" class="headerlink" title="道路管理系統"></a>道路管理系統</h2><p><strong>所有查報案件列表。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/3Sr6pOH.jpg" alt="案件總表"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pfxzXuH.jpg" alt="案件地圖"></p>
-<p><strong>後勤人員可在這邊審核案件指派給相關協力廠商進行後續。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/DVvnTvl.png" alt="查報案件作業區"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/ba9U3vz.png" alt="查報案件作業區詳細"></p>
-<p><strong>可查詢合約當前保固的路段資訊。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/CnWJmkB.png" alt="保固路段"></p>
-<h2 id="管理員後台"><a href="#管理員後台" class="headerlink" title="管理員後台"></a>管理員後台</h2><p><strong>管理員可在這邊新增合約、合約人員角色與各種環境參數。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/VjyBXdh.png" alt="管理員功能列表"></p>
-<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">維修,</span> <span class="string">Repair,</span> <span class="string">re-pair</span></span><br><span class="line"><span class="string">派工,</span> <span class="string">Dispatch,</span> <span class="string">dis-patch</span></span><br><span class="line"><span class="string">協力廠商,</span> <span class="string">Cooperate</span> <span class="string">factory,</span> <span class="string">co-oper-ate</span> <span class="string">fac-tory</span></span><br><span class="line"><span class="string">流程,</span> <span class="string">Process,</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">客戶需求,</span> <span class="string">Customer</span> <span class="string">requirement,</span> <span class="string">cus-tom-er</span> <span class="string">re-quire-ment</span></span><br><span class="line"><span class="string">內勤人員,</span> <span class="string">Internal</span> <span class="string">staff,</span> <span class="string">in-ter-nal</span> <span class="string">staff</span></span><br><span class="line"><span class="string">作品集,</span> <span class="string">Portfolio,</span> <span class="string">port-fol-io</span></span><br><span class="line"><span class="string">開發經驗,</span> <span class="string">Development</span> <span class="string">experience,</span> <span class="string">deve-lop-ment</span> <span class="string">ex-per-ien-ce</span></span><br><span class="line"><span class="string">學習曲線,</span> <span class="string">Learning</span> <span class="string">curve,</span> <span class="string">learn-ing</span> <span class="string">curve</span></span><br><span class="line"><span class="string">縮短設計成本,</span> <span class="string">Shorten</span> <span class="string">design</span> <span class="string">cost,</span> <span class="string">short-en</span> <span class="string">de-sign</span> <span class="string">cost</span></span><br><span class="line"><span class="string">客製化元件,</span> <span class="string">Customized</span> <span class="string">component,</span> <span class="string">cus-tom-ized</span> <span class="string">com-po-nent</span></span><br><span class="line"><span class="string">豐富元件庫,</span> <span class="string">Rich</span> <span class="string">component</span> <span class="string">library,</span> <span class="string">rich</span> <span class="string">com-po-nent</span> <span class="string">lib-r-ary</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>Android</tag>
-        <tag>Backend</tag>
-        <tag>作品集</tag>
-        <tag>Frontend</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>面試 - Phantom Mask</title>
     <url>/2022/11/19/projects/plantom-mask/</url>
     <content><![CDATA[<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>Building a backend service and a database for a pharmacy platform.</p>
@@ -1351,6 +1288,69 @@ ol, ul {
         <tag>面試</tag>
         <tag>Django</tag>
         <tag>作品集</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>作品集 - 道路管理系統</title>
+    <url>/2022/11/16/projects/road-management/</url>
+    <content><![CDATA[<h1 id="專案需求"><a href="#專案需求" class="headerlink" title="專案需求"></a>專案需求</h1><p>客戶需要一個系統來管理道路回報案件、案件派工維修等e化流程。透過APP進行道路巡查與回報毀損案件，再由內勤人員進行審核與分派案件給協力廠商。</p>
+<p>當車巡人員使用APP錄影進行道路巡查時，後台也需要觀看即時影像與巡查員軌跡。</p>
+<h1 id="交付項目"><a href="#交付項目" class="headerlink" title="交付項目"></a>交付項目</h1><ul>
+<li>車巡APP: 提供汽車巡查人員使用，進行道路巡查與回報毀損案件。</li>
+<li>機巡APP: 提供機車巡查人員使用，進行道路巡查與回報毀損案件。</li>
+<li>內勤與協力廠商後台: 提供內勤人員使用，進行案件審核與分派。</li>
+<li>管理者後台: 提供管理者使用，新增合約、系統相關參數。</li>
+</ul>
+<h1 id="人員分配"><a href="#人員分配" class="headerlink" title="人員分配"></a>人員分配</h1><p>共有5人，分別為:</p>
+<ul>
+<li>車巡APP: 1人(Me)</li>
+<li>機巡APP: 1人</li>
+<li>內勤與協力廠商後台: 1人(Me)<ul>
+<li>車巡管理系統</li>
+<li>道路管理系統</li>
+</ul>
+</li>
+<li>管理者後台: 2人(Me)</li>
+<li>UI設計: 1人</li>
+<li>PM: 1人</li>
+</ul>
+<h1 id="使用技術"><a href="#使用技術" class="headerlink" title="使用技術"></a>使用技術</h1><ul>
+<li>APP: Kotlin</li>
+<li>Backend: Linode + AWS + Django + Nginx + Postgresql + Redis + Nginx RTMP</li>
+<li>Frontend: Vue.js + Vuex + Vue Router + Vuetify + Axios</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="開發日誌"><a href="#開發日誌" class="headerlink" title="開發日誌"></a>開發日誌</h1><h2 id="系統架構與流程圖"><a href="#系統架構與流程圖" class="headerlink" title="系統架構與流程圖"></a>系統架構與流程圖</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/uOf53of.png" alt="系統組織架構"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pg4X3cb.png" alt="案件新增與審查流程"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/5G31v3C.jpg" alt="案件派工流程"></p>
+<h2 id="技術選用評估"><a href="#技術選用評估" class="headerlink" title="技術選用評估"></a>技術選用評估</h2><h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><p>Django自帶一個Admin後台與ORM，可以快速開發後台、建立資料庫模型並且可以透過Django REST<br>Framework快速開發API。而且Django也有很多第三方套件可以使用，例如Django REST Framework JWT可以快速開發JWT驗證，Django Filter可以快速開發篩選功能，Django CORS Headers可以快速開發跨網域功能。</p>
+<p>同時導入Docker容器，可以快速部署開發環境與生產環境，並且可以透過Docker Compose快速建立開發環境。至於為何沒有採用k8s，主要考慮到運維成本可能會過大，所以尚未採用。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/GL1q5lL.png" alt="服務器架構"></p>
+<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>選用Vue + <a href="https://vuetifyjs.com/en/getting-started/installation/">Vuetify</a>，因為Vue是目前最流行的前端框架之一且學習曲線不高，同時考慮到如何縮短UI設計時間，如果有套UI框架提供設計師做設計參考，同時工程師也可以縮短客製化元件的製作成本。且Vuetify已有提供豐富的元件庫，並且可以透過Vue<br>CLI快速開發SPA。</p>
+<h2 id="實作單元"><a href="#實作單元" class="headerlink" title="實作單元"></a>實作單元</h2><h3 id="Android-RTMP推流"><a href="#Android-RTMP推流" class="headerlink" title="Android RTMP推流"></a>Android RTMP推流</h3><p>手機端透過RTMP協定將影像推流到服務器，使用『<a href="https://github.com/pedroSG94/rtmp-rtsp-stream-client-java">RTMP第三方拉流與推流庫</a>』套件進行。 套件同時支援RTMP&#x2F;RSTP協定，同時實作了推流與拉流等功能。專案需求只使用推流功能，早期版本有些Bug，經過長時間推流很容易發生閃退，最後Fork一份檔案到專案裡，進行客製化參數調整。</p>
+<h3 id="Nginx-RTMP-Server"><a href="#Nginx-RTMP-Server" class="headerlink" title="Nginx RTMP Server"></a>Nginx RTMP Server</h3><p>使用Nginx +『<a href="https://github.com/arut/nginx-rtmp-module">nginx-rtmp-module</a>』模組，進行RTMP Server的建置。RTMP協定通常會有5～10秒影像落後，在未優化設定前落後秒數達30秒以上，經過優化設定後，網頁播放的影像落後秒數降低至10～15秒左右，如果透過OBS做拉流可以在5～10秒區間。</p>
+<p>影像延遲優化手段:</p>
+<ul>
+<li>Android端推流時，將影像縮小至720p、FPS減少成20幀、去掉去掉音訊資料，降低影像資料量。</li>
+<li>Nginx Server端，只能從現有參數做調整做優化外，另外就減少分流頻道，保留720p、360p頻道，移除1080p頻道。</li>
+<li>Web前端，使用『<a href="https://github.com/Bilibili/flv.js/">Flv.js</a>』套件進行拉流，從套件參數調整做優化，主要透過減少cache大小進行延遲優化。</li>
+</ul>
+<h1 id="功能頁面"><a href="#功能頁面" class="headerlink" title="功能頁面"></a>功能頁面</h1><h2 id="車巡管理系統"><a href="#車巡管理系統" class="headerlink" title="車巡管理系統"></a>車巡管理系統</h2><p><strong>可以查過去巡查軌跡與案件，若當前有巡察員巡查可在此頁面觀看直播。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/hEndckI.png" alt="車巡即時軌跡"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/I3B6RGf.png" alt="查報案件列表"><br><strong>後勤人員可在此頁面進行案件歸檔，歸檔後的案件會進到道路管理系統。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/qJXgaPV.png" alt="查報案件詳細"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/zOs58pu.png" alt="車巡路段管理"><br><strong>可以在地圖上規劃巡察員每日巡查軌跡。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/nHZl0dU.png" alt="車巡路段管理編輯"></p>
+<h2 id="道路管理系統"><a href="#道路管理系統" class="headerlink" title="道路管理系統"></a>道路管理系統</h2><p><strong>所有查報案件列表。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/3Sr6pOH.jpg" alt="案件總表"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/pfxzXuH.jpg" alt="案件地圖"></p>
+<p><strong>後勤人員可在這邊審核案件指派給相關協力廠商進行後續。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/DVvnTvl.png" alt="查報案件作業區"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/ba9U3vz.png" alt="查報案件作業區詳細"></p>
+<p><strong>可查詢合約當前保固的路段資訊。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/CnWJmkB.png" alt="保固路段"></p>
+<h2 id="管理員後台"><a href="#管理員後台" class="headerlink" title="管理員後台"></a>管理員後台</h2><p><strong>管理員可在這邊新增合約、合約人員角色與各種環境參數。</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgur.com/VjyBXdh.png" alt="管理員功能列表"></p>
+<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">維修,</span> <span class="string">Repair,</span> <span class="string">re-pair</span></span><br><span class="line"><span class="string">派工,</span> <span class="string">Dispatch,</span> <span class="string">dis-patch</span></span><br><span class="line"><span class="string">協力廠商,</span> <span class="string">Cooperate</span> <span class="string">factory,</span> <span class="string">co-oper-ate</span> <span class="string">fac-tory</span></span><br><span class="line"><span class="string">流程,</span> <span class="string">Process,</span> <span class="string">pro-cess</span></span><br><span class="line"><span class="string">客戶需求,</span> <span class="string">Customer</span> <span class="string">requirement,</span> <span class="string">cus-tom-er</span> <span class="string">re-quire-ment</span></span><br><span class="line"><span class="string">內勤人員,</span> <span class="string">Internal</span> <span class="string">staff,</span> <span class="string">in-ter-nal</span> <span class="string">staff</span></span><br><span class="line"><span class="string">作品集,</span> <span class="string">Portfolio,</span> <span class="string">port-fol-io</span></span><br><span class="line"><span class="string">開發經驗,</span> <span class="string">Development</span> <span class="string">experience,</span> <span class="string">deve-lop-ment</span> <span class="string">ex-per-ien-ce</span></span><br><span class="line"><span class="string">學習曲線,</span> <span class="string">Learning</span> <span class="string">curve,</span> <span class="string">learn-ing</span> <span class="string">curve</span></span><br><span class="line"><span class="string">縮短設計成本,</span> <span class="string">Shorten</span> <span class="string">design</span> <span class="string">cost,</span> <span class="string">short-en</span> <span class="string">de-sign</span> <span class="string">cost</span></span><br><span class="line"><span class="string">客製化元件,</span> <span class="string">Customized</span> <span class="string">component,</span> <span class="string">cus-tom-ized</span> <span class="string">com-po-nent</span></span><br><span class="line"><span class="string">豐富元件庫,</span> <span class="string">Rich</span> <span class="string">component</span> <span class="string">library,</span> <span class="string">rich</span> <span class="string">com-po-nent</span> <span class="string">lib-r-ary</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Android</tag>
+        <tag>Backend</tag>
+        <tag>作品集</tag>
+        <tag>Frontend</tag>
       </tags>
   </entry>
 </search>
